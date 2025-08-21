@@ -40,11 +40,11 @@ y_sort_enabled = true
 position = Vector2(122, 75)
 
 [node name="Player" parent="PlantYsort" instance=ExtResource("3_5f05i")]
-position = Vector2(12, -62)
+position = Vector2(-19, 94)
 
 [node name="plant" type="TileMapLayer" parent="PlantYsort"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD6//3/AwAAAAAAAAD5////AwAAAAAAAAD///r/AwAAAAAAAAACAP7/AwAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD6//3/AwAAAAAAAAD5////AwAAAAAAAAD///r/AwAAAAAAAAACAP7/AwAAAAAAAAD7/wMAAwAAAAAAAAAAAAgAAwAAAAAAAAAAAAUAAgAEAAgAAAA=")
 tile_set = ExtResource("1_cqqpl")
 
 [node name="LargeTree" parent="PlantYsort" instance=ExtResource("4_oxa5y")]
