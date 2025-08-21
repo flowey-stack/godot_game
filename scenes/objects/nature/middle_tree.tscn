@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ycltjrnegef1"]
+
+[ext_resource type="SpriteFrames" uid="uid://jijmdqrlyx2q" path="res://tileset/nature.tres" id="1_jtfrm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfu6y"]
+size = Vector2(25, 10)
+
+[node name="MiddleTree" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+sprite_frames = ExtResource("1_jtfrm")
+animation = &"middle_tree"
+offset = Vector2(0, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_sfu6y")
