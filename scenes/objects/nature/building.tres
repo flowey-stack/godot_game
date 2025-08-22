@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://f82k1bcjkoul"]
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://f82k1bcjkoul"]
 
 [ext_resource type="Texture2D" uid="uid://c3c0oeuqasm0r" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="1_g5t86"]
 
@@ -9,6 +9,10 @@ region = Rect2(0, 0, 64, 48)
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5t86"]
 atlas = ExtResource("1_g5t86")
 region = Rect2(368, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58ply"]
+atlas = ExtResource("1_g5t86")
+region = Rect2(256, 0, 48, 48)
 
 [resource]
 animations = [{
@@ -26,5 +30,13 @@ animations = [{
 }],
 "loop": true,
 "name": &"house_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58ply")
+}],
+"loop": true,
+"name": &"house_3",
 "speed": 5.0
 }]

@@ -1,0 +1,61 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://b7fpqus1b72c6"]
+
+[ext_resource type="Texture2D" uid="uid://c3c0oeuqasm0r" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="1_dbxje"]
+[ext_resource type="Texture2D" uid="uid://bv055u5nwjviu" path="res://assets/Backgrounds/Tilesets/TilesetReliefDetail.png" id="2_g8wte"]
+[ext_resource type="Texture2D" uid="uid://68ms2h6dvjoq" path="res://assets/Backgrounds/Tilesets/TilesetDesert.png" id="3_s863i"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppm7f"]
+texture = ExtResource("1_dbxje")
+0:0/size_in_atlas = Vector2i(4, 3)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-29.3333, -10.6667, -18.6667, -21.3333, 18.6667, -21.3333, 29.3333, -10.6667, 29.3333, 10.6667, -29.3333, 10.6667)
+4:0/size_in_atlas = Vector2i(4, 3)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, 8)
+8:0/size_in_atlas = Vector2i(4, 3)
+8:0/0 = 0
+8:0/0/texture_origin = Vector2i(0, 8)
+12:0/size_in_atlas = Vector2i(4, 3)
+12:0/0 = 0
+12:0/0/texture_origin = Vector2i(0, 8)
+16:0/size_in_atlas = Vector2i(3, 3)
+16:0/0 = 0
+16:0/0/texture_origin = Vector2i(0, 8)
+19:0/size_in_atlas = Vector2i(4, 3)
+19:0/0 = 0
+19:0/0/texture_origin = Vector2i(0, 8)
+23:0/size_in_atlas = Vector2i(3, 3)
+23:0/0 = 0
+23:0/0/texture_origin = Vector2i(0, 8)
+26:0/size_in_atlas = Vector2i(3, 3)
+26:0/0 = 0
+26:0/0/texture_origin = Vector2i(0, 8)
+29:0/size_in_atlas = Vector2i(4, 4)
+29:0/0 = 0
+29:0/0/texture_origin = Vector2i(0, 16)
+29:4/size_in_atlas = Vector2i(3, 4)
+29:4/0 = 0
+22:3/size_in_atlas = Vector2i(3, 3)
+22:3/0 = 0
+22:6/size_in_atlas = Vector2i(3, 3)
+22:6/0 = 0
+22:9/size_in_atlas = Vector2i(3, 3)
+22:9/0 = 0
+22:12/size_in_atlas = Vector2i(3, 2)
+22:12/0 = 0
+25:7/size_in_atlas = Vector2i(4, 5)
+25:7/0 = 0
+25:7/0/texture_origin = Vector2i(0, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8r4p7"]
+texture = ExtResource("2_g8wte")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kutbf"]
+texture = ExtResource("3_s863i")
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_ppm7f")
+sources/4 = SubResource("TileSetAtlasSource_8r4p7")
+sources/5 = SubResource("TileSetAtlasSource_kutbf")
