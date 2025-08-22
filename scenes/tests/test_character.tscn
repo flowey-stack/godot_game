@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4jwvymiyicqb"]
 
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="1_sydju"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="1_sydju"]
 
 [node name="TestCharacterMove" type="Node2D"]
 
