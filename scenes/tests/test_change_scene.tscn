@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_x70hg"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_1ts85"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_1ts85"]
-[ext_resource type="PackedScene" uid="uid://c3x6r660yrthw" path="res://component/scene_trigger.tscn" id="4_4be3v"]
+[ext_resource type="PackedScene" uid="uid://c3x6r660yrthw" path="res://scenes/component/scene_trigger.tscn" id="4_4be3v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5y2t4"]
 size = Vector2(12, 9)
@@ -31,7 +31,7 @@ tile_set = ExtResource("1_x70hg")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("2_1ts85")]
-position = Vector2(334, 46)
+position = Vector2(368, 52)
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true

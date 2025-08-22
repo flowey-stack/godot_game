@@ -1,5 +1,4 @@
-class_name Player
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 @export var speed : int = 35
 @onready var animations = $AnimationPlayer
