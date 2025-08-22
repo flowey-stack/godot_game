@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_x70hg"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_1ts85"]
-[ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house&room.tres" id="3_1ts85"]
+[ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_1ts85"]
 
 [node name="TestTileMap" type="Node2D"]
 

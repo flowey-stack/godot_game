@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bujrxy4gxjulr"
-path="res://.godot/imported/TilesetWallSimple.png-1b51c9115bdd9414d0945d8dda40a8a6.ctex"
+uid="uid://or6whgpn6h2r"
+path="res://.godot/imported/hotbar_selector.png-4c22a869188c866aa934bfd826c1414d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/Tilesets/Interior/TilesetWallSimple.png"
-dest_files=["res://.godot/imported/TilesetWallSimple.png-1b51c9115bdd9414d0945d8dda40a8a6.ctex"]
+source_file="res://assets/Ui/hotbar_selector.png"
+dest_files=["res://.godot/imported/hotbar_selector.png-4c22a869188c866aa934bfd826c1414d.ctex"]
 
 [params]
 

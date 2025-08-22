@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bujrxy4gxjulr"
-path="res://.godot/imported/TilesetWallSimple.png-1b51c9115bdd9414d0945d8dda40a8a6.ctex"
+uid="uid://co1l5l7xo83i0"
+path="res://.godot/imported/healthbarProgress.png-386e19ed5ad2adc4db33481bd1de585f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/Tilesets/Interior/TilesetWallSimple.png"
-dest_files=["res://.godot/imported/TilesetWallSimple.png-1b51c9115bdd9414d0945d8dda40a8a6.ctex"]
+source_file="res://assets/Ui/healthbarProgress.png"
+dest_files=["res://.godot/imported/healthbarProgress.png-386e19ed5ad2adc4db33481bd1de585f.ctex"]
 
 [params]
 

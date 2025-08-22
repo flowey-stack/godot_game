@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://oyb4q1asyv1s"]
 
-[ext_resource type="SpriteFrames" uid="uid://f82k1bcjkoul" path="res://scenes/objects/nature/building.tres" id="1_oyj76"]
+[ext_resource type="SpriteFrames" uid="uid://f82k1bcjkoul" path="res://tileset/building.tres" id="1_oyj76"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpa2e"]
 size = Vector2(60, 17)
