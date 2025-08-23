@@ -1,14 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://cpyd8nn8voq07"]
+[gd_scene load_steps=7 format=4 uid="uid://cpyd8nn8voq07"]
 
-[ext_resource type="Script" uid="uid://daikk2alaad0y" path="res://scenes/tests/test_change_scene.gd" id="1_4qsif"]
+[ext_resource type="Script" uid="uid://daikk2alaad0y" path="res://scenes/component/scene_change/test_change_scene.gd" id="1_4qsif"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_x70hg"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_1ts85"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_1ts85"]
-[ext_resource type="PackedScene" uid="uid://c3x6r660yrthw" path="res://scenes/component/scene_change/scene_trigger.tscn" id="4_4be3v"]
 [ext_resource type="Script" uid="uid://b7tjnyw765m7x" path="res://scenes/component/scene_change/scene_trigger_2.gd" id="5_5y2t4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y2t4"]
-size = Vector2(12, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qsif"]
 size = Vector2(16, 11.5)
@@ -41,22 +37,13 @@ position = Vector2(421, 51)
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAABAP//AgAAAAIAAAD//wEAAgAAAAIAAAAPAP//AgAAAAIAAAAQAAEAAgAAAAIAAAABAAEAAgAGAAgAAAADAP7/AgAGAAgAAAANAP//AgAGAAgAAAANAAIAAgAGAAgAAAAAAAUAAgAGAAgAAAD+/wMAAgAFAAoAAAABAAQAAgAFAAoAAAACAAEAAgAFAAoAAAADAAEAAgAFAAoAAAAFAP//AgAFAAoAAAAPAAQAAgAFAAoAAAADAAIAAgAJAAoAAAAHAP//AgAJAAoAAAD+/wUAAgAJAAoAAAACAAcAAgAJAAoAAAAFAAUAAgAJAAoAAAD+/wAAAgADABIAAAASAAAAAgADABIAAAAAAAMAAgAAAAsAAAD//wQAAgAAAAsAAAAQAAMAAgAAAAsAAAATAAIAAgADAAsAAAAQAAYAAgADAAsAAAARAAQAAgADAAsAAAACAAUAAwAAAAAAAAAUAAQAAwAAAAAAAAALAAAAAwAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD//wEAAgAAAAIAAAAPAP//AgAAAAIAAAAQAAEAAgAAAAIAAAABAAEAAgAGAAgAAAANAP//AgAGAAgAAAANAAIAAgAGAAgAAAAAAAUAAgAGAAgAAAD+/wMAAgAFAAoAAAABAAQAAgAFAAoAAAACAAEAAgAFAAoAAAADAAEAAgAFAAoAAAAFAP//AgAFAAoAAAAPAAQAAgAFAAoAAAADAAIAAgAJAAoAAAAHAP//AgAJAAoAAAD+/wUAAgAJAAoAAAACAAcAAgAJAAoAAAAFAAUAAgAJAAoAAAD+/wAAAgADABIAAAASAAAAAgADABIAAAAAAAMAAgAAAAsAAAD//wQAAgAAAAsAAAAQAAMAAgAAAAsAAAATAAIAAgADAAsAAAAQAAYAAgADAAsAAAARAAQAAgADAAsAAAACAAUAAwAAAAAAAAAUAAQAAwAAAAAAAAALAAAAAwAAAAAAAAABAP//AgAAAAIAAAA=")
 tile_set = ExtResource("1_x70hg")
 
 [node name="house" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAXAAEAAwAAAAAAAAAcAAEAAwATAAAAAAA=")
+tile_map_data = PackedByteArray("AAAcAAEAAwATAAAAAAA=")
 tile_set = ExtResource("3_1ts85")
-
-[node name="Room1_Scene" parent="." instance=ExtResource("4_4be3v")]
-visible = false
-position = Vector2(368, 34)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1_Scene"]
-position = Vector2(0, -3.5)
-shape = SubResource("RectangleShape2D_5y2t4")
-debug_color = Color(0.913965, 0.234011, 0.447263, 0.42)
 
 [node name="Room2_Scene" type="Area2D" parent="."]
 collision_layer = 0

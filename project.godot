@@ -16,7 +16,6 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 
 [autoload]
 
-SceneChangeManager="*res://global/scene_manager.gd"
 TransitionChangeManager="*res://scenes/component/scene_change/transition_manager.tscn"
 
 [display]
