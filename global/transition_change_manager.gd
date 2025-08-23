@@ -2,7 +2,7 @@ class_name TransitionManager extends CanvasLayer
 
 signal transition_done
 
-@export var transition_time = 0.3
+@export var transition_time = 0.1
 
 @onready var color_rect: ColorRect = $ColorRect
  

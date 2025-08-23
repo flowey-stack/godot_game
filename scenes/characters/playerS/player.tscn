@@ -100,14 +100,14 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yewv4"]
-radius = 4.0
+radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 texture_filter = 1
-collision_layer = 9
+collision_layer = 25
 script = ExtResource("1_yewv4")
-speed = 40
+speed = 45
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -123,7 +123,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_yewv4")
 
 [node name="Camera2D" type="Camera2D" parent="."]

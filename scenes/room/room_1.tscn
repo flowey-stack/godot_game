@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=4 uid="uid://up8cmhl4kn38"]
 
-[ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://scenes/room/room.tres" id="1_586hl"]
+[ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="1_586hl"]
 [ext_resource type="Script" uid="uid://chd5mtwd15xyx" path="res://scenes/room/room_1.gd" id="1_sxcg1"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_sxcg1"]
 

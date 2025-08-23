@@ -80,7 +80,8 @@ ui_down={
 2d_physics/layer_1="player"
 2d_physics/layer_2="enemy"
 2d_physics/layer_3="hitBoxes"
-2d_physics/layer_4="triggers"
+2d_physics/layer_4="entrance"
+2d_physics/layer_5="merchant"
 
 [rendering]
 
