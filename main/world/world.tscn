@@ -41,6 +41,8 @@ position = Vector2(122, 75)
 
 [node name="Player" parent="PlantYsort" instance=ExtResource("3_5f05i")]
 position = Vector2(-19, 94)
+collision_layer = 25
+speed = 45
 
 [node name="plant" type="TileMapLayer" parent="PlantYsort"]
 y_sort_enabled = true
