@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 
 [autoload]
 
-SceneChangeManager="*res://global/scene_manager.gd"
+TransitionChangeManager="*res://scenes/component/scene_change/transition_manager.tscn"
 
 [display]
 
@@ -79,7 +79,8 @@ ui_down={
 2d_physics/layer_1="player"
 2d_physics/layer_2="enemy"
 2d_physics/layer_3="hitBoxes"
-2d_physics/layer_4="triggers"
+2d_physics/layer_4="entrance"
+2d_physics/layer_5="merchant"
 
 [rendering]
 
