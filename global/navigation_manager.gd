@@ -2,6 +2,7 @@ extends Node
 
 const scene_world = preload("res://scenes/level/world/world.tscn")
 const scene_mine = preload("res://scenes/level/mine/mine.tscn")
+const scene_room_1 = preload("res://scenes/room/room_1.tscn")
 
 signal on_trigger_player_spawn 
 
@@ -15,6 +16,8 @@ func go_to_level(level_tag, destination_tag):
 			scene_to_load = scene_world
 		"mine" :
 			scene_to_load = scene_mine
+		"room_1":
+			scene_to_load = scene_room_1
 		
 	if scene_to_load != null:
 		spawn_door_tag = destination_tag

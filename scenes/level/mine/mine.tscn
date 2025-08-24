@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cns8kwtrmwm7v" path="res://scenes/component/scene_door/level.gd" id="1_rbxf6"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="1_xtydg"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_rbxf6"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_rbxf6"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_sgec5"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="3_rbxf6"]
 
@@ -19,16 +19,18 @@ tile_map_data = PackedByteArray("AAAAAAAABgAAAAYAAAAAAAEABgAAAAcAAAAAAAIABgAAAAc
 tile_set = ExtResource("1_xtydg")
 
 [node name="Ysort" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Player" parent="Ysort" instance=ExtResource("2_rbxf6")]
 position = Vector2(112, 38)
-collision_layer = 57
 
 [node name="Item" type="TileMapLayer" parent="Ysort"]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAEACgAJAAAAAAAEAAEACgAJAAAAAAAJAAEACgAJAAAAAAALAAEACgAJAAAAAAANAAEACgAJAAAAAAABAAEACgADAAIAAAADAAEACgADAAIAAAAIAAEACgAGAAMAAAAKAAEACgADAAIAAAAMAAEACgADAAIAAAAMAAMACgAOAAAAAAAFAAEACgAGAAMAAAAFAAIACgAAAAIAAAAIAAIACgAAAAIAAAACAAYACgADAAIAAAABAAYACgADAAIAAAABAAUACgAAAAoAAAACAAUACgAAAAoAAAABAAIACgAAAAoAAAACAAIACgAAAAoAAAABAAMACgABAAsAAAABAAQACgABAAsAAAASAPr/CgAAAAEAAAAbAPr/CgAAAAEAAAASAPz/CgAAAAEAAAASAPv/CgADAAIAAAASAP3/CgADAAIAAAAbAPv/CgADAAIAAAAbAPz/CgAAAAEAAAAbAP3/CgADAAIAAAAdAAMACgAIAAcAAAAgAAMACgAIAAcAAAAeAAMACgADAAcAAAAgAAYACgAGAAsAAAA=")
 tile_set = ExtResource("1_xtydg")
 
 [node name="Mine" type="TileMapLayer" parent="Ysort"]
+y_sort_enabled = true
 tile_set = ExtResource("2_sgec5")
 
 [node name="Doors" type="Node" parent="."]

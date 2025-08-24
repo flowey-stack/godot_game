@@ -1,17 +1,32 @@
-[gd_scene load_steps=8 format=4 uid="uid://balcg4qfv6123"]
+[gd_scene load_steps=6 format=4 uid="uid://balcg4qfv6123"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_fxyu3"]
-[ext_resource type="Script" uid="uid://daikk2alaad0y" path="res://scenes/component/scene_change/test_change_scene.gd" id="1_l2age"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_l2age"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_l2age"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_h3lpy"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="5_6nipe"]
-[ext_resource type="Script" uid="uid://b7tjnyw765m7x" path="res://scenes/component/scene_change/scene_trandition.gd" id="5_h3lpy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qsif"]
-size = Vector2(16, 11.5)
+[sub_resource type="GDScript" id="GDScript_vd143"]
+script/source = "extends Node2D
+@onready var player: Player = $Node2D/Player
+
+
+func _ready() -> void:	
+	if NavigationManager.spawn_door_tag !=null:
+		_on_level_spawn(NavigationManager.spawn_door_tag)
+	
+
+
+
+
+
+func _on_level_spawn(destination_tag : String):
+	var door_path = \"Doors/Door_\" + destination_tag
+	var door = get_node(door_path) as Door
+	NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
+"
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_l2age")
+script = SubResource("GDScript_vd143")
 
 [node name="sea" type="TileMapLayer" parent="."]
 position = Vector2(30, -55)
@@ -34,8 +49,7 @@ tile_set = ExtResource("1_fxyu3")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("2_l2age")]
-position = Vector2(-23, 143)
-collision_layer = 57
+position = Vector2(435, 48)
 speed = 60
 
 [node name="Wall" type="TileMapLayer" parent="Node2D"]
@@ -53,20 +67,6 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAaAAAAAwATAAAAAAA=")
 tile_set = ExtResource("3_h3lpy")
 
-[node name="Room" type="Node" parent="."]
-
-[node name="Room2_Scene" type="Area2D" parent="Room"]
-collision_layer = 0
-collision_mask = 8
-script = ExtResource("5_h3lpy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Room2_Scene"]
-position = Vector2(432, 13)
-shape = SubResource("RectangleShape2D_4qsif")
-
-[node name="PlayerSpawnPoint" type="Marker2D" parent="Room"]
-position = Vector2(433, 32)
-
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_W" parent="Doors" instance=ExtResource("5_6nipe")]
@@ -81,6 +81,14 @@ position = Vector2(13.5, 5)
 [node name="Spawn" parent="Doors/Door_W" index="1"]
 position = Vector2(50, 6)
 
-[connection signal="body_entered" from="Room/Room2_Scene" to="Room/Room2_Scene" method="_on_body_entered"]
+[node name="Door_GreenHouse" parent="Doors" instance=ExtResource("5_6nipe")]
+position = Vector2(432, 11)
+destination_level_tag = "room_1"
+destination_door_tag = "S"
+spawn_direction = "down"
+
+[node name="Spawn" parent="Doors/Door_GreenHouse" index="1"]
+position = Vector2(0, 20)
 
 [editable path="Doors/Door_W"]
+[editable path="Doors/Door_GreenHouse"]
