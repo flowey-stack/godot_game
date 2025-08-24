@@ -13,12 +13,14 @@ config_version=5
 config/name="RPG"
 run/main_scene="uid://c5bk8kyg3e8vl"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://icon.svg"
 
 [autoload]
 
+NavigationManager="*res://global/navigation_manager.gd"
 TransitionChangeManager="*res://scenes/component/scene_change/transition_manager.tscn"
 SceneChangeManager="*res://global/scene_change_manager.gd"
-NavigationManager="*res://global/navigation_manager.gd"
+TransitionScreen="*res://global/transition_screen.gd"
 
 [display]
 
