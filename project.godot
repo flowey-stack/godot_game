@@ -18,9 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 NavigationManager="*res://global/navigation_manager.gd"
-TransitionChangeManager="*res://scenes/component/scene_change/transition_manager.tscn"
-SceneChangeManager="*res://global/scene_change_manager.gd"
-TransitionScreen="*res://global/transition_screen.gd"
+TransitionScreen="*res://global/transition_screen.tscn"
 
 [display]
 
