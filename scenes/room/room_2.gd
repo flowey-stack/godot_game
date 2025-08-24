@@ -16,4 +16,4 @@ func on_transition_done():
 
 
 func _on_exit_area_body_entered(body: Node2D) -> void:
-	TransitionChangeManager.change_scene("res://scenes/tests/test_change_scene.tscn") #改這裡
+	TransitionChangeManager.change_scene("res://scenes/level/world/world.tscn")

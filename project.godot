@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 [autoload]
 
 TransitionChangeManager="*res://scenes/component/scene_change/transition_manager.tscn"
+SceneChangeManager="*res://global/scene_change_manager.gd"
 
 [display]
 
@@ -34,7 +35,6 @@ window/per_pixel_transparency/allowed=true
 folder_colors={
 "res://assets/": "orange",
 "res://global/": "blue",
-"res://main/": "red",
 "res://scenes/": "green",
 "res://tileset/": "pink"
 }
