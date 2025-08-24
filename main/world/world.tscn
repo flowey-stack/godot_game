@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_cqqpl"]
 [ext_resource type="TileSet" uid="uid://hvo22bxs15eq" path="res://tileset/obstacle.tres" id="2_4ttqp"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="3_5f05i"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_5f05i"]
 
 [node name="World" type="Node2D"]
 
