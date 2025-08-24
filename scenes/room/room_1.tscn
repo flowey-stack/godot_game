@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=4 uid="uid://b5w82psrvpcx8"]
 
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="1_2bme7"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_5wd2y"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_5wd2y"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="3_p2wpg"]
 
 [node name="Room1" type="Node2D"]
