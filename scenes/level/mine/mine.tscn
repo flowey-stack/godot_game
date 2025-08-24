@@ -22,7 +22,7 @@ tile_set = ExtResource("1_xtydg")
 y_sort_enabled = true
 
 [node name="Player" parent="Ysort" instance=ExtResource("2_rbxf6")]
-position = Vector2(134, 70)
+position = Vector2(58, 68)
 
 [node name="Item" type="TileMapLayer" parent="Ysort"]
 y_sort_enabled = true
