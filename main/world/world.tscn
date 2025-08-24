@@ -1,15 +1,8 @@
-[gd_scene load_steps=11 format=4 uid="uid://b72on4uuaa440"]
+[gd_scene load_steps=4 format=4 uid="uid://b72on4uuaa440"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_cqqpl"]
 [ext_resource type="TileSet" uid="uid://hvo22bxs15eq" path="res://tileset/obstacle.tres" id="2_4ttqp"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_5f05i"]
-[ext_resource type="PackedScene" uid="uid://bcif22cemaej1" path="res://scenes/objects/nature/large_tree.tscn" id="4_oxa5y"]
-[ext_resource type="PackedScene" uid="uid://tq3vfopsekb7" path="res://scenes/objects/nature/tree.tscn" id="5_skysp"]
-[ext_resource type="PackedScene" uid="uid://ycltjrnegef1" path="res://scenes/objects/nature/middle_tree.tscn" id="6_0gqsx"]
-[ext_resource type="PackedScene" uid="uid://dom0j3huwhf86" path="res://scenes/objects/nature/large_tree_3.tscn" id="7_itj4m"]
-[ext_resource type="PackedScene" uid="uid://ln1uqa26jnxn" path="res://scenes/objects/nature/large_tree_2.tscn" id="8_fn4nu"]
-[ext_resource type="PackedScene" uid="uid://oyb4q1asyv1s" path="res://scenes/objects/houses/house_1.tscn" id="9_y4wk8"]
-[ext_resource type="PackedScene" uid="uid://l6ehqbgbbgwh" path="res://scenes/objects/houses/house_2.tscn" id="10_4ttqp"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="3_5f05i"]
 
 [node name="World" type="Node2D"]
 
@@ -41,37 +34,8 @@ position = Vector2(122, 75)
 
 [node name="Player" parent="PlantYsort" instance=ExtResource("3_5f05i")]
 position = Vector2(-19, 94)
-collision_layer = 25
-speed = 45
 
 [node name="plant" type="TileMapLayer" parent="PlantYsort"]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD6//3/AwAAAAAAAAD5////AwAAAAAAAAD///r/AwAAAAAAAAACAP7/AwAAAAAAAAD7/wMAAwAAAAAAAAAAAAgAAwAAAAAAAAAAAAUAAgAEAAgAAAD8/wYAAgABAAsAAAAAAAQAAgAEAAkAAAD7/wUAAgAAAAsAAAA=")
 tile_set = ExtResource("1_cqqpl")
-
-[node name="LargeTree" parent="PlantYsort" instance=ExtResource("4_oxa5y")]
-position = Vector2(-102, -67)
-
-[node name="LargeTree2" parent="PlantYsort" instance=ExtResource("4_oxa5y")]
-position = Vector2(-136, -15)
-
-[node name="Tree" parent="PlantYsort" instance=ExtResource("5_skysp")]
-position = Vector2(-91, -52)
-
-[node name="MiddleTree" parent="PlantYsort" instance=ExtResource("6_0gqsx")]
-position = Vector2(-142, 4)
-
-[node name="LargeTree5" parent="PlantYsort" instance=ExtResource("7_itj4m")]
-position = Vector2(-123, 31)
-
-[node name="LargeTree3" parent="PlantYsort" instance=ExtResource("4_oxa5y")]
-position = Vector2(-51, -75)
-
-[node name="LargeTree4" parent="PlantYsort" instance=ExtResource("8_fn4nu")]
-position = Vector2(-121, -39)
-
-[node name="House2" parent="PlantYsort" instance=ExtResource("10_4ttqp")]
-position = Vector2(49, -57)
-
-[node name="House" parent="PlantYsort" instance=ExtResource("9_y4wk8")]
-position = Vector2(-50, -21)
