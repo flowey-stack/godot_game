@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=4 uid="uid://b5w82psrvpcx8"]
+
+[ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="1_2bme7"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_5wd2y"]
+[ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="3_p2wpg"]
+
+[node name="Room1" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(12.813, 16.5)
+
+[node name="Floor" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAKAAQACAACAAIAAAAKAAMACAACAAEAAAAKAAIACAACAAEAAAAKAAEACAACAAAAAAAJAAQACAABAAIAAAAJAAMACAABAAEAAAAJAAIACAABAAEAAAAJAAEACAABAAAAAAAIAAQACAABAAIAAAAIAAMACAABAAEAAAAIAAIACAABAAEAAAAIAAEACAABAAAAAAAHAAQACAABAAIAAAAHAAMACAABAAEAAAAHAAIACAABAAEAAAAHAAEACAABAAAAAAAGAAQACAABAAIAAAAGAAMACAABAAEAAAAGAAIACAABAAEAAAAGAAEACAABAAAAAAAFAAQACAABAAIAAAAFAAMACAABAAEAAAAFAAIACAABAAEAAAAFAAEACAABAAAAAAAEAAQACAABAAIAAAAEAAMACAABAAEAAAAEAAIACAABAAEAAAAEAAEACAABAAAAAAADAAQACAAAAAIAAAADAAMACAAAAAEAAAADAAIACAAAAAEAAAADAAEACAAAAAAAAAA=")
+tile_set = ExtResource("1_2bme7")
+
+[node name="Wall" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACAAAABgAAAAAAAAACAAEABgAAAAEAAAACAAIABgAAAAEAAAACAAMABgAAAAEAAAACAAQABgAAAAEAAAACAAUABgAAAAQAAAAFAAUABgABAAQAAAAHAAUABgACAAQAAAAEAAUABgADAAQAAAADAAUABgADAAQAAAAIAAUABgADAAQAAAAJAAUABgADAAQAAAAKAAUABgADAAQAAAALAAUABgAEAAQAAAALAAEABgAEAAEAAAALAAIABgAEAAEAAAALAAMABgAEAAEAAAALAAQABgAEAAEAAAALAAAABgAEAAAAAAADAAAABgADAAAAAAAEAAAABgADAAAAAAAFAAAABgADAAAAAAAGAAAABgADAAAAAAAHAAAABgADAAAAAAAIAAAABgADAAAAAAAJAAAABgADAAAAAAAKAAAABgADAAAAAAA=")
+tile_set = ExtResource("1_2bme7")
+
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="Node2D" instance=ExtResource("2_5wd2y")]
+position = Vector2(106.187, 56.5)
+
+[node name="Item" type="TileMapLayer" parent="Node2D"]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAADAAEACgAAAAcAAAAFAAEACgAIAAcAAAAJAAEACgAIAAcAAAAKAAEACgAAAAcAAAAHAAAACgAIAAkAAAAKAAIACgAAAAoAAAAKAAQACgAAAAoAAAAKAAMACgADAAEAAAADAAMACgAKAAIAAAADAAQACgAKAAIAAAA=")
+tile_set = ExtResource("1_2bme7")
+
+[node name="Doors" type="Node" parent="."]
+
+[node name="Door_S" parent="Doors" instance=ExtResource("3_p2wpg")]
+position = Vector2(117, 112)
+destination_level_tag = "world"
+destination_door_tag = "GreenHouse"
+
+[node name="Spawn" parent="Doors/Door_S" index="1"]
+position = Vector2(0, -22)
+
+[editable path="Doors/Door_S"]

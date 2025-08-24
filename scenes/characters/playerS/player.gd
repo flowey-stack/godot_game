@@ -1,7 +1,7 @@
 class_name Player extends CharacterBody2D
 
-@export var speed : int = 35
-@onready var animations = $AnimationPlayer
+@export var speed : int = 50
+@onready var animations:AnimationPlayer = $AnimationPlayer
 
 func handleInput():
 	var moveDirection = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down")
@@ -23,3 +23,11 @@ func _physics_process(delta) -> void:
 	handleInput()
 	move_and_slide()
 	updateAnimation()
+
+func _ready() :
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	
+func _on_spawn(position: Vector2, direction: String):
+	global_position = position
+	animations.play("walk_" + direction)
+	animations.stop()

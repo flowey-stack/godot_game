@@ -17,6 +17,8 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 [autoload]
 
 TransitionChangeManager="*res://scenes/component/scene_change/transition_manager.tscn"
+SceneChangeManager="*res://global/scene_change_manager.gd"
+NavigationManager="*res://global/navigation_manager.gd"
 
 [display]
 
@@ -34,7 +36,6 @@ window/per_pixel_transparency/allowed=true
 folder_colors={
 "res://assets/": "orange",
 "res://global/": "blue",
-"res://main/": "red",
 "res://scenes/": "green",
 "res://tileset/": "pink"
 }
@@ -81,6 +82,7 @@ ui_down={
 2d_physics/layer_3="hitBoxes"
 2d_physics/layer_4="entrance"
 2d_physics/layer_5="merchant"
+2d_physics/layer_6="door"
 
 [rendering]
 
