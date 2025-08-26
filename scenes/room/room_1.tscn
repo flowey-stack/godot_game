@@ -20,7 +20,7 @@ tile_set = ExtResource("1_2bme7")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("2_5wd2y")]
-position = Vector2(106.187, 56.5)
+position = Vector2(104.187, 77.5)
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -34,7 +34,10 @@ position = Vector2(117, 112)
 destination_level_tag = "world"
 destination_door_tag = "GreenHouse"
 
+[node name="CollisionShape2D" parent="Doors/Door_S" index="0"]
+position = Vector2(0, -5)
+
 [node name="Spawn" parent="Doors/Door_S" index="1"]
-position = Vector2(0, -22)
+position = Vector2(0, -18)
 
 [editable path="Doors/Door_S"]
