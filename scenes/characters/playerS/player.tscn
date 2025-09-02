@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5bk8kyg3e8vl"]
+[gd_scene load_steps=11 format=3 uid="uid://c5bk8kyg3e8vl"]
 
 [ext_resource type="Script" uid="uid://d4lvba3a1ohax" path="res://scenes/characters/players/player.gd" id="1_yewv4"]
 [ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Actor/Characters/Cavegirl/SpriteSheet.png" id="2_yewv4"]
@@ -102,10 +102,14 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_yewv4"]
 radius = 5.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cbw2d"]
+radius = 7.0
+height = 16.0
+
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 texture_filter = 1
-collision_layer = 57
+collision_layer = 59
 script = ExtResource("1_yewv4")
 speed = 45
 
@@ -127,3 +131,12 @@ position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_yewv4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_cbw2d")
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

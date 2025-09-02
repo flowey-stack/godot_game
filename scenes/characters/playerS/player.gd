@@ -19,9 +19,16 @@ func updateAnimation():
 	
 		animations.play("walk" + direction)
 
+func handle_collision():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		print_debug(collider.name)
+
 func _physics_process(delta) -> void:
 	handleInput()
 	move_and_slide()
+	handle_collision()
 	updateAnimation()
 
 func _ready() :
@@ -31,3 +38,8 @@ func _on_spawn(position: Vector2, direction: String):
 	global_position = position
 	animations.play("walk_" + direction)
 	animations.stop()
+
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	if area.name == "HitBox":
+		print_debug(area.get_parent().name)
