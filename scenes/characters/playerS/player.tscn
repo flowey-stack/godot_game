@@ -111,7 +111,6 @@ y_sort_enabled = true
 texture_filter = 1
 collision_layer = 59
 script = ExtResource("1_yewv4")
-speed = 45
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -120,6 +119,13 @@ texture = ExtResource("2_yewv4")
 offset = Vector2(0, -4)
 hframes = 4
 vframes = 7
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
+visible = false
+offset_left = -19.0
+offset_top = -21.0
+offset_right = 21.0
+offset_bottom = 19.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

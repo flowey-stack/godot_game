@@ -1,22 +1,28 @@
-[gd_scene load_steps=7 format=4 uid="uid://balcg4qfv6123"]
+[gd_scene load_steps=8 format=4 uid="uid://balcg4qfv6123"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_fxyu3"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_l2age"]
 [ext_resource type="PackedScene" uid="uid://50wbgvltd8dm" path="res://scenes/characters/enemys/slime.tscn" id="2_rthas"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_h3lpy"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="5_6nipe"]
+[ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_mlbfh"]
 
 [sub_resource type="GDScript" id="GDScript_vd143"]
 script/source = "extends Node2D
 @onready var player: Player = $Node2D/Player
+
+@onready var heart_container = $CanvasLayer/HeartContainer
 
 
 func _ready() -> void:	
 	if NavigationManager.spawn_door_tag !=null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 	
-
-
+	
+	
+	heart_container.set_max_heart(player.max_health)
+	heart_container.update_heart(player.current_health)
+	player.health_changed.connect(heart_container.update_heart)
 
 
 
@@ -99,6 +105,14 @@ spawn_direction = "down"
 
 [node name="Spawn" parent="Doors/Door_GreenHouse" index="1"]
 position = Vector2(0, 20)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("6_mlbfh")]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 8.0
+offset_bottom = 5.0
 
 [editable path="Doors/Door_W"]
 [editable path="Doors/Door_GreenHouse"]
