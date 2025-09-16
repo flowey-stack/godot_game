@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://b7fpqus1b72c6"]
 
-[ext_resource type="Texture2D" uid="uid://c3c0oeuqasm0r" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="1_mxsks"]
-[ext_resource type="Texture2D" uid="uid://bv055u5nwjviu" path="res://assets/Backgrounds/Tilesets/TilesetReliefDetail.png" id="2_jhpr6"]
-[ext_resource type="Texture2D" uid="uid://68ms2h6dvjoq" path="res://assets/Backgrounds/Tilesets/TilesetDesert.png" id="3_0p46f"]
+[ext_resource type="Texture2D" uid="uid://c3c0oeuqasm0r" path="res://assets/Farm/Backgrounds/Tilesets/TilesetHouse.png" id="1_jhpr6"]
+[ext_resource type="Texture2D" uid="uid://bv055u5nwjviu" path="res://assets/Farm/Backgrounds/Tilesets/TilesetReliefDetail.png" id="2_0p46f"]
+[ext_resource type="Texture2D" uid="uid://68ms2h6dvjoq" path="res://assets/Farm/Backgrounds/Tilesets/TilesetDesert.png" id="3_y1jq6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppm7f"]
-texture = ExtResource("1_mxsks")
+texture = ExtResource("1_jhpr6")
 0:0/size_in_atlas = Vector2i(4, 3)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, 8)
@@ -107,10 +107,10 @@ texture = ExtResource("1_mxsks")
 8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.66667, -8, 2.51802, -2.66667, 8, -2.66667, 8, 2.66667, 8, 8, 2.66667, 8, -2.66667, 8, -2.66667, -8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8r4p7"]
-texture = ExtResource("2_jhpr6")
+texture = ExtResource("2_0p46f")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kutbf"]
-texture = ExtResource("3_0p46f")
+texture = ExtResource("3_y1jq6")
 
 [resource]
 physics_layer_0/collision_layer = 1

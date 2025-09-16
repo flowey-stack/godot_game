@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://mvmyer8yspi1"]
 
-[ext_resource type="Texture2D" uid="uid://dedtofwihmapt" path="res://assets/Backgrounds/Tilesets/TilesetElement.png" id="1_cbxef"]
-[ext_resource type="Texture2D" uid="uid://c01qkl237r1k8" path="res://assets/Backgrounds/Tilesets/Interior/TilesetWallSimple-transparentbg.png" id="2_tp7ym"]
-[ext_resource type="Texture2D" uid="uid://b8qkgg32r7ju4" path="res://assets/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="3_kpok6"]
+[ext_resource type="Texture2D" uid="uid://dedtofwihmapt" path="res://assets/Farm/Backgrounds/Tilesets/TilesetElement.png" id="1_cbxef"]
+[ext_resource type="Texture2D" uid="uid://c01qkl237r1k8" path="res://assets/Farm/Backgrounds/Tilesets/Interior/TilesetWallSimple-transparentbg.png" id="2_tp7ym"]
+[ext_resource type="Texture2D" uid="uid://b8qkgg32r7ju4" path="res://assets/Farm/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="3_kpok6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uvin"]
 texture = ExtResource("1_cbxef")

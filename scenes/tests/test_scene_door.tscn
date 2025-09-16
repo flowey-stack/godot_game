@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://pjcmjvqrop8j"]
+[gd_scene load_steps=5 format=4 uid="uid://da3f8db534w0k"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_fklrs"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_xpxc2"]
@@ -44,8 +44,6 @@ tile_set = ExtResource("4_inqou")
 
 [node name="Door_EnterRoom3" parent="Door" instance=ExtResource("4_nqyjq")]
 position = Vector2(-156, 238)
-destination_level = "room_3"
-destination_door = "Room3"
 spawn_direction = "right"
 
 [node name="Spawn" parent="Door/Door_EnterRoom3" index="1"]

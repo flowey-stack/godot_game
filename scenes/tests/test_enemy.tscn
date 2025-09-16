@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=4 uid="uid://ov7kbh3vxl8b"]
 
-[ext_resource type="Script" uid="uid://daikk2alaad0y" path="res://scenes/component/scene_change/test_change_scene.gd" id="1_hdb0e"]
+[ext_resource type="Script" path="res://scenes/component/scene_change/test_change_scene.gd" id="1_hdb0e"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_jpuxc"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_vrmx1"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="4_fjm8c"]
-[ext_resource type="Script" uid="uid://b7tjnyw765m7x" path="res://scenes/component/scene_change/scene_trandition.gd" id="5_04asg"]
+[ext_resource type="Script" path="res://scenes/component/scene_change/scene_trandition.gd" id="5_04asg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qsif"]
 size = Vector2(16, 11.5)

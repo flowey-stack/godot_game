@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=13 format=3 uid="uid://diyac756kvgfh"]
 
-[ext_resource type="Texture2D" uid="uid://basul62kink01" path="res://assets/Backgrounds/Tilesets/TilesetFloor.png" id="1_l5ulx"]
-[ext_resource type="Texture2D" uid="uid://bmjjwkssku083" path="res://assets/Backgrounds/Tilesets/TilesetWater.png" id="2_qaink"]
-[ext_resource type="Texture2D" uid="uid://tm7n2pkwdnjk" path="res://assets/Backgrounds/Tilesets/TilesetNature.png" id="3_ogtqk"]
-[ext_resource type="Texture2D" uid="uid://b4xp8ltdajue6" path="res://assets/Backgrounds/Animated/Plant/SpriteSheet16x16.png" id="4_wj8s6"]
-[ext_resource type="Texture2D" uid="uid://bxustl6gv3ih1" path="res://assets/Backgrounds/Tilesets/TilesetField.png" id="5_h6aa3"]
-[ext_resource type="Texture2D" uid="uid://u7gl1rptyhsn" path="res://assets/Backgrounds/Tilesets/TilesetFloorDetail.png" id="6_qaink"]
+[ext_resource type="Texture2D" uid="uid://basul62kink01" path="res://assets/Farm/Backgrounds/Tilesets/TilesetFloor.png" id="1_qaink"]
+[ext_resource type="Texture2D" uid="uid://bmjjwkssku083" path="res://assets/Farm/Backgrounds/Tilesets/TilesetWater.png" id="2_ogtqk"]
+[ext_resource type="Texture2D" uid="uid://tm7n2pkwdnjk" path="res://assets/Farm/Backgrounds/Tilesets/TilesetNature.png" id="3_wj8s6"]
+[ext_resource type="Texture2D" uid="uid://b4xp8ltdajue6" path="res://assets/Farm/Backgrounds/Animated/Plant/SpriteSheet16x16.png" id="4_h6aa3"]
+[ext_resource type="Texture2D" uid="uid://bxustl6gv3ih1" path="res://assets/Farm/Backgrounds/Tilesets/TilesetField.png" id="5_cxn57"]
+[ext_resource type="Texture2D" uid="uid://u7gl1rptyhsn" path="res://assets/Farm/Backgrounds/Tilesets/TilesetFloorDetail.png" id="6_thgca"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q82qd"]
-texture = ExtResource("1_l5ulx")
+texture = ExtResource("1_qaink")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -826,7 +826,7 @@ texture = ExtResource("1_l5ulx")
 19:25/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bdsxe"]
-texture = ExtResource("2_qaink")
+texture = ExtResource("2_ogtqk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1378,7 +1378,7 @@ texture = ExtResource("2_qaink")
 8:16/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h21gu"]
-texture = ExtResource("3_ogtqk")
+texture = ExtResource("3_wj8s6")
 0:10/0 = 0
 0:10/0/texture_origin = Vector2i(0, 2)
 1:10/0 = 0
@@ -1694,7 +1694,7 @@ texture = ExtResource("3_ogtqk")
 10:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v8egi"]
-texture = ExtResource("4_wj8s6")
+texture = ExtResource("4_h6aa3")
 0:0/animation_frame_0/duration = 1.0
 0:0/animation_frame_1/duration = 1.0
 0:0/animation_frame_2/duration = 1.0
@@ -1704,7 +1704,7 @@ texture = ExtResource("4_wj8s6")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, 0, 4, 0, 4, 4, -4, 4)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avt77"]
-texture = ExtResource("5_h6aa3")
+texture = ExtResource("5_cxn57")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1874,7 +1874,7 @@ texture = ExtResource("5_h6aa3")
 2:14/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogtqk"]
-texture = ExtResource("6_qaink")
+texture = ExtResource("6_thgca")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

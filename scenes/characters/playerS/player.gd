@@ -1,7 +1,16 @@
 class_name Player extends CharacterBody2D
 
+signal health_changed
+
 @export var speed : int = 50
 @onready var animations:AnimationPlayer = $AnimationPlayer
+@onready var hurt_box = $HurtBox
+@onready var hurt_color = $Sprite2D/ColorRect
+
+@export var max_health = 3
+@onready var current_health : int = max_health
+
+@export var knock_back_power : int = 500
 
 func handleInput():
 	var moveDirection = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down")
@@ -42,4 +51,17 @@ func _on_spawn(position: Vector2, direction: String):
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.name == "HitBox":
-		print_debug(area.get_parent().name)
+		current_health -= 1
+		if current_health < 0:
+			current_health = max_health
+		health_changed.emit(current_health)
+		knock_back(area.get_parent().velocity)
+
+func knock_back(enemy_velocity : Vector2):
+	var knock_back_direction = (enemy_velocity - velocity).normalized() * knock_back_power #撞擊力量
+	velocity = knock_back_direction
+	print_debug(velocity)
+	print_debug(position)
+	move_and_slide()
+	print_debug(position)
+	print_debug(" ")
