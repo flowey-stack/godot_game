@@ -11,7 +11,7 @@ signal health_changed
 @export var max_health = 3
 @onready var current_health : int = max_health
 
-@export var knock_back_power : int = 500
+@export var knock_back_power : int = 700
 
 func handleInput():
 	var moveDirection = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down")
