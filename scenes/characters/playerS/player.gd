@@ -4,6 +4,7 @@ signal health_changed
 
 @export var speed : int = 50
 @onready var animations:AnimationPlayer = $AnimationPlayer
+@onready var effects = $Effects
 @onready var hurt_box = $HurtBox
 @onready var hurt_color = $Sprite2D/ColorRect
 
@@ -42,6 +43,7 @@ func _physics_process(delta) -> void:
 
 func _ready() :
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	effects.play("RESET")
 	
 func _on_spawn(position: Vector2, direction: String):
 	global_position = position
@@ -56,6 +58,8 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 			current_health = max_health
 		health_changed.emit(current_health)
 		knock_back(area.get_parent().velocity)
+		
+		effects.play("hurt_blink")
 
 func knock_back(enemy_velocity : Vector2):
 	var knock_back_direction = (enemy_velocity - velocity).normalized() * knock_back_power #撞擊力量
