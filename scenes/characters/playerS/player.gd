@@ -5,6 +5,7 @@ signal health_changed
 @export var speed : int = 50
 @onready var animations:AnimationPlayer = $AnimationPlayer
 @onready var effects = $Effects
+@onready var hurt_timer = $HurtTimer
 @onready var hurt_box = $HurtBox
 @onready var hurt_color = $Sprite2D/ColorRect
 
@@ -12,6 +13,9 @@ signal health_changed
 @onready var current_health : int = max_health
 
 @export var knock_back_power : int = 700
+
+var is_hurt : bool = false
+var enemy_collisions = []
 
 func handleInput():
 	var moveDirection = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down")
@@ -40,6 +44,9 @@ func _physics_process(delta) -> void:
 	move_and_slide()
 	handle_collision()
 	updateAnimation()
+	if !is_hurt:
+		for enemy_area in enemy_collisions:
+			hurt_by_enemy(enemy_area)
 
 func _ready() :
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
@@ -50,16 +57,25 @@ func _on_spawn(position: Vector2, direction: String):
 	animations.play("walk_" + direction)
 	animations.stop()
 
+func hurt_by_enemy(area):
+	current_health -= 1
+	if current_health < 0:
+		current_health = max_health
+	
+	health_changed.emit(current_health)
+	is_hurt = true
+	knock_back(area.get_parent().velocity)
+	
+	effects.play("hurt_blink")
+	hurt_timer.start()
+	await hurt_timer.timeout
+	effects.play("RESET")
+	is_hurt = false
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.name == "HitBox":
-		current_health -= 1
-		if current_health < 0:
-			current_health = max_health
-		health_changed.emit(current_health)
-		knock_back(area.get_parent().velocity)
-		
-		effects.play("hurt_blink")
+		enemy_collisions.append(area)
+
 
 func knock_back(enemy_velocity : Vector2):
 	var knock_back_direction = (enemy_velocity - velocity).normalized() * knock_back_power #撞擊力量
@@ -69,3 +85,7 @@ func knock_back(enemy_velocity : Vector2):
 	move_and_slide()
 	print_debug(position)
 	print_debug(" ")
+
+
+func _on_hurt_box_area_exited(area: Area2D) -> void:
+	enemy_collisions.erase(area)

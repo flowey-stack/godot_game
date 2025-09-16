@@ -190,4 +190,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_xhovg")
 }
 
+[node name="HurtTimer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="area_exited" from="HurtBox" to="." method="_on_hurt_box_area_exited"]
