@@ -57,7 +57,7 @@ tile_set = ExtResource("1_fxyu3")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("2_l2age")]
-position = Vector2(-31, 139)
+position = Vector2(216, 145)
 speed = 60
 
 [node name="Wall" type="TileMapLayer" parent="Node2D"]
