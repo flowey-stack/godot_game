@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://btdj6sw2v6n21"]
+
+[ext_resource type="FontFile" uid="uid://djhmncgnyxyev" path="res://assets/MaldiniBold.ttf" id="1_s3k51"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8u2p"]
+bg_color = Color(0.252071, 0.657183, 0.774901, 1)
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="ScorePanel" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_right = 500.0
+offset_bottom = 50.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o8u2p")
+
+[node name="ScoreLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(130, 58)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.0
+offset_top = -6.0
+offset_right = 65.0
+offset_bottom = 52.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_s3k51")
+theme_override_font_sizes/font_size = 40
+text = "SCORE : 0"
+horizontal_alignment = 1
+vertical_alignment = 1

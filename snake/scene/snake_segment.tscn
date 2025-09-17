@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://canb4o1taxsd4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cln04"]
+bg_color = Color(0.33807, 0.68835, 0.420718, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="SnakeSegment" type="Panel" groups=["segments"]]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cln04")
