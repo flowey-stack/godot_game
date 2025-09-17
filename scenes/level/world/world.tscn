@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://balcg4qfv6123"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_fxyu3"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_l2age"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_l2age"]
 [ext_resource type="PackedScene" uid="uid://50wbgvltd8dm" path="res://scenes/characters/enemys/slime.tscn" id="2_rthas"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_h3lpy"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="5_6nipe"]
@@ -57,7 +57,7 @@ tile_set = ExtResource("1_fxyu3")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("2_l2age")]
-position = Vector2(216, 145)
+position = Vector2(-31, 139)
 speed = 60
 
 [node name="Wall" type="TileMapLayer" parent="Node2D"]
