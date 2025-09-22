@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://balcg4qfv6123"]
+[gd_scene load_steps=9 format=4 uid="uid://balcg4qfv6123"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_fxyu3"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_l2age"]
 [ext_resource type="PackedScene" uid="uid://50wbgvltd8dm" path="res://scenes/characters/enemys/slime.tscn" id="2_rthas"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_h3lpy"]
+[ext_resource type="TileSet" uid="uid://dkd458sqx1lha" path="res://tileset/items.tres" id="4_ssyoi"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="5_6nipe"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_mlbfh"]
 
@@ -74,6 +75,10 @@ tile_set = ExtResource("1_fxyu3")
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAaAAAAAwATAAAAAAA=")
 tile_set = ExtResource("3_h3lpy")
+
+[node name="Items" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAALAAkAAAAAAAAAAQAMAAkAAAAAAAAAAgA=")
+tile_set = ExtResource("4_ssyoi")
 
 [node name="Slime" parent="Node2D" node_paths=PackedStringArray("end_point") instance=ExtResource("2_rthas")]
 position = Vector2(238, 139)

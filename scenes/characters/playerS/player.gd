@@ -73,7 +73,8 @@ func hurt_by_enemy(area):
 	is_hurt = false
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
-	pass
+	if area.has_method("collect"):
+		area.collect()
 
 
 func knock_back(enemy_velocity : Vector2):
