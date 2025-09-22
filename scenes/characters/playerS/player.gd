@@ -15,7 +15,6 @@ signal health_changed
 @export var knock_back_power : int = 700
 
 var is_hurt : bool = false
-var enemy_collisions = []
 
 func handleInput():
 	var moveDirection = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down")
@@ -45,8 +44,9 @@ func _physics_process(delta) -> void:
 	handle_collision()
 	updateAnimation()
 	if !is_hurt:
-		for enemy_area in enemy_collisions:
-			hurt_by_enemy(enemy_area)
+		for area in hurt_box.get_overlapping_areas():
+			if area.name == "HitBox":
+				hurt_by_enemy(area)
 
 func _ready() :
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
@@ -73,8 +73,7 @@ func hurt_by_enemy(area):
 	is_hurt = false
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
-	if area.name == "HitBox":
-		enemy_collisions.append(area)
+	pass
 
 
 func knock_back(enemy_velocity : Vector2):
@@ -88,4 +87,4 @@ func knock_back(enemy_velocity : Vector2):
 
 
 func _on_hurt_box_area_exited(area: Area2D) -> void:
-	enemy_collisions.erase(area)
+	pass
