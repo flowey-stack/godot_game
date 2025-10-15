@@ -1,1 +1,0 @@
-再把HP UI加入地圖前要先新增canvas layer 再加入health_container

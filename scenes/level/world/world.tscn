@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://balcg4qfv6123"]
+[gd_scene load_steps=11 format=4 uid="uid://balcg4qfv6123"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_fxyu3"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_l2age"]
@@ -7,6 +7,8 @@
 [ext_resource type="TileSet" uid="uid://dkd458sqx1lha" path="res://tileset/items.tres" id="4_ssyoi"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="5_6nipe"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_mlbfh"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="7_oycft"]
+[ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="8_hwgr7"]
 
 [sub_resource type="GDScript" id="GDScript_vd143"]
 script/source = "extends Node2D
@@ -31,6 +33,14 @@ func _on_level_spawn(destination_tag : String):
 	var door_path = \"Doors/Door_\" + destination_tag
 	var door = get_node(door_path) as Door
 	NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
+
+
+func _on_inventory_gui_closed() -> void:
+	get_tree().paused = false
+
+
+func _on_inventory_gui_opened() -> void:
+	get_tree().paused = true
 "
 
 [node name="World" type="Node2D"]
@@ -112,12 +122,30 @@ spawn_direction = "down"
 position = Vector2(0, 20)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("7_oycft")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("6_mlbfh")]
 offset_left = 8.0
 offset_top = 5.0
 offset_right = 8.0
 offset_bottom = 5.0
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("8_hwgr7")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
+[connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
 
 [editable path="Doors/Door_W"]
 [editable path="Doors/Door_GreenHouse"]
