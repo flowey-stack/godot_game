@@ -1,14 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3cas6whl80vh"]
+[gd_scene load_steps=3 format=3 uid="uid://b3cas6whl80vh"]
 
 [ext_resource type="Texture2D" uid="uid://bnhso4yax8pqc" path="res://assets/Farm/Ui/inventorySlot.png" id="1_mvsae"]
+[ext_resource type="Script" uid="uid://d20p5fy4awdlf" path="res://scenes/ui/inventory/slot.gd" id="1_rvwbt"]
 
 [node name="Slot" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(20, 20)
 offset_right = 20.0
 offset_bottom = 20.0
+script = ExtResource("1_rvwbt")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BackGround" type="Sprite2D" parent="."]
 texture = ExtResource("1_mvsae")
 centered = false
 vframes = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Item" type="Sprite2D" parent="CenterContainer/Panel"]

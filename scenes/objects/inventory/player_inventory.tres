@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://blcsbfnd8r2tf"]
+
+[ext_resource type="Script" uid="uid://b65gk8igd5t1o" path="res://scenes/objects/inventory/inventory_item.gd" id="1_3stjh"]
+[ext_resource type="Resource" uid="uid://dp424hmocl5m" path="res://scenes/objects/inventory/items/axe.tres" id="2_p881v"]
+[ext_resource type="Resource" uid="uid://bupbt2lu5ar0b" path="res://scenes/objects/inventory/items/onigiri.tres" id="3_n6te4"]
+[ext_resource type="Script" uid="uid://dx0614vnluixn" path="res://scenes/objects/inventory/inventory.gd" id="4_v02ip"]
+
+[resource]
+script = ExtResource("4_v02ip")
+items = Array[ExtResource("1_3stjh")]([ExtResource("2_p881v"), ExtResource("3_n6te4"), null, null, null, ExtResource("3_n6te4"), null, null, null, null])
+metadata/_custom_type_script = "uid://dx0614vnluixn"

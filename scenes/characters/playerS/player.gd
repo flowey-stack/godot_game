@@ -14,6 +14,8 @@ signal health_changed
 
 @export var knock_back_power : int = 700
 
+@export var inventory : Inventory
+
 var is_hurt : bool = false
 
 func handleInput():

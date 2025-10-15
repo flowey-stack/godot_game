@@ -9,6 +9,7 @@ UI
 UI調整畫面中的位置->調整layout
 
 
-canvas layer->inventory:
+canvas layer/inventory:
 	inventory需要連接opened和closed節點
 	canvas layer->process->mode 改成always
+	影片:https://www.youtube.com/watch?v=EYJTwS8emeE&list=PLMQtM2GgbPEWKQuyv9sXHwGWDXLY3Zjpw&index=21
