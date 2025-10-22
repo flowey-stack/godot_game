@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://vf3ostbj4ac1"]
+[gd_scene load_steps=10 format=3 uid="uid://vf3ostbj4ac1"]
 
 [ext_resource type="PackedScene" uid="uid://eb1gsen400p" path="res://scenes/objects/collections/collectable.tscn" id="1_vl73b"]
 [ext_resource type="Script" uid="uid://cbpjyvfmi8yyd" path="res://scenes/objects/collections/axe.gd" id="2_c0kqa"]
 [ext_resource type="Texture2D" uid="uid://gr6s5nd3g7rj" path="res://assets/Farm/Items/Weapons/AxeTool/Sprite.png" id="2_sp3c3"]
+[ext_resource type="Resource" uid="uid://dp424hmocl5m" path="res://scenes/objects/inventory/items/axe.tres" id="3_c0kqa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0kqa"]
 resource_local_to_scene = true
@@ -51,6 +52,7 @@ _data = {
 
 [node name="Axe" instance=ExtResource("1_vl73b")]
 script = ExtResource("2_c0kqa")
+item_res = ExtResource("3_c0kqa")
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(-0.256373, 0)
