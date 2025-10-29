@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://dkd458sqx1lha"]
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://ubgifnhnm2gq"]
 
 [ext_resource type="PackedScene" uid="uid://c7r5t0piqom3p" path="res://scenes/objects/collections/onigiri.tscn" id="1_bl4ol"]
 [ext_resource type="PackedScene" uid="uid://vf3ostbj4ac1" path="res://scenes/objects/collections/axe.tscn" id="2_5og8s"]
