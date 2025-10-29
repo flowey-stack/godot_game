@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://c5bk8kyg3e8vl"]
 
-[ext_resource type="Script" uid="uid://d4lvba3a1ohax" path="res://scenes/characters/playerS/player.gd" id="1_yewv4"]
+[ext_resource type="Script" uid="uid://d4lvba3a1ohax" path="res://scenes/characters/players/player.gd" id="1_yewv4"]
 [ext_resource type="Resource" uid="uid://blcsbfnd8r2tf" path="res://scenes/objects/inventory/player_inventory.tres" id="2_16t6o"]
 [ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="2_yewv4"]
 
