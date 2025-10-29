@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7r5t0piqom3p"]
+
+[ext_resource type="PackedScene" uid="uid://eb1gsen400p" path="res://scenes/objects/collections/collectable.tscn" id="1_8hhd3"]
+[ext_resource type="Texture2D" uid="uid://dwgc1jguy4hlc" path="res://assets/Farm/Items/Food/Onigiri.png" id="2_2n2p3"]
+[ext_resource type="Resource" uid="uid://bupbt2lu5ar0b" path="res://scenes/objects/inventory/items/onigiri.tres" id="2_racv3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_racv3"]
+resource_local_to_scene = true
+size = Vector2(13, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wofy"]
+atlas = ExtResource("2_2n2p3")
+
+[node name="Onigiri" instance=ExtResource("1_8hhd3")]
+item_res = ExtResource("2_racv3")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_racv3")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = SubResource("AtlasTexture_4wofy")

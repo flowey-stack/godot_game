@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bupbt2lu5ar0b"]
+
+[ext_resource type="Script" uid="uid://b65gk8igd5t1o" path="res://scenes/objects/inventory/inventory_item.gd" id="1_rv6pj"]
+[ext_resource type="Texture2D" uid="uid://dwgc1jguy4hlc" path="res://assets/Farm/Items/Food/Onigiri.png" id="2_3k7tw"]
+
+[resource]
+script = ExtResource("1_rv6pj")
+name = "onigiri"
+texture = ExtResource("2_3k7tw")
+metadata/_custom_type_script = "uid://b65gk8igd5t1o"

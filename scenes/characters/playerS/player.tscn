@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://c5bk8kyg3e8vl"]
+[gd_scene load_steps=15 format=3 uid="uid://c5bk8kyg3e8vl"]
 
 [ext_resource type="Script" uid="uid://d4lvba3a1ohax" path="res://scenes/characters/players/player.gd" id="1_yewv4"]
+[ext_resource type="Resource" uid="uid://blcsbfnd8r2tf" path="res://scenes/objects/inventory/player_inventory.tres" id="2_16t6o"]
 [ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="2_yewv4"]
 
 [sub_resource type="Animation" id="Animation_76oj4"]
@@ -107,7 +108,8 @@ radius = 7.0
 height = 16.0
 
 [sub_resource type="Animation" id="Animation_13c0u"]
-length = 0.001
+length = 0.2
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -149,6 +151,7 @@ y_sort_enabled = true
 texture_filter = 1
 collision_layer = 59
 script = ExtResource("1_yewv4")
+inventory = ExtResource("2_16t6o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 clip_children = 2
@@ -160,9 +163,9 @@ vframes = 7
 
 [node name="ColorRect" type="ColorRect" parent="Sprite2D"]
 offset_left = -18.0
-offset_top = -16.0
+offset_top = -17.0
 offset_right = 22.0
-offset_bottom = 24.0
+offset_bottom = 23.0
 color = Color(1, 1, 1, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

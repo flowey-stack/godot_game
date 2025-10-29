@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dp424hmocl5m"]
+
+[ext_resource type="Script" uid="uid://b65gk8igd5t1o" path="res://scenes/objects/inventory/inventory_item.gd" id="1_rft0j"]
+[ext_resource type="Texture2D" uid="uid://gr6s5nd3g7rj" path="res://assets/Farm/Items/Weapons/AxeTool/Sprite.png" id="2_afua1"]
+
+[resource]
+script = ExtResource("1_rft0j")
+name = "axe"
+texture = ExtResource("2_afua1")
+metadata/_custom_type_script = "uid://b65gk8igd5t1o"
