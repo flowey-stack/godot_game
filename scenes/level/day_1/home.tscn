@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=4 uid="uid://coopdkpeo3yq8"]
+[gd_scene load_steps=10 format=4 uid="uid://coopdkpeo3yq8"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_jhsm6"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_orknk"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_oqrb7"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="3_oqrb7"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_ek7ty"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="4_orknk"]
-[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_hvtpp"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_hvtpp"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_msjq6"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_mro0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orknk"]
+size = Vector2(20, 94.5)
 
 [node name="Main" type="Node2D"]
 position = Vector2(-8, 10)
@@ -50,7 +53,8 @@ destination_door_tag = "東"
 spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="Doors/Door_西" index="0"]
-position = Vector2(0, 9.5)
+position = Vector2(-10, -2)
+shape = SubResource("RectangleShape2D_orknk")
 
 [node name="Spawn" parent="Doors/Door_西" index="1"]
 position = Vector2(28, 7)

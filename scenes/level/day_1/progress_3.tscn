@@ -1,12 +1,18 @@
-[gd_scene load_steps=10 format=4 uid="uid://dtkr6b2bqgukk"]
+[gd_scene load_steps=12 format=4 uid="uid://dtkr6b2bqgukk"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_er8kc"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_xroq8"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_oemqo"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="3_oemqo"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_7a8pt"]
-[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_cmsb5"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_cmsb5"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_avcar"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_pqe37"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_er8kc"]
+size = Vector2(20, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xroq8"]
+size = Vector2(20, 124.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_480s7"]
 size = Vector2(78, 29)
@@ -49,7 +55,8 @@ destination_door_tag = "西"
 spawn_direction = "left"
 
 [node name="CollisionShape2D" parent="Doors/Door_東" index="0"]
-position = Vector2(7.6875, 1)
+position = Vector2(3, 1)
+shape = SubResource("RectangleShape2D_er8kc")
 
 [node name="Spawn" parent="Doors/Door_東" index="1"]
 position = Vector2(-22, 1)
@@ -61,7 +68,8 @@ destination_door_tag = "東"
 spawn_direction = "right"
 
 [node name="CollisionShape2D" parent="Doors/Door_西" index="0"]
-position = Vector2(0, 9.5)
+position = Vector2(5, -3)
+shape = SubResource("RectangleShape2D_xroq8")
 
 [node name="Spawn" parent="Doors/Door_西" index="1"]
 position = Vector2(28, 7)
