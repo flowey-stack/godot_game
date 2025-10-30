@@ -11,6 +11,7 @@ const scene_day_1_progress_3 = preload("res://scenes/level/day_1/progress_3.tscn
 const scene_day_1_progress_4 = preload("res://scenes/level/day_1/progress_4.tscn")
 const scene_day_1_hidden = preload("res://scenes/level/day_1/hidden.tscn")
 const scene_day_1_progress_5 =preload("res://scenes/level/day_1/progress_5.tscn")
+const scene_day_1_home = preload("res://scenes/level/day_1/home.tscn")
 
 signal on_trigger_player_spawn 
 
@@ -41,6 +42,8 @@ func go_to_level(level_tag, destination_tag):
 			scene_to_load = scene_day_1_hidden
 		"progress_5" :
 			scene_to_load = scene_day_1_progress_5
+		"home" :
+			scene_to_load = scene_day_1_home
 		
 	if scene_to_load != null:
 		TransitionScreen.transition()
