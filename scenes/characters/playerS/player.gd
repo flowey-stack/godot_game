@@ -8,6 +8,7 @@ signal health_changed
 @onready var hurt_timer = $HurtTimer
 @onready var hurt_box = $HurtBox
 @onready var hurt_color = $Sprite2D/ColorRect
+@onready var weapon = $Weapon
 
 @export var max_health = 3
 @onready var current_health : int = max_health
@@ -16,13 +17,34 @@ signal health_changed
 
 @export var inventory : Inventory
 
+var last_anim_direction : String = "down"
 var is_hurt : bool = false
+var is_attacking : bool = false
+
+func _ready() :
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	effects.play("RESET")
+
 
 func handleInput():
 	var moveDirection = Input.get_vector( "ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = moveDirection*speed
+	
+	if Input.is_action_just_pressed("attack"):
+		attack()
+		
+
+func attack():
+	animations.play("attack_" + last_anim_direction)
+	is_attacking = true
+	weapon.visible = true
+	await animations.animation_finished
+	weapon.visible = false
+	is_attacking = false
 
 func updateAnimation():
+	if is_attacking : return
+	
 	if velocity.length() == 0:
 		if animations.is_playing():
 			animations.stop()
@@ -33,6 +55,7 @@ func updateAnimation():
 		elif velocity.y < 0:direction="_up"
 	
 		animations.play("walk" + direction)
+		last_anim_direction = direction
 
 func handle_collision():
 	for i in get_slide_collision_count():
@@ -50,9 +73,7 @@ func _physics_process(delta) -> void:
 			if area.name == "HitBox":
 				hurt_by_enemy(area)
 
-func _ready() :
-	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
-	effects.play("RESET")
+
 	
 func _on_spawn(position: Vector2, direction: String):
 	global_position = position

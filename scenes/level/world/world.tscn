@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://balcg4qfv6123"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_fxyu3"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_l2age"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_l2age"]
 [ext_resource type="PackedScene" uid="uid://50wbgvltd8dm" path="res://scenes/characters/enemys/slime.tscn" id="2_rthas"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_h3lpy"]
 [ext_resource type="TileSet" uid="uid://3y0ss002dmpj" path="res://tileset/items.tres" id="4_ssyoi"]
