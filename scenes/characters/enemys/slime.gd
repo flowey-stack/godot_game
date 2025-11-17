@@ -10,6 +10,8 @@ extends CharacterBody2D
 var start_position
 var end_position
 
+var is_death : bool = false
+
 func _ready() -> void:
 	start_position = position
 	end_position = end_point.global_position
@@ -39,6 +41,16 @@ func update_animation():
 	
 
 func _physics_process(delta):
+	if is_death : return
 	update_velosity()
 	move_and_slide()
 	update_animation()
+
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	if area == $HitBox : return
+	$HitBox.set_deferred("monitorable", false)
+	is_death = true
+	animations.play("death")
+	await animations.animation_finished
+	queue_free()

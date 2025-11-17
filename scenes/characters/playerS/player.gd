@@ -17,7 +17,7 @@ signal health_changed
 
 @export var inventory : Inventory
 
-var last_anim_direction : String = "down"
+var last_anim_direction : String = "_down"
 var is_hurt : bool = false
 var is_attacking : bool = false
 
@@ -35,11 +35,11 @@ func handleInput():
 		
 
 func attack():
-	animations.play("attack_" + last_anim_direction)
+	animations.play("attack" + last_anim_direction)
 	is_attacking = true
-	weapon.visible = true
+	weapon.enable()
 	await animations.animation_finished
-	weapon.visible = false
+	weapon.disable()
 	is_attacking = false
 
 func updateAnimation():
