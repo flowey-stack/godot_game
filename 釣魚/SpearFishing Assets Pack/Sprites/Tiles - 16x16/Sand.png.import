@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0wlo5lakc0u1"
-path="res://.godot/imported/Sand.png-a09ca517ace54a0335286ccd504b5593.ctex"
+path="res://.godot/imported/Sand.png-9bffd903842cb66586c774eb6bba8bf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/Tiles - 16x16/Sand.png"
-dest_files=["res://.godot/imported/Sand.png-a09ca517ace54a0335286ccd504b5593.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Tiles - 16x16/Sand.png"
+dest_files=["res://.godot/imported/Sand.png-9bffd903842cb66586c774eb6bba8bf2.ctex"]
 
 [params]
 

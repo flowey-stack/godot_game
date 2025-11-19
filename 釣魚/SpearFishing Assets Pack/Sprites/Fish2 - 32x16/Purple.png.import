@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbfguxvkb46sv"
-path="res://.godot/imported/Purple.png-3a7b25f24d87102e4fb6dfe8db5ba4b4.ctex"
+path="res://.godot/imported/Purple.png-12bedeca0193140c5cd0fbb434790c50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Purple.png"
-dest_files=["res://.godot/imported/Purple.png-3a7b25f24d87102e4fb6dfe8db5ba4b4.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Purple.png"
+dest_files=["res://.godot/imported/Purple.png-12bedeca0193140c5cd0fbb434790c50.ctex"]
 
 [params]
 

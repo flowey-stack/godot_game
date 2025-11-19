@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkxytx8np6h0x"
-path="res://.godot/imported/fish_grey-mirror.png-87474f9f98ff38bdf1639b5671d45396.ctex"
+path="res://.godot/imported/fish_grey-mirror.png-ca0210ef6c1322db969ce62c84144fd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/Fish3 - 32x16/fish_grey-mirror.png"
-dest_files=["res://.godot/imported/fish_grey-mirror.png-87474f9f98ff38bdf1639b5671d45396.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Fish3 - 32x16/fish_grey-mirror.png"
+dest_files=["res://.godot/imported/fish_grey-mirror.png-ca0210ef6c1322db969ce62c84144fd2.ctex"]
 
 [params]
 

@@ -1,22 +1,22 @@
 [gd_scene load_steps=18 format=3 uid="uid://dv0meuw4opk6h"]
 
-[ext_resource type="Script" uid="uid://btkg2w624a13n" path="res://fishing_game.gd" id="1_3ieao"]
-[ext_resource type="PackedScene" uid="uid://bv57vijwhmaw8" path="res://coral_pink.tscn" id="1_idmjn"]
-[ext_resource type="PackedScene" uid="uid://cqmfb8uuf8fc1" path="res://coral_red.tscn" id="2_1s4ul"]
-[ext_resource type="PackedScene" uid="uid://kqhtmvtcq7ce" path="res://coral_whit.tscn" id="3_y1bhi"]
-[ext_resource type="PackedScene" uid="uid://blqjr0j0xydkh" path="res://coral_purple.tscn" id="4_w10u8"]
-[ext_resource type="PackedScene" uid="uid://bxqgbhlfoqemv" path="res://sea_weed_blue.tscn" id="5_wm50p"]
-[ext_resource type="PackedScene" uid="uid://csqrvlrx7w8fu" path="res://sea_weed_dark.tscn" id="6_k7is6"]
-[ext_resource type="PackedScene" uid="uid://b2sfp4h8phuo7" path="res://sea_weed_light.tscn" id="7_k7is6"]
-[ext_resource type="PackedScene" uid="uid://d2e7q1lcwfnqm" path="res://sea_weed_pink.tscn" id="8_3ieao"]
-[ext_resource type="Script" uid="uid://dpak4gwg4vg6v" path="res://fishspawner.gd" id="10_1cofu"]
-[ext_resource type="PackedScene" uid="uid://qj0qubqowpt1" path="res://sawshark.tscn" id="10_1punl"]
-[ext_resource type="PackedScene" uid="uid://dnwxdiq8evel3" path="res://fish-orange.tscn" id="11_5bkye"]
-[ext_resource type="PackedScene" uid="uid://cix2w2eosokn8" path="res://target.tscn" id="12_lmed5"]
-[ext_resource type="PackedScene" uid="uid://dy7rgeakwpjsu" path="res://fish_green.tscn" id="13_rjqtc"]
-[ext_resource type="PackedScene" uid="uid://dywgp2me5oayf" path="res://swordfish.tscn" id="16_7tprk"]
-[ext_resource type="PackedScene" uid="uid://cvktquitsx5sw" path="res://fish_grey.tscn" id="16_yu6pj"]
-[ext_resource type="PackedScene" uid="uid://dcwd22bfyv45a" path="res://jellyfish.tscn" id="17_7tprk"]
+[ext_resource type="Script" path="res://釣魚/fishing_game.gd" id="1_3ieao"]
+[ext_resource type="PackedScene" uid="uid://bv57vijwhmaw8" path="res://釣魚/coral_pink.tscn" id="1_idmjn"]
+[ext_resource type="PackedScene" uid="uid://cqmfb8uuf8fc1" path="res://釣魚/coral_red.tscn" id="2_1s4ul"]
+[ext_resource type="PackedScene" uid="uid://kqhtmvtcq7ce" path="res://釣魚/coral_whit.tscn" id="3_y1bhi"]
+[ext_resource type="PackedScene" uid="uid://blqjr0j0xydkh" path="res://釣魚/coral_purple.tscn" id="4_w10u8"]
+[ext_resource type="PackedScene" uid="uid://bxqgbhlfoqemv" path="res://釣魚/sea_weed_blue.tscn" id="5_wm50p"]
+[ext_resource type="PackedScene" uid="uid://csqrvlrx7w8fu" path="res://釣魚/sea_weed_dark.tscn" id="6_k7is6"]
+[ext_resource type="PackedScene" uid="uid://b2sfp4h8phuo7" path="res://釣魚/sea_weed_light.tscn" id="7_k7is6"]
+[ext_resource type="PackedScene" uid="uid://d2e7q1lcwfnqm" path="res://釣魚/sea_weed_pink.tscn" id="8_3ieao"]
+[ext_resource type="Script" path="res://釣魚/fishspawner.gd" id="10_1cofu"]
+[ext_resource type="PackedScene" uid="uid://qj0qubqowpt1" path="res://釣魚/sawshark.tscn" id="10_1punl"]
+[ext_resource type="PackedScene" uid="uid://dnwxdiq8evel3" path="res://釣魚/fish-orange.tscn" id="11_5bkye"]
+[ext_resource type="PackedScene" uid="uid://cix2w2eosokn8" path="res://釣魚/target.tscn" id="12_lmed5"]
+[ext_resource type="PackedScene" uid="uid://dy7rgeakwpjsu" path="res://釣魚/fish_green.tscn" id="13_rjqtc"]
+[ext_resource type="PackedScene" uid="uid://dywgp2me5oayf" path="res://釣魚/swordfish.tscn" id="16_7tprk"]
+[ext_resource type="PackedScene" uid="uid://cvktquitsx5sw" path="res://釣魚/fish_grey.tscn" id="16_yu6pj"]
+[ext_resource type="PackedScene" uid="uid://dcwd22bfyv45a" path="res://釣魚/jellyfish.tscn" id="17_7tprk"]
 
 [node name="fishing game" type="Control"]
 layout_mode = 3
@@ -130,6 +130,7 @@ fish_scenes = Array[PackedScene]([ExtResource("11_5bkye"), ExtResource("13_rjqtc
 
 [node name="target" parent="AquaContainer" instance=ExtResource("12_lmed5")]
 position = Vector2(505, 242)
+script = null
 
 [node name="GameOverOverlay" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1152, 648)

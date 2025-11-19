@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpnqlcmwk8yua"
-path="res://.godot/imported/Abyss - EM.png-96e320847fe20eb58adf1bbae79516d5.ctex"
+path="res://.godot/imported/Abyss - EM.png-9b83dc4f1d31b5d619ee3d15300905fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/Tiles - 16x16/Emission Maps/Abyss - EM.png"
-dest_files=["res://.godot/imported/Abyss - EM.png-96e320847fe20eb58adf1bbae79516d5.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Tiles - 16x16/Emission Maps/Abyss - EM.png"
+dest_files=["res://.godot/imported/Abyss - EM.png-9b83dc4f1d31b5d619ee3d15300905fe.ctex"]
 
 [params]
 
