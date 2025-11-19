@@ -35,7 +35,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="coral-pink2" parent="ColorRect/coral" instance=ExtResource("1_idmjn")]
-position = Vector2(999, 549.75)
+position = Vector2(995, 552)
 scale = Vector2(13.3125, 12.3438)
 
 [node name="coral-whit2" parent="ColorRect/coral" instance=ExtResource("3_y1bhi")]
