@@ -10,7 +10,7 @@ var game_over = false
 @onready var game_over_overlay = $GameOverOverlay
 @onready var game_over_label = $GameOverOverlay/VBoxContainer/GameOverLabel
 @onready var final_score_label = $GameOverOverlay/VBoxContainer/FinalScoreLabel
-@onready var fish_spawner = $FishSpawner
+@onready var fish_spawner = $fishspawner
 
 func _ready():
 	game_over_overlay.visible = false
