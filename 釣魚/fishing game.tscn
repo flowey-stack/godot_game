@@ -25,42 +25,14 @@ script = ExtResource("1_3ieao")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 288.0
+offset_bottom = 162.0
 color = Color(0.0392157, 0.4, 0.968627, 1)
 
 [node name="coral" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-
-[node name="coral-pink2" parent="ColorRect/coral" instance=ExtResource("1_idmjn")]
-position = Vector2(995, 552)
-scale = Vector2(13.3125, 12.3438)
-
-[node name="coral-whit2" parent="ColorRect/coral" instance=ExtResource("3_y1bhi")]
-position = Vector2(843, 555)
-scale = Vector2(13.6875, 11.9688)
-
-[node name="coral-red2" parent="ColorRect/coral" instance=ExtResource("2_1s4ul")]
-position = Vector2(32, 495)
-scale = Vector2(9.25, 7.8125)
-
-[node name="coral-purple2" parent="ColorRect/coral" instance=ExtResource("4_w10u8")]
-position = Vector2(1113, 494)
-scale = Vector2(6.1875, 7)
-
-[node name="coral-pink" parent="ColorRect/coral" instance=ExtResource("1_idmjn")]
-position = Vector2(313, 596)
-scale = Vector2(7.3125, 7)
-
-[node name="coral-whit" parent="ColorRect/coral" instance=ExtResource("3_y1bhi")]
-position = Vector2(202, 551)
-scale = Vector2(15.625, 14.125)
-
-[node name="coral-purple" parent="ColorRect/coral" instance=ExtResource("4_w10u8")]
-position = Vector2(49, 588)
-scale = Vector2(7.5, 8.3125)
 
 [node name="sea weed" type="Label" parent="ColorRect"]
 layout_mode = 0
@@ -96,6 +68,22 @@ autoplay = "new_animation_1"
 position = Vector2(374, 588)
 scale = Vector2(4.5625, 4.09375)
 autoplay = "new_animation"
+
+[node name="coral-pink" parent="ColorRect" instance=ExtResource("1_idmjn")]
+position = Vector2(12, 147)
+scale = Vector2(2.08, 2.04)
+
+[node name="coral-purple" parent="ColorRect" instance=ExtResource("4_w10u8")]
+position = Vector2(35, 142)
+scale = Vector2(2.48, 2.52)
+
+[node name="coral-red" parent="ColorRect" instance=ExtResource("2_1s4ul")]
+position = Vector2(277, 141)
+scale = Vector2(2.6, 2.8)
+
+[node name="coral-whit" parent="ColorRect" instance=ExtResource("3_y1bhi")]
+position = Vector2(239, 138)
+scale = Vector2(3.68, 3.6)
 
 [node name="UI" type="Control" parent="."]
 anchors_preset = 0
