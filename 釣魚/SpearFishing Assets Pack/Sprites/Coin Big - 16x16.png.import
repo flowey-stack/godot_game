@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3yo5p1fg7gn1"
-path="res://.godot/imported/Coin Big - 16x16.png-946cb08836a1dd3a441fb76533b56661.ctex"
+path="res://.godot/imported/Coin Big - 16x16.png-170ab05497cf2a747b77c3e7a2420749.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/Coin Big - 16x16.png"
-dest_files=["res://.godot/imported/Coin Big - 16x16.png-946cb08836a1dd3a441fb76533b56661.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Coin Big - 16x16.png"
+dest_files=["res://.godot/imported/Coin Big - 16x16.png-170ab05497cf2a747b77c3e7a2420749.ctex"]
 
 [params]
 

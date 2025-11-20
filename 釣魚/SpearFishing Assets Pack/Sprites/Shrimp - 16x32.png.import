@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckkf4blqbq6bf"
-path="res://.godot/imported/Shrimp - 16x32.png-6a3c721b4a526d385df549c3a9ca4978.ctex"
+path="res://.godot/imported/Shrimp - 16x32.png-3d11697469953040b918468be709ad38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/Shrimp - 16x32.png"
-dest_files=["res://.godot/imported/Shrimp - 16x32.png-6a3c721b4a526d385df549c3a9ca4978.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Shrimp - 16x32.png"
+dest_files=["res://.godot/imported/Shrimp - 16x32.png-3d11697469953040b918468be709ad38.ctex"]
 
 [params]
 
