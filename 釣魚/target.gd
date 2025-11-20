@@ -3,7 +3,7 @@ extends Area2D
 signal fish_caught
 
 @export var aquaContainer: Control
-const SPEED := 200
+const SPEED := 100
 
 var overlapping_fish: Array = []
 

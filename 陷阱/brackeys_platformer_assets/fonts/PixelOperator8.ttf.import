@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ccqtt8kaapwyq"
-path="res://.godot/imported/NormalFont.ttf-c2ebfe3f995a20af8d91a464e068cbaf.fontdata"
+uid="uid://f7ncpwduf6cr"
+path="res://.godot/imported/PixelOperator8.ttf-bc84520237c4fe65fc4b86e1120bb1a6.fontdata"
 
 [deps]
 
-source_file="res://assets/Farm/Ui/Font/NormalFont.ttf"
-dest_files=["res://.godot/imported/NormalFont.ttf-c2ebfe3f995a20af8d91a464e068cbaf.fontdata"]
+source_file="res://陷阱/brackeys_platformer_assets/fonts/PixelOperator8.ttf"
+dest_files=["res://.godot/imported/PixelOperator8.ttf-bc84520237c4fe65fc4b86e1120bb1a6.fontdata"]
 
 [params]
 
@@ -22,7 +22,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=1
-subpixel_positioning=4
+subpixel_positioning=1
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

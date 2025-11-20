@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bniipico30qnm"
-path="res://.godot/imported/icon.svg-ef6923241de2ef8ace92337c7c7ec2ec.ctex"
+uid="uid://bvhx0u1xj1mki"
+path="res://.godot/imported/slime_purple.png-14ea80ed87c9de149a84b3a7c698d88e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://陷阱/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-ef6923241de2ef8ace92337c7c7ec2ec.ctex"]
+source_file="res://陷阱/brackeys_platformer_assets/sprites/slime_purple.png"
+dest_files=["res://.godot/imported/slime_purple.png-14ea80ed87c9de149a84b3a7c698d88e.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
