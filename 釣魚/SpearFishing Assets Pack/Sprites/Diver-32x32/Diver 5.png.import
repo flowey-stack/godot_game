@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh6rpt1nlmd24"
-path="res://.godot/imported/Diver 5.png-ab6f8179571b5b9f11a47059427e0e67.ctex"
+path="res://.godot/imported/Diver 5.png-ba7f7ffc939105bc1f710b74aaec10b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Diver-32x32/Diver 5.png"
-dest_files=["res://.godot/imported/Diver 5.png-ab6f8179571b5b9f11a47059427e0e67.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/Diver-32x32/Diver 5.png"
+dest_files=["res://.godot/imported/Diver 5.png-ba7f7ffc939105bc1f710b74aaec10b4.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwg350dsv7aq2"
-path="res://.godot/imported/SawShark-mirror.png-ddda28338dd81c1840248d5b04ef6900.ctex"
+path="res://.godot/imported/SawShark-mirror.png-01fefb4b4f9973d8928049b7d9c16ade.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark-mirror.png"
-dest_files=["res://.godot/imported/SawShark-mirror.png-ddda28338dd81c1840248d5b04ef6900.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark-mirror.png"
+dest_files=["res://.godot/imported/SawShark-mirror.png-01fefb4b4f9973d8928049b7d9c16ade.ctex"]
 
 [params]
 

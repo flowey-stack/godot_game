@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vrbtcqrjdsod"
-path="res://.godot/imported/Dark.png-ab79dcd6028fb11f6c494ba8c884753e.ctex"
+path="res://.godot/imported/Dark.png-1d3b330bb411d175c04c91ea598669db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/SeaWeed - 16x32/Dark.png"
-dest_files=["res://.godot/imported/Dark.png-ab79dcd6028fb11f6c494ba8c884753e.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/SeaWeed - 16x32/Dark.png"
+dest_files=["res://.godot/imported/Dark.png-1d3b330bb411d175c04c91ea598669db.ctex"]
 
 [params]
 

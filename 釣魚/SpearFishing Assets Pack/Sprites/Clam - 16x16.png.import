@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://t7feyib6kwk4"
-path="res://.godot/imported/Clam - 16x16.png-b2fac9b24134911da0a00ca9a66188d3.ctex"
+path="res://.godot/imported/Clam - 16x16.png-7d10b6644a371d868eb559db702bc763.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Clam - 16x16.png"
-dest_files=["res://.godot/imported/Clam - 16x16.png-b2fac9b24134911da0a00ca9a66188d3.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/Clam - 16x16.png"
+dest_files=["res://.godot/imported/Clam - 16x16.png-7d10b6644a371d868eb559db702bc763.ctex"]
 
 [params]
 

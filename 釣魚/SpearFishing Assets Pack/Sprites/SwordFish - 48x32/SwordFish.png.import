@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3d0r5q7cre3f"
-path="res://.godot/imported/SwordFish.png-c0757d91a9e5b58c2414d75a1dd889f3.ctex"
+path="res://.godot/imported/SwordFish.png-458eccc399986d2972b44eade2256c35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/SwordFish - 48x32/SwordFish.png"
-dest_files=["res://.godot/imported/SwordFish.png-c0757d91a9e5b58c2414d75a1dd889f3.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/SwordFish - 48x32/SwordFish.png"
+dest_files=["res://.godot/imported/SwordFish.png-458eccc399986d2972b44eade2256c35.ctex"]
 
 [params]
 

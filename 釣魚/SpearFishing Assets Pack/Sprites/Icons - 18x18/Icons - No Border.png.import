@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vangak6ok61"
-path="res://.godot/imported/Icons - No Border.png-a843696bca448b221f9123ff1d9511bf.ctex"
+path="res://.godot/imported/Icons - No Border.png-985c49ba90c8872dd617f93dd996a50d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Icons - 18x18/Icons - No Border.png"
-dest_files=["res://.godot/imported/Icons - No Border.png-a843696bca448b221f9123ff1d9511bf.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/Icons - 18x18/Icons - No Border.png"
+dest_files=["res://.godot/imported/Icons - No Border.png-985c49ba90c8872dd617f93dd996a50d.ctex"]
 
 [params]
 

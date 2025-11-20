@@ -119,10 +119,6 @@ script = ExtResource("2_1qyyv")
 aquaContainer = NodePath("..")
 fish_scenes = Array[PackedScene]([ExtResource("3_xpwqf"), ExtResource("4_5qmu8"), ExtResource("5_ihcg2"), ExtResource("6_mhalm"), ExtResource("7_yqwm8"), ExtResource("8_2dm3c")])
 
-[node name="target" parent="." instance=ExtResource("3_n43jp")]
-position = Vector2(142, 84)
-scale = Vector2(0.5, 0.5)
-
 [node name="UI" type="Label" parent="."]
 layout_mode = 0
 offset_right = 40.0
@@ -161,3 +157,8 @@ vertical_alignment = 1
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="target" parent="." node_paths=PackedStringArray("aquaContainer") instance=ExtResource("3_n43jp")]
+position = Vector2(133, 81)
+scale = Vector2(0.3, 0.3)
+aquaContainer = NodePath("../AquaContainer")

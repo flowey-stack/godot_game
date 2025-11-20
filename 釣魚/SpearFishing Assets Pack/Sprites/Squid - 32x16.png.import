@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tingybhwgpo4"
-path="res://.godot/imported/Squid - 32x16.png-73fd77f6071107db56dc78172a8a88f3.ctex"
+path="res://.godot/imported/Squid - 32x16.png-0638f74ba291f49e99b67084822d5e01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Squid - 32x16.png"
-dest_files=["res://.godot/imported/Squid - 32x16.png-73fd77f6071107db56dc78172a8a88f3.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/Squid - 32x16.png"
+dest_files=["res://.godot/imported/Squid - 32x16.png-0638f74ba291f49e99b67084822d5e01.ctex"]
 
 [params]
 

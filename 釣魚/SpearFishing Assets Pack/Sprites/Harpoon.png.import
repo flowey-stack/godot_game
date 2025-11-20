@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6gninr6qgt2n"
-path="res://.godot/imported/Harpoon.png-499d33877147d3f4632f9a151760aa8e.ctex"
+path="res://.godot/imported/Harpoon.png-35f9b29b5b90aa12ab3f6832531ad511.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Harpoon.png"
-dest_files=["res://.godot/imported/Harpoon.png-499d33877147d3f4632f9a151760aa8e.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/Harpoon.png"
+dest_files=["res://.godot/imported/Harpoon.png-35f9b29b5b90aa12ab3f6832531ad511.ctex"]
 
 [params]
 

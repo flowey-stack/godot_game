@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv1n3n1dp7gw1"
-path="res://.godot/imported/Sprite names.png-ab6a2bb9b9cbfbca1f5e60296ab68853.ctex"
+path="res://.godot/imported/Sprite names.png-ab93ebef710053f655c228904dfc0fb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprite names.png"
-dest_files=["res://.godot/imported/Sprite names.png-ab6a2bb9b9cbfbca1f5e60296ab68853.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprite names.png"
+dest_files=["res://.godot/imported/Sprite names.png-ab93ebef710053f655c228904dfc0fb6.ctex"]
 
 [params]
 

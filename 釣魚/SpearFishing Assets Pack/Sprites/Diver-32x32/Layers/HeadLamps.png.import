@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b28gwtwm367yi"
-path="res://.godot/imported/HeadLamps.png-2bcc4208b5c950ce2aad8ffb3b353049.ctex"
+path="res://.godot/imported/HeadLamps.png-b94236eac52408a660791a71f792bfa3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Diver-32x32/Layers/HeadLamps.png"
-dest_files=["res://.godot/imported/HeadLamps.png-2bcc4208b5c950ce2aad8ffb3b353049.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/Diver-32x32/Layers/HeadLamps.png"
+dest_files=["res://.godot/imported/HeadLamps.png-b94236eac52408a660791a71f792bfa3.ctex"]
 
 [params]
 

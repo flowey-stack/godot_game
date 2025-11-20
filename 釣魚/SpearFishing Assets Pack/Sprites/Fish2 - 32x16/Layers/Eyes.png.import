@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bw8nbi8e7lj1c"
-path="res://.godot/imported/Eyes.png-373e909e91dcdf7563cc717ee92c0e3f.ctex"
+path="res://.godot/imported/Eyes.png-5a28fdf8cd7f7d78e5352957d5df406f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Layers/Eyes.png"
-dest_files=["res://.godot/imported/Eyes.png-373e909e91dcdf7563cc717ee92c0e3f.ctex"]
+source_file="res://SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Layers/Eyes.png"
+dest_files=["res://.godot/imported/Eyes.png-5a28fdf8cd7f7d78e5352957d5df406f.ctex"]
 
 [params]
 
