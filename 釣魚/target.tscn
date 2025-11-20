@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cix2w2eosokn8"]
 
-[ext_resource type="Script" uid="uid://cveabb1urdgiu" path="res://target.gd" id="1_e1yvt"]
-[ext_resource type="Texture2D" uid="uid://46xvdfbo6qlj" path="res://SpearFishing Assets Pack/crosshair026.png" id="1_t2jmu"]
+[ext_resource type="Script" path="res://釣魚/target.gd" id="1_e1yvt"]
+[ext_resource type="Texture2D" uid="uid://46xvdfbo6qlj" path="res://釣魚/SpearFishing Assets Pack/crosshair026.png" id="1_t2jmu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1yvt"]
 size = Vector2(40, 40)
