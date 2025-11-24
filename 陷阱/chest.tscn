@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://u0bds4vq2d4r"]
+
+[ext_resource type="Script" uid="uid://lnf1qrjnadtw" path="res://chest.gd" id="1_cl2l7"]
+[ext_resource type="Texture2D" uid="uid://nbqa7ap36gti" path="res://brackeys_platformer_assets/sprites/chest.png" id="1_g3m8a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiwk8"]
+atlas = ExtResource("1_g3m8a")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vruv"]
+atlas = ExtResource("1_g3m8a")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xv1u"]
+atlas = ExtResource("1_g3m8a")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a20jw"]
+atlas = ExtResource("1_g3m8a")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h3ty"]
+atlas = ExtResource("1_g3m8a")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mqgpe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uiwk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vruv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xv1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a20jw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5h3ty")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oid20"]
+radius = 8.0
+
+[node name="chest" type="Area2D"]
+script = ExtResource("1_cl2l7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mqgpe")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oid20")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
