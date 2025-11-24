@@ -1,7 +1,7 @@
 extends Control
 
 var score = 0
-var time_left = 60.0
+var time_left = 5.0
 var game_over = false
 
 @onready var ui = $UI
