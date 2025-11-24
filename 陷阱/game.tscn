@@ -1,18 +1,18 @@
 [gd_scene load_steps=18 format=4 uid="uid://doh8xhpckfsnw"]
 
-[ext_resource type="PackedScene" uid="uid://ck1j32ydbon8k" path="res://player.tscn" id="1_d2o3j"]
-[ext_resource type="Texture2D" uid="uid://6ibgwbbysyb5" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="1_e35kb"]
-[ext_resource type="PackedScene" uid="uid://csbm1kh1c3ic8" path="res://cloud_1.tscn" id="2_lc2xo"]
-[ext_resource type="PackedScene" uid="uid://bvs0xks10vfjl" path="res://cloud_2.tscn" id="3_215e1"]
-[ext_resource type="PackedScene" uid="uid://u0bds4vq2d4r" path="res://chest.tscn" id="3_5453g"]
-[ext_resource type="PackedScene" uid="uid://chd801euhsjxm" path="res://kill_zone.tscn" id="4_2axm0"]
-[ext_resource type="PackedScene" uid="uid://dd2uodeb1vwgx" path="res://cloud_3.tscn" id="4_7sc4i"]
-[ext_resource type="PackedScene" uid="uid://d1hhu6kc6hpf0" path="res://kill_zone_2.tscn" id="5_be323"]
-[ext_resource type="PackedScene" uid="uid://bqcw67s2fwgbw" path="res://slime.tscn" id="6_6ddee"]
-[ext_resource type="Script" uid="uid://drjraadq8lhji" path="res://canvas_layer.gd" id="8_tm6sf"]
-[ext_resource type="Texture2D" uid="uid://cyje1nb4u1kp5" path="res://brackeys_platformer_assets/chest1.png" id="9_j5gj0"]
-[ext_resource type="Script" uid="uid://b1tp37gu8o3q8" path="res://game_manager.gd" id="10_hve3p"]
-[ext_resource type="Script" uid="uid://gvvnfv623g5b" path="res://chest_ui.gd" id="11_mfdv2"]
+[ext_resource type="PackedScene" uid="uid://ck1j32ydbon8k" path="res://陷阱/player.tscn" id="1_d2o3j"]
+[ext_resource type="Texture2D" uid="uid://6ibgwbbysyb5" path="res://陷阱/brackeys_platformer_assets/sprites/world_tileset.png" id="1_e35kb"]
+[ext_resource type="PackedScene" uid="uid://csbm1kh1c3ic8" path="res://陷阱/cloud_1.tscn" id="2_lc2xo"]
+[ext_resource type="PackedScene" uid="uid://bvs0xks10vfjl" path="res://陷阱/cloud_2.tscn" id="3_215e1"]
+[ext_resource type="PackedScene" uid="uid://u0bds4vq2d4r" path="res://陷阱/chest.tscn" id="3_5453g"]
+[ext_resource type="PackedScene" uid="uid://chd801euhsjxm" path="res://陷阱/kill_zone.tscn" id="4_2axm0"]
+[ext_resource type="PackedScene" uid="uid://dd2uodeb1vwgx" path="res://陷阱/cloud_3.tscn" id="4_7sc4i"]
+[ext_resource type="PackedScene" uid="uid://d1hhu6kc6hpf0" path="res://陷阱/kill_zone_2.tscn" id="5_be323"]
+[ext_resource type="PackedScene" uid="uid://bqcw67s2fwgbw" path="res://陷阱/slime.tscn" id="6_6ddee"]
+[ext_resource type="Script" uid="uid://drjraadq8lhji" path="res://陷阱/canvas_layer.gd" id="8_tm6sf"]
+[ext_resource type="Texture2D" uid="uid://cyje1nb4u1kp5" path="res://陷阱/brackeys_platformer_assets/chest1.png" id="9_j5gj0"]
+[ext_resource type="Script" uid="uid://b1tp37gu8o3q8" path="res://陷阱/game_manager.gd" id="10_hve3p"]
+[ext_resource type="Script" uid="uid://gvvnfv623g5b" path="res://陷阱/chest_ui.gd" id="11_mfdv2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kghom"]
 texture = ExtResource("1_e35kb")
@@ -362,10 +362,9 @@ position = Vector2(1043, -100)
 position = Vector2(1755, -253)
 
 [node name="player" parent="." instance=ExtResource("1_d2o3j")]
-position = Vector2(838, -310)
+position = Vector2(8, 4)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-zoom = Vector2(4, 4)
 
 [node name="kill_zone" parent="." instance=ExtResource("4_2axm0")]
 position = Vector2(-2, 117)
@@ -418,21 +417,21 @@ alignment = 1
 
 [node name="Label" type="Label" parent="gamestart/ColorRect/Container/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 15
 text = "Find Three"
 horizontal_alignment = 3
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="gamestart/ColorRect/Container/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("9_j5gj0")
 stretch_mode = 5
 
 [node name="Label2" type="Label" parent="gamestart/ColorRect/Container/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 15
 text = "To Pass The Level"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -444,6 +443,28 @@ autostart = true
 
 [node name="GameManager" type="Node" parent="." groups=["game_manager"]]
 script = ExtResource("10_hve3p")
+
+[node name="UI" type="Control" parent="GameManager"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ChestUI" type="CanvasLayer" parent="GameManager/UI"]
+script = ExtResource("11_mfdv2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameManager/UI/ChestUI"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="GameManager/UI/ChestUI/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("9_j5gj0")
+
+[node name="Label" type="Label" parent="GameManager/UI/ChestUI/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
 
 [node name="DeathScreen" type="CanvasLayer" parent="GameManager"]
 
@@ -469,31 +490,9 @@ offset_right = 144.0
 offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 15
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="UI" type="Control" parent="GameManager"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ChestUI" type="CanvasLayer" parent="GameManager/UI"]
-script = ExtResource("11_mfdv2")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GameManager/UI/ChestUI"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="GameManager/UI/ChestUI/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("9_j5gj0")
-
-[node name="Label" type="Label" parent="GameManager/UI/ChestUI/HBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
 
 [node name="cloud_3" parent="." instance=ExtResource("4_7sc4i")]
 position = Vector2(1061, -445)

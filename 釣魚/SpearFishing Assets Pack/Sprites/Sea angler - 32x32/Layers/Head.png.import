@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cex7o3r86ek2n"
-path="res://.godot/imported/Head.png-9a89145e190a16264b8c68a261a15dcf.ctex"
+path="res://.godot/imported/Head.png-9c98a870afcbaa1c868a5f34b8738c41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/Sea angler - 32x32/Layers/Head.png"
-dest_files=["res://.godot/imported/Head.png-9a89145e190a16264b8c68a261a15dcf.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Sea angler - 32x32/Layers/Head.png"
+dest_files=["res://.godot/imported/Head.png-9c98a870afcbaa1c868a5f34b8738c41.ctex"]
 
 [params]
 

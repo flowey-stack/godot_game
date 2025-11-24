@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc31xwsgm8vx6"
-path="res://.godot/imported/GameBoy-Palette.png-1d6689dd3874d5ce86094b00a4e67be1.ctex"
+path="res://.godot/imported/GameBoy-Palette.png-267417619570afb50c50c8402314a0cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://brackeys_platformer_assets/Cloudy-Pack-Free/GameBoy Clouds/GameBoy-Palette.png"
-dest_files=["res://.godot/imported/GameBoy-Palette.png-1d6689dd3874d5ce86094b00a4e67be1.ctex"]
+source_file="res://陷阱/brackeys_platformer_assets/Cloudy-Pack-Free/GameBoy Clouds/GameBoy-Palette.png"
+dest_files=["res://.godot/imported/GameBoy-Palette.png-267417619570afb50c50c8402314a0cb.ctex"]
 
 [params]
 

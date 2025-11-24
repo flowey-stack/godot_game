@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6tjt2wltrtm7"
-path="res://.godot/imported/basic charactor sprites.png-a43e0e5e112b53c8ca7c762b33853cde.ctex"
+path="res://.godot/imported/basic charactor sprites.png-052e67962462ea32e44ea093ebb9bb00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://brackeys_platformer_assets/basic charactor sprites.png"
-dest_files=["res://.godot/imported/basic charactor sprites.png-a43e0e5e112b53c8ca7c762b33853cde.ctex"]
+source_file="res://陷阱/brackeys_platformer_assets/basic charactor sprites.png"
+dest_files=["res://.godot/imported/basic charactor sprites.png-052e67962462ea32e44ea093ebb9bb00.ctex"]
 
 [params]
 

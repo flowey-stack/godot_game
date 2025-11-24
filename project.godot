@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 NavigationManager="*res://global/navigation_manager.gd"
 TransitionScreen="*res://global/transition_screen.tscn"
+global="*res://陷阱/global.gd"
 
 [display]
 

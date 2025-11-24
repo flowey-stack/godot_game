@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsgg1jj5p61v0"
-path="res://.godot/imported/UI-Buttons.png-02f68e64eecdee6b80bbf3ebfd6e88e1.ctex"
+path="res://.godot/imported/UI-Buttons.png-aed1f3fd10dd9b41a1e47ff69b153100.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/UI/UI-Buttons.png"
-dest_files=["res://.godot/imported/UI-Buttons.png-02f68e64eecdee6b80bbf3ebfd6e88e1.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/UI/UI-Buttons.png"
+dest_files=["res://.godot/imported/UI-Buttons.png-aed1f3fd10dd9b41a1e47ff69b153100.ctex"]
 
 [params]
 

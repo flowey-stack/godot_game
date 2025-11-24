@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba5sh8ugs7km1"
-path="res://.godot/imported/Cloud-23.png-85ac8972e8f86f2d2e0e5569dde73522.ctex"
+path="res://.godot/imported/Cloud-23.png-32f7f6ca7c0de573a61a15bb66243fe7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://brackeys_platformer_assets/Cloudy-Pack-Free/Pale Clouds/Dithered/Cloud-23.png"
-dest_files=["res://.godot/imported/Cloud-23.png-85ac8972e8f86f2d2e0e5569dde73522.ctex"]
+source_file="res://陷阱/brackeys_platformer_assets/Cloudy-Pack-Free/Pale Clouds/Dithered/Cloud-23.png"
+dest_files=["res://.godot/imported/Cloud-23.png-32f7f6ca7c0de573a61a15bb66243fe7.ctex"]
 
 [params]
 
