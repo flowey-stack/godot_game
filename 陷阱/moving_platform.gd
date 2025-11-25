@@ -2,19 +2,20 @@ extends Node2D
 
 @export var move_distance := 100
 @export var move_speed := 60
+@export var phase_offset := 0.0   # 新增：移動起始偏移（秒）
 
 var start_position := Vector2.ZERO
 var direction := 1
-var velocity := Vector2.ZERO  # 新增
+var velocity := Vector2.ZERO
+var timer := 0.0   # 計時器
 
 func _ready():
 	start_position = global_position
+	timer = phase_offset  # 每個平台的開始時間不同
 
 func _physics_process(delta):
-	velocity = Vector2(0, move_speed * direction)
-	global_position += velocity * delta
+	timer += delta
 
-	if global_position.y > start_position.y + move_distance:
-		direction = -1
-	elif global_position.y < start_position.y:
-		direction = 1
+	# 使用正弦波運動，會自然往返移動
+	var t = sin(timer * move_speed / 50.0)
+	global_position.y = start_position.y + t * move_distance
