@@ -20,6 +20,8 @@ func insert(isg : ItemStackGui):
 func take_item():
 	var item = item_stack_gui
 	
+	inventory.remove_slot(item_stack_gui.inventory_slot)
+	
 	container.remove_child(item_stack_gui)
 	item_stack_gui = null
 	back_ground_sprite.frame = 0

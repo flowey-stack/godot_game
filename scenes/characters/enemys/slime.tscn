@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://50wbgvltd8dm"]
 
 [ext_resource type="Texture2D" uid="uid://c1vfsrlj5w42n" path="res://assets/Farm/Actor/Monsters/Slime/Slime.png" id="1_b6ku0"]
-[ext_resource type="Script" uid="uid://dutj4i1np5gtt" path="res://scenes/characters/enemys/slime.gd" id="1_p8yp6"]
+[ext_resource type="Script" path="res://scenes/characters/enemys/slime.gd" id="1_p8yp6"]
 [ext_resource type="Texture2D" uid="uid://bc65q8shiv2u5" path="res://assets/Farm/FX/SpriteSheet.png" id="3_ai2h8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8yp6"]
@@ -294,12 +294,12 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dgv66"]
 _data = {
-&"RESET": SubResource("Animation_p8yp6"),
-&"death": SubResource("Animation_jgnha"),
-&"walk_down": SubResource("Animation_dgv66"),
-&"walk_left": SubResource("Animation_3osqy"),
-&"walk_right": SubResource("Animation_ai2h8"),
-&"walk_up": SubResource("Animation_7p67y")
+"RESET": SubResource("Animation_p8yp6"),
+"death": SubResource("Animation_jgnha"),
+"walk_down": SubResource("Animation_dgv66"),
+"walk_left": SubResource("Animation_3osqy"),
+"walk_right": SubResource("Animation_ai2h8"),
+"walk_up": SubResource("Animation_7p67y")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7p67y"]
@@ -330,7 +330,7 @@ vframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_dgv66")
+"": SubResource("AnimationLibrary_dgv66")
 }
 
 [node name="HitBox" type="Area2D" parent="."]
