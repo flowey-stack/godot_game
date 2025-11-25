@@ -110,9 +110,13 @@ scale = Vector2(1.71743, 1.244)
 autoplay = "new_animation_1"
 
 [node name="AquaContainer" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 288.0
-offset_bottom = 162.0
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="fishspawner" type="Node" parent="AquaContainer" node_paths=PackedStringArray("aquaContainer")]
 script = ExtResource("2_1qyyv")
@@ -158,7 +162,6 @@ layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="target" parent="." node_paths=PackedStringArray("aquaContainer") instance=ExtResource("3_n43jp")]
+[node name="target" parent="." instance=ExtResource("3_n43jp")]
 position = Vector2(133, 81)
 scale = Vector2(0.3, 0.3)
-aquaContainer = NodePath("../AquaContainer")
