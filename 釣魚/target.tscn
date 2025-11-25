@@ -1,16 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://cix2w2eosokn8"]
+[gd_scene load_steps=5 format=3 uid="uid://cix2w2eosokn8"]
 
-[ext_resource type="Script" uid="uid://cveabb1urdgiu" path="res://target.gd" id="1_e1yvt"]
-[ext_resource type="Texture2D" uid="uid://46xvdfbo6qlj" path="res://SpearFishing Assets Pack/crosshair026.png" id="1_t2jmu"]
+[ext_resource type="Script" path="res://釣魚/target.gd" id="1_e1yvt"]
+[ext_resource type="Texture2D" uid="uid://46xvdfbo6qlj" path="res://釣魚/SpearFishing Assets Pack/crosshair026.png" id="1_t2jmu"]
+[ext_resource type="AudioStream" uid="uid://corw74jncjvby" path="res://釣魚/SpearFishing Assets Pack/watersplash.wav" id="3_5ebp1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ebp1"]
-size = Vector2(45, 45)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1yvt"]
+size = Vector2(40, 40)
 
 [node name="target" type="Area2D"]
 script = ExtResource("1_e1yvt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_t2jmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_5ebp1")
+shape = SubResource("RectangleShape2D_e1yvt")
+
+[node name="CatchSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5ebp1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

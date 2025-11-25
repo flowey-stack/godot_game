@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsja5ynrm0hcc"
+path="res://.godot/imported/watersplash.wav-a7e8e8370c5d3a862b2804a20892772f.sample"
+
+[deps]
+
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Deads/watersplash.wav"
+dest_files=["res://.godot/imported/watersplash.wav-a7e8e8370c5d3a862b2804a20892772f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

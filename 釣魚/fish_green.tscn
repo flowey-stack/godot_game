@@ -1,8 +1,8 @@
 [gd_scene load_steps=54 format=3 uid="uid://dy7rgeakwpjsu"]
 
-[ext_resource type="Script" uid="uid://l51ou1k35wdh" path="res://fish.gd" id="1_fram3"]
-[ext_resource type="Texture2D" uid="uid://c4eg1vhjg2gb3" path="res://SpearFishing Assets Pack/Sprites/Fish2 - 32x16/fish_green-mirror.png" id="1_lhpqs"]
-[ext_resource type="Texture2D" uid="uid://c387q2xkk13kd" path="res://SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Green.png" id="1_mvpxw"]
+[ext_resource type="Script" path="res://釣魚/fish.gd" id="1_fram3"]
+[ext_resource type="Texture2D" uid="uid://c4eg1vhjg2gb3" path="res://釣魚/SpearFishing Assets Pack/Sprites/Fish2 - 32x16/fish_green-mirror.png" id="1_lhpqs"]
+[ext_resource type="Texture2D" uid="uid://c387q2xkk13kd" path="res://釣魚/SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Green.png" id="1_mvpxw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4ntl"]
 atlas = ExtResource("1_lhpqs")

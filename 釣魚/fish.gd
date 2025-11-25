@@ -1,10 +1,8 @@
 extends CharacterBody2D
 
-class_name Fish
-
 signal fish_caught(points)
 
-@export var SPEED: float = 40.0
+@export var SPEED: float = 50.0
 @export var points: int = 10  # 抓到這條魚加多少分
 @export var min_x := 10
 @export var max_x := 280
