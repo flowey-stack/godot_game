@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://balcg4qfv6123"]
+[gd_scene load_steps=12 format=4 uid="uid://balcg4qfv6123"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_fxyu3"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_l2age"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_mlbfh"]
 [ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="7_oycft"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="8_hwgr7"]
+[ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="10_pequ1"]
 
 [sub_resource type="GDScript" id="GDScript_vd143"]
 script/source = "extends Node2D
@@ -143,6 +144,22 @@ offset_right = 58.0
 offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HotBar" parent="CanvasLayer" instance=ExtResource("10_pequ1")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -24.0
+offset_right = 58.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+alignment = 1
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
