@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6spy8"]
 size = Vector2(20, 104)
 
-[node name="Main" type="Node2D"]
+[node name="Main2" type="Node2D"]
 position = Vector2(-8, 10)
 script = ExtResource("1_6spy8")
 
