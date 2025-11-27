@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://c5bk8kyg3e8vl"]
 
-[ext_resource type="Script" uid="uid://d4lvba3a1ohax" path="res://scenes/characters/players/player.gd" id="1_yewv4"]
+[ext_resource type="Script" path="res://scenes/characters/players/player.gd" id="1_yewv4"]
 [ext_resource type="Resource" uid="uid://blcsbfnd8r2tf" path="res://scenes/objects/inventory/player_inventory.tres" id="2_16t6o"]
 [ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="2_yewv4"]
 
@@ -93,11 +93,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6eyoc"]
 _data = {
-&"RESET": SubResource("Animation_76oj4"),
-&"walk_down": SubResource("Animation_yewv4"),
-&"walk_left": SubResource("Animation_atpat"),
-&"walk_right": SubResource("Animation_kqtwu"),
-&"walk_up": SubResource("Animation_dyp2m")
+"RESET": SubResource("Animation_76oj4"),
+"walk_down": SubResource("Animation_yewv4"),
+"walk_left": SubResource("Animation_atpat"),
+"walk_right": SubResource("Animation_kqtwu"),
+"walk_up": SubResource("Animation_dyp2m")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yewv4"]
@@ -142,8 +142,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xhovg"]
 _data = {
-&"RESET": SubResource("Animation_13c0u"),
-&"hurt_blink": SubResource("Animation_cbw2d")
+"RESET": SubResource("Animation_13c0u"),
+"hurt_blink": SubResource("Animation_cbw2d")
 }
 
 [node name="Player" type="CharacterBody2D"]
@@ -170,7 +170,7 @@ color = Color(1, 1, 1, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_6eyoc")
+"": SubResource("AnimationLibrary_6eyoc")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -190,7 +190,7 @@ shape = SubResource("CapsuleShape2D_cbw2d")
 
 [node name="Effects" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_xhovg")
+"": SubResource("AnimationLibrary_xhovg")
 }
 
 [node name="HurtTimer" type="Timer" parent="."]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu714i1y6div2"
-path="res://.godot/imported/Dead Small - 32x32 - EM.png-cc88ec5a521e7edb31f6091d77f68217.ctex"
+path="res://.godot/imported/Dead Small - 32x32 - EM.png-bbbdfd7a28aa85c95877785987bdc704.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SpearFishing Assets Pack/Sprites/Deads/Emission Maps/Dead Small - 32x32 - EM.png"
-dest_files=["res://.godot/imported/Dead Small - 32x32 - EM.png-cc88ec5a521e7edb31f6091d77f68217.ctex"]
+source_file="res://釣魚/SpearFishing Assets Pack/Sprites/Deads/Emission Maps/Dead Small - 32x32 - EM.png"
+dest_files=["res://.godot/imported/Dead Small - 32x32 - EM.png-bbbdfd7a28aa85c95877785987bdc704.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 extends Control
 
 var score = 0
-var time_left = 60.0
+var time_left = 30.0
 var game_over = false
 
 @onready var ui = $UI
@@ -10,7 +10,7 @@ var game_over = false
 @onready var game_over_overlay = $GameOverOverlay
 @onready var game_over_label = $GameOverOverlay/VBoxContainer/GameOverLabel
 @onready var final_score_label = $GameOverOverlay/VBoxContainer/FinalScoreLabel
-@onready var fish_spawner = $FishSpawner
+@onready var fish_spawner = $fishspawner
 
 func _ready():
 	game_over_overlay.visible = false
