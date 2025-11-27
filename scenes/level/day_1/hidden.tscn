@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://cuhwj0r1axncm"]
+[gd_scene load_steps=10 format=4 uid="uid://cuhwj0r1axncm"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_6spy8"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_327qe"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_q5x1s"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_la3qk"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_h7uci"]
+[ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="8_327qe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6spy8"]
 size = Vector2(20, 104)
@@ -74,5 +75,18 @@ offset_right = 58.0
 offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HotBar" parent="CanvasLayer" instance=ExtResource("8_327qe")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -24.0
+offset_right = 46.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [editable path="Doors/Door_東"]
