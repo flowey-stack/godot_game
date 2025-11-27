@@ -22,6 +22,7 @@ var is_hurt : bool = false
 var is_attacking : bool = false
 
 func _ready() :
+	inventory.use_item.connect(use_item)
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
 	effects.play("RESET")
 
@@ -112,3 +113,12 @@ func knock_back(enemy_velocity : Vector2):
 
 func _on_hurt_box_area_exited(area: Area2D) -> void:
 	pass
+
+func increase_health(amount: int)-> void:
+	current_health += amount
+	current_health = min(max_health, current_health)
+	
+	health_changed.emit(current_health)
+
+func use_item(item: InventoryItem) -> void:
+	item.use(self)
