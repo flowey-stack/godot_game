@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var end_point = Marker2D
 
 @onready var animations = $AnimationPlayer
+@onready var hit = $Hit
 
 
 var start_position
@@ -52,5 +53,6 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 	$HitBox.set_deferred("monitorable", false)
 	is_death = true
 	animations.play("death")
+	hit.play()
 	await animations.animation_finished
 	queue_free()

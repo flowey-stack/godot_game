@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://50wbgvltd8dm"]
+[gd_scene load_steps=15 format=3 uid="uid://50wbgvltd8dm"]
 
 [ext_resource type="Texture2D" uid="uid://c1vfsrlj5w42n" path="res://assets/Farm/Actor/Monsters/Slime/Slime.png" id="1_b6ku0"]
 [ext_resource type="Script" uid="uid://dutj4i1np5gtt" path="res://scenes/characters/enemys/slime.gd" id="1_p8yp6"]
 [ext_resource type="Texture2D" uid="uid://bc65q8shiv2u5" path="res://assets/Farm/FX/SpriteSheet.png" id="3_ai2h8"]
+[ext_resource type="AudioStream" uid="uid://cpqnn4xox3xdn" path="res://assets/Farm/Audio/Sounds/Hit & Impact/Hit9.wav" id="4_dgv66"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8yp6"]
 radius = 4.0
@@ -354,5 +355,8 @@ visible = false
 position = Vector2(0, -10)
 texture = ExtResource("3_ai2h8")
 hframes = 6
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dgv66")
 
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
