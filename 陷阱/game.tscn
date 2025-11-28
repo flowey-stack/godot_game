@@ -461,6 +461,10 @@ script = ExtResource("11_mfdv2")
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Label2" type="Label" parent="GameManager/UI/ChestUI/HBoxContainer"]
+layout_mode = 2
+text = " "
+
 [node name="TextureRect" type="TextureRect" parent="GameManager/UI/ChestUI/HBoxContainer"]
 custom_minimum_size = Vector2(10, 10)
 layout_direction = 1
