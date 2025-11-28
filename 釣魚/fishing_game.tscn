@@ -18,15 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://b2sfp4h8phuo7" path="res://釣魚/sea_weed_light.tscn" id="8_sp0kb"]
 [ext_resource type="PackedScene" uid="uid://d2e7q1lcwfnqm" path="res://釣魚/sea_weed_pink.tscn" id="9_kupm3"]
 
-[node name="fishing_game" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 288.0
-offset_bottom = 162.0
+[node name="fishing_game" type="Node2D"]
 script = ExtResource("1_826u1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
 offset_right = 288.0
 offset_bottom = 162.0
 color = Color(0.156863, 0.411765, 1, 1)
@@ -110,9 +105,11 @@ scale = Vector2(1.71743, 1.244)
 autoplay = "new_animation_1"
 
 [node name="AquaContainer" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 162.0
+mouse_filter = 2
 
 [node name="fishspawner" type="Node" parent="AquaContainer" node_paths=PackedStringArray("aquaContainer")]
 script = ExtResource("2_1qyyv")
@@ -125,7 +122,6 @@ scale = Vector2(0.5, 0.5)
 script = null
 
 [node name="UI" type="Label" parent="."]
-layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
@@ -142,7 +138,6 @@ offset_right = 262.0
 offset_bottom = 24.0
 
 [node name="GameOverOverlay" type="ColorRect" parent="."]
-layout_mode = 0
 offset_right = 288.0
 offset_bottom = 162.0
 color = Color(0.113725, 0.113725, 0.113725, 0.780392)

@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 var score = 0
 var time_left = 30.0
