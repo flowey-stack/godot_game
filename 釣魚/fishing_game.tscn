@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://dc1nwx0hltori"]
+[gd_scene load_steps=18 format=3 uid="uid://ckg4npggdy6ie"]
 
-[ext_resource type="Script" path="res://釣魚/fishing_game.gd" id="1_826u1"]
-[ext_resource type="Script" path="res://釣魚/fishspawner.gd" id="2_1qyyv"]
+[ext_resource type="Script" uid="uid://btkg2w624a13n" path="res://釣魚/fishing_game.gd" id="1_826u1"]
+[ext_resource type="Script" uid="uid://dpak4gwg4vg6v" path="res://釣魚/fishspawner.gd" id="2_1qyyv"]
 [ext_resource type="PackedScene" uid="uid://kqhtmvtcq7ce" path="res://釣魚/coral_whit.tscn" id="2_urpjt"]
 [ext_resource type="PackedScene" uid="uid://bv57vijwhmaw8" path="res://釣魚/coral_pink.tscn" id="3_aq5wr"]
 [ext_resource type="PackedScene" uid="uid://cix2w2eosokn8" path="res://釣魚/target.tscn" id="3_n43jp"]
