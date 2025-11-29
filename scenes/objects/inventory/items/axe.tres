@@ -7,4 +7,6 @@
 script = ExtResource("1_rft0j")
 name = "axe"
 texture = ExtResource("2_afua1")
+max_amount_pr_stack = 0
+consumable = false
 metadata/_custom_type_script = "uid://b65gk8igd5t1o"

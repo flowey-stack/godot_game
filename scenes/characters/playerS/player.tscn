@@ -1,10 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://c5bk8kyg3e8vl"]
+[gd_scene load_steps=21 format=3 uid="uid://c5bk8kyg3e8vl"]
 
 [ext_resource type="Script" uid="uid://d4lvba3a1ohax" path="res://scenes/characters/players/player.gd" id="1_yewv4"]
 [ext_resource type="Resource" uid="uid://blcsbfnd8r2tf" path="res://scenes/objects/inventory/player_inventory.tres" id="2_16t6o"]
 [ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="2_yewv4"]
 [ext_resource type="Script" uid="uid://camxoto83v6l4" path="res://scenes/characters/players/weapon.gd" id="4_p7ctl"]
-[ext_resource type="PackedScene" uid="uid://dv7gwwphukywh" path="res://scenes/characters/players/axe.tscn" id="4_xhovg"]
 [ext_resource type="AudioStream" uid="uid://2chv1gtkm4qb" path="res://assets/Farm/Audio/Sounds/Magic & Skill/Heal.wav" id="6_tveg4"]
 
 [sub_resource type="Animation" id="Animation_76oj4"]
@@ -317,7 +316,7 @@ _data = {
 &"hurt_blink": SubResource("Animation_cbw2d")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 y_sort_enabled = true
 texture_filter = 1
 collision_layer = 59
@@ -369,13 +368,9 @@ wait_time = 0.8
 one_shot = true
 
 [node name="Weapon" type="Node2D" parent="."]
-visible = false
 position = Vector2(-5, 0)
 rotation = 4.18879
 script = ExtResource("4_p7ctl")
-
-[node name="Axe" parent="Weapon" instance=ExtResource("4_xhovg")]
-rotation = -0.262936
 
 [node name="Sound" type="Node" parent="."]
 

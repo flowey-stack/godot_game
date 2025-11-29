@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://coopdkpeo3yq8"]
+[gd_scene load_steps=14 format=4 uid="uid://coopdkpeo3yq8"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_jhsm6"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_orknk"]
@@ -6,15 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_ek7ty"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="4_orknk"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_hvtpp"]
+[ext_resource type="TileSet" uid="uid://3y0ss002dmpj" path="res://tileset/items.tres" id="6_mro0y"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_msjq6"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_mro0y"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="9_ek7ty"]
 [ext_resource type="PackedScene" uid="uid://uot5lsr7g2pv" path="res://scenes/component/background_decoration/falling_leaf.tscn" id="10_ek7ty"]
+[ext_resource type="PackedScene" uid="uid://n8k8h503gjab" path="res://scenes/characters/enemys/ghost.tscn" id="11_hvtpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orknk"]
 size = Vector2(20, 94.5)
 
-[node name="Main" type="Node2D"]
+[node name="Home" type="Node2D"]
 position = Vector2(-8, 10)
 script = ExtResource("1_jhsm6")
 
@@ -54,6 +56,13 @@ tile_set = ExtResource("2_orknk")
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAGAP3/AwAKAAQAAAAFAP7/AwAOAAQAAAADAP7/AwAOAAQAAAALAPv/AAAAAAAAAAAPAPv/AwALAAQAAAAPAPz/AwALAAQAAAAPAP3/AwAIAAUAAAAPAPr/AwAJAAQAAAA=")
 tile_set = ExtResource("4_orknk")
+
+[node name="Sprite" parent="Node2D" instance=ExtResource("11_hvtpp")]
+position = Vector2(97, 66)
+
+[node name="Item" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAADAAMAAAAAAAAAAgA=")
+tile_set = ExtResource("6_mro0y")
 
 [node name="Doors" type="Node2D" parent="."]
 
