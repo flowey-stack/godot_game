@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 NavigationManager="*res://global/navigation_manager.gd"
 TransitionScreen="*res://global/transition_screen.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
 
@@ -30,6 +31,10 @@ window/size/window_height_override=540
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 window/per_pixel_transparency/allowed=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [file_customization]
 
