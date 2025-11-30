@@ -39,7 +39,7 @@ tile_set = ExtResource("2_orknk")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_oqrb7")]
-position = Vector2(154, 77)
+position = Vector2(174, 53)
 speed = 70
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
@@ -57,12 +57,12 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAGAP3/AwAKAAQAAAAFAP7/AwAOAAQAAAADAP7/AwAOAAQAAAALAPv/AAAAAAAAAAAPAPv/AwALAAQAAAAPAPz/AwALAAQAAAAPAP3/AwAIAAUAAAAPAPr/AwAJAAQAAAA=")
 tile_set = ExtResource("4_orknk")
 
-[node name="Sprite" parent="Node2D" instance=ExtResource("11_hvtpp")]
-position = Vector2(97, 66)
-
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 tile_map_data = PackedByteArray("AAADAAMAAAAAAAAAAgA=")
 tile_set = ExtResource("6_mro0y")
+
+[node name="Ghost" parent="Node2D" instance=ExtResource("11_hvtpp")]
+position = Vector2(46, 106)
 
 [node name="Doors" type="Node2D" parent="."]
 
