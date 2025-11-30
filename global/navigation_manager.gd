@@ -1,7 +1,6 @@
 extends Node
 
 const scene_world = preload("res://scenes/level/world/world.tscn")
-const scene_room_1 = preload("res://scenes/room/room_1.tscn")
 #Day1
 const scene_day_1_main = preload("res://scenes/level/day_1/main.tscn")
 const scene_day_1_progress_1 = preload("res://scenes/level/day_1/progress_1.tscn")
@@ -22,8 +21,6 @@ func go_to_level(level_tag, destination_tag):
 	match level_tag:
 		"world" :
 			scene_to_load = scene_world
-		"room_1":
-			scene_to_load = scene_room_1
 		#day1
 		"main" :
 			scene_to_load = scene_day_1_main

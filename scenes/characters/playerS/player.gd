@@ -11,14 +11,13 @@ signal health_changed
 @onready var weapon = $Weapon
 @onready var health_sound = $Sound/Health
 
+
 @export var max_health = 3
 @onready var current_health : int = max_health
 
 @export var knock_back_power : int = 700
 
 @export var inventory : Inventory
-
-
 
 var last_anim_direction : String = "_down"
 var is_hurt : bool = false
@@ -36,7 +35,9 @@ func handleInput():
 	
 	if Input.is_action_just_pressed("attack"):
 		attack()
-		
+
+
+
 
 func attack():
 	animations.play("attack" + last_anim_direction)
