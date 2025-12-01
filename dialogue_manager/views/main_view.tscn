@@ -1,14 +1,14 @@
 [gd_scene load_steps=15 format=3 uid="uid://cbuf1q3xsse3q"]
 
-[ext_resource type="Script" uid="uid://cipjcc7bkh1pc" path="res://addons/dialogue_manager/views/main_view.gd" id="1_h6qfq"]
-[ext_resource type="PackedScene" uid="uid://civ6shmka5e8u" path="res://addons/dialogue_manager/components/code_edit.tscn" id="2_f73fm"]
-[ext_resource type="PackedScene" uid="uid://dnufpcdrreva3" path="res://addons/dialogue_manager/components/files_list.tscn" id="2_npj2k"]
-[ext_resource type="PackedScene" uid="uid://ctns6ouwwd68i" path="res://addons/dialogue_manager/components/title_list.tscn" id="2_onb4i"]
-[ext_resource type="PackedScene" uid="uid://co8yl23idiwbi" path="res://addons/dialogue_manager/components/update_button.tscn" id="2_ph3vs"]
-[ext_resource type="PackedScene" uid="uid://gr8nakpbrhby" path="res://addons/dialogue_manager/components/search_and_replace.tscn" id="6_ylh0t"]
-[ext_resource type="PackedScene" uid="uid://cs8pwrxr5vxix" path="res://addons/dialogue_manager/components/errors_panel.tscn" id="7_5cvl4"]
-[ext_resource type="Script" uid="uid://klpiq4tk3t7a" path="res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd" id="7_necsa"]
-[ext_resource type="Texture2D" uid="uid://cnm67htuohhlo" path="res://addons/dialogue_manager/assets/banner.png" id="9_y6rqu"]
+[ext_resource type="Script" uid="uid://cipjcc7bkh1pc" path="res://dialogue_manager/views/main_view.gd" id="1_h6qfq"]
+[ext_resource type="PackedScene" uid="uid://civ6shmka5e8u" path="res://dialogue_manager/components/code_edit.tscn" id="2_f73fm"]
+[ext_resource type="PackedScene" uid="uid://dnufpcdrreva3" path="res://dialogue_manager/components/files_list.tscn" id="2_npj2k"]
+[ext_resource type="PackedScene" uid="uid://ctns6ouwwd68i" path="res://dialogue_manager/components/title_list.tscn" id="2_onb4i"]
+[ext_resource type="PackedScene" uid="uid://co8yl23idiwbi" path="res://dialogue_manager/components/update_button.tscn" id="2_ph3vs"]
+[ext_resource type="PackedScene" uid="uid://gr8nakpbrhby" path="res://dialogue_manager/components/search_and_replace.tscn" id="6_ylh0t"]
+[ext_resource type="PackedScene" uid="uid://cs8pwrxr5vxix" path="res://dialogue_manager/components/errors_panel.tscn" id="7_5cvl4"]
+[ext_resource type="Script" uid="uid://klpiq4tk3t7a" path="res://dialogue_manager/components/code_edit_syntax_highlighter.gd" id="7_necsa"]
+[ext_resource type="Texture2D" uid="uid://cnm67htuohhlo" path="res://dialogue_manager/assets/banner.png" id="9_y6rqu"]
 
 [sub_resource type="Image" id="Image_faxki"]
 data = {

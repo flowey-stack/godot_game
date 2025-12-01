@@ -19,7 +19,11 @@ config/icon="res://icon.svg"
 
 NavigationManager="*res://global/navigation_manager.gd"
 TransitionScreen="*res://global/transition_screen.tscn"
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+DialogueManager="*res://dialogue_manager/dialogue_manager.gd"
+
+[dialogue_manager]
+
+editor/advanced/custom_test_scene_path="res://dialogue_manager/test_scene.tscn"
 
 [display]
 

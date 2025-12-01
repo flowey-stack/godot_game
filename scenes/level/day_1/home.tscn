@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_jhsm6"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_orknk"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_oqrb7"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="3_oqrb7"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_ek7ty"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="4_orknk"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_hvtpp"]
@@ -58,7 +58,7 @@ tile_map_data = PackedByteArray("AAAGAP3/AwAKAAQAAAAFAP7/AwAOAAQAAAADAP7/AwAOAAQ
 tile_set = ExtResource("4_orknk")
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
-tile_map_data = PackedByteArray("AAADAAMAAAAAAAAAAgA=")
+tile_map_data = PackedByteArray("AAAOAAUAAAAAAAAAAgAPAAUAAAAAAAAAAQA=")
 tile_set = ExtResource("6_mro0y")
 
 [node name="Ghost" parent="Node2D" instance=ExtResource("11_hvtpp")]
