@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4kd144ty03jx"]
+
+[ext_resource type="Texture2D" path="res://陷阱/brackeys_platformer_assets/altar.png" id="1_fae3p"]
+[ext_resource type="Script" path="res://陷阱/game_entrance.gd" id="1_o711f"]
+[ext_resource type="Texture2D" path="res://陷阱/brackeys_platformer_assets/altar words.png" id="2_o711f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4hcbd"]
+radius = 36.0
+height = 94.0122
+
+[node name="game entrance" type="Area2D"]
+script = ExtResource("1_o711f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fae3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+texture = ExtResource("2_o711f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.56344
+shape = SubResource("CapsuleShape2D_4hcbd")
