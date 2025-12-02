@@ -21,7 +21,7 @@ size = Vector2(78, 29)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fr34"]
 size = Vector2(78, 20)
 
-[node name="Main" type="Node2D"]
+[node name="Main2" type="Node2D"]
 position = Vector2(-8, 10)
 script = ExtResource("1_vlksa")
 
