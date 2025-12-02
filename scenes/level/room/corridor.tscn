@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=4 uid="uid://bnu0erwne6imf"]
+
+[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_o2ija"]
+[ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_aierg"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="3_f4eb2"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_k2im0"]
+[ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_gxgdo"]
+[ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_sdpqm"]
+[ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_urivi"]
+
+[node name="Corridor" type="Node2D"]
+position = Vector2(-8, 10)
+script = ExtResource("1_o2ija")
+
+[node name="Floor" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAPAAMACAACAAcAAAAPAAIACAACAAcAAAAPAAEACAACAAYAAAAOAAMACAABAAcAAAAOAAIACAABAAcAAAAOAAEACAABAAYAAAANAAMACAABAAcAAAANAAIACAABAAcAAAANAAEACAABAAYAAAAMAAMACAABAAcAAAAMAAIACAABAAcAAAAMAAEACAABAAYAAAALAAMACAABAAcAAAALAAIACAABAAcAAAALAAEACAABAAYAAAAKAAMACAABAAcAAAAKAAIACAABAAcAAAAKAAEACAABAAYAAAAJAAMACAABAAcAAAAJAAIACAABAAcAAAAJAAEACAABAAYAAAAIAAMACAABAAcAAAAIAAIACAABAAcAAAAIAAEACAABAAYAAAAHAAMACAABAAcAAAAHAAIACAABAAcAAAAHAAEACAABAAYAAAAGAAMACAABAAcAAAAGAAIACAABAAcAAAAGAAEACAABAAYAAAAFAAMACAABAAcAAAAFAAIACAABAAcAAAAFAAEACAABAAYAAAAEAAMACAABAAcAAAAEAAIACAABAAcAAAAEAAEACAABAAYAAAADAAMACAAAAAcAAAADAAIACAAAAAcAAAADAAEACAAAAAYAAAA=")
+tile_set = ExtResource("2_aierg")
+
+[node name="Wall" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAADAAAAAgAHAAgAAAAEAAAAAgAHAAgAAAAFAAAAAgAHAAgAAAAGAAAAAgAHAAgAAAAHAAAAAgAHAAgAAAAIAAAAAgAHAAgAAAAJAAAAAgAHAAgAAAAKAAAAAgAHAAgAAAALAAAAAgAHAAgAAAAMAAAAAgAHAAgAAAANAAAAAgAHAAgAAAAOAAAAAgAHAAgAAAAPAAAAAgAHAAgAAAACAP//AgAAAAAAAAAQAP//AgACAAAAAAADAP//AgABAAAAAAAEAP//AgABAAAAAAAFAP//AgABAAAAAAAGAP//AgABAAAAAAAHAP//AgABAAAAAAAIAP//AgABAAAAAAAJAP//AgABAAAAAAAKAP//AgABAAAAAAALAP//AgABAAAAAAAMAP//AgABAAAAAAANAP//AgABAAAAAAAOAP//AgABAAAAAAAPAP//AgABAAAAAAACAAAAAgAAAAEAAAACAAEAAgAEAAIAAAACAAQAAgAAAAIAAAADAAQAAgABAAIAAAAEAAQAAgABAAIAAAAFAAQAAgABAAIAAAAGAAQAAgABAAIAAAAHAAQAAgABAAIAAAAIAAQAAgABAAIAAAAJAAQAAgABAAIAAAAKAAQAAgABAAIAAAALAAQAAgABAAIAAAAMAAQAAgABAAIAAAANAAQAAgABAAIAAAAOAAQAAgABAAIAAAAPAAQAAgABAAIAAAAQAAQAAgACAAIAAAAQAAAAAgACAAEAAAAQAAEAAgACAAEAAAAQAAIAAgACAAEAAAAQAAMAAgACAAEAAAACAAMAAgAHAAAAAAA=")
+tile_set = ExtResource("2_aierg")
+
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Item" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAAPAAEACgAAAAcAAAAOAAAAAwAFAAIAAAADAAEACgAAAAcAAAAIAAAACgAIAAoAAAA=")
+tile_set = ExtResource("2_aierg")
+
+[node name="InteractionItem" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAAGAAAAAQAFAAAAAAAMAAAAAQAFAAAAAAAEAAAAAwAAAAAAAAA=")
+tile_set = ExtResource("2_aierg")
+
+[node name="Player" parent="Node2D" instance=ExtResource("3_f4eb2")]
+position = Vector2(65, 46)
+speed = 70
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("4_k2im0")
+
+[node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("5_gxgdo")]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 8.0
+offset_bottom = 5.0
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("6_sdpqm")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -46.0
+offset_right = 58.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HotBar" parent="CanvasLayer" instance=ExtResource("7_urivi")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -24.0
+offset_right = 46.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0

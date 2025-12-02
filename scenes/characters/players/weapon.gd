@@ -17,3 +17,14 @@ func disable():
 	if !weapon :return
 	visible = false
 	weapon.disable()
+
+func add_weapon(new_weapon) -> void:
+	if weapon && weapon.name == new_weapon.name : return
+	
+	if weapon:
+		remove_child(weapon)
+	
+	weapon = new_weapon
+	add_child(new_weapon)
+	
+	disable()

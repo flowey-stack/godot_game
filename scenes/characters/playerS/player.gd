@@ -9,6 +9,8 @@ signal health_changed
 @onready var hurt_box = $HurtBox
 @onready var hurt_color = $Sprite2D/ColorRect
 @onready var weapon = $Weapon
+@onready var health_sound = $Sound/Health
+
 
 @export var max_health = 3
 @onready var current_health : int = max_health
@@ -33,7 +35,9 @@ func handleInput():
 	
 	if Input.is_action_just_pressed("attack"):
 		attack()
-		
+
+
+
 
 func attack():
 	animations.play("attack" + last_anim_direction)
@@ -121,4 +125,9 @@ func increase_health(amount: int)-> void:
 	health_changed.emit(current_health)
 
 func use_item(item: InventoryItem) -> void:
+	if not item.can_be_used(self): return
 	item.use(self)
+	
+	if item.consumable:
+		inventory.remove_last_used_item()
+	health_sound.play()
