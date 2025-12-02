@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=4 uid="uid://coopdkpeo3yq8"]
+[gd_scene load_steps=14 format=4 uid="uid://coopdkpeo3yq8"]
 
 [ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_8gk22"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_76ubw"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_nkfrk"]
-[ext_resource type="Resource" uid="uid://blcsbfnd8r2tf" path="res://scenes/objects/inventory/player_inventory.tres" id="4_2ir1j"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="4_3vm3p"]
 [ext_resource type="TileSet" uid="uid://3y0ss002dmpj" path="res://tileset/items.tres" id="5_heue8"]
 [ext_resource type="PackedScene" uid="uid://n8k8h503gjab" path="res://scenes/characters/enemys/ghost.tscn" id="6_vdt00"]
@@ -41,7 +40,6 @@ y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_nkfrk")]
 position = Vector2(174, 53)
-inventory = ExtResource("4_2ir1j")
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
