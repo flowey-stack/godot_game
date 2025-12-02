@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=4 uid="uid://bjov7eglwtfm6"]
 
-[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_r5fit"]
+[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_r5fit"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_6oeus"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_gwjni"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_srpqv"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_2nbuh"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_2nbuh"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="6_6oeus"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_slksd"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_k41sd"]
@@ -35,7 +35,7 @@ tile_set = ExtResource("2_6oeus")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_gwjni")]
-position = Vector2(154, 77)
+position = Vector2(-331, 55)
 speed = 70
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
@@ -48,6 +48,7 @@ tile_map_data = PackedByteArray("AAACAAIAAgABAAsAAAA=")
 tile_set = ExtResource("2_6oeus")
 
 [node name="Doors" type="Node2D" parent="."]
+visible = false
 
 [node name="Door_東" parent="Doors" instance=ExtResource("4_srpqv")]
 position = Vector2(293, 69)
@@ -102,6 +103,7 @@ position = Vector2(0, 22)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+visible = false
 script = ExtResource("5_2nbuh")
 
 [node name="HotBar" parent="CanvasLayer" instance=ExtResource("6_6oeus")]

@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=4 uid="uid://dd5wyarn2yaje"]
+
+[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_qfmh3"]
+[ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_n6pxf"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_08vtl"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="4_m4k6c"]
+[ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_ne08w"]
+[ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_6b1lh"]
+[ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_ob6fy"]
+
+[node name="Room1" type="Node2D"]
+position = Vector2(-8, 10)
+script = ExtResource("1_qfmh3")
+
+[node name="Floor" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAADAAEAAgAHAAgAAAADAAIAAgAHAAgAAAADAAMAAgAHAAgAAAADAAQAAgAHAAgAAAADAAUAAgAHAAgAAAAEAAEAAgAHAAgAAAAEAAIAAgAHAAgAAAAEAAMAAgAHAAgAAAAEAAQAAgAHAAgAAAAEAAUAAgAHAAgAAAAFAAEAAgAHAAgAAAAFAAIAAgAHAAgAAAAFAAMAAgAHAAgAAAAFAAQAAgAHAAgAAAAFAAUAAgAHAAgAAAAGAAEAAgAHAAgAAAAGAAIAAgAHAAgAAAAGAAMAAgAHAAgAAAAGAAQAAgAHAAgAAAAGAAUAAgAHAAgAAAAHAAEAAgAHAAgAAAAHAAIAAgAHAAgAAAAHAAMAAgAHAAgAAAAHAAQAAgAHAAgAAAAHAAUAAgAHAAgAAAAIAAEAAgAHAAgAAAAIAAIAAgAHAAgAAAAIAAMAAgAHAAgAAAAIAAQAAgAHAAgAAAAIAAUAAgAHAAgAAAAJAAEAAgAHAAgAAAAJAAIAAgAHAAgAAAAJAAMAAgAHAAgAAAAJAAQAAgAHAAgAAAAJAAUAAgAHAAgAAAAKAAEAAgAHAAgAAAAKAAIAAgAHAAgAAAAKAAMAAgAHAAgAAAAKAAQAAgAHAAgAAAAKAAUAAgAHAAgAAAALAAEAAgAHAAgAAAALAAIAAgAHAAgAAAALAAMAAgAHAAgAAAALAAQAAgAHAAgAAAALAAUAAgAHAAgAAAAMAAEAAgAHAAgAAAAMAAIAAgAHAAgAAAAMAAMAAgAHAAgAAAAMAAQAAgAHAAgAAAAMAAUAAgAHAAgAAAA=")
+tile_set = ExtResource("2_n6pxf")
+
+[node name="Wall" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACAP//AgAAAAAAAAADAP//AgABAAAAAAAEAP//AgABAAAAAAAFAP//AgABAAAAAAAGAP//AgABAAAAAAAHAP//AgABAAAAAAAIAP//AgABAAAAAAAJAP//AgABAAAAAAAKAP//AgABAAAAAAALAP//AgABAAAAAAAMAP//AgABAAAAAAACAAAAAgAAAAEAAAACAAEAAgAAAAEAAAACAAIAAgAAAAEAAAACAAMAAgAAAAEAAAACAAQAAgAAAAEAAAACAAUAAgAAAAEAAAACAAYAAgAAAAIAAAADAAYAAgABAAIAAAAEAAYAAgABAAIAAAAFAAYAAgABAAIAAAAHAAYAAgACAAIAAAAGAAYAAgABAAIAAAAJAAYAAgABAAIAAAAIAAYAAgAAAAIAAAAKAAYAAgABAAIAAAALAAYAAgABAAIAAAAMAAYAAgABAAIAAAANAAYAAgACAAIAAAANAAAAAgACAAEAAAANAAEAAgACAAEAAAANAAIAAgACAAEAAAANAAMAAgACAAEAAAANAAQAAgACAAEAAAANAAUAAgACAAEAAAANAP//AgACAAAAAAADAAAAAgABAA0AAAAEAAAAAgABAA0AAAAFAAAAAgABAA0AAAAGAAAAAgABAA0AAAAHAAAAAgABAA0AAAAIAAAAAgABAA0AAAAJAAAAAgABAA0AAAAKAAAAAgABAA0AAAALAAAAAgABAA0AAAAMAAAAAgABAA0AAAA=")
+tile_set = ExtResource("2_n6pxf")
+
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="Node2D" instance=ExtResource("3_08vtl")]
+position = Vector2(118, 88)
+speed = 70
+
+[node name="Item" type="TileMapLayer" parent="Node2D"]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAAAAAQAAAAAAAAAKAAAAAQAAAAAAAAAMAAEACgAAAAcAAAAGAAEABAAvACEAAAAHAAAABAA1ACEAAAAJAAAABAA2ACEAAAAEAAEABAAnACEAAAADAAEABAAwACEAAAAFAAEABAA1ACAAAAAKAAIABAA0ACAAAAA=")
+tile_set = ExtResource("2_n6pxf")
+
+[node name="InteractionItem" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAAKAAIABAAxACMAAAAEAAIABAArACMAAAALAAEABAAtACEAAAA=")
+tile_set = ExtResource("2_n6pxf")
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("4_m4k6c")
+
+[node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("5_ne08w")]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 8.0
+offset_bottom = 5.0
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("6_6b1lh")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -46.0
+offset_right = 58.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HotBar" parent="CanvasLayer" instance=ExtResource("7_ob6fy")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -24.0
+offset_right = 46.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
