@@ -9,7 +9,7 @@ const scene_day_1_progress_3 = preload("res://scenes/level/day_1/progress_3.tscn
 const scene_day_1_progress_4 = preload("res://scenes/level/day_1/progress_4.tscn")
 const scene_day_1_hidden = preload("res://scenes/level/day_1/hidden.tscn")
 const scene_day_1_progress_5 =preload("res://scenes/level/day_1/progress_5.tscn")
-const scene_day_1_home = preload("res://scenes/level/day_1/home.tscn")
+const scene_day_1_home = preload("res://scenes/level/home/home.tscn")
 
 signal on_trigger_player_spawn 
 
