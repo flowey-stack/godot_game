@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://blqjr0j0xydkh"]
+
+[ext_resource type="Texture2D" uid="uid://df3hehvfo8ok" path="res://SpearFishing Assets Pack/Sprites/Corals - 16x16/Corals.png" id="1_sigt8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssga0"]
+atlas = ExtResource("1_sigt8")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1w2wi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssga0")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="coral-purple" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1w2wi")
+animation = &"new_animation"

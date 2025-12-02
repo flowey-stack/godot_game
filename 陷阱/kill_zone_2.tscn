@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1hhu6kc6hpf0"]
+
+[ext_resource type="Script" uid="uid://c4ijhelucttfv" path="res://kill_zone.gd" id="1_02a34"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thyo7"]
+
+[node name="kill_zone2" type="Area2D"]
+script = ExtResource("1_02a34")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_thyo7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

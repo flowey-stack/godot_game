@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://dy7rgeakwpjsu"]
+
+[ext_resource type="Script" uid="uid://l51ou1k35wdh" path="res://釣魚/fish.gd" id="1_fram3"]
+[ext_resource type="Texture2D" uid="uid://c4eg1vhjg2gb3" path="res://釣魚/SpearFishing Assets Pack/Sprites/Fish2 - 32x16/fish_green-mirror.png" id="1_lhpqs"]
+[ext_resource type="Texture2D" uid="uid://c387q2xkk13kd" path="res://釣魚/SpearFishing Assets Pack/Sprites/Fish2 - 32x16/Green.png" id="1_mvpxw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53aiw"]
+atlas = ExtResource("1_lhpqs")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj0xf"]
+atlas = ExtResource("1_lhpqs")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kffi7"]
+atlas = ExtResource("1_lhpqs")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1je0"]
+atlas = ExtResource("1_mvpxw")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn3nu"]
+atlas = ExtResource("1_mvpxw")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6osa"]
+atlas = ExtResource("1_mvpxw")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w4ntl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53aiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj0xf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kffi7")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1je0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn3nu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6osa")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ltwd"]
+radius = 8.0
+
+[node name="fish-green" type="CharacterBody2D" groups=["fish"]]
+collision_mask = 0
+script = ExtResource("1_fram3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+sprite_frames = SubResource("SpriteFrames_w4ntl")
+animation = &"right"
+autoplay = "left"
+frame_progress = 0.459043
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["fish"]]
+shape = SubResource("CircleShape2D_7ltwd")
