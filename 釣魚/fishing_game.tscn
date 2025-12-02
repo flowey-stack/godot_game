@@ -122,7 +122,6 @@ fish_scenes = Array[PackedScene]([ExtResource("3_xpwqf"), ExtResource("4_5qmu8")
 [node name="target" parent="." instance=ExtResource("3_n43jp")]
 position = Vector2(142, 84)
 scale = Vector2(0.5, 0.5)
-script = null
 
 [node name="UI" type="Label" parent="."]
 layout_mode = 0
