@@ -857,14 +857,17 @@ theme_override_constants/margin_right = 20
 layout_mode = 2
 
 [node name="textDisplay" type="Label" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_onc8m")
-theme_override_font_sizes/font_size = 15
-text = "how to play how to play how to play
-how to play how to play"
+theme_override_font_sizes/font_size = 20
+text = "Z - 點擊
+X - 物品欄
+U - 使用物品
+tab - 更換物品"
 autowrap_mode = 3
 
 [node name="exitButton" type="VBoxContainer" parent="popupMenu/helpMenu"]
