@@ -1,8 +1,16 @@
-[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://b7fpqus1b72c6"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://b7fpqus1b72c6"]
 
+[ext_resource type="Texture2D" uid="uid://ca1dyak0ti0mm" path="res://assets/Farm/Backgrounds/Tilesets/3.png" id="1_0p46f"]
 [ext_resource type="Texture2D" uid="uid://c3c0oeuqasm0r" path="res://assets/Farm/Backgrounds/Tilesets/TilesetHouse.png" id="1_jhpr6"]
 [ext_resource type="Texture2D" uid="uid://bv055u5nwjviu" path="res://assets/Farm/Backgrounds/Tilesets/TilesetReliefDetail.png" id="2_0p46f"]
 [ext_resource type="Texture2D" uid="uid://68ms2h6dvjoq" path="res://assets/Farm/Backgrounds/Tilesets/TilesetDesert.png" id="3_y1jq6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y1jq6"]
+texture = ExtResource("1_0p46f")
+0:0/size_in_atlas = Vector2i(8, 7)
+0:0/0 = 0
+0:0/0/y_sort_origin = 22
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-60, -12, 56, -12, 56, 32, 4, 32, 4, 44, -8, 44, -8, 20, -20, 20, -21.9919, 44, -56, 44, -56, 20, -60, 20)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ppm7f"]
 texture = ExtResource("1_jhpr6")
@@ -125,3 +133,4 @@ physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_ppm7f")
 sources/4 = SubResource("TileSetAtlasSource_8r4p7")
 sources/5 = SubResource("TileSetAtlasSource_kutbf")
+sources/0 = SubResource("TileSetAtlasSource_y1jq6")

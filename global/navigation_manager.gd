@@ -1,8 +1,6 @@
 extends Node
 
 const scene_world = preload("res://scenes/level/world/world.tscn")
-const scene_mine = preload("res://scenes/level/mine/mine.tscn")
-const scene_room_1 = preload("res://scenes/room/room_1.tscn")
 #Day1
 const scene_day_1_main = preload("res://scenes/level/day_1/main.tscn")
 const scene_day_1_progress_1 = preload("res://scenes/level/day_1/progress_1.tscn")
@@ -11,7 +9,7 @@ const scene_day_1_progress_3 = preload("res://scenes/level/day_1/progress_3.tscn
 const scene_day_1_progress_4 = preload("res://scenes/level/day_1/progress_4.tscn")
 const scene_day_1_hidden = preload("res://scenes/level/day_1/hidden.tscn")
 const scene_day_1_progress_5 =preload("res://scenes/level/day_1/progress_5.tscn")
-const scene_day_1_home = preload("res://scenes/level/day_1/home.tscn")
+const scene_day_1_home = preload("res://scenes/level/home/home.tscn")
 
 signal on_trigger_player_spawn 
 
@@ -23,10 +21,6 @@ func go_to_level(level_tag, destination_tag):
 	match level_tag:
 		"world" :
 			scene_to_load = scene_world
-		"mine" :
-			scene_to_load = scene_mine
-		"room_1":
-			scene_to_load = scene_room_1
 		#day1
 		"main" :
 			scene_to_load = scene_day_1_main
