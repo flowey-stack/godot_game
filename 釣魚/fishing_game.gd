@@ -11,10 +11,17 @@ var game_over = false
 @onready var game_over_label = $GameOverOverlay/VBoxContainer/GameOverLabel
 @onready var final_score_label = $GameOverOverlay/VBoxContainer/FinalScoreLabel
 @onready var fish_spawner = $fishspawner
+@onready var aqua_container = $AquaContainer
 
 func _ready():
 	game_over_overlay.visible = false
 	set_process(true)
+	set_physics_process(true)
+	print("=== FishingGame ready ===")
+
+	# 列出 AquaContainer 子節點 (debug)
+	for node in aqua_container.get_children():
+		print("Child node:", node.name, " type:", node)
 
 func _process(delta):
 	if game_over:
@@ -35,13 +42,14 @@ func add_score(points: int):
 func _end_game():
 	game_over = true
 	set_process(false)
+	set_physics_process(false)
 
 	game_over_overlay.visible = true
-	game_over_overlay.modulate = Color(0, 0, 0, 0.6)  # 半透明暗背景
+	game_over_overlay.modulate = Color(0, 0, 0, 0.6)
 	game_over_label.text = "TIME'S OVER"
 	final_score_label.text = "Final Score: %d" % score
 
-	# 停止魚的移動
-	for fish in $AquaContainer.get_children():
-		if fish.has_method("set_physics_process"):
-			fish.set_physics_process(false)
+	# 停止魚與 target
+	for node in aqua_container.get_children():
+		if node.has_method("set_physics_process"):
+			node.set_physics_process(false)
