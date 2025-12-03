@@ -368,8 +368,8 @@ wait_time = 0.8
 one_shot = true
 
 [node name="Weapon" type="Node2D" parent="."]
-position = Vector2(-5, 0)
-rotation = 4.18879
+position = Vector2(5, 0)
+rotation = 2.44346
 script = ExtResource("4_p7ctl")
 
 [node name="Sound" type="Node" parent="."]

@@ -35,7 +35,7 @@ tile_set = ExtResource("2_6oeus")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_gwjni")]
-position = Vector2(154, 77)
+position = Vector2(-331, 55)
 speed = 70
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
@@ -48,6 +48,7 @@ tile_map_data = PackedByteArray("AAACAAIAAgABAAsAAAA=")
 tile_set = ExtResource("2_6oeus")
 
 [node name="Doors" type="Node2D" parent="."]
+visible = false
 
 [node name="Door_東" parent="Doors" instance=ExtResource("4_srpqv")]
 position = Vector2(293, 69)
@@ -102,6 +103,7 @@ position = Vector2(0, 22)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+visible = false
 script = ExtResource("5_2nbuh")
 
 [node name="HotBar" parent="CanvasLayer" instance=ExtResource("6_6oeus")]
