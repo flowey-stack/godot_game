@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bub712fpdks7k"
-path="res://.godot/imported/Triangle Mouse icon 1.png-6c78c450c19e63e4767b4855fca6163e.ctex"
+uid="uid://d0x6uwnd55tcg"
+path="res://.godot/imported/spr_tileset_sunnysideworld.png-5016abe7376ccc974998c75c2574047b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Mouse sprites/Triangle Mouse icon 1.png"
-dest_files=["res://.godot/imported/Triangle Mouse icon 1.png-6c78c450c19e63e4767b4855fca6163e.ctex"]
+source_file="res://assets/Farm/Backgrounds/Tilesets/spr_tileset_sunnysideworld.png"
+dest_files=["res://.godot/imported/spr_tileset_sunnysideworld.png-5016abe7376ccc974998c75c2574047b.ctex"]
 
 [params]
 

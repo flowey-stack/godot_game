@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bub712fpdks7k"
-path="res://.godot/imported/Triangle Mouse icon 1.png-6c78c450c19e63e4767b4855fca6163e.ctex"
+uid="uid://bcegk27cot8n0"
+path="res://.godot/imported/SpriteSheet-export.png-c5c6f9793dc978c62ad0c903b10d555f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Mouse sprites/Triangle Mouse icon 1.png"
-dest_files=["res://.godot/imported/Triangle Mouse icon 1.png-6c78c450c19e63e4767b4855fca6163e.ctex"]
+source_file="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet-export.png"
+dest_files=["res://.godot/imported/SpriteSheet-export.png-c5c6f9793dc978c62ad0c903b10d555f.ctex"]
 
 [params]
 

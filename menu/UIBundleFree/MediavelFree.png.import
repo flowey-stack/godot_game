@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cosmx1gagru5p"
-path="res://.godot/imported/MediavelFree.png-925ed270fa474cd95cf5f84cf0ea588a.ctex"
+path="res://.godot/imported/MediavelFree.png-2ee93f7eff4c40605925dec39b192bb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UIBundleFree/MediavelFree.png"
-dest_files=["res://.godot/imported/MediavelFree.png-925ed270fa474cd95cf5f84cf0ea588a.ctex"]
+source_file="res://menu/UIBundleFree/MediavelFree.png"
+dest_files=["res://.godot/imported/MediavelFree.png-2ee93f7eff4c40605925dec39b192bb0.ctex"]
 
 [params]
 
