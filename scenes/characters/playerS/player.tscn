@@ -377,7 +377,5 @@ script = ExtResource("4_p7ctl")
 [node name="Health" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("6_tveg4")
 
-[node name="Attack" type="AudioStreamPlayer" parent="Sound"]
-
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_exited" from="HurtBox" to="." method="_on_hurt_box_area_exited"]
