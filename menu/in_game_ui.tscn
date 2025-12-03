@@ -1,10 +1,10 @@
 [gd_scene load_steps=31 format=3 uid="uid://bj0p8riusuhwn"]
 
-[ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://popup_menu.gd" id="1_cwbuu"]
-[ext_resource type="Script" uid="uid://ci3flp4c4wuyp" path="res://stat_display_menu.gd" id="2_e6quo"]
-[ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
-[ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://UIBundleFree/MediavelFree.png" id="5_4v80v"]
-[ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
+[ext_resource type="Script" path="res://menu/popup_menu.gd" id="1_cwbuu"]
+[ext_resource type="Script" path="res://menu/stat_display_menu.gd" id="2_e6quo"]
+[ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
+[ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://menu/UIBundleFree/MediavelFree.png" id="5_4v80v"]
+[ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpq86"]
 texture = ExtResource("6_0qsvx")
