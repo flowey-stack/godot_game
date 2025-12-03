@@ -667,7 +667,6 @@ open_quit_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/Mar
 
 [node name="menu" type="VBoxContainer" parent="popupMenu"]
 visible = false
-modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -683,6 +682,8 @@ layout_mode = 2
 theme_override_constants/separation = 3
 
 [node name="toggleMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 4)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -692,7 +693,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_dpq86")
 theme_override_styles/normal = SubResource("StyleBoxTexture_dpq86")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/menu/baseMenuScreen/VBoxContainer"]
-custom_minimum_size = Vector2(350, 160)
 layout_mode = 2
 texture = ExtResource("6_0qsvx")
 region_rect = Rect2(741, 38, 22, 22)
@@ -702,6 +702,8 @@ patch_margin_right = 4
 patch_margin_bottom = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -792,8 +794,6 @@ text = "SCORE:"
 layout_mode = 2
 
 [node name="baseMenuOpenButtonContainer" type="VBoxContainer" parent="popupMenu"]
-visible = false
-modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -857,17 +857,14 @@ theme_override_constants/margin_right = 20
 layout_mode = 2
 
 [node name="textDisplay" type="Label" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_onc8m")
-theme_override_font_sizes/font_size = 20
-text = "Z - 點擊
-X - 物品欄
-U - 使用物品
-tab - 更換物品"
+theme_override_font_sizes/font_size = 15
+text = "how to play how to play how to play
+how to play how to play"
 autowrap_mode = 3
 
 [node name="exitButton" type="VBoxContainer" parent="popupMenu/helpMenu"]
@@ -890,6 +887,8 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_l8h7b")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ukwlx")
 
 [node name="settingMenu" type="MarginContainer" parent="popupMenu"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -1044,9 +1043,10 @@ layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="popupMenu/pauseMenu"]
 layout_mode = 2
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 0.513726)
 
 [node name="pauseButton" type="Button" parent="popupMenu/pauseMenu"]
+custom_minimum_size = Vector2(70, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
