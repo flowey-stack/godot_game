@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/objects/inventory/items/weapon_item.gd" id="1_l7vdg"]
 [ext_resource type="Texture2D" uid="uid://gr6s5nd3g7rj" path="res://assets/Farm/Items/Weapons/AxeTool/Sprite.png" id="2_afua1"]
-[ext_resource type="PackedScene" path="res://scenes/characters/players/axe.tscn" id="3_0o5je"]
+[ext_resource type="PackedScene" uid="uid://dv7gwwphukywh" path="res://scenes/characters/players/axe.tscn" id="3_0o5je"]
 
 [resource]
 script = ExtResource("1_l7vdg")
