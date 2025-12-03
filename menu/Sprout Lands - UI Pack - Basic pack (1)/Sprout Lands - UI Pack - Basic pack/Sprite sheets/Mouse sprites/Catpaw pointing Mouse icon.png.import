@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buejrx6g8yatk"
-path="res://.godot/imported/Catpaw pointing Mouse icon.png-e2c23c569dc567947f8ff25bc83317cc.ctex"
+path="res://.godot/imported/Catpaw pointing Mouse icon.png-e329eed8b7db5f086d6c866378a9c472.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Mouse sprites/Catpaw pointing Mouse icon.png"
-dest_files=["res://.godot/imported/Catpaw pointing Mouse icon.png-e2c23c569dc567947f8ff25bc83317cc.ctex"]
+source_file="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Mouse sprites/Catpaw pointing Mouse icon.png"
+dest_files=["res://.godot/imported/Catpaw pointing Mouse icon.png-e329eed8b7db5f086d6c866378a9c472.ctex"]
 
 [params]
 
