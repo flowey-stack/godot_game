@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://ctv7ep2rwusbm"]
+[gd_scene load_steps=21 format=4 uid="uid://ctv7ep2rwusbm"]
 
 [ext_resource type="PackedScene" uid="uid://i7m4oxea4vke" path="res://陷阱/player.tscn" id="1_d2o3j"]
 [ext_resource type="Texture2D" uid="uid://6ibgwbbysyb5" path="res://陷阱/brackeys_platformer_assets/sprites/world_tileset.png" id="1_e35kb"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://co5riir77uqba" path="res://assets/Farm/Items/Treasure/GoldKey.png" id="10_x8bkk"]
 [ext_resource type="Script" path="res://陷阱/chest_ui.gd" id="11_mfdv2"]
 [ext_resource type="PackedScene" uid="uid://cvp2lv3jeq872" path="res://陷阱/moving_platform.tscn" id="14_x8bkk"]
+[ext_resource type="AudioStream" uid="uid://c5sgegyr27g15" path="res://陷阱/brackeys_platformer_assets/冒險BGM.mp3" id="16_y5n0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kghom"]
 texture = ExtResource("1_e35kb")
@@ -570,5 +571,10 @@ phase_offset = 10.0
 [node name="MovingPlatform14" parent="MovingPlatform" instance=ExtResource("14_x8bkk")]
 position = Vector2(1625, -264)
 phase_offset = 20.0
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_y5n0h")
+autoplay = true
+parameters/looping = false
 
 [connection signal="timeout" from="gamestart/Timer" to="gamestart" method="_on_timer_timeout"]
