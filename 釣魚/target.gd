@@ -35,8 +35,10 @@ func _physics_process(delta: float)->void:
 				CircleShape2D:
 					half_extents = Vector2(cs.shape.radius, cs.shape.radius)
 
-		global_position.x = clamp(global_position.x, box.position.x + half_extents.x, box.position.x + box.size.x - half_extents.x)
-		global_position.y = clamp(global_position.y, box.position.y + half_extents.y, box.position.y + box.size.y - half_extents.y)
+		global_position.x = clamp(global_position.x, box.position.x + half_extents.x, box.position.x + box.size.x 
+		- half_extents.x)
+		global_position.y = clamp(global_position.y, box.position.y + half_extents.y, box.position.y + box.size.y
+		 - half_extents.y)
 
 	# 捕魚（空白鍵）
 	if Input.is_action_just_pressed("ui_accept") and overlapping_fish.size() > 0:

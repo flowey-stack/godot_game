@@ -573,6 +573,7 @@ position = Vector2(1625, -264)
 phase_offset = 20.0
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2, 0)
 stream = ExtResource("16_y5n0h")
 autoplay = true
 parameters/looping = false
