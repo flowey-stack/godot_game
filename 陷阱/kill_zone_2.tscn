@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1hhu6kc6hpf0"]
 
-[ext_resource type="Script" uid="uid://c4ijhelucttfv" path="res://kill_zone.gd" id="1_02a34"]
+[ext_resource type="Script" uid="uid://c4ijhelucttfv" path="res://陷阱/kill_zone.gd" id="1_02a34"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_thyo7"]
 

@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=4 uid="uid://38c6htb0g1xj"]
 
-[ext_resource type="Texture2D" uid="uid://6ibgwbbysyb5" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="1_me4bl"]
-[ext_resource type="PackedScene" uid="uid://ck1j32ydbon8k" path="res://player.tscn" id="2_31blf"]
-[ext_resource type="Script" uid="uid://drjraadq8lhji" path="res://canvas_layer.gd" id="3_31blf"]
-[ext_resource type="PackedScene" uid="uid://crj0efsod4m2g" path="res://moving_platform.tscn" id="4_h2xay"]
-[ext_resource type="Texture2D" uid="uid://cyje1nb4u1kp5" path="res://brackeys_platformer_assets/chest1.png" id="4_pylxb"]
-[ext_resource type="Script" uid="uid://b1tp37gu8o3q8" path="res://game_manager.gd" id="6_5swrt"]
-[ext_resource type="Script" uid="uid://gvvnfv623g5b" path="res://chest_ui.gd" id="7_mo5db"]
-[ext_resource type="PackedScene" uid="uid://chd801euhsjxm" path="res://kill_zone.tscn" id="8_mo5db"]
-[ext_resource type="PackedScene" uid="uid://u0bds4vq2d4r" path="res://chest.tscn" id="9_ew235"]
+[ext_resource type="Texture2D" uid="uid://6ibgwbbysyb5" path="res://陷阱/brackeys_platformer_assets/sprites/world_tileset.png" id="1_me4bl"]
+[ext_resource type="PackedScene" uid="uid://ck1j32ydbon8k" path="res://陷阱/player.tscn" id="2_31blf"]
+[ext_resource type="Script" uid="uid://drjraadq8lhji" path="res://陷阱/canvas_layer.gd" id="3_31blf"]
+[ext_resource type="PackedScene" uid="uid://crj0efsod4m2g" path="res://陷阱/moving_platform.tscn" id="4_h2xay"]
+[ext_resource type="Texture2D" uid="uid://cyje1nb4u1kp5" path="res://陷阱/brackeys_platformer_assets/chest1.png" id="4_pylxb"]
+[ext_resource type="Script" uid="uid://b1tp37gu8o3q8" path="res://陷阱/game_manager.gd" id="6_5swrt"]
+[ext_resource type="Script" uid="uid://gvvnfv623g5b" path="res://陷阱/chest_ui.gd" id="7_mo5db"]
+[ext_resource type="PackedScene" uid="uid://chd801euhsjxm" path="res://陷阱/kill_zone.tscn" id="8_mo5db"]
+[ext_resource type="PackedScene" uid="uid://u0bds4vq2d4r" path="res://陷阱/chest.tscn" id="9_ew235"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2xay"]
 texture = ExtResource("1_me4bl")

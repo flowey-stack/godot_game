@@ -1,10 +1,24 @@
 [gd_scene load_steps=31 format=3 uid="uid://bj0p8riusuhwn"]
 
-[ext_resource type="Script" path="res://menu/popup_menu.gd" id="1_cwbuu"]
-[ext_resource type="Script" path="res://menu/stat_display_menu.gd" id="2_e6quo"]
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+[ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://menu/popup_menu.gd" id="1_cwbuu"]
+[ext_resource type="Script" uid="uid://ci3flp4c4wuyp" path="res://menu/stat_display_menu.gd" id="2_e6quo"]
 [ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
 [ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://menu/UIBundleFree/MediavelFree.png" id="5_4v80v"]
 [ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
+=======
+=======
+>>>>>>> Stashed changes
+[ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://popup_menu.gd" id="1_cwbuu"]
+[ext_resource type="Script" uid="uid://ci3flp4c4wuyp" path="res://stat_display_menu.gd" id="2_e6quo"]
+[ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
+[ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://UIBundleFree/MediavelFree.png" id="5_4v80v"]
+[ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpq86"]
 texture = ExtResource("6_0qsvx")
@@ -619,15 +633,15 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uusyb"]
 _data = {
-"RESET": SubResource("Animation_0qsvx"),
-"close_helpMenu": SubResource("Animation_dpq86"),
-"close_menu": SubResource("Animation_uusyb"),
-"close_pauseMenu": SubResource("Animation_tjjbm"),
-"close_settingMenu": SubResource("Animation_ukwlx"),
-"open_helpMenu": SubResource("Animation_ep3pr"),
-"open_menu": SubResource("Animation_4v80v"),
-"open_pauseMenu": SubResource("Animation_h3j15"),
-"open_settingMenu": SubResource("Animation_l8h7b")
+&"RESET": SubResource("Animation_0qsvx"),
+&"close_helpMenu": SubResource("Animation_dpq86"),
+&"close_menu": SubResource("Animation_uusyb"),
+&"close_pauseMenu": SubResource("Animation_tjjbm"),
+&"close_settingMenu": SubResource("Animation_ukwlx"),
+&"open_helpMenu": SubResource("Animation_ep3pr"),
+&"open_menu": SubResource("Animation_4v80v"),
+&"open_pauseMenu": SubResource("Animation_h3j15"),
+&"open_settingMenu": SubResource("Animation_l8h7b")
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4etj"]
@@ -890,7 +904,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_l8h7b")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ukwlx")
 
 [node name="settingMenu" type="MarginContainer" parent="popupMenu"]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1037,7 +1050,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ukwlx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="popupMenu"]
 libraries = {
-"": SubResource("AnimationLibrary_uusyb")
+&"": SubResource("AnimationLibrary_uusyb")
 }
 
 [node name="pauseMenu" type="MarginContainer" parent="popupMenu"]
@@ -1046,10 +1059,9 @@ layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="popupMenu/pauseMenu"]
 layout_mode = 2
-color = Color(0, 0, 0, 0.513726)
+color = Color(0, 0, 0, 0)
 
 [node name="pauseButton" type="Button" parent="popupMenu/pauseMenu"]
-custom_minimum_size = Vector2(70, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

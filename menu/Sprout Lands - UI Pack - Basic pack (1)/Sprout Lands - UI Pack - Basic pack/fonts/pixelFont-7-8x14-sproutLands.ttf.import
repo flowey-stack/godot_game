@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dxo2xyqdatael"
-path="res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-d838181bb4ad0b28f3dc6ba14723ae4c.fontdata"
+path="res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-e364b4b4d0d81864cde4804e09c22059.fontdata"
 
 [deps]
 
-source_file="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf"
-dest_files=["res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-d838181bb4ad0b28f3dc6ba14723ae4c.fontdata"]
+source_file="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf"
+dest_files=["res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-e364b4b4d0d81864cde4804e09c22059.fontdata"]
 
 [params]
 
@@ -23,6 +23,7 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=4
+keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

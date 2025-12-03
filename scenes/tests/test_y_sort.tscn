@@ -1,13 +1,25 @@
 [gd_scene load_steps=9 format=4 uid="uid://cjchsi5fspa7c"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_4lyap"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_ynekv"]
-[ext_resource type="PackedScene" uid="uid://ycltjrnegef1" path="res://scenes/objects/nature/middle_tree.tscn" id="3_vht01"]
-[ext_resource type="PackedScene" uid="uid://tq3vfopsekb7" path="res://scenes/objects/nature/tree.tscn" id="4_ynekv"]
-[ext_resource type="PackedScene" uid="uid://bcif22cemaej1" path="res://scenes/objects/nature/large_tree.tscn" id="5_vht01"]
-[ext_resource type="PackedScene" uid="uid://oyb4q1asyv1s" path="res://scenes/objects/houses/house_1.tscn" id="6_i3gg8"]
-[ext_resource type="PackedScene" uid="uid://dom0j3huwhf86" path="res://scenes/objects/nature/large_tree_3.tscn" id="6_o1yx5"]
-[ext_resource type="PackedScene" uid="uid://ln1uqa26jnxn" path="res://scenes/objects/nature/large_tree_2.tscn" id="7_dta2u"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_ynekv"]
+
+[sub_resource type="Resource" id="Resource_sxv7a"]
+metadata/__load_path__ = "res://scenes/objects/houses/house_1.tscn"
+
+[sub_resource type="Resource" id="Resource_4lyap"]
+metadata/__load_path__ = "res://scenes/objects/nature/tree.tscn"
+
+[sub_resource type="Resource" id="Resource_ynekv"]
+metadata/__load_path__ = "res://scenes/objects/nature/middle_tree.tscn"
+
+[sub_resource type="Resource" id="Resource_vht01"]
+metadata/__load_path__ = "res://scenes/objects/nature/large_tree_3.tscn"
+
+[sub_resource type="Resource" id="Resource_i3gg8"]
+metadata/__load_path__ = "res://scenes/objects/nature/large_tree_2.tscn"
+
+[sub_resource type="Resource" id="Resource_vfysj"]
+metadata/__load_path__ = "res://scenes/objects/nature/large_tree.tscn"
 
 [node name="TestTileMap" type="Node2D"]
 
@@ -36,20 +48,20 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAAAAMAAwAAAAAAAAAAAAEAAgAAAAsAAAADAAIAAgAEAAsAAAANAAMAAgADABIAAAAPAAUAAgAAAAIAAAALAAYAAgAGAAgAAAAOAAcAAgAAAAAAAAA=")
 tile_set = ExtResource("1_4lyap")
 
-[node name="House" parent="EnviromantalObjects" instance=ExtResource("6_i3gg8")]
+[node name="House" parent="EnviromantalObjects"]
 position = Vector2(235, 17)
 
-[node name="Tree" parent="EnviromantalObjects" instance=ExtResource("4_ynekv")]
+[node name="Tree" parent="EnviromantalObjects"]
 position = Vector2(-24, 10)
 
-[node name="MiddleTree" parent="EnviromantalObjects" instance=ExtResource("3_vht01")]
+[node name="MiddleTree" parent="EnviromantalObjects"]
 position = Vector2(10, 9)
 
-[node name="LargeTree" parent="EnviromantalObjects" instance=ExtResource("6_o1yx5")]
+[node name="LargeTree" parent="EnviromantalObjects"]
 position = Vector2(53, 11)
 
-[node name="LargeTree2" parent="EnviromantalObjects" instance=ExtResource("7_dta2u")]
+[node name="LargeTree2" parent="EnviromantalObjects"]
 position = Vector2(105, 15)
 
-[node name="LargeTree3" parent="EnviromantalObjects" instance=ExtResource("5_vht01")]
+[node name="LargeTree3" parent="EnviromantalObjects"]
 position = Vector2(170, -9)

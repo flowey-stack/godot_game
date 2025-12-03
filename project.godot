@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="RPG"
+<<<<<<< Updated upstream
+run/main_scene="uid://del0x1j5skg88"
+=======
 run/main_scene="res://scene/main.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
