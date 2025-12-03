@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yypjmoelb4wd"
-path="res://.godot/imported/white icons.png-19eed81feaaecf2b211166a865abc336.ctex"
+path="res://.godot/imported/white icons.png-a849547f64817b40d3818e13fc10c211.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/Icons/white icons.png"
-dest_files=["res://.godot/imported/white icons.png-19eed81feaaecf2b211166a865abc336.ctex"]
+source_file="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Icons/white icons.png"
+dest_files=["res://.godot/imported/white icons.png-a849547f64817b40d3818e13fc10c211.ctex"]
 
 [params]
 
