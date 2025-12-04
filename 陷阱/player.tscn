@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://ck1j32ydbon8k"]
 
-[ext_resource type="Script" uid="uid://bkq7dmxhdad8d" path="res://player.gd" id="1_miac1"]
-[ext_resource type="Texture2D" uid="uid://d1flc248ddric" path="res://brackeys_platformer_assets/sprites/SpriteSheet.png" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://bkq7dmxhdad8d" path="res://陷阱/player.gd" id="1_miac1"]
+[ext_resource type="Texture2D" uid="uid://d1flc248ddric" path="res://陷阱/brackeys_platformer_assets/sprites/SpriteSheet.png" id="2_onrkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
 atlas = ExtResource("2_onrkg")

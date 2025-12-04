@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=4 uid="uid://bmn3yro00ilmr"]
 
-[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_vlksa"]
+[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_vlksa"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_6dvl8"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_1sdvw"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="3_1sdvw"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_3ygs2"]
-[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_3ygs2"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_3ygs2"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_2grsr"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_522j7"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="8_2grsr"]
