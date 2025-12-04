@@ -15,7 +15,7 @@ size = Vector2(75, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l34qa"]
 size = Vector2(20, 132.5)
 
-[node name="Main2" type="Node2D"]
+[node name="Progress4" type="Node2D"]
 position = Vector2(-8, 10)
 script = ExtResource("1_4flfq")
 

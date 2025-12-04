@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bjov7eglwtfm6"]
+[gd_scene load_steps=14 format=4 uid="uid://bjov7eglwtfm6"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_r5fit"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_6oeus"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="6_6oeus"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_slksd"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_k41sd"]
+[ext_resource type="PackedScene" uid="uid://511xjudocj7g" path="res://scenes/component/background_decoration/rain_drops.tscn" id="9_srpqv"]
+[ext_resource type="PackedScene" uid="uid://dug644r14vloh" path="res://scenes/component/background_decoration/rain_splashs.tscn" id="10_2nbuh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r5fit"]
 size = Vector2(20, 93.5)
@@ -18,7 +20,7 @@ size = Vector2(111, 31.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwjni"]
 size = Vector2(26, 59)
 
-[node name="Main2" type="Node2D"]
+[node name="Progress2" type="Node2D"]
 position = Vector2(-8, 10)
 script = ExtResource("1_r5fit")
 
@@ -32,7 +34,7 @@ tile_set = ExtResource("2_6oeus")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_gwjni")]
-position = Vector2(179, -89)
+position = Vector2(196, 78)
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -119,6 +121,14 @@ offset_right = 58.0
 offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="RainDrops" parent="." instance=ExtResource("9_srpqv")]
+position = Vector2(58, -110)
+amount = 1300
+lifetime = 4.0
+
+[node name="RainSplashs" parent="." instance=ExtResource("10_2nbuh")]
+amount = 1300
 
 [editable path="Doors/Door_from_1"]
 [editable path="Doors/Door_to_3"]
