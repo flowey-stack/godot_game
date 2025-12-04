@@ -1,7 +1,7 @@
 extends Control
 
 var score = 0
-var time_left = 60.0
+var time_left = 30.0
 var game_over = false
 
 @onready var ui = $UI
@@ -37,7 +37,7 @@ func _end_game():
 	set_process(false)
 
 	game_over_overlay.visible = true
-	game_over_overlay.modulate = Color(0, 0, 0, 0.6)  # 半透明暗背景
+	game_over_overlay.modulate = Color(0, 0, 0, 0.6)
 	game_over_label.text = "TIME'S OVER"
 	final_score_label.text = "Final Score: %d" % score
 
@@ -45,3 +45,14 @@ func _end_game():
 	for fish in $AquaContainer.get_children():
 		if fish.has_method("set_physics_process"):
 			fish.set_physics_process(false)
+
+	# === 新增：3 秒後自動回到 home ===
+	var timer := Timer.new()
+	timer.wait_time = 3.0
+	timer.one_shot = true
+	add_child(timer)
+	timer.timeout.connect(_return_home)
+	timer.start()
+
+func _return_home():
+	get_tree().change_scene_to_file("res://scenes/level/home/home.tscn")

@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://陷阱/player.gd" id="7_iu54t"]
 [ext_resource type="Script" path="res://陷阱/canvas_layer.gd" id="8_tm6sf"]
 [ext_resource type="Script" path="res://陷阱/kill_zone.gd" id="9_y5n0h"]
-[ext_resource type="Script" path="res://陷阱/game_manager.gd" id="10_hve3p"]
+[ext_resource type="Script" uid="uid://b1tp37gu8o3q8" path="res://陷阱/game_manager.gd" id="10_hve3p"]
 [ext_resource type="Texture2D" uid="uid://co5riir77uqba" path="res://assets/Farm/Items/Treasure/GoldKey.png" id="10_x8bkk"]
 [ext_resource type="Script" path="res://陷阱/chest_ui.gd" id="11_mfdv2"]
 [ext_resource type="PackedScene" uid="uid://cvp2lv3jeq872" path="res://陷阱/moving_platform.tscn" id="14_x8bkk"]
