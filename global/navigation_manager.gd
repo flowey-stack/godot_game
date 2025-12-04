@@ -44,9 +44,13 @@ func go_to_level(level_tag, destination_tag):
 			scene_to_load = scene_room_1
 		"room_2":
 			scene_to_load = scene_room_2
-		
+	
+	
 	if scene_to_load != null:
-		TransitionScreen.transition()
+		var transition_speed: float = 1.0
+		if level_tag == "home": #or level_tag == "room_2" or level_tag == "hidden":
+			transition_speed = 0.3 # 進入這些關鍵場景時，速度變慢 (例如慢三倍)
+		TransitionScreen.transition(transition_speed)
 		await TransitionScreen.on_transition_finished
 		spawn_door_tag = destination_tag
 		get_tree().change_scene_to_packed(scene_to_load)
