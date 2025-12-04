@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=4 uid="uid://ledoae84ka4h"]
+[gd_scene load_steps=10 format=4 uid="uid://ledoae84ka4h"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_33nox"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_l0wn4"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_ou2d2"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_mjnk7"]
+[ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_vqsjn"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_exair"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_8vdav"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_fscab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7kxj"]
 
 [node name="LivingRoom" type="Node2D"]
 position = Vector2(-8, 10)
@@ -25,7 +28,6 @@ y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_ou2d2")]
 position = Vector2(153, 120)
-speed = 70
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -37,6 +39,27 @@ tile_map_data = PackedByteArray("AAAMAAEACgABAAIAAAADAAQACgAAAAcAAAAFAAMACgAHAAQ
 tile_set = ExtResource("2_l0wn4")
 
 [node name="Doors" type="Node2D" parent="."]
+
+[node name="Door_home" parent="Doors" instance=ExtResource("4_vqsjn")]
+position = Vector2(152, 153)
+destination_level_tag = "home"
+destination_door_tag = "living_room"
+
+[node name="Spawn" parent="Doors/Door_home" index="1"]
+position = Vector2(1, -18)
+
+[node name="Door_corridor" parent="Doors" instance=ExtResource("4_vqsjn")]
+position = Vector2(215, 65)
+destination_level_tag = "corridor"
+destination_door_tag = "living_room"
+spawn_direction = "left"
+
+[node name="CollisionShape2D" parent="Doors/Door_corridor" index="0"]
+position = Vector2(35, -25)
+shape = SubResource("RectangleShape2D_o7kxj")
+
+[node name="Spawn" parent="Doors/Door_corridor" index="1"]
+position = Vector2(13, -23)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -74,3 +97,6 @@ offset_right = 46.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[editable path="Doors/Door_home"]
+[editable path="Doors/Door_corridor"]

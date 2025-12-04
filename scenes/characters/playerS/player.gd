@@ -2,7 +2,7 @@ class_name Player extends CharacterBody2D
 
 signal health_changed
 
-@export var speed : int = 50
+@export var speed : int = 70
 @onready var animations:AnimationPlayer = $AnimationPlayer
 @onready var effects = $Effects
 @onready var hurt_timer = $HurtTimer

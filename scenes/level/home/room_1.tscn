@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://dd5wyarn2yaje"]
+[gd_scene load_steps=9 format=4 uid="uid://dd5wyarn2yaje"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_qfmh3"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_n6pxf"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_08vtl"]
+[ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_4t8kc"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_m4k6c"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_ne08w"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_6b1lh"]
@@ -25,7 +26,6 @@ y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_08vtl")]
 position = Vector2(118, 88)
-speed = 70
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -37,6 +37,17 @@ tile_map_data = PackedByteArray("AAAKAAIABAAxACMAAAAEAAIABAArACMAAAALAAEABAAtACE
 tile_set = ExtResource("2_n6pxf")
 
 [node name="Doors" type="Node2D" parent="."]
+
+[node name="Door_corridor" parent="Doors" instance=ExtResource("4_4t8kc")]
+position = Vector2(129, 102)
+destination_level_tag = "corridor"
+destination_door_tag = "room_1"
+
+[node name="CollisionShape2D" parent="Doors/Door_corridor" index="0"]
+position = Vector2(-1, 4)
+
+[node name="Spawn" parent="Doors/Door_corridor" index="1"]
+position = Vector2(-1, -17)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -74,3 +85,5 @@ offset_right = 46.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[editable path="Doors/Door_corridor"]
