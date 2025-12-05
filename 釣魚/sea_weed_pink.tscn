@@ -1,6 +1,6 @@
 [gd_scene load_steps=51 format=3 uid="uid://d2e7q1lcwfnqm"]
 
-[ext_resource type="Texture2D" uid="uid://b4rwb1v3xpe1k" path="res://SpearFishing Assets Pack/Sprites/SeaWeed - 16x32/Pink.png" id="1_vvg55"]
+[ext_resource type="Texture2D" uid="uid://b4rwb1v3xpe1k" path="res://釣魚/SpearFishing Assets Pack/Sprites/SeaWeed - 16x32/Pink.png" id="1_vvg55"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tn5j"]
 atlas = ExtResource("1_vvg55")
