@@ -155,7 +155,7 @@ tracks/1/path = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect:custom
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.366667),
+"times": PackedFloat32Array(0, 0.2, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(350, 160), Vector2(0, 160), Vector2(0, 0)]
@@ -666,7 +666,6 @@ close_pause_button = NodePath("pauseMenu/pauseButton")
 open_quit_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/quitButton")
 
 [node name="menu" type="VBoxContainer" parent="popupMenu"]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1039,14 +1038,14 @@ libraries = {
 }
 
 [node name="pauseMenu" type="MarginContainer" parent="popupMenu"]
-visible = false
 layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="popupMenu/pauseMenu"]
 layout_mode = 2
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 0.513726)
 
 [node name="pauseButton" type="Button" parent="popupMenu/pauseMenu"]
+custom_minimum_size = Vector2(70, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://kksfd0n1eyme" path="res://scenes/objects/inventory/items/weapon_item.gd" id="1_l7vdg"]
 [ext_resource type="Texture2D" uid="uid://gr6s5nd3g7rj" path="res://assets/Farm/Items/Weapons/AxeTool/Sprite.png" id="2_afua1"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dv7gwwphukywh" path="res://scenes/characters/players/axe.tscn" id="3_0o5je"]
+=======
+[ext_resource type="PackedScene" uid="uid://dv7gwwphukywh" path="res://scenes/characters/playerS/axe.tscn" id="3_0o5je"]
+>>>>>>> d50ab977e19b5acb3e6999aa463afbe0f8a5351e
 
 [resource]
 script = ExtResource("1_l7vdg")

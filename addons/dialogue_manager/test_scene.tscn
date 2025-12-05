@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=2 format=3 uid="uid://geqpktwn801a"]
+=======
+[gd_scene load_steps=2 format=3 uid="uid://38jr0exxvuy"]
+>>>>>>> d50ab977e19b5acb3e6999aa463afbe0f8a5351e
 
 [ext_resource type="Script" uid="uid://bstl65ck5h01f" path="res://addons/dialogue_manager/test_scene.gd" id="1_yupoh"]
 

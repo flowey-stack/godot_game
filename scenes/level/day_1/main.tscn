@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bmn3yro00ilmr"]
+[gd_scene load_steps=12 format=4 uid="uid://bmn3yro00ilmr"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_vlksa"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_6dvl8"]
@@ -17,9 +17,6 @@ size = Vector2(20, 90.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_480s7"]
 size = Vector2(27, 61.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fr34"]
-size = Vector2(78, 20)
 
 [node name="Main2" type="Node2D"]
 position = Vector2(-8, 10)
@@ -87,20 +84,6 @@ shape = SubResource("RectangleShape2D_480s7")
 [node name="Spawn" parent="Doors/Door_from_3" index="1"]
 position = Vector2(301, -208)
 
-[node name="Door_北" parent="Doors" instance=ExtResource("4_3ygs2")]
-visible = false
-position = Vector2(152, -5)
-destination_level_tag = "main"
-destination_door_tag = "南"
-spawn_direction = "down"
-
-[node name="CollisionShape2D" parent="Doors/Door_北" index="0"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_2fr34")
-
-[node name="Spawn" parent="Doors/Door_北" index="1"]
-position = Vector2(0, 22)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
 visible = false
@@ -141,4 +124,3 @@ grow_vertical = 0
 [editable path="Doors/Door_to_1"]
 [editable path="Doors/Door_to_3"]
 [editable path="Doors/Door_from_3"]
-[editable path="Doors/Door_北"]
