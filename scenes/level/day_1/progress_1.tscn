@@ -1,20 +1,17 @@
-[gd_scene load_steps=12 format=4 uid="uid://cos6qsurtjany"]
+[gd_scene load_steps=11 format=4 uid="uid://cos6qsurtjany"]
 
-[ext_resource type="Script" path="res://scenes/level/day_1/progress_1.gd" id="1_jcp30"]
+[ext_resource type="Script" uid="uid://crhk3gns5q6fd" path="res://scenes/level/day_1/progress_1.gd" id="1_jcp30"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_ieq2y"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_x2af0"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_5ixmp"]
-[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_jj62p"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_jj62p"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_p234h"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_avs8e"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="8_ieq2y"]
 [ext_resource type="AudioStream" uid="uid://cukccy3hixulv" path="res://assets/Farm/Audio/背景音/オオルリのさえずり1.mp3" id="9_tko0q"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4o3rm"]
-size = Vector2(20, 88)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ieq2y"]
-size = Vector2(20, 95)
+size = Vector2(66, 95)
 
 [node name="Progress1" type="Node2D"]
 position = Vector2(-8, 10)
@@ -31,7 +28,7 @@ tile_set = ExtResource("2_ieq2y")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_x2af0")]
-position = Vector2(409, 130)
+position = Vector2(-168, 28)
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -39,35 +36,32 @@ tile_map_data = PackedByteArray("AADw//j/AgAJABIAAADw//n/AgAJABIAAADw//r/AgAJABI
 tile_set = ExtResource("2_ieq2y")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAD0/wAAAwAAAAAAAAAbAAYAAwAAAAAAAAA=")
 tile_set = ExtResource("2_ieq2y")
 
 [node name="Doors" type="Node2D" parent="."]
 
-[node name="Door_from_1" parent="Doors" instance=ExtResource("4_5ixmp")]
-position = Vector2(293, 69)
-destination_level_tag = "main"
-destination_door_tag = "to_1"
-spawn_direction = "right"
-
-[node name="CollisionShape2D" parent="Doors/Door_from_1" index="0"]
-position = Vector2(-515, -51)
-shape = SubResource("RectangleShape2D_4o3rm")
-
-[node name="Spawn" parent="Doors/Door_from_1" index="1"]
-position = Vector2(-488, -47)
-
-[node name="Door_to_2" parent="Doors" instance=ExtResource("4_5ixmp")]
+[node name="Door_E" parent="Doors" instance=ExtResource("4_5ixmp")]
 position = Vector2(3, 68)
 destination_level_tag = "progress_2"
-destination_door_tag = "from_1"
+destination_door_tag = "W"
 spawn_direction = "left"
 
-[node name="CollisionShape2D" parent="Doors/Door_to_2" index="0"]
-position = Vector2(476, 54)
+[node name="CollisionShape2D" parent="Doors/Door_E" index="0"]
+position = Vector2(536, 55)
 shape = SubResource("RectangleShape2D_ieq2y")
 
-[node name="Spawn" parent="Doors/Door_to_2" index="1"]
-position = Vector2(439, 56)
+[node name="Spawn" parent="Doors/Door_E" index="1"]
+position = Vector2(492, 56)
+
+[node name="Door_W" parent="Doors" instance=ExtResource("4_5ixmp")]
+position = Vector2(-253, 16)
+destination_level_tag = "main"
+destination_door_tag = "E"
+spawn_direction = "right"
+
+[node name="Spawn" parent="Doors/Door_W" index="1"]
+position = Vector2(36, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -108,5 +102,5 @@ grow_vertical = 0
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_tko0q")
 
-[editable path="Doors/Door_from_1"]
-[editable path="Doors/Door_to_2"]
+[editable path="Doors/Door_E"]
+[editable path="Doors/Door_W"]

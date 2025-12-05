@@ -10,4 +10,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		NavigationManager.go_to_level(destination_level_tag, destination_door_tag)
+		#if not is_instance_valid(destination_door_tag):
+			#print("錯誤：門節點 ", name, " destination_door_tag")
+			#return
+		NavigationManager.go_to_level(destination_level_tag, destination_door_tag,spawn.global_position,spawn_direction)

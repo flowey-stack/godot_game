@@ -37,8 +37,6 @@ func handleInput():
 		attack()
 
 
-
-
 func attack():
 	animations.play("attack" + last_anim_direction)
 	is_attacking = true

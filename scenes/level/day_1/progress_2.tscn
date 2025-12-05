@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://bjov7eglwtfm6"]
+[gd_scene load_steps=16 format=4 uid="uid://bjov7eglwtfm6"]
 
-[ext_resource type="Script" path="res://scenes/level/day_1/progress_2.gd" id="1_xetlm"]
+[ext_resource type="Script" uid="uid://cmgwajlg6rn8x" path="res://scenes/level/day_1/progress_2.gd" id="1_xetlm"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_6oeus"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_gwjni"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_srpqv"]
-[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_2nbuh"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_2nbuh"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="6_6oeus"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_slksd"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_k41sd"]
@@ -13,13 +13,16 @@
 [ext_resource type="AudioStream" uid="uid://ch3hgaqmurg0p" path="res://assets/Farm/Audio/背景音/雨が降る2.mp3" id="11_uv1jt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r5fit"]
-size = Vector2(20, 93.5)
+size = Vector2(59, 93.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6oeus"]
-size = Vector2(111, 31.5)
+size = Vector2(111, 51.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwjni"]
-size = Vector2(26, 59)
+size = Vector2(51, 59)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ktai7"]
+blend_mode = 3
 
 [node name="Progress2" type="Node2D"]
 position = Vector2(-8, 10)
@@ -35,7 +38,7 @@ tile_set = ExtResource("2_6oeus")
 y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_gwjni")]
-position = Vector2(196, 78)
+position = Vector2(187, -64)
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -43,35 +46,35 @@ tile_map_data = PackedByteArray("AAAAAAAAAgAJABIAAAACAAAAAgAJABIAAAAAAAIAAgAJABI
 tile_set = ExtResource("2_6oeus")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
-tile_map_data = PackedByteArray("AAACAAIAAgABAAsAAAA=")
+tile_map_data = PackedByteArray("AAACAAIAAgABAAsAAADy/wwAAwAAAAAAAADz/wwAAwAAAAAAAAAeAP//AwAAAAAAAAAdAP//AwAAAAAAAAAKAPn/AwAAAAAAAAAKAPr/AwAAAAAAAAA=")
 tile_set = ExtResource("2_6oeus")
 
 [node name="Doors" type="Node2D" parent="."]
 
-[node name="Door_from_1" parent="Doors" instance=ExtResource("4_srpqv")]
+[node name="Door_W" parent="Doors" instance=ExtResource("4_srpqv")]
 position = Vector2(293, 69)
 destination_level_tag = "progress_1"
-destination_door_tag = "to_2"
+destination_door_tag = "E"
 spawn_direction = "right"
 
-[node name="CollisionShape2D" parent="Doors/Door_from_1" index="0"]
-position = Vector2(-537, 130)
+[node name="CollisionShape2D" parent="Doors/Door_W" index="0"]
+position = Vector2(-556.5, 130)
 shape = SubResource("RectangleShape2D_r5fit")
 
-[node name="Spawn" parent="Doors/Door_from_1" index="1"]
+[node name="Spawn" parent="Doors/Door_W" index="1"]
 position = Vector2(-510, 143)
 
-[node name="Door_to_3" parent="Doors" instance=ExtResource("4_srpqv")]
+[node name="Door_N" parent="Doors" instance=ExtResource("4_srpqv")]
 position = Vector2(3, 68)
 destination_level_tag = "progress_3"
-destination_door_tag = "from_2"
+destination_door_tag = "S"
 spawn_direction = "down"
 
-[node name="CollisionShape2D" parent="Doors/Door_to_3" index="0"]
-position = Vector2(174, -215)
+[node name="CollisionShape2D" parent="Doors/Door_N" index="0"]
+position = Vector2(174, -225.125)
 shape = SubResource("RectangleShape2D_6oeus")
 
-[node name="Spawn" parent="Doors/Door_to_3" index="1"]
+[node name="Spawn" parent="Doors/Door_N" index="1"]
 position = Vector2(173, -186)
 
 [node name="Door_to_hidden" parent="Doors" instance=ExtResource("4_srpqv")]
@@ -80,7 +83,7 @@ destination_door_tag = "from_2"
 spawn_direction = "left "
 
 [node name="CollisionShape2D" parent="Doors/Door_to_hidden" index="0"]
-position = Vector2(539, -7)
+position = Vector2(551.5, -7)
 shape = SubResource("RectangleShape2D_gwjni")
 
 [node name="Spawn" parent="Doors/Door_to_hidden" index="1"]
@@ -134,6 +137,16 @@ amount = 1300
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_uv1jt")
 
-[editable path="Doors/Door_from_1"]
-[editable path="Doors/Door_to_3"]
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.270588)
+material = SubResource("CanvasItemMaterial_ktai7")
+offset_left = -675.0
+offset_top = -384.0
+offset_right = 959.0
+offset_bottom = 601.0
+color = Color(0.544495, 0.602941, 0.845146, 1)
+
+[editable path="Doors/Door_W"]
+[editable path="Doors/Door_N"]
 [editable path="Doors/Door_to_hidden"]

@@ -7,6 +7,7 @@ const scene_progress_2 = preload("res://scenes/level/day_1/progress_2.tscn")
 const scene_progress_3 = preload("res://scenes/level/day_1/progress_3.tscn")
 const scene_progress_4 = preload("res://scenes/level/day_1/progress_4.tscn")
 const scene_hidden = preload("res://scenes/level/day_1/hidden.tscn")
+
 const scene_home = preload("res://scenes/level/home/home.tscn")
 const scene_living_room = preload("res://scenes/level/home/living_room.tscn")
 const scene_corridor = preload("res://scenes/level/home/corridor.tscn")
@@ -17,7 +18,7 @@ signal on_trigger_player_spawn
 
 var spawn_door_tag
 
-func go_to_level(level_tag, destination_tag):
+func go_to_level(level_tag, destination_tag,spawn_pos: Vector2, spawn_dir: String):
 	var scene_to_load
 	
 	match level_tag:
@@ -47,12 +48,16 @@ func go_to_level(level_tag, destination_tag):
 	
 	
 	if scene_to_load != null:
-		var transition_speed: float = 1.0
+		var transition_speed: float = 0.8
 		if level_tag == "home": #or level_tag == "room_2" or level_tag == "hidden":
 			transition_speed = 0.3 # 進入這些關鍵場景時，速度變慢 (例如慢三倍)
+		
 		TransitionScreen.transition(transition_speed)
 		await TransitionScreen.on_transition_finished
 		spawn_door_tag = destination_tag
+		
+		trigger_player_spawn(spawn_pos, spawn_dir)
+		
 		get_tree().change_scene_to_packed(scene_to_load)
 
 func trigger_player_spawn(position: Vector2, direction: String):

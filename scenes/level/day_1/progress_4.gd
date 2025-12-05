@@ -1,4 +1,5 @@
-extends Node2D
+extends "res://scenes/level/world/world.gd"
+
 
 func _ready() -> void:
 	if NavigationManager.spawn_door_tag !=null:
