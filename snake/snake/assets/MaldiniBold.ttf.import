@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://djhmncgnyxyev"
-path="res://.godot/imported/MaldiniBold.ttf-cce0e3cae12b8508d03cb12dba036872.fontdata"
+path="res://.godot/imported/MaldiniBold.ttf-689a8e0a80c85c071996baee49f02b60.fontdata"
 
 [deps]
 
-source_file="res://assets/MaldiniBold.ttf"
-dest_files=["res://.godot/imported/MaldiniBold.ttf-cce0e3cae12b8508d03cb12dba036872.fontdata"]
+source_file="res://snake/snake/assets/MaldiniBold.ttf"
+dest_files=["res://.godot/imported/MaldiniBold.ttf-689a8e0a80c85c071996baee49f02b60.fontdata"]
 
 [params]
 
@@ -23,7 +23,6 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=4
-keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

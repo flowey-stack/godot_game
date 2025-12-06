@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=4 uid="uid://balcg4qfv6123"]
 
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="1_fxyu3"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="2_l2age"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="2_l2age"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_h3lpy"]
 [ext_resource type="TileSet" uid="uid://3y0ss002dmpj" path="res://tileset/items.tres" id="4_ssyoi"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="5_6nipe"]
 [ext_resource type="PackedScene" uid="uid://n8k8h503gjab" path="res://scenes/characters/enemys/ghost.tscn" id="5_n47ow"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_mlbfh"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="7_oycft"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="7_oycft"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="8_hwgr7"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="10_pequ1"]
 
