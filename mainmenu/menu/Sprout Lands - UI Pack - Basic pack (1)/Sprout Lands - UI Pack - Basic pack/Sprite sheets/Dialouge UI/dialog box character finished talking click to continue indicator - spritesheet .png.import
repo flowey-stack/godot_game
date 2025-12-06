@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yk2c4klro784"
-path="res://.godot/imported/dialog box character finished talking click to continue indicator - spritesheet .png-06368f095fa7098960a190d2e4aacad7.ctex"
+path="res://.godot/imported/dialog box character finished talking click to continue indicator - spritesheet .png-c9fcf26d3f49b30602ed3ad6f0cc90f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Dialouge UI/dialog box character finished talking click to continue indicator - spritesheet .png"
-dest_files=["res://.godot/imported/dialog box character finished talking click to continue indicator - spritesheet .png-06368f095fa7098960a190d2e4aacad7.ctex"]
+source_file="res://mainmenu/menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Dialouge UI/dialog box character finished talking click to continue indicator - spritesheet .png"
+dest_files=["res://.godot/imported/dialog box character finished talking click to continue indicator - spritesheet .png-c9fcf26d3f49b30602ed3ad6f0cc90f3.ctex"]
 
 [params]
 

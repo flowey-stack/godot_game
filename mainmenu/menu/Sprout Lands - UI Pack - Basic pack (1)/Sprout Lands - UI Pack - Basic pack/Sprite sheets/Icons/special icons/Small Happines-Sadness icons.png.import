@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cndquy5khx71l"
-path="res://.godot/imported/Small Happines-Sadness icons.png-335bad16f0d2c524f9c1e076a92e58a5.ctex"
+path="res://.godot/imported/Small Happines-Sadness icons.png-71843cbe705e9d7c23f6ab6dd686ff28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Icons/special icons/Small Happines-Sadness icons.png"
-dest_files=["res://.godot/imported/Small Happines-Sadness icons.png-335bad16f0d2c524f9c1e076a92e58a5.ctex"]
+source_file="res://mainmenu/menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Icons/special icons/Small Happines-Sadness icons.png"
+dest_files=["res://.godot/imported/Small Happines-Sadness icons.png-71843cbe705e9d7c23f6ab6dd686ff28.ctex"]
 
 [params]
 

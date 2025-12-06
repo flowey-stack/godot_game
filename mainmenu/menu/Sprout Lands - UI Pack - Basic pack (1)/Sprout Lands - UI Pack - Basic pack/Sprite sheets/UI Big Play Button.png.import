@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dihjn80gd5m1"
-path="res://.godot/imported/UI Big Play Button.png-22a348322b644a77a76800b633bc9ceb.ctex"
+path="res://.godot/imported/UI Big Play Button.png-cf89404a93352c2ad2421b01a5d69f6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Big Play Button.png"
-dest_files=["res://.godot/imported/UI Big Play Button.png-22a348322b644a77a76800b633bc9ceb.ctex"]
+source_file="res://mainmenu/menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Big Play Button.png"
+dest_files=["res://.godot/imported/UI Big Play Button.png-cf89404a93352c2ad2421b01a5d69f6d.ctex"]
 
 [params]
 

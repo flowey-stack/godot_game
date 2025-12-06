@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbt4r6yml5jnl"
-path="res://.godot/imported/pixel-letters-7-8x14-preview.png-d478181e44963aadf915dbb3a0aa87ae.ctex"
+path="res://.godot/imported/pixel-letters-7-8x14-preview.png-4440204b26bc3ceaac572782694918b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixel-letters-7-8x14-preview.png"
-dest_files=["res://.godot/imported/pixel-letters-7-8x14-preview.png-d478181e44963aadf915dbb3a0aa87ae.ctex"]
+source_file="res://mainmenu/menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixel-letters-7-8x14-preview.png"
+dest_files=["res://.godot/imported/pixel-letters-7-8x14-preview.png-4440204b26bc3ceaac572782694918b5.ctex"]
 
 [params]
 
