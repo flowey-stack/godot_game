@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://3y0ss002dmpj"]
+
+[ext_resource type="PackedScene" uid="uid://c7r5t0piqom3p" path="res://scenes/objects/collections/onigiri.tscn" id="1_bl4ol"]
+[ext_resource type="PackedScene" uid="uid://vf3ostbj4ac1" path="res://scenes/objects/collections/axe.tscn" id="2_5og8s"]
+[ext_resource type="PackedScene" uid="uid://c8xxjbg81xgg8" path="res://scenes/objects/collections/axe2.tscn" id="3_amumt"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_4nqc1"]
+resource_name = "collectables"
+scenes/1/scene = ExtResource("1_bl4ol")
+scenes/2/scene = ExtResource("2_5og8s")
+scenes/3/scene = ExtResource("3_amumt")
+
+[resource]
+sources/0 = SubResource("TileSetScenesCollectionSource_4nqc1")
