@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=4 uid="uid://bnu0erwne6imf"]
 
-[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_o2ija"]
+[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_o2ija"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_aierg"]
 [ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_f4eb2"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_k2im0"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="4_k2im0"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_n4pke"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_gxgdo"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_sdpqm"]

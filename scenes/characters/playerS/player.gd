@@ -35,6 +35,7 @@ func handleInput():
 	
 	if Input.is_action_just_pressed("attack"):
 		attack()
+	
 
 
 func attack():
