@@ -35,6 +35,8 @@ tile_set = ExtResource("2_6dvl8")
 tile_map_data = PackedByteArray("AAAPAAIAAgABAAsAAAA=")
 tile_set = ExtResource("2_6dvl8")
 
+[node name="TileMapLayer2" type="TileMapLayer" parent="Node2D"]
+
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="Door_E" parent="Doors" instance=ExtResource("4_3ygs2")]
