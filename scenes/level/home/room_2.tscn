@@ -1,12 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://b7o2alren1ovl"]
+[gd_scene load_steps=10 format=4 uid="uid://b7o2alren1ovl"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_327lm"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_phbfs"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/playerS/player.tscn" id="3_l2c2i"]
+[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_l2c2i"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_1dd2t"]
+[ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_jb2cs"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_gujg7"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_54137"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_7nchm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb2cs"]
+size = Vector2(25, 20)
 
 [node name="Room2" type="Node2D"]
 position = Vector2(-8, 10)
@@ -29,7 +33,6 @@ y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_l2c2i")]
 position = Vector2(118, 88)
-speed = 70
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -37,6 +40,18 @@ tile_map_data = PackedByteArray("AAAKAAIAAwAEAAUAAAAMAAIAAwAAAAAAAAAJAAIABAA2ACE
 tile_set = ExtResource("2_phbfs")
 
 [node name="Doors" type="Node2D" parent="."]
+
+[node name="Door_corridor" parent="Doors" instance=ExtResource("4_jb2cs")]
+position = Vector2(127, 98)
+destination_level_tag = "corridor"
+destination_door_tag = "room_2"
+
+[node name="CollisionShape2D" parent="Doors/Door_corridor" index="0"]
+position = Vector2(2.5, 8)
+shape = SubResource("RectangleShape2D_jb2cs")
+
+[node name="Spawn" parent="Doors/Door_corridor" index="1"]
+position = Vector2(0, -12)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -74,3 +89,5 @@ offset_right = 46.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[editable path="Doors/Door_corridor"]

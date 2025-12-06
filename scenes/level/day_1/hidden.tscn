@@ -12,7 +12,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6spy8"]
 size = Vector2(20, 104)
 
-[node name="Main2" type="Node2D"]
+[node name="Hidden" type="Node2D"]
 position = Vector2(-8, 10)
 script = ExtResource("1_6spy8")
 
@@ -27,7 +27,6 @@ y_sort_enabled = true
 
 [node name="Player" parent="Node2D" instance=ExtResource("3_hpxut")]
 position = Vector2(154, 77)
-speed = 70
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -40,17 +39,17 @@ tile_set = ExtResource("2_327qe")
 
 [node name="Doors" type="Node2D" parent="."]
 
-[node name="Door_東" parent="Doors" instance=ExtResource("4_qj7jp")]
+[node name="Door_from_2" parent="Doors" instance=ExtResource("4_qj7jp")]
 position = Vector2(293, 69)
-destination_level_tag = "progress_5"
-destination_door_tag = "西"
+destination_level_tag = "progress_2"
+destination_door_tag = "to_hidden"
 spawn_direction = "left"
 
-[node name="CollisionShape2D" parent="Doors/Door_東" index="0"]
+[node name="CollisionShape2D" parent="Doors/Door_from_2" index="0"]
 position = Vector2(3, -8)
 shape = SubResource("RectangleShape2D_6spy8")
 
-[node name="Spawn" parent="Doors/Door_東" index="1"]
+[node name="Spawn" parent="Doors/Door_from_2" index="1"]
 position = Vector2(-22, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -89,4 +88,4 @@ offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[editable path="Doors/Door_東"]
+[editable path="Doors/Door_from_2"]

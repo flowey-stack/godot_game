@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhb6vbw82i1n5"]
+
+[ext_resource type="Texture2D" uid="uid://dedtofwihmapt" path="res://assets/Farm/Backgrounds/Tilesets/TilesetElement.png" id="1_4lsq7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p52pf"]
+atlas = ExtResource("1_4lsq7")
+region = Rect2(16, 32, 16, 16)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_p52pf")
