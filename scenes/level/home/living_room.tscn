@@ -45,6 +45,9 @@ position = Vector2(152, 153)
 destination_level_tag = "home"
 destination_door_tag = "living_room"
 
+[node name="CollisionShape2D" parent="Doors/Door_home" index="0"]
+position = Vector2(0, 20)
+
 [node name="Spawn" parent="Doors/Door_home" index="1"]
 position = Vector2(1, -18)
 

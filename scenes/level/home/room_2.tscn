@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=4 uid="uid://b7o2alren1ovl"]
 
-[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_327lm"]
+[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_327lm"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_phbfs"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_l2c2i"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_1dd2t"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_r4ts7"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="4_1dd2t"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_jb2cs"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_gujg7"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_54137"]
@@ -31,13 +31,13 @@ tile_set = ExtResource("2_phbfs")
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Player" parent="Node2D" instance=ExtResource("3_l2c2i")]
-position = Vector2(118, 88)
-
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAKAAIAAwAEAAUAAAAMAAIAAwAAAAAAAAAJAAIABAA2ACEAAAADAAEABAAtACEAAAAEAAEABAAtACEAAAAIAAEABAAtACEAAAAHAAEABAAtACEAAAAFAAEABAA0ACAAAAAGAAEABAAwACEAAAADAAMABAAnACMAAAA=")
 tile_set = ExtResource("2_phbfs")
+
+[node name="Player_2" parent="Node2D" instance=ExtResource("3_r4ts7")]
+position = Vector2(129, 89)
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -47,7 +47,7 @@ destination_level_tag = "corridor"
 destination_door_tag = "room_2"
 
 [node name="CollisionShape2D" parent="Doors/Door_corridor" index="0"]
-position = Vector2(2.5, 8)
+position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_jb2cs")
 
 [node name="Spawn" parent="Doors/Door_corridor" index="1"]
@@ -55,7 +55,6 @@ position = Vector2(0, -12)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
-visible = false
 script = ExtResource("4_1dd2t")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("5_gujg7")]
