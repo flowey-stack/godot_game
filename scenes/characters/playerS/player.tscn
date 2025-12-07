@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://c5bk8kyg3e8vl"]
 
 [ext_resource type="Script" path="res://scenes/characters/players/player.gd" id="1_oi5qt"]
-[ext_resource type="PackedScene" uid="uid://de2d6kecqlx1f" path="res://scenes/component/hurt_box.tscn" id="2_msmdf"]
+[ext_resource type="PackedScene" uid="uid://cwcfp51j3b8oa" path="res://scenes/component/hurt_box.tscn" id="2_msmdf"]
 [ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="2_yewv4"]
 [ext_resource type="PackedScene" uid="uid://1i02ngc2ctxc" path="res://scenes/characters/players/effects.tscn" id="3_xtb5j"]
 [ext_resource type="Script" path="res://scenes/characters/players/weapon.gd" id="4_p7ctl"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dvayatc4im3sd"]
+[gd_scene load_steps=22 format=3 uid="uid://dvayatc4im3sd"]
 
 [ext_resource type="Script" path="res://scenes/characters/players/player_2.gd" id="1_eowxm"]
 [ext_resource type="Texture2D" uid="uid://brh7hlhl5gnc0" path="res://assets/Farm/Actor/Characters/AnimationSheet_Character.png" id="1_ngp3l"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scenes/characters/players/state/state_walk.gd" id="4_d6sqh"]
 [ext_resource type="Script" path="res://scenes/characters/players/state/state_run.gd" id="6_tq0xn"]
 [ext_resource type="Script" path="res://scenes/characters/players/state/state_attack.gd" id="7_tmqhh"]
-[ext_resource type="PackedScene" uid="uid://de2d6kecqlx1f" path="res://scenes/component/hurt_box.tscn" id="8_qu5m4"]
+[ext_resource type="PackedScene" uid="uid://cwcfp51j3b8oa" path="res://scenes/component/hurt_box.tscn" id="8_qu5m4"]
 [ext_resource type="PackedScene" uid="uid://1i02ngc2ctxc" path="res://scenes/characters/players/effects.tscn" id="9_68qg2"]
 [ext_resource type="AudioStream" uid="uid://2chv1gtkm4qb" path="res://assets/Farm/Audio/Sounds/Magic & Skill/Heal.wav" id="10_8fg6f"]
 [ext_resource type="AudioStream" uid="uid://b3w2afs0ysxeh" path="res://assets/Farm/Audio/Sounds/Whoosh & Slash/Whoosh2.wav" id="12_rkicw"]
@@ -131,6 +131,10 @@ _data = {
 "walk": SubResource("Animation_6rsry")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csybd"]
+radius = 7.0
+height = 16.0
+
 [node name="Player_2" type="CharacterBody2D" groups=["Player"]]
 y_sort_enabled = true
 texture_filter = 1
@@ -186,6 +190,7 @@ position = Vector2(-1, 13)
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 position = Vector2(0, -23)
+shape = SubResource("CapsuleShape2D_csybd")
 
 [node name="Effects" parent="." instance=ExtResource("9_68qg2")]
 
