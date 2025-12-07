@@ -17,7 +17,7 @@ signal health_changed
 #
 @onready var current_health : int = max_health
 @export var max_health = 3
-@export var knock_back_power : int = 700
+@export var knock_back_power : int = 1000
 @export var inventory : Inventory
 #
 var is_hurt : bool = false
@@ -70,6 +70,7 @@ func handle_collision():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		print_debug(collider.name)
+
 func hurt_by_enemy(area):
 	current_health -= 1
 	if current_health < 0:

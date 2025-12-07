@@ -376,7 +376,7 @@ script = ExtResource("7_rtoxo")
 
 [node name="wander" type="Node" parent="StateMachine"]
 script = ExtResource("7_gwjg2")
-max_wander_time = 5.0
+max_wander_time = 1.0
 wander_speed = 10.0
 
 [node name="idle" type="Node" parent="StateMachine"]
