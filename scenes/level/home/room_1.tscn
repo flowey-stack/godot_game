@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=4 uid="uid://dd5wyarn2yaje"]
 
-[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_qfmh3"]
+[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_qfmh3"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_n6pxf"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_08vtl"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_4t8kc"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_m4k6c"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="4_m4k6c"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_ne08w"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_6b1lh"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_ob6fy"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="8_07lb2"]
 
 [node name="Room1" type="Node2D"]
 position = Vector2(-8, 10)
@@ -24,9 +24,6 @@ tile_set = ExtResource("2_n6pxf")
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Player" parent="Node2D" instance=ExtResource("3_08vtl")]
-position = Vector2(118, 88)
-
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAFAAAAAQAAAAAAAAAKAAAAAQAAAAAAAAAMAAEACgAAAAcAAAAGAAEABAAvACEAAAAHAAAABAA1ACEAAAAJAAAABAA2ACEAAAAEAAEABAAnACEAAAADAAEABAAwACEAAAAFAAEABAA1ACAAAAAKAAIABAA0ACAAAAA=")
@@ -36,6 +33,9 @@ tile_set = ExtResource("2_n6pxf")
 tile_map_data = PackedByteArray("AAAKAAIABAAxACMAAAAEAAIABAArACMAAAALAAEABAAtACEAAAA=")
 tile_set = ExtResource("2_n6pxf")
 
+[node name="Player_2" parent="Node2D" instance=ExtResource("8_07lb2")]
+position = Vector2(129, 81)
+
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="Door_corridor" parent="Doors" instance=ExtResource("4_4t8kc")]
@@ -44,7 +44,7 @@ destination_level_tag = "corridor"
 destination_door_tag = "room_1"
 
 [node name="CollisionShape2D" parent="Doors/Door_corridor" index="0"]
-position = Vector2(-1, 4)
+position = Vector2(0, 21)
 
 [node name="Spawn" parent="Doors/Door_corridor" index="1"]
 position = Vector2(-1, -17)

@@ -1,22 +1,23 @@
 [gd_scene load_steps=15 format=4 uid="uid://coopdkpeo3yq8"]
 
-[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_8gk22"]
+[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_8gk22"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_76ubw"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_nkfrk"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="4_3vm3p"]
 [ext_resource type="TileSet" uid="uid://3y0ss002dmpj" path="res://tileset/items.tres" id="5_heue8"]
 [ext_resource type="PackedScene" uid="uid://n8k8h503gjab" path="res://scenes/characters/enemys/ghost.tscn" id="6_vdt00"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="7_5fhu7"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="8_psxio"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="8_psxio"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="9_1ux1l"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="10_87ddl"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="11_07ue0"]
 [ext_resource type="PackedScene" uid="uid://uot5lsr7g2pv" path="res://scenes/component/background_decoration/falling_leaf.tscn" id="12_0p1ao"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="12_xvdib"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orknk"]
 size = Vector2(20, 94.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qy05r"]
+size = Vector2(20, 14)
 
 [node name="Home" type="Node2D"]
 position = Vector2(-8, 10)
@@ -40,8 +41,8 @@ tile_set = ExtResource("2_76ubw")
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Player" parent="Node2D" instance=ExtResource("3_nkfrk")]
-position = Vector2(174, 53)
+[node name="Player_2" parent="Node2D" instance=ExtResource("12_xvdib")]
+position = Vector2(55, 88)
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
@@ -54,11 +55,13 @@ tile_map_data = PackedByteArray("AAAGAP3/AwAKAAQAAAAFAP7/AwAOAAQAAAADAP7/AwAOAAQ
 tile_set = ExtResource("4_3vm3p")
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
-tile_map_data = PackedByteArray("AAAOAAUAAAAAAAAAAgAPAAUAAAAAAAAAAQA=")
 tile_set = ExtResource("5_heue8")
 
 [node name="Ghost" parent="Node2D" instance=ExtResource("6_vdt00")]
 position = Vector2(68, 27)
+
+[node name="Ghost2" parent="Node2D" instance=ExtResource("6_vdt00")]
+position = Vector2(46, 42)
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -82,11 +85,11 @@ destination_door_tag = "home"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_living_room" index="0"]
-position = Vector2(0, -3)
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_qy05r")
 
 [node name="Spawn" parent="Doors/Door_living_room" index="1"]
-position = Vector2(-1, 21)
+position = Vector2(-1, 28)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3

@@ -15,6 +15,8 @@ class_name Ghost extends CharacterBody2D
 var alive := true
 var stunned := false
 
+var is_death: bool = false
+
 func _ready():
 	sprite.texture = textures.pick_random()
 
@@ -27,6 +29,8 @@ func _physics_process(delta):
 		sprite.flip_h = false
 	if velocity.x < 0:
 		sprite.flip_h = true
+
+
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area == $HitBox : return

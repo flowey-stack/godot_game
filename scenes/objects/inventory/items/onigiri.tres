@@ -1,9 +1,10 @@
 [gd_resource type="Resource" script_class="HealthItem" load_steps=3 format=3 uid="uid://bupbt2lu5ar0b"]
 
-[ext_resource type="Script" uid="uid://0x38j3o10wos" path="res://scenes/objects/inventory/items/health_item.gd" id="1_rv6pj"]
+[ext_resource type="Script" path="res://scenes/objects/inventory/items/health_item.gd" id="1_rv6pj"]
 [ext_resource type="Texture2D" uid="uid://cdqtvy24k3pe7" path="res://assets/Farm/Items/Food/Onigiri.png" id="2_rv6pj"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_rv6pj")
 health_increase = 1
 name = "onigiri"

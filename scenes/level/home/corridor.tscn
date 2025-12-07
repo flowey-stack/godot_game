@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=4 uid="uid://bnu0erwne6imf"]
 
-[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_o2ija"]
+[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_o2ija"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_aierg"]
-[ext_resource type="PackedScene" uid="uid://c5bk8kyg3e8vl" path="res://scenes/characters/players/player.tscn" id="3_f4eb2"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_k2im0"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="4_k2im0"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_n4pke"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_gxgdo"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_sdpqm"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_urivi"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="8_25pgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gux48"]
 size = Vector2(20, 29)
@@ -33,9 +33,6 @@ tile_set = ExtResource("2_aierg")
 [node name="Node2D" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Player" parent="Node2D" instance=ExtResource("3_f4eb2")]
-position = Vector2(65, 46)
-
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 tile_map_data = PackedByteArray("AAAPAAEACgAAAAcAAAAOAAAAAwAFAAIAAAADAAEACgAAAAcAAAAIAAAACgAIAAoAAAA=")
 tile_set = ExtResource("2_aierg")
@@ -43,6 +40,9 @@ tile_set = ExtResource("2_aierg")
 [node name="InteractionItem" type="TileMapLayer" parent="Node2D"]
 tile_map_data = PackedByteArray("AAAGAAAAAQAFAAAAAAAMAAAAAQAFAAAAAAAEAAAAAwAAAAAAAAA=")
 tile_set = ExtResource("2_aierg")
+
+[node name="Player_2" parent="Node2D" instance=ExtResource("8_25pgh")]
+position = Vector2(66, 50)
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -70,7 +70,7 @@ position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_n4pke")
 
 [node name="Spawn" parent="Doors/Door_room_1" index="1"]
-position = Vector2(0, 13)
+position = Vector2(0, 19)
 
 [node name="Door_room_2" parent="Doors" instance=ExtResource("4_n4pke")]
 position = Vector2(200, 14)
@@ -83,7 +83,7 @@ position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_wb2yo")
 
 [node name="Spawn" parent="Doors/Door_room_2" index="1"]
-position = Vector2(0, 14)
+position = Vector2(0, 20)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
