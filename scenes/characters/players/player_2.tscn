@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dvayatc4im3sd"]
+[gd_scene load_steps=23 format=3 uid="uid://dvayatc4im3sd"]
 
 [ext_resource type="Script" path="res://scenes/characters/players/player_2.gd" id="1_eowxm"]
 [ext_resource type="Texture2D" uid="uid://brh7hlhl5gnc0" path="res://assets/Farm/Actor/Characters/AnimationSheet_Character.png" id="1_ngp3l"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://1i02ngc2ctxc" path="res://scenes/characters/players/effects.tscn" id="9_68qg2"]
 [ext_resource type="AudioStream" uid="uid://2chv1gtkm4qb" path="res://assets/Farm/Audio/Sounds/Magic & Skill/Heal.wav" id="10_8fg6f"]
 [ext_resource type="AudioStream" uid="uid://b3w2afs0ysxeh" path="res://assets/Farm/Audio/Sounds/Whoosh & Slash/Whoosh2.wav" id="12_rkicw"]
+[ext_resource type="PackedScene" uid="uid://bkke8wunhx6du" path="res://scenes/component/hit_box.tscn" id="13_ojf1e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o31at"]
 radius = 7.0
@@ -31,6 +32,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [Vector2i(0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitBox/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8, -16)]
+}
 
 [sub_resource type="Animation" id="Animation_dmkw0"]
 resource_name = "attack"
@@ -47,6 +60,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 8), Vector2i(1, 8), Vector2i(2, 8), Vector2i(3, 8), Vector2i(4, 8), Vector2i(5, 8), Vector2i(6, 8), Vector2i(7, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitBox/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(8, -16)]
 }
 
 [sub_resource type="Animation" id="Animation_caufh"]
@@ -131,9 +156,8 @@ _data = {
 "walk": SubResource("Animation_6rsry")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_csybd"]
-radius = 7.0
-height = 16.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bndlj"]
+size = Vector2(17, 31)
 
 [node name="Player_2" type="CharacterBody2D" groups=["Player"]]
 y_sort_enabled = true
@@ -141,6 +165,10 @@ texture_filter = 1
 collision_layer = 59
 script = ExtResource("1_eowxm")
 inventory = ExtResource("2_vektj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -9)
+shape = SubResource("CapsuleShape2D_o31at")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 clip_children = 2
@@ -157,10 +185,6 @@ offset_top = -22.0
 offset_right = 21.0
 offset_bottom = 18.0
 color = Color(1, 1, 1, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -9)
-shape = SubResource("CapsuleShape2D_o31at")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -188,10 +212,6 @@ script = ExtResource("7_tmqhh")
 [node name="HurtBox" parent="." instance=ExtResource("8_qu5m4")]
 position = Vector2(-1, 13)
 
-[node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2(0, -23)
-shape = SubResource("CapsuleShape2D_csybd")
-
 [node name="Effects" parent="." instance=ExtResource("9_68qg2")]
 
 [node name="HurtTimer" type="Timer" parent="."]
@@ -208,5 +228,15 @@ stream = ExtResource("10_8fg6f")
 
 [node name="Attack" type="AudioStreamPlayer2D" parent="Sound"]
 stream = ExtResource("12_rkicw")
+
+[node name="HitBox" parent="." instance=ExtResource("13_ojf1e")]
+visible = false
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(8, -16)
+shape = SubResource("RectangleShape2D_bndlj")
+
+[connection signal="body_entered" from="HitBox" to="PlayerStateMachine/Attack" method="_on_hit_box_body_entered"]
 
 [editable path="HurtBox"]

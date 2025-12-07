@@ -313,7 +313,6 @@ position_smoothing_speed = 20.0
 [node name="Effects" parent="." instance=ExtResource("3_xtb5j")]
 
 [node name="Weapon" type="Node2D" parent="."]
-visible = false
 position = Vector2(-5, 0)
 rotation = 4.18879
 script = ExtResource("4_p7ctl")
