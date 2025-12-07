@@ -1,4 +1,4 @@
-class_name Player extends CharacterBody2D
+class_name Player2 extends CharacterBody2D
 
 signal health_changed
 
@@ -24,7 +24,7 @@ var is_hurt : bool = false
 var is_attacking : bool = false
 
 func _ready() :
-	inventory.use_item.connect(use_item)
+	#inventory.use_item.connect(use_item)
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
 	effects.play("RESET")
 
@@ -124,8 +124,8 @@ func increase_health(amount: int)-> void:
 	health_changed.emit(current_health)
 
 func use_item(item: InventoryItem) -> void:
-	if not item.can_be_used(self): return
-	item.use(self)
+	#if not item.can_be_used(self): return
+	#item.use(self)
 	
 	if item.consumable:
 		inventory.remove_last_used_item()

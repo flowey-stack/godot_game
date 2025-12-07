@@ -4,10 +4,12 @@ var attacking : bool = false
 @onready var animation_player :AnimationPlayer = $"../../AnimationPlayer"
 @onready var idle :PlayerState = $"../Idle"
 @onready var walk : PlayerState = $"../Walk"
+@onready var attack_sound : AudioStreamPlayer2D = $"../../Sound/Attack"
 
 func Enter() -> void:
 	player.UpdateAnimation("attack")
 	animation_player.animation_finished.connect(EndAttack)
+	attack_sound.play()
 	attacking = true
 	pass
 

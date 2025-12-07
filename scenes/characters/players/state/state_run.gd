@@ -4,6 +4,7 @@ class_name PlayerStateRun extends PlayerState
 
 @onready var idle : PlayerState = $"../Idle"
 @onready var walk : PlayerState = $"../Walk"
+@onready var attack : PlayerState = $"../Attack"
 
 const  run_action = ("run")
 
@@ -29,4 +30,6 @@ func Physics(_delta : float) -> PlayerState:
 	return null
 
 func HandInput(_event :InputEvent) ->PlayerState:
+	if _event.is_action_pressed("attack"):
+		return attack
 	return null

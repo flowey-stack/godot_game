@@ -1,5 +1,5 @@
 extends Node2D
-@onready var player: Player = $Node2D/Player
+@onready var player: Player = $Node2D/Player_2
 
 @onready var heart_container = $CanvasLayer/HeartContainer
 
