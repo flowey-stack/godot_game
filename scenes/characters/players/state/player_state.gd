@@ -1,6 +1,6 @@
 class_name PlayerState extends Node
 
-static var player: Player
+static var player: Player2
 
 func _ready() -> void:
 	pass
