@@ -35,8 +35,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xhovg"]
 _data = {
-"RESET": SubResource("Animation_13c0u"),
-"hurt_blink": SubResource("Animation_cbw2d")
+&"RESET": SubResource("Animation_13c0u"),
+&"hurt_blink": SubResource("Animation_cbw2d")
 }
 
 [node name="Effects" type="AnimationPlayer"]

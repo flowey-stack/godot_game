@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=3 uid="uid://c5bk8kyg3e8vl"]
 
-[ext_resource type="Script" path="res://scenes/characters/players/player.gd" id="1_oi5qt"]
+[ext_resource type="Script" uid="uid://d4lvba3a1ohax" path="res://scenes/characters/players/player.gd" id="1_oi5qt"]
 [ext_resource type="PackedScene" uid="uid://cwcfp51j3b8oa" path="res://scenes/component/hurt_box.tscn" id="2_msmdf"]
 [ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="2_yewv4"]
 [ext_resource type="PackedScene" uid="uid://1i02ngc2ctxc" path="res://scenes/characters/players/effects.tscn" id="3_xtb5j"]
-[ext_resource type="Script" path="res://scenes/characters/players/weapon.gd" id="4_p7ctl"]
+[ext_resource type="Script" uid="uid://camxoto83v6l4" path="res://scenes/characters/players/weapon.gd" id="4_p7ctl"]
 [ext_resource type="AudioStream" uid="uid://2chv1gtkm4qb" path="res://assets/Farm/Audio/Sounds/Magic & Skill/Heal.wav" id="6_tveg4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yewv4"]
@@ -263,15 +263,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6eyoc"]
 _data = {
-"RESET": SubResource("Animation_76oj4"),
-"attack_down": SubResource("Animation_p7ctl"),
-"attack_left": SubResource("Animation_faa85"),
-"attack_right": SubResource("Animation_tveg4"),
-"attack_up": SubResource("Animation_xhovg"),
-"walk_down": SubResource("Animation_yewv4"),
-"walk_left": SubResource("Animation_atpat"),
-"walk_right": SubResource("Animation_kqtwu"),
-"walk_up": SubResource("Animation_dyp2m")
+&"RESET": SubResource("Animation_76oj4"),
+&"attack_down": SubResource("Animation_p7ctl"),
+&"attack_left": SubResource("Animation_faa85"),
+&"attack_right": SubResource("Animation_tveg4"),
+&"attack_up": SubResource("Animation_xhovg"),
+&"walk_down": SubResource("Animation_yewv4"),
+&"walk_left": SubResource("Animation_atpat"),
+&"walk_right": SubResource("Animation_kqtwu"),
+&"walk_up": SubResource("Animation_dyp2m")
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
@@ -301,7 +301,7 @@ color = Color(1, 1, 1, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_6eyoc")
+&"": SubResource("AnimationLibrary_6eyoc")
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
