@@ -26,12 +26,18 @@ Cursor="*res://global/cursor.tscn"
 [dialogic]
 
 directories/dch_directory={
+"character": "res://dialogue/npc/cat.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
-directories/dtl_directory={}
-layout/style_directory={}
-layout/style_list=[]
-layout/default_style="Default"
+directories/dtl_directory={
+"first_main": "res://dialogue/timeline/first_main.dtl"
+}
+layout/style_directory={
+"": "res://dialogue/style/New_File.tres",
+"New_File": "res://dialogue/style/New_File.tres"
+}
+layout/style_list=["res://dialogue/style/New_File.tres"]
+layout/default_style="res://dialogue/style/New_File.tres"
 variables={}
 extensions_folder="res://addons/dialogic"
 text/letter_speed=0.01

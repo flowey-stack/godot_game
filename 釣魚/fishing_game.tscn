@@ -27,89 +27,92 @@ script = ExtResource("1_826u1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 288.0
-offset_bottom = 162.0
+offset_right = 355.0
+offset_bottom = 211.0
 color = Color(0.156863, 0.411765, 1, 1)
 
 [node name="coral" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 48.0
+offset_bottom = 33.0
 
 [node name="coral-whit" parent="ColorRect/coral" instance=ExtResource("2_urpjt")]
-position = Vector2(240, 145)
+position = Vector2(236.61, 148.48)
 scale = Vector2(3.12, 2.32)
 
 [node name="coral-pink" parent="ColorRect/coral" instance=ExtResource("3_aq5wr")]
-position = Vector2(13, 147)
+position = Vector2(9.61021, 150.48)
 scale = Vector2(1.8, 1.8)
 
 [node name="coral-purple" parent="ColorRect/coral" instance=ExtResource("4_qxjpa")]
-position = Vector2(39, 142)
+position = Vector2(35.6102, 145.48)
 scale = Vector2(2.91346, 2.7443)
 
 [node name="coral-red" parent="ColorRect/coral" instance=ExtResource("5_fkx0w")]
-position = Vector2(272, 135)
+position = Vector2(268.61, 138.48)
 rotation = 3.14159
 scale = Vector2(4.23718, -3.74723)
 
 [node name="coral-whit2" parent="ColorRect/coral" instance=ExtResource("2_urpjt")]
-position = Vector2(66, 141)
+position = Vector2(62.6102, 144.48)
 scale = Vector2(2.52, 2.56)
 
 [node name="coral-red2" parent="ColorRect/coral" instance=ExtResource("5_fkx0w")]
-position = Vector2(15, 118)
+position = Vector2(11.6102, 121.48)
 rotation = 0.353201
 scale = Vector2(3.12, 2.96)
 
 [node name="coral-purple2" parent="ColorRect/coral" instance=ExtResource("4_qxjpa")]
-position = Vector2(210, 149)
+position = Vector2(206.61, 152.48)
 scale = Vector2(2.72, 1.96)
 
 [node name="coral-pink2" parent="ColorRect/coral" instance=ExtResource("3_aq5wr")]
-position = Vector2(272, 106)
+position = Vector2(268.61, 109.48)
 rotation = -0.541988
 scale = Vector2(-3.25738, 2.716)
 
 [node name="seaweed" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 9.61021
+offset_top = 18.0
+offset_right = 49.6102
+offset_bottom = 41.0
 
 [node name="sea weed-blue" parent="ColorRect/seaweed" instance=ExtResource("6_e7ddi")]
-position = Vector2(56, 111)
+position = Vector2(43, 96.48)
 scale = Vector2(2.24, 3.16)
 autoplay = "new_animation_1"
 
 [node name="sea weed-dark" parent="ColorRect/seaweed" instance=ExtResource("7_xk3rj")]
-position = Vector2(229, 125)
+position = Vector2(216, 110.48)
 scale = Vector2(2.07938, 2.30497)
 autoplay = "new_animation_1"
 
 [node name="sea weed-light" parent="ColorRect/seaweed" instance=ExtResource("8_sp0kb")]
-position = Vector2(82, 147)
+position = Vector2(69, 132.48)
 autoplay = "default"
 
 [node name="sea weed-light2" parent="ColorRect/seaweed" instance=ExtResource("8_sp0kb")]
-position = Vector2(189, 138)
+position = Vector2(176, 123.48)
 scale = Vector2(1.94623, 1.54303)
 autoplay = "default"
 
 [node name="sea weed-pink" parent="ColorRect/seaweed" instance=ExtResource("9_kupm3")]
-position = Vector2(180, 146)
+position = Vector2(167, 131.48)
 autoplay = "default"
 
 [node name="sea weed-dark2" parent="ColorRect/seaweed" instance=ExtResource("7_xk3rj")]
-position = Vector2(23, 111)
+position = Vector2(10, 96.48)
 scale = Vector2(2.04, 3.28)
 autoplay = "new_animation_1"
 
 [node name="sea weed-blue2" parent="ColorRect/seaweed" instance=ExtResource("6_e7ddi")]
-position = Vector2(254, 145)
+position = Vector2(241, 130.48)
 scale = Vector2(1.71743, 1.244)
 autoplay = "new_animation_1"
 
 [node name="AquaContainer" type="Control" parent="."]
+visible = false
 layout_direction = 1
 layout_mode = 1
 anchors_preset = 15
@@ -141,10 +144,9 @@ offset_right = 262.0
 offset_bottom = 24.0
 
 [node name="GameOverOverlay" type="ColorRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 288.0
-offset_bottom = 162.0
+offset_bottom = 163.0
 color = Color(0.113725, 0.113725, 0.113725, 0.780392)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameOverOverlay"]

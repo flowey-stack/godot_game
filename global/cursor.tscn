@@ -8,8 +8,7 @@ layer = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 100
-position = Vector2(-4.76837e-07, -4.76837e-07)
-scale = Vector2(0.75, 0.734375)
+scale = Vector2(0.619507, 0.52956)
 texture = ExtResource("1_sonsi")
 offset = Vector2(12, 20)
 script = ExtResource("2_a0rcy")
