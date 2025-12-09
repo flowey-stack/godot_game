@@ -26,17 +26,20 @@ Cursor="*res://global/cursor.tscn"
 [dialogic]
 
 directories/dch_directory={
-"character": "res://dialogue/npc/cat.dch",
+"frog_man": "res://dialogue/npc/frog_man.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"first_main": "res://dialogue/timeline/first_main.dtl"
+"first_main": "res://dialogue/timeline/first_main.dtl",
+"main_frogman_talk": "res://dialogue/timeline/main_frogman_talk.dtl",
+"main_tip": "res://dialogue/timeline/main_tip.dtl"
 }
 layout/style_directory={
-"": "res://dialogue/style/New_File.tres",
-"New_File": "res://dialogue/style/New_File.tres"
+"New_File": "res://dialogue/style/底下對話框.tres",
+"tip": "res://dialogue/style/tip.tres",
+"角色對話": "res://dialogue/style/角色對話.tres"
 }
-layout/style_list=["res://dialogue/style/New_File.tres"]
+layout/style_list=["res://dialogue/style/底下對話框.tres", "res://dialogue/style/角色對話.tres", "res://dialogue/style/tip.tres"]
 layout/default_style="res://dialogue/style/New_File.tres"
 variables={}
 extensions_folder="res://addons/dialogic"
@@ -116,6 +119,7 @@ folder_colors={
 [global_group]
 
 Player=""
+Dialogic=""
 
 [input]
 

@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=9 format=3 uid="uid://bwoqkdaey1ek2"]
+
+[ext_resource type="PackedScene" uid="uid://syki6k0e6aac" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.tscn" id="1_6c7px"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_c7bld"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="3_nn7hk"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="4_gfjqe"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_rfi48"]
+
+[sub_resource type="Resource" id="Resource_54j2f"]
+script = ExtResource("2_c7bld")
+scene = ExtResource("1_6c7px")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_vr4pd"]
+script = ExtResource("2_c7bld")
+scene = ExtResource("3_nn7hk")
+overrides = {
+"disabled": "true"
+}
+
+[sub_resource type="Resource" id="Resource_n5ksx"]
+script = ExtResource("2_c7bld")
+scene = ExtResource("4_gfjqe")
+overrides = {
+"bold_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf\"",
+"name_label_enabled": "false",
+"normal_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_1.9.ttf\"",
+"text_color": "Color(1, 1, 1, 1)",
+"text_max_width": "100.0",
+"text_size": "9.0"
+}
+
+[resource]
+script = ExtResource("5_rfi48")
+name = "角色對話"
+layer_list = Array[String](["10", "11"])
+layer_info = {
+"": SubResource("Resource_54j2f"),
+"10": SubResource("Resource_vr4pd"),
+"11": SubResource("Resource_n5ksx")
+}
+base_overrides = {}
+layers = Array[ExtResource("2_c7bld")]([])
+metadata/_latest_layer = "11"

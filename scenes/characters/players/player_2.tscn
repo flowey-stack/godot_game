@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dvayatc4im3sd"]
+[gd_scene load_steps=22 format=3 uid="uid://dvayatc4im3sd"]
 
 [ext_resource type="Script" uid="uid://qtqyvnjgcrap" path="res://scenes/characters/players/player_2.gd" id="1_eowxm"]
 [ext_resource type="Texture2D" uid="uid://brh7hlhl5gnc0" path="res://assets/Farm/Actor/Characters/AnimationSheet_Character.png" id="1_ngp3l"]
@@ -133,6 +133,10 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_tbpmn"]
 radius = 7.07107
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o5krk"]
+radius = 6.0
+height = 22.0
+
 [node name="Player_2" type="CharacterBody2D" groups=["Player"]]
 y_sort_enabled = true
 texture_filter = 1
@@ -210,5 +214,11 @@ stream = ExtResource("10_8fg6f")
 
 [node name="Attack" type="AudioStreamPlayer2D" parent="Sound"]
 stream = ExtResource("12_rkicw")
+
+[node name="Dialogic" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogic"]
+position = Vector2(-1, -13)
+shape = SubResource("CapsuleShape2D_o5krk")
 
 [editable path="HurtBox"]
