@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://co51wigx8vrlu"]
+
+[ext_resource type="Texture2D" uid="uid://ccrce3pn3cen8" path="res://assets/Farm/Items/Action/cursor_none.png" id="1_sonsi"]
+[ext_resource type="Script" uid="uid://1byg6lnn2ukn" path="res://scenes/component/cursor.gd" id="2_a0rcy"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 100
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(0.75, 0.734375)
+texture = ExtResource("1_sonsi")
+offset = Vector2(12, 20)
+script = ExtResource("2_a0rcy")

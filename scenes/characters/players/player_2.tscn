@@ -196,6 +196,10 @@ shape = SubResource("CircleShape2D_tbpmn")
 wait_time = 0.8
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -250
+limit_top = -125
+limit_right = 525
+limit_bottom = 350
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 

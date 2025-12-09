@@ -43,7 +43,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAgAJABIAAAACAAAAAgAJABIAAAAAAAIAAgAJABI
 tile_set = ExtResource("2_6oeus")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
-tile_map_data = PackedByteArray("AAACAAIAAgABAAsAAADy/wwAAwAAAAAAAADz/wwAAwAAAAAAAAAeAP//AwAAAAAAAAAdAP//AwAAAAAAAAAKAPn/AwAAAAAAAAAKAPr/AwAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAIAAgABAAsAAAAeAP//AwAAAAAAAAAdAP//AwAAAAAAAAA=")
 tile_set = ExtResource("2_6oeus")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("3_b12ph")]
@@ -71,11 +71,11 @@ destination_door_tag = "S"
 spawn_direction = "down"
 
 [node name="CollisionShape2D" parent="Doors/Door_N" index="0"]
-position = Vector2(174, -243)
+position = Vector2(176, -211)
 shape = SubResource("RectangleShape2D_6oeus")
 
 [node name="Spawn" parent="Doors/Door_N" index="1"]
-position = Vector2(174, -186)
+position = Vector2(174, -159)
 
 [node name="Door_to_hidden" parent="Doors" instance=ExtResource("4_srpqv")]
 destination_level_tag = "hidden"
@@ -137,12 +137,13 @@ amount = 1300
 stream = ExtResource("11_uv1jt")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.270588)
 material = SubResource("CanvasItemMaterial_ktai7")
-offset_left = -628.0
-offset_top = -385.0
-offset_right = 1006.0
-offset_bottom = 600.0
+offset_left = -627.0
+offset_top = -371.0
+offset_right = 1007.0
+offset_bottom = 614.0
 color = Color(0.544495, 0.602941, 0.845146, 1)
 
 [editable path="Doors/Door_W"]
