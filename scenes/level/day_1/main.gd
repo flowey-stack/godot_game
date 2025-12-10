@@ -11,3 +11,6 @@ func _ready() -> void:
 	heart_container.set_max_heart(player.max_health)
 	heart_container.update_heart(player.current_health)
 	player.health_changed.connect(heart_container.update_heart)
+	print("ui loading")
+	var ui = preload("res://menu/in_game_ui.tscn").instantiate()
+	add_child(ui)

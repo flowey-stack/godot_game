@@ -34,7 +34,7 @@ func update_button_scale():
 	for button in close_menu_buttons:
 		button_hov(button, 1.5, 0.2)
 	for button in toggle_popupmenu_buttons:
-		button_hov(button, 1.8, 0.3)
+		button_hov(button, 2.0, 0.5)
 
 func button_hov(button: Button, tween_amt, duration):
 	button.pivot_offset = button.size / 2

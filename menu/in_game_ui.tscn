@@ -1,18 +1,19 @@
-[gd_scene load_steps=31 format=3 uid="uid://bj0p8riusuhwn"]
+[gd_scene load_steps=32 format=3 uid="uid://bj0p8riusuhwn"]
 
 [ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://menu/popup_menu.gd" id="1_cwbuu"]
 [ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
+[ext_resource type="Texture2D" uid="uid://cbf5uplcm27uh" path="res://assets/Farm/Ui/Input/Preview.png" id="2_q8sw4"]
 [ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://menu/UIBundleFree/MediavelFree.png" id="5_4v80v"]
 [ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="5_q8sw4"]
 [ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpq86"]
-texture = ExtResource("6_0qsvx")
+texture = ExtResource("2_q8sw4")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
 texture_margin_bottom = 2.0
-region_rect = Rect2(626, 230, 12, 4)
+region_rect = Rect2(258, 110, 28, 10)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onc8m"]
 texture = ExtResource("6_0qsvx")
@@ -634,7 +635,9 @@ _data = {
 texture = ExtResource("6_0qsvx")
 region_rect = Rect2(245, 2, 7, 12)
 
-[node name="inGameUI" type="Control"]
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="inGameUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -644,7 +647,7 @@ offset_bottom = 486.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="popupMenu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen", "open_menu_screen", "help_menu_screen", "setting_menu_screen", "pause_menu_screen", "open_menu_button", "close_menu_button", "open_help_button", "close_help_button", "open_settings_button", "close_settings_button", "open_pause_button", "close_pause_button", "open_quit_button")]
+[node name="popupMenu" type="MarginContainer" parent="inGameUI" node_paths=PackedStringArray("menu_screen", "open_menu_screen", "help_menu_screen", "setting_menu_screen", "pause_menu_screen", "open_menu_button", "close_menu_button", "open_help_button", "close_help_button", "open_settings_button", "close_settings_button", "open_pause_button", "close_pause_button", "open_quit_button")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -668,23 +671,23 @@ open_pause_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/Ma
 close_pause_button = NodePath("pauseMenu/pauseButton")
 open_quit_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/quitButton")
 
-[node name="menu" type="VBoxContainer" parent="popupMenu"]
+[node name="menu" type="VBoxContainer" parent="inGameUI/popupMenu"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_constants/separation = 40
 
-[node name="baseMenuScreen" type="MarginContainer" parent="popupMenu/menu"]
+[node name="baseMenuScreen" type="MarginContainer" parent="inGameUI/popupMenu/menu"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu/menu/baseMenuScreen"]
+[node name="VBoxContainer" type="VBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen"]
 layout_mode = 2
 theme_override_constants/separation = 3
 
-[node name="toggleMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer"]
+[node name="toggleMenuButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 4)
@@ -695,7 +698,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_dpq86")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_dpq86")
 theme_override_styles/normal = SubResource("StyleBoxTexture_dpq86")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/menu/baseMenuScreen/VBoxContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("6_0qsvx")
 region_rect = Rect2(741, 38, 22, 22)
@@ -704,7 +707,7 @@ patch_margin_top = 4
 patch_margin_right = 4
 patch_margin_bottom = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect"]
+[node name="MarginContainer" type="MarginContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect"]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -718,17 +721,17 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 15
 
-[node name="buttonContainer" type="VBoxContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
+[node name="buttonContainer" type="VBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_constants/separation = 10
 
-[node name="topButtonContainer" type="HBoxContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
+[node name="topButtonContainer" type="HBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="toggleHelpMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+[node name="toggleHelpMenuButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -737,7 +740,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_onc8m")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_onc8m")
 theme_override_styles/normal = SubResource("StyleBoxTexture_e6quo")
 
-[node name="pauseButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+[node name="pauseButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -746,11 +749,11 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
 theme_override_styles/normal = SubResource("StyleBoxTexture_cwbuu")
 
-[node name="bottomButtonContainer2" type="HBoxContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
+[node name="bottomButtonContainer2" type="HBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="toggleSettingMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
+[node name="toggleSettingMenuButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -759,7 +762,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_4v80v")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4v80v")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0qsvx")
 
-[node name="quitButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
+[node name="quitButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -768,16 +771,16 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_uusyb")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uusyb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ep3pr")
 
-[node name="seperator" type="Control" parent="popupMenu/menu"]
+[node name="seperator" type="Control" parent="inGameUI/popupMenu/menu"]
 layout_mode = 2
 
-[node name="baseMenuOpenButtonContainer" type="VBoxContainer" parent="popupMenu"]
+[node name="baseMenuOpenButtonContainer" type="VBoxContainer" parent="inGameUI/popupMenu"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-theme_override_constants/separation = 20
+theme_override_constants/separation = 10
 
-[node name="toggleMenuButton" type="Button" parent="popupMenu/baseMenuOpenButtonContainer"]
+[node name="toggleMenuButton" type="Button" parent="inGameUI/popupMenu/baseMenuOpenButtonContainer"]
 custom_minimum_size = Vector2(50, 4)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -786,17 +789,17 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_dpq86")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_dpq86")
 theme_override_styles/normal = SubResource("StyleBoxTexture_dpq86")
 
-[node name="seperator" type="Control" parent="popupMenu/baseMenuOpenButtonContainer"]
+[node name="seperator" type="Control" parent="inGameUI/popupMenu/baseMenuOpenButtonContainer"]
 layout_mode = 2
 
-[node name="helpMenu" type="MarginContainer" parent="popupMenu"]
+[node name="helpMenu" type="MarginContainer" parent="inGameUI/popupMenu"]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/helpMenu"]
+[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/helpMenu"]
 custom_minimum_size = Vector2(300, 400)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -808,15 +811,15 @@ patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
 
-[node name="title" type="HBoxContainer" parent="popupMenu/helpMenu"]
+[node name="title" type="HBoxContainer" parent="inGameUI/popupMenu/helpMenu"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 20
 
-[node name="Control" type="Control" parent="popupMenu/helpMenu/title"]
+[node name="Control" type="Control" parent="inGameUI/popupMenu/helpMenu/title"]
 layout_mode = 2
 
-[node name="helpDisplay" type="Label" parent="popupMenu/helpMenu/title"]
+[node name="helpDisplay" type="Label" parent="inGameUI/popupMenu/helpMenu/title"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
@@ -825,16 +828,16 @@ theme_override_fonts/font = ExtResource("5_q8sw4")
 theme_override_font_sizes/font_size = 42
 text = "HOW TO PLAY"
 
-[node name="MarginContainer" type="MarginContainer" parent="popupMenu/helpMenu"]
+[node name="MarginContainer" type="MarginContainer" parent="inGameUI/popupMenu/helpMenu"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 42
 theme_override_constants/margin_right = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu/helpMenu/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="inGameUI/popupMenu/helpMenu/MarginContainer"]
 layout_mode = 2
 
-[node name="textDisplay" type="Label" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer"]
+[node name="textDisplay" type="Label" parent="inGameUI/popupMenu/helpMenu/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
@@ -849,17 +852,17 @@ TAB-更換物品
 SHIFT-奔跑"
 autowrap_mode = 3
 
-[node name="exitButton" type="VBoxContainer" parent="popupMenu/helpMenu"]
+[node name="exitButton" type="VBoxContainer" parent="inGameUI/popupMenu/helpMenu"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="popupMenu/helpMenu/exitButton"]
+[node name="MarginContainer" type="MarginContainer" parent="inGameUI/popupMenu/helpMenu/exitButton"]
 layout_mode = 2
 theme_override_constants/margin_top = -10
 theme_override_constants/margin_right = -10
 
-[node name="toggleHelpMenuButton" type="Button" parent="popupMenu/helpMenu/exitButton/MarginContainer"]
+[node name="toggleHelpMenuButton" type="Button" parent="inGameUI/popupMenu/helpMenu/exitButton/MarginContainer"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -868,14 +871,14 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_l8h7b")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_l8h7b")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ukwlx")
 
-[node name="settingMenu" type="MarginContainer" parent="popupMenu"]
+[node name="settingMenu" type="MarginContainer" parent="inGameUI/popupMenu"]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/settingMenu"]
+[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/settingMenu"]
 custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -887,15 +890,15 @@ patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
 
-[node name="title" type="HBoxContainer" parent="popupMenu/settingMenu"]
+[node name="title" type="HBoxContainer" parent="inGameUI/popupMenu/settingMenu"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 10
 
-[node name="Control" type="Control" parent="popupMenu/settingMenu/title"]
+[node name="Control" type="Control" parent="inGameUI/popupMenu/settingMenu/title"]
 layout_mode = 2
 
-[node name="settingDisplay" type="Label" parent="popupMenu/settingMenu/title"]
+[node name="settingDisplay" type="Label" parent="inGameUI/popupMenu/settingMenu/title"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
@@ -904,36 +907,36 @@ theme_override_fonts/font = ExtResource("2_onc8m")
 theme_override_font_sizes/font_size = 35
 text = "SETTINGS"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu/settingMenu"]
+[node name="VBoxContainer" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 30
 
-[node name="Control" type="Control" parent="popupMenu/settingMenu/VBoxContainer"]
+[node name="Control" type="Control" parent="inGameUI/popupMenu/settingMenu/VBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu/settingMenu/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="volumnBar" type="HBoxContainer" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer"]
+[node name="volumnBar" type="HBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
+[node name="VBoxContainer" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
 layout_mode = 2
 theme_override_constants/separation = -13
 
-[node name="Control" type="Control" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar/VBoxContainer"]
+[node name="Control" type="Control" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar/VBoxContainer"]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar/VBoxContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar/VBoxContainer"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("5_4v80v")
 region_rect = Rect2(242, 98, 13, 12)
 
-[node name="HScrollBar" type="HScrollBar" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
+[node name="HScrollBar" type="HScrollBar" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
 custom_minimum_size = Vector2(150, 10)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -943,36 +946,36 @@ theme_override_styles/grabber = SubResource("StyleBoxTexture_tjjbm")
 theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_nw3uw")
 theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_nw3uw")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
 layout_mode = 2
 theme_override_constants/separation = -13
 
-[node name="Control" type="Control" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar/VBoxContainer2"]
+[node name="Control" type="Control" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar/VBoxContainer2"]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar/VBoxContainer2"]
+[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar/VBoxContainer2"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("5_4v80v")
 region_rect = Rect2(241, 81, 13, 12)
 
-[node name="brightnessBar" type="HBoxContainer" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer"]
+[node name="brightnessBar" type="HBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
+[node name="VBoxContainer" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
 layout_mode = 2
 theme_override_constants/separation = -13
 
-[node name="Control" type="Control" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer"]
+[node name="Control" type="Control" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer"]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("6_0qsvx")
 region_rect = Rect2(562, 67, 12, 10)
 
-[node name="HScrollBar" type="HScrollBar" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
+[node name="HScrollBar" type="HScrollBar" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
 custom_minimum_size = Vector2(150, 10)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -982,30 +985,30 @@ theme_override_styles/grabber = SubResource("StyleBoxTexture_tjjbm")
 theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_nw3uw")
 theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_nw3uw")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
 layout_mode = 2
 theme_override_constants/separation = -13
 
-[node name="Control" type="Control" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer2"]
+[node name="Control" type="Control" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer2"]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer2"]
+[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer2"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("6_0qsvx")
 region_rect = Rect2(530, 67, 12, 10)
 
-[node name="exitButton" type="VBoxContainer" parent="popupMenu/settingMenu"]
+[node name="exitButton" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="popupMenu/settingMenu/exitButton"]
+[node name="MarginContainer" type="MarginContainer" parent="inGameUI/popupMenu/settingMenu/exitButton"]
 layout_mode = 2
 theme_override_constants/margin_top = -10
 theme_override_constants/margin_right = -10
 
-[node name="toggleSettingMenuButton" type="Button" parent="popupMenu/settingMenu/exitButton/MarginContainer"]
+[node name="toggleSettingMenuButton" type="Button" parent="inGameUI/popupMenu/settingMenu/exitButton/MarginContainer"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1014,20 +1017,20 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_l8h7b")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_l8h7b")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ukwlx")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="popupMenu"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="inGameUI/popupMenu"]
 libraries = {
 &"": SubResource("AnimationLibrary_uusyb")
 }
 
-[node name="pauseMenu" type="MarginContainer" parent="popupMenu"]
+[node name="pauseMenu" type="MarginContainer" parent="inGameUI/popupMenu"]
 visible = false
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="popupMenu/pauseMenu"]
+[node name="ColorRect" type="ColorRect" parent="inGameUI/popupMenu/pauseMenu"]
 layout_mode = 2
 color = Color(0, 0, 0, 0.513726)
 
-[node name="pauseButton" type="Button" parent="popupMenu/pauseMenu"]
+[node name="pauseButton" type="Button" parent="inGameUI/popupMenu/pauseMenu"]
 custom_minimum_size = Vector2(70, 120)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1036,12 +1039,12 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_u4etj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_u4etj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u4etj")
 
-[connection signal="pressed" from="popupMenu/menu/baseMenuScreen/VBoxContainer/toggleMenuButton" to="popupMenu" method="_on_toggle_menu_button_pressed"]
-[connection signal="pressed" from="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/toggleHelpMenuButton" to="popupMenu" method="_on_toggle_help_menu_button_pressed"]
-[connection signal="pressed" from="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/pauseButton" to="popupMenu" method="_on_pause_button_pressed"]
-[connection signal="pressed" from="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/toggleSettingMenuButton" to="popupMenu" method="_on_toggle_setting_menu_button_pressed"]
-[connection signal="pressed" from="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/quitButton" to="popupMenu" method="_on_quit_button_pressed"]
-[connection signal="pressed" from="popupMenu/baseMenuOpenButtonContainer/toggleMenuButton" to="popupMenu" method="_on_toggle_menu_button_pressed"]
-[connection signal="pressed" from="popupMenu/helpMenu/exitButton/MarginContainer/toggleHelpMenuButton" to="popupMenu" method="_on_toggle_help_menu_button_pressed"]
-[connection signal="pressed" from="popupMenu/settingMenu/exitButton/MarginContainer/toggleSettingMenuButton" to="popupMenu" method="_on_toggle_setting_menu_button_pressed"]
-[connection signal="pressed" from="popupMenu/pauseMenu/pauseButton" to="popupMenu" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/toggleMenuButton" to="inGameUI/popupMenu" method="_on_toggle_menu_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/toggleHelpMenuButton" to="inGameUI/popupMenu" method="_on_toggle_help_menu_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/pauseButton" to="inGameUI/popupMenu" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/toggleSettingMenuButton" to="inGameUI/popupMenu" method="_on_toggle_setting_menu_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/quitButton" to="inGameUI/popupMenu" method="_on_quit_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/baseMenuOpenButtonContainer/toggleMenuButton" to="inGameUI/popupMenu" method="_on_toggle_menu_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/helpMenu/exitButton/MarginContainer/toggleHelpMenuButton" to="inGameUI/popupMenu" method="_on_toggle_help_menu_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/settingMenu/exitButton/MarginContainer/toggleSettingMenuButton" to="inGameUI/popupMenu" method="_on_toggle_setting_menu_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/pauseMenu/pauseButton" to="inGameUI/popupMenu" method="_on_pause_button_pressed"]
