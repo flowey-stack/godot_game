@@ -22,6 +22,7 @@ signal health_changed
 #
 var is_hurt : bool = false
 var is_attacking : bool = false
+var can_move: bool = true
 
 func _ready():
 	state_machine.Initialize(self)
@@ -30,8 +31,11 @@ func _ready():
 	pass
 
 func _process(delta):
-	direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	if can_move:
+		direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+		direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	else:
+		direction = Vector2.ZERO
 	pass
 	
 func _physics_process(delta) :
@@ -109,3 +113,12 @@ func use_item(item: InventoryItem) -> void:
 	if item.consumable:
 		inventory.remove_last_used_item()
 	heal_sound.play()
+
+#func set_movement_enabled(enabled: bool):
+#	can_move = enabled
+#	if not enabled:
+#		direction = Vector2.ZERO 
+	
+
+func player():
+	pass

@@ -32,6 +32,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "first_main": "res://dialogue/timeline/first_main.dtl",
 "main_frogman_talk": "res://dialogue/timeline/main_frogman_talk.dtl",
+"main_frogman_talk2": "res://dialogue/timeline/main_frogman_talk2.dtl",
 "main_tip": "res://dialogue/timeline/main_tip.dtl"
 }
 layout/style_directory={
@@ -119,7 +120,7 @@ folder_colors={
 [global_group]
 
 Player=""
-Dialogic=""
+dialogic_controller=""
 
 [input]
 

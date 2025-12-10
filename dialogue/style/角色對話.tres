@@ -22,11 +22,15 @@ overrides = {
 script = ExtResource("2_c7bld")
 scene = ExtResource("4_gfjqe")
 overrides = {
+"behaviour_direction": "Vector2(2, -2)",
+"behaviour_distance": "40.0",
 "bold_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf\"",
+"box_corner_radius": "10.0",
+"box_padding": "Vector2(7, 7)",
 "choices_text_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf\"",
 "choices_text_size": "10.0",
 "name_label_enabled": "false",
-"normal_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf\"",
+"normal_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_1.9.ttf\"",
 "text_max_width": "100.0",
 "text_size": "10.0"
 }
