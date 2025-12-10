@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfikcxsnj1oum"]
 
-[ext_resource type="Script" uid="uid://xd6sp2jsayao" path="res://dialogue/npc/alien.gd" id="1_oqdif"]
+[ext_resource type="Script" uid="uid://xd6sp2jsayao" path="res://dialogue/scene/alien.gd" id="1_oqdif"]
 [ext_resource type="Texture2D" uid="uid://c2du70nquafgx" path="res://assets/Farm/Actor/Characters/alien.png" id="2_chvdy"]
 
 [sub_resource type="Animation" id="Animation_jvi0n"]

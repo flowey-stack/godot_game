@@ -1,29 +1,29 @@
 [gd_scene load_steps=9 format=3 uid="uid://bsy5xmmmlynxv"]
 
-[ext_resource type="Texture2D" uid="uid://bpxx7t2js5akk" path="res://assets/Farm/Actor/Characters/-0002.png" id="1_lwxp4"]
+[ext_resource type="Texture2D" uid="uid://bpxx7t2js5akk" path="res://assets/Farm/Actor/Characters/-0002.png" id="1_4s5xm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sn3m2"]
-atlas = ExtResource("1_lwxp4")
+atlas = ExtResource("1_4s5xm")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6mnd3"]
-atlas = ExtResource("1_lwxp4")
+atlas = ExtResource("1_4s5xm")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_07lme"]
-atlas = ExtResource("1_lwxp4")
+atlas = ExtResource("1_4s5xm")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wnpeu"]
-atlas = ExtResource("1_lwxp4")
+atlas = ExtResource("1_4s5xm")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_em0en"]
-atlas = ExtResource("1_lwxp4")
+atlas = ExtResource("1_4s5xm")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ro8qn"]
-atlas = ExtResource("1_lwxp4")
+atlas = ExtResource("1_4s5xm")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dlpa8"]

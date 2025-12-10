@@ -55,6 +55,7 @@ tile_map_data = PackedByteArray("AAAGAP3/AwAKAAQAAAAFAP7/AwAOAAQAAAADAP7/AwAOAAQ
 tile_set = ExtResource("4_3vm3p")
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAAQAAYAAAAAAAAAAQA=")
 tile_set = ExtResource("5_heue8")
 
 [node name="Ghost" parent="Node2D" instance=ExtResource("6_vdt00")]
