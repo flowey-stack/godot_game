@@ -23,11 +23,12 @@ script = ExtResource("2_c7bld")
 scene = ExtResource("4_gfjqe")
 overrides = {
 "bold_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf\"",
+"choices_text_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf\"",
+"choices_text_size": "10.0",
 "name_label_enabled": "false",
-"normal_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_1.9.ttf\"",
-"text_color": "Color(1, 1, 1, 1)",
+"normal_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf\"",
 "text_max_width": "100.0",
-"text_size": "9.0"
+"text_size": "10.0"
 }
 
 [resource]
