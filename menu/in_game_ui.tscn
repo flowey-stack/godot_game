@@ -1,10 +1,10 @@
 [gd_scene load_steps=31 format=3 uid="uid://bj0p8riusuhwn"]
 
-[ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://popup_menu.gd" id="1_cwbuu"]
-[ext_resource type="Script" uid="uid://ci3flp4c4wuyp" path="res://stat_display_menu.gd" id="2_e6quo"]
-[ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
-[ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://UIBundleFree/MediavelFree.png" id="5_4v80v"]
-[ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
+[ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://menu/popup_menu.gd" id="1_cwbuu"]
+[ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
+[ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://menu/UIBundleFree/MediavelFree.png" id="5_4v80v"]
+[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="5_q8sw4"]
+[ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpq86"]
 texture = ExtResource("6_0qsvx")
@@ -639,6 +639,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 864.0
+offset_bottom = 486.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -649,6 +651,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_cwbuu")
 menu_screen = NodePath("menu")
 open_menu_screen = NodePath("baseMenuOpenButtonContainer")
@@ -765,31 +768,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_uusyb")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uusyb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ep3pr")
 
-[node name="statDisplayContainer" type="VBoxContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-theme_override_constants/separation = 15
-script = ExtResource("2_e6quo")
-
-[node name="coinDisplay" type="Label" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
-theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_onc8m")
-theme_override_font_sizes/font_size = 33
-text = "COINS:"
-
-[node name="scoreDisplay" type="Label" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
-theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_onc8m")
-theme_override_font_sizes/font_size = 33
-text = "SCORE:"
-
 [node name="seperator" type="Control" parent="popupMenu/menu"]
 layout_mode = 2
 
@@ -843,8 +821,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_onc8m")
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("5_q8sw4")
+theme_override_font_sizes/font_size = 42
 text = "HOW TO PLAY"
 
 [node name="MarginContainer" type="MarginContainer" parent="popupMenu/helpMenu"]
@@ -857,16 +835,18 @@ theme_override_constants/margin_right = 20
 layout_mode = 2
 
 [node name="textDisplay" type="Label" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_onc8m")
-theme_override_font_sizes/font_size = 15
+theme_override_fonts/font = ExtResource("5_q8sw4")
+theme_override_font_sizes/font_size = 40
 text = "Z-點擊
 X-物品欄
 U-使用物品
-TAB-更換物品"
+TAB-更換物品
+SHIFT-奔跑"
 autowrap_mode = 3
 
 [node name="exitButton" type="VBoxContainer" parent="popupMenu/helpMenu"]

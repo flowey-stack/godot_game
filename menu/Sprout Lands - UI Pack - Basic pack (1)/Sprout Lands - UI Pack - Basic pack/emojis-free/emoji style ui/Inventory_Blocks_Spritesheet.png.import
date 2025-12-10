@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmivi65pww5yr"
-path="res://.godot/imported/Inventory_Blocks_Spritesheet.png-11dc556a81cdbe19fd98031cd34bc03c.ctex"
+path="res://.godot/imported/Inventory_Blocks_Spritesheet.png-ea13e75ceaaf97e5009002a85a56aab8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/emojis-free/emoji style ui/Inventory_Blocks_Spritesheet.png"
-dest_files=["res://.godot/imported/Inventory_Blocks_Spritesheet.png-11dc556a81cdbe19fd98031cd34bc03c.ctex"]
+source_file="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/emojis-free/emoji style ui/Inventory_Blocks_Spritesheet.png"
+dest_files=["res://.godot/imported/Inventory_Blocks_Spritesheet.png-ea13e75ceaaf97e5009002a85a56aab8.ctex"]
 
 [params]
 

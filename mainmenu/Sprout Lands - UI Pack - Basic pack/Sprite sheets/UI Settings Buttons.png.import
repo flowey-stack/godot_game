@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnlkjpuewjxh3"
-path="res://.godot/imported/UI Settings Buttons.png-0b4c96577c7c710a2f6b4ae39024e2d8.ctex"
+path="res://.godot/imported/UI Settings Buttons.png-3ff60ca635fa3a3c9af23ce9be22b53e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Settings Buttons.png"
-dest_files=["res://.godot/imported/UI Settings Buttons.png-0b4c96577c7c710a2f6b4ae39024e2d8.ctex"]
+source_file="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/UI Settings Buttons.png"
+dest_files=["res://.godot/imported/UI Settings Buttons.png-3ff60ca635fa3a3c9af23ce9be22b53e.ctex"]
 
 [params]
 

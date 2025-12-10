@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyg1pri6rpljb"
-path="res://.godot/imported/inventory_Light_example_with_slots.png-ff412dfa45f1554fe1ad7644487ca733.ctex"
+path="res://.godot/imported/inventory_Light_example_with_slots.png-322ed1585ea06d4c431cd98a9b5c52bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack/emojis-free/emoji style ui/inventory_Light_example_with_slots.png"
-dest_files=["res://.godot/imported/inventory_Light_example_with_slots.png-ff412dfa45f1554fe1ad7644487ca733.ctex"]
+source_file="res://mainmenu/Sprout Lands - UI Pack - Basic pack/emojis-free/emoji style ui/inventory_Light_example_with_slots.png"
+dest_files=["res://.godot/imported/inventory_Light_example_with_slots.png-322ed1585ea06d4c431cd98a9b5c52bf.ctex"]
 
 [params]
 

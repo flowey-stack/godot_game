@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cxulhvuiugx6m"
-path="res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-f7072d3422a1f29a88fdd86efa6c7fd1.fontdata"
+path="res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-12c40bef8ad15f31df0b703e0c234e60.fontdata"
 
 [deps]
 
-source_file="res://Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf"
-dest_files=["res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-f7072d3422a1f29a88fdd86efa6c7fd1.fontdata"]
+source_file="res://mainmenu/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf"
+dest_files=["res://.godot/imported/pixelFont-7-8x14-sproutLands.ttf-12c40bef8ad15f31df0b703e0c234e60.fontdata"]
 
 [params]
 

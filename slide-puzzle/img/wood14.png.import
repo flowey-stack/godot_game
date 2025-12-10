@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0bjepdj2dynt"
-path="res://.godot/imported/wood14.png-8dedba6520f071d36c562b459cd6b057.ctex"
+path="res://.godot/imported/wood14.png-106c624cbecacb74026e5ac1c75b18e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/wood14.png"
-dest_files=["res://.godot/imported/wood14.png-8dedba6520f071d36c562b459cd6b057.ctex"]
+source_file="res://slide-puzzle/img/wood14.png"
+dest_files=["res://.godot/imported/wood14.png-106c624cbecacb74026e5ac1c75b18e0.ctex"]
 
 [params]
 

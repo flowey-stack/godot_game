@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://b1c66xtx8v613" path="res://dialogue/main_tip.gd" id="6_xe4lw"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_522j7"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="8_2grsr"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="9_02xfy"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="9_02xfy"]
 [ext_resource type="AudioStream" uid="uid://cukccy3hixulv" path="res://assets/Farm/Audio/背景音/オオルリのさえずり1.mp3" id="9_qgn05"]
 [ext_resource type="PackedScene" uid="uid://da671k0qmw4d2" path="res://dialogue/dialogue_trigger.tscn" id="10_3icul"]
 
