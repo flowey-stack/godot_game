@@ -1,19 +1,14 @@
-[gd_scene load_steps=32 format=3 uid="uid://bj0p8riusuhwn"]
+[gd_scene load_steps=31 format=3 uid="uid://bj0p8riusuhwn"]
 
 [ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://menu/popup_menu.gd" id="1_cwbuu"]
 [ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
-[ext_resource type="Texture2D" uid="uid://cbf5uplcm27uh" path="res://assets/Farm/Ui/Input/Preview.png" id="2_q8sw4"]
 [ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://menu/UIBundleFree/MediavelFree.png" id="5_4v80v"]
 [ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="5_q8sw4"]
 [ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpq86"]
-texture = ExtResource("2_q8sw4")
-texture_margin_left = 2.0
-texture_margin_top = 2.0
-texture_margin_right = 2.0
-texture_margin_bottom = 2.0
-region_rect = Rect2(258, 110, 28, 10)
+texture = ExtResource("6_0qsvx")
+region_rect = Rect2(402, 73, 28, 14)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onc8m"]
 texture = ExtResource("6_0qsvx")
@@ -781,7 +776,7 @@ size_flags_vertical = 8
 theme_override_constants/separation = 10
 
 [node name="toggleMenuButton" type="Button" parent="inGameUI/popupMenu/baseMenuOpenButtonContainer"]
-custom_minimum_size = Vector2(50, 4)
+custom_minimum_size = Vector2(50, 6)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
