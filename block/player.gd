@@ -1,4 +1,4 @@
-extends "res://game_object.gd"
+extends "res://block/game_object.gd"
 
 
 func  _process(delta: float) -> void:

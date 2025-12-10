@@ -1,5 +1,5 @@
 class_name Crate
-extends "res://game_object.gd"
+extends "res://block/game_object.gd"
 
 
 var is_reached := false:

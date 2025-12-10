@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bu1xlugriok1g"]
 
-[ext_resource type="Script" uid="uid://dmp7pny8e2aw6" path="res://crate.gd" id="1_mo0jf"]
-[ext_resource type="Texture2D" uid="uid://bbpjdxwxg0lql" path="res://img/sokoban_tilesheet.png" id="1_uep05"]
+[ext_resource type="Script" uid="uid://dmp7pny8e2aw6" path="res://block/crate.gd" id="1_mo0jf"]
+[ext_resource type="Texture2D" uid="uid://bbpjdxwxg0lql" path="res://block/img/sokoban_tilesheet.png" id="1_uep05"]
 
 [sub_resource type="Animation" id="Animation_ggnq6"]
 length = 0.001

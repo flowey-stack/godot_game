@@ -22,6 +22,7 @@ TransitionScreen="*res://global/transition_screen.tscn"
 global="*res://陷阱/global.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Cursor="*res://global/cursor.tscn"
+EventBus="*res://block/event_bus.gd"
 
 [dialogic]
 

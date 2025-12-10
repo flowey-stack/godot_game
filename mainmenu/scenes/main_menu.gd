@@ -9,8 +9,22 @@ extends Control
 func _ready() -> void:
 	start_button.button_down.connect(on_start_pressed)
 	exit_button.button_down.connect(on_exit_pressed)
+	#$fadeTransition.show()
+	#$fadeTransition/fadeTimer.start()
+	#$fadeTransition/AnimationPlayer.play("fade_in")
 	
 func on_start_pressed():
+	#get_tree().change_scene_to_packed(start_level)
+	# 1. 取得 AnimationPlayer 節點
+	var anim_player = $fadeTransition/AnimationPlayer
+	
+	# 2. 播放讓畫面變黑的動畫 ("fade_in")
+	anim_player.play("fade_in")
+	
+	# 3. 等待動畫播放結束
+	await anim_player.animation_finished
+	
+	# 4. 動畫播完後，才切換場景
 	get_tree().change_scene_to_packed(start_level)
 	
 func on_exit_pressed():
