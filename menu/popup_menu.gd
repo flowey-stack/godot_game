@@ -15,6 +15,11 @@ extends MarginContainer
 @export var open_pause_button: Button
 @export var close_pause_button: Button
 @export var open_quit_button: Button
+@onready var volume_slider = %vHSlider
+
+
+# 獲取音效系統的 Master 頻道
+var master_bus_index = AudioServer.get_bus_index("Master")
 
 var in_menu_buttons: Array
 var close_menu_buttons: Array
@@ -24,6 +29,21 @@ func _ready() -> void:
 	in_menu_buttons = [open_help_button, open_settings_button, open_pause_button, open_quit_button]
 	toggle_popupmenu_buttons = [open_menu_button, close_menu_button]
 	close_menu_buttons = [close_help_button, close_settings_button, close_pause_button]
+		#連接訊號 (當滑桿數值改變時，觸發函式)
+	volume_slider.value_changed.connect(on_volume_changed)
+	
+	#初始化滑桿位置 (讀取當前設定)
+	volume_slider.value = db_to_linear(AudioServer.get_bus_volume_db(master_bus_index))
+	
+func on_volume_changed(value):
+	AudioServer.set_bus_volume_db(master_bus_index, linear_to_db(value))
+	
+	#如果拉到 0 就靜音
+	if value == 0:
+		AudioServer.set_bus_mute(master_bus_index, true)
+	else:
+		AudioServer.set_bus_mute(master_bus_index, false)
+		
 	
 func _process(delta):
 	update_button_scale()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bj0p8riusuhwn"]
+[gd_scene load_steps=28 format=3 uid="uid://bj0p8riusuhwn"]
 
 [ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://menu/popup_menu.gd" id="1_cwbuu"]
 [ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
@@ -49,30 +49,6 @@ region_rect = Rect2(869, 102, 22, 22)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ukwlx"]
 texture = ExtResource("6_0qsvx")
 region_rect = Rect2(837, 100, 22, 24)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3j15"]
-texture = ExtResource("6_0qsvx")
-texture_margin_left = 3.0
-texture_margin_top = 2.0
-texture_margin_right = 3.0
-texture_margin_bottom = 1.0
-region_rect = Rect2(277, 166, 38, 4)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjjbm"]
-texture = ExtResource("6_0qsvx")
-expand_margin_left = 3.0
-expand_margin_top = 9.0
-expand_margin_right = 4.0
-expand_margin_bottom = 9.0
-region_rect = Rect2(277, 133, 7, 18)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nw3uw"]
-texture = ExtResource("6_0qsvx")
-expand_margin_left = 3.0
-expand_margin_top = 9.0
-expand_margin_right = 4.0
-expand_margin_bottom = 9.0
-region_rect = Rect2(309, 133, 7, 18)
 
 [sub_resource type="Animation" id="Animation_0qsvx"]
 length = 0.001
@@ -867,7 +843,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_l8h7b")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ukwlx")
 
 [node name="settingMenu" type="MarginContainer" parent="inGameUI/popupMenu"]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -931,15 +906,14 @@ layout_mode = 2
 texture = ExtResource("5_4v80v")
 region_rect = Rect2(242, 98, 13, 12)
 
-[node name="HScrollBar" type="HScrollBar" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
+[node name="vHSlider" type="HSlider" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 10)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_styles/scroll = SubResource("StyleBoxTexture_h3j15")
-theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_h3j15")
-theme_override_styles/grabber = SubResource("StyleBoxTexture_tjjbm")
-theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_nw3uw")
-theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_nw3uw")
+max_value = 1.0
+step = 0.05
+value = 0.5
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumnBar"]
 layout_mode = 2
@@ -953,45 +927,6 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("5_4v80v")
 region_rect = Rect2(241, 81, 13, 12)
-
-[node name="brightnessBar" type="HBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
-layout_mode = 2
-theme_override_constants/separation = -13
-
-[node name="Control" type="Control" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer"]
-layout_mode = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-texture = ExtResource("6_0qsvx")
-region_rect = Rect2(562, 67, 12, 10)
-
-[node name="HScrollBar" type="HScrollBar" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
-custom_minimum_size = Vector2(150, 10)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_styles/scroll = SubResource("StyleBoxTexture_h3j15")
-theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_h3j15")
-theme_override_styles/grabber = SubResource("StyleBoxTexture_tjjbm")
-theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_nw3uw")
-theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_nw3uw")
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar"]
-layout_mode = 2
-theme_override_constants/separation = -13
-
-[node name="Control" type="Control" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer2"]
-layout_mode = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/settingMenu/VBoxContainer/VBoxContainer/brightnessBar/VBoxContainer2"]
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-texture = ExtResource("6_0qsvx")
-region_rect = Rect2(530, 67, 12, 10)
 
 [node name="exitButton" type="VBoxContainer" parent="inGameUI/popupMenu/settingMenu"]
 layout_mode = 2

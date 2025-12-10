@@ -9,9 +9,8 @@ extends Control
 func _ready() -> void:
 	start_button.button_down.connect(on_start_pressed)
 	exit_button.button_down.connect(on_exit_pressed)
-	#$fadeTransition.show()
-	#$fadeTransition/fadeTimer.start()
-	#$fadeTransition/AnimationPlayer.play("fade_in")
+	
+
 	
 func on_start_pressed():
 	#get_tree().change_scene_to_packed(start_level)
