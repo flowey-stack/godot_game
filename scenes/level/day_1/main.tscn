@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://bmn3yro00ilmr"]
+[gd_scene load_steps=14 format=4 uid="uid://bmn3yro00ilmr"]
 
 [ext_resource type="Script" uid="uid://beoao1x1gmh1b" path="res://scenes/level/day_1/main.gd" id="1_b5rpj"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_6dvl8"]
 [ext_resource type="PackedScene" uid="uid://d3b48kcdjweja" path="res://dialogue/scene/mask_frog.tscn" id="4_3icul"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_3ygs2"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_3ygs2"]
+[ext_resource type="TileSet" uid="uid://3y0ss002dmpj" path="res://tileset/items.tres" id="5_opd48"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_2grsr"]
 [ext_resource type="Script" uid="uid://b1c66xtx8v613" path="res://dialogue/scene/main_tip.gd" id="6_xe4lw"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_522j7"]
@@ -38,8 +39,12 @@ tile_set = ExtResource("2_6dvl8")
 [node name="Player_2" parent="Node2D" instance=ExtResource("9_02xfy")]
 position = Vector2(11, 224)
 
-[node name="MaskFrog" parent="Node2D" groups=["Dialogic"] instance=ExtResource("4_3icul")]
+[node name="MaskFrog" parent="Node2D" instance=ExtResource("4_3icul")]
 position = Vector2(-86, 216)
+
+[node name="Item" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAD8////AAAAAAAAAQA=")
+tile_set = ExtResource("5_opd48")
 
 [node name="Doors" type="Node2D" parent="."]
 

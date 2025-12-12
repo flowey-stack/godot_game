@@ -120,7 +120,7 @@ folder_colors={
 [global_group]
 
 Player=""
-dialogic_controller=""
+Dialogic=""
 
 [input]
 

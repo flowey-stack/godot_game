@@ -14,7 +14,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o31at"]
 radius = 7.0
-height = 16.0
+height = 18.0
 
 [sub_resource type="Animation" id="Animation_urf1g"]
 length = 0.001
@@ -157,7 +157,6 @@ hframes = 8
 vframes = 9
 
 [node name="ColorRect" type="ColorRect" parent="Sprite2D"]
-visible = false
 offset_left = -19.0
 offset_top = -22.0
 offset_right = 21.0
@@ -220,5 +219,7 @@ stream = ExtResource("12_rkicw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogic"]
 position = Vector2(-1, -13)
 shape = SubResource("CapsuleShape2D_o5krk")
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
 
 [editable path="HurtBox"]

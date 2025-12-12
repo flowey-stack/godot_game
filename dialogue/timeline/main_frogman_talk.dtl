@@ -8,5 +8,5 @@ frog_man: 你知道嗎，按Z可以和別人對話喔
 - 知道了
 	frog_man: 哈哈~不客氣
 	frog_man: 快去多和其他人聊天吧!
-[wait_input]
+[wait time="0.8"]
 frog_man: 還在這幹嘛??

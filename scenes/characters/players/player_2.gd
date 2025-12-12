@@ -91,7 +91,6 @@ func hurt_by_enemy(area):
 	is_hurt = false
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area.has_method("collect"):
-		print("get")
 		area.collect(inventory)
 func knock_back(enemy_velocity : Vector2):
 	var knock_back_direction = (enemy_velocity - velocity).normalized() * knock_back_power #撞擊力量
