@@ -22,14 +22,34 @@ func shuffle_tiles():
 		var tile2 = randi() % 16
 		swap_tiles(tile1, tile2)
 
-func _process(delta: float) -> void:
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):  # 確保是左鍵按下
-		var mouse_pos = get_global_mouse_position()  # 取得鼠標位置
-		var rows = int(mouse_pos.y / tile_size)
-		var cols = int(mouse_pos.x / tile_size)
-		check_neighbours(rows, cols)
+#func _process(delta: float) -> void:
+#	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):  # 確保是左鍵按下
+#		var mouse_pos = get_global_mouse_position()  # 取得鼠標位置
+#		var rows = int(mouse_pos.y / tile_size)
+#		var cols = int(mouse_pos.x / tile_size)
+#		check_neighbours(rows, cols)
 
 		# 檢查是否已經達成獲勝條件
+#		if is_solved():
+#			print("You win!")
+
+func _input(event):
+	# 偵測滑鼠左鍵是否被 "按下去" (只觸發一次)
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		
+		# 1. 使用 get_local_mouse_position() 自動處理 0.12 的縮放
+		var local_pos = get_local_mouse_position()
+		
+		# 2. 算出是在第幾行、第幾列
+		var rows = int(local_pos.y / tile_size)
+		var cols = int(local_pos.x / tile_size)
+		
+		print("點擊座標: ", rows, ", ", cols) # 這行可以讓你知道有沒有點對
+		
+		# 3. 執行檢查與移動
+		check_neighbours(rows, cols)
+		
+		# 4. 檢查勝利 (每次點擊後檢查一次就好)
 		if is_solved():
 			print("You win!")
 

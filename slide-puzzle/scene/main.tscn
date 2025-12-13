@@ -21,88 +21,94 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8yysc"]
 size = Vector2(1000, 1000)
 
-[node name="Main" type="Area2D"]
+[node name="Boaed" type="Node2D"]
+
+[node name="Main" type="Area2D" parent="."]
+position = Vector2(70, 0)
+scale = Vector2(0.16, 0.16)
 script = ExtResource("1_axfas")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main"]
 position = Vector2(500, 500)
 shape = SubResource("RectangleShape2D_8yysc")
 
-[node name="Tile1" type="Sprite2D" parent="."]
+[node name="Tile1" type="Sprite2D" parent="Main"]
 position = Vector2(125, 125)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_smf0o")
 
-[node name="Tile2" type="Sprite2D" parent="."]
+[node name="Tile2" type="Sprite2D" parent="Main"]
 position = Vector2(375, 125)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_tv8i1")
 
-[node name="Tile3" type="Sprite2D" parent="."]
+[node name="Tile3" type="Sprite2D" parent="Main"]
 position = Vector2(625, 125)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_0vlqb")
 
-[node name="Tile4" type="Sprite2D" parent="."]
+[node name="Tile4" type="Sprite2D" parent="Main"]
 position = Vector2(875, 125)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_gjnwh")
 
-[node name="Tile5" type="Sprite2D" parent="."]
+[node name="Tile5" type="Sprite2D" parent="Main"]
 position = Vector2(125, 375)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_fdqew")
 
-[node name="Tile6" type="Sprite2D" parent="."]
+[node name="Tile6" type="Sprite2D" parent="Main"]
 position = Vector2(375, 375)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_0d4pv")
 
-[node name="Tile7" type="Sprite2D" parent="."]
+[node name="Tile7" type="Sprite2D" parent="Main"]
 position = Vector2(625, 375)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_gtqqq")
 
-[node name="Tile8" type="Sprite2D" parent="."]
+[node name="Tile8" type="Sprite2D" parent="Main"]
 position = Vector2(875, 375)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_gn2wi")
 
-[node name="Tile9" type="Sprite2D" parent="."]
+[node name="Tile9" type="Sprite2D" parent="Main"]
 position = Vector2(125, 625)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_p8adh")
 
-[node name="Tile10" type="Sprite2D" parent="."]
+[node name="Tile10" type="Sprite2D" parent="Main"]
 position = Vector2(375, 625)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("11_oldxj")
 
-[node name="Tile11" type="Sprite2D" parent="."]
+[node name="Tile11" type="Sprite2D" parent="Main"]
 position = Vector2(625, 625)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_4jm02")
 
-[node name="Tile12" type="Sprite2D" parent="."]
+[node name="Tile12" type="Sprite2D" parent="Main"]
 position = Vector2(875, 625)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_vneqc")
 
-[node name="Tile13" type="Sprite2D" parent="."]
+[node name="Tile13" type="Sprite2D" parent="Main"]
 position = Vector2(125, 875)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("14_io27d")
 
-[node name="Tile14" type="Sprite2D" parent="."]
+[node name="Tile14" type="Sprite2D" parent="Main"]
 position = Vector2(375, 875)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("15_fa8t4")
 
-[node name="Tile15" type="Sprite2D" parent="."]
+[node name="Tile15" type="Sprite2D" parent="Main"]
 position = Vector2(625, 875)
-scale = Vector2(0.275, 0.275)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("16_rg6nf")
 
-[node name="Tile16" type="Sprite2D" parent="."]
+[node name="Tile16" type="Sprite2D" parent="Main"]
 position = Vector2(875, 875)
 texture = ExtResource("16_fdshd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Main"]
