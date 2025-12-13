@@ -42,7 +42,8 @@ script = ExtResource("2_jva8o")
 scene = ExtResource("6_82dpq")
 overrides = {
 "bold_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf\"",
-"box_size": "Vector2(200, 150)",
+"box_margin_bottom": "100.0",
+"box_size": "Vector2(200, 50)",
 "next_indicator_size": "Vector2(10, 10)",
 "normal_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf\"",
 "text_size": "10.0",
@@ -87,4 +88,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_jva8o")]([])
-metadata/_latest_layer = ""
+metadata/_latest_layer = "13"

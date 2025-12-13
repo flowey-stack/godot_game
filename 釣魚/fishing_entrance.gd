@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var target_scene: String = "res://fishing_game.tscn"
+@export var target_scene: String = "res://釣魚/fishing_game.tscn"
 
 func _ready():
 	input_pickable = true  # 確保 Area2D 可以接收滑鼠事件

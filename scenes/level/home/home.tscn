@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://coopdkpeo3yq8"]
+[gd_scene load_steps=19 format=4 uid="uid://coopdkpeo3yq8"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_8gk22"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_76ubw"]
@@ -12,6 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="11_07ue0"]
 [ext_resource type="PackedScene" uid="uid://uot5lsr7g2pv" path="res://scenes/component/background_decoration/falling_leaf.tscn" id="12_0p1ao"]
 [ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="12_xvdib"]
+[ext_resource type="PackedScene" uid="uid://cwhyjx3k8xgai" path="res://釣魚/fishing_entrance.tscn" id="13_nywe8"]
+[ext_resource type="PackedScene" uid="uid://da671k0qmw4d2" path="res://dialogue/dialogue_trigger.tscn" id="14_16x5l"]
+[ext_resource type="Script" uid="uid://vpr54v802aof" path="res://dialogue/home_fishing.gd" id="15_c411v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nywe8"]
+size = Vector2(65, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orknk"]
 size = Vector2(20, 94.5)
@@ -51,7 +57,12 @@ tile_set = ExtResource("2_76ubw")
 
 [node name="Wall" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAGAP3/AwAKAAQAAAAFAP7/AwAOAAQAAAADAP7/AwAOAAQAAAALAPv/AAAAAAAAAAAPAPv/AwALAAQAAAAPAPz/AwALAAQAAAAPAP3/AwAIAAUAAAAPAPr/AwAJAAQAAAAQAP3/AwAJAAQAAAAQAP7/AwAIAAUAAAASAAAAAwALAAQAAAASAAEAAwALAAQAAAASAAIAAwAIAAUAAAATAAIAAwAKAAUAAAAUAAIAAwAJAAQAAAAUAAMAAwALAAQAAAAUAAQAAwALAAQAAAA=")
+tile_map_data = PackedByteArray("AAAGAP3/AwAKAAQAAAAFAP7/AwAOAAQAAAADAP7/AwAOAAQAAAALAPv/AAAAAAAAAAAPAPv/AwALAAQAAAAPAPz/AwALAAQAAAAPAP3/AwAIAAUAAAAPAPr/AwAJAAQAAAAQAP3/AwAJAAQAAAAQAP7/AwAIAAUAAAASAAAAAwALAAQAAAASAAEAAwALAAQAAAASAAIAAwAIAAUAAAATAAIAAwAKAAUAAAAUAAIAAwAJAAQAAAAUAAMAAwALAAQAAAAUAAQAAwALAAQAAAASAP//AwALAAQAAAASAP7/AwAJAAQAAAA=")
+tile_set = ExtResource("4_3vm3p")
+
+[node name="Wall2" type="TileMapLayer" parent="Node2D"]
+visibility_layer = 0
+tile_map_data = PackedByteArray("AAARAP3/AwAOAAYAAAASAP3/AwAOAAYAAAATAP3/AwAOAAYAAAAUAP3/AwAOAAYAAAA=")
 tile_set = ExtResource("4_3vm3p")
 
 [node name="Ghost" parent="Node2D" instance=ExtResource("6_vdt00")]
@@ -63,6 +74,16 @@ position = Vector2(46, 42)
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 tile_map_data = PackedByteArray("AAAPAAcAAAAAAAAAAQA=")
 tile_set = ExtResource("5_heue8")
+
+[node name="fishing entrance" parent="Node2D" instance=ExtResource("13_nywe8")]
+y_sort_enabled = true
+position = Vector2(308, -50)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/fishing entrance"]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_nywe8")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -131,5 +152,11 @@ grow_vertical = 0
 [node name="GPUParticles2D" parent="." instance=ExtResource("12_0p1ao")]
 position = Vector2(189, -19)
 
+[node name="DialogueTrigger" parent="." instance=ExtResource("14_16x5l")]
+position = Vector2(278, -20)
+script = ExtResource("15_c411v")
+dialogue_timeline_path = "res://dialogue/timeline/home_fishing.dtl"
+
 [editable path="Doors/Door_from_4"]
 [editable path="Doors/Door_living_room"]
+[editable path="DialogueTrigger"]
