@@ -27,6 +27,7 @@ Cursor="*res://global/cursor.tscn"
 
 directories/dch_directory={
 "cat_head": "res://dialogue/npc/cat_head.dch",
+"cave_girl": "res://dialogue/npc/cave_girl.dch",
 "fish_告示牌": "res://dialogue/npc/fish_告示牌.dch",
 "frog_man": "res://dialogue/npc/frog_man.dch",
 "main_slime": "res://dialogue/npc/main_slime.dch",
@@ -42,7 +43,11 @@ directories/dtl_directory={
 "main_frogman_talk": "res://dialogue/timeline/main_frogman_talk.dtl",
 "main_slime_talk": "res://dialogue/timeline/main_slime_talk.dtl",
 "main_tip": "res://dialogue/timeline/main_tip.dtl",
-"progress2_frogman": "res://dialogue/timeline/progress2_frogman.dtl"
+"progress2_frogman": "res://dialogue/timeline/progress2_frogman.dtl",
+"progress3_cathead": "res://dialogue/timeline/progress3_cathead.dtl",
+"progress3_cathead_repeat": "res://dialogue/timeline/progress3_cathead_repeat.dtl",
+"progress4_cavegirl": "res://dialogue/timeline/progress4_cavegirl.dtl",
+"progress4_cavegirl_repeat": "res://dialogue/timeline/progress4_cavegirl_repeat.dtl"
 }
 layout/style_directory={
 "New_File": "res://dialogue/style/底下對話框.tres",
