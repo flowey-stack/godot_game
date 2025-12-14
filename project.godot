@@ -26,12 +26,14 @@ Cursor="*res://global/cursor.tscn"
 [dialogic]
 
 directories/dch_directory={
+"cat_head": "res://dialogue/npc/cat_head.dch",
 "frog_man": "res://dialogue/npc/frog_man.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "first_main": "res://dialogue/timeline/first_main.dtl",
 "home_fishing": "res://dialogue/timeline/home_fishing.dtl",
+"main_cathead": "res://main_cathead.dtl",
 "main_frogman_talk": "res://dialogue/timeline/main_frogman_talk.dtl",
 "main_frogman_talk2": "res://dialogue/timeline/main_frogman_talk2.dtl",
 "main_tip": "res://dialogue/timeline/main_tip.dtl"

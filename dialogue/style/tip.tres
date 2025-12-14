@@ -17,8 +17,9 @@ script = ExtResource("2_jva8o")
 scene = ExtResource("1_foxh2")
 overrides = {
 "canvas_layer": "5.0",
-"global_bg_color": "Color(1, 1, 1, 0)",
+"global_bg_color": "Color(1, 1, 1, 0.678431)",
 "global_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf\"",
+"global_font_color": "Color(0.226563, 0.226563, 0.226563, 1)",
 "global_font_size": "10.0"
 }
 
@@ -88,4 +89,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_jva8o")]([])
-metadata/_latest_layer = "13"
+metadata/_latest_layer = ""
