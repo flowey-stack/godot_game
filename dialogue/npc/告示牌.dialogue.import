@@ -1,7 +1,6 @@
 [remap]
 
-importer="dialogue_manager"
-importer_version=15
+importer="dialogue_manager_compiler_13"
 type="Resource"
 uid="uid://cqlcjrunpy5id"
 path="res://.godot/imported/告示牌.dialogue-09228783cd823dc7d6a4e845454f2da9.tres"
