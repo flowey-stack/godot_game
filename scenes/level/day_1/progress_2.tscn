@@ -27,7 +27,7 @@ size = Vector2(51, 59)
 blend_mode = 3
 
 [node name="Progress2" type="Node2D"]
-position = Vector2(-8, 10)
+position = Vector2(-8, 13)
 script = ExtResource("1_xetlm")
 
 [node name="Grass" type="TileMapLayer" parent="."]

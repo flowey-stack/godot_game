@@ -4,13 +4,13 @@ frog_man: 真是天降甘霖，對吧
 frog_man: 你見到剛剛那個人了嗎?
 - 有
 	frog_man: 嗯，他真的練習很久了
-	frog_man: 我常常在另一頭聽到他挫敗的吼來吼去
+	frog_man: 我常常在另一頭聽到他挫敗的大吼大叫
 	frog_man: 我會裝作沒聽到，等著哪天他在我路過時叫住我
 	frog_man: 給我看後空翻
 	frog_man: 畢竟沒人能拒絕後空翻，對吧?
 	[wait time="0.7"]
-	frog_man: 我在想，他應該要擁有完整的身體的
-	frog_man: 這對他來說才公平一點
+	frog_man: 他成功的時候可以告訴我嗎?
+	frog_man: 我真的很想看!
 - 沒有
 	frog_man: 能回去看看嗎?
 	frog_man: 他練習很久了，或許他今天成功了呢?

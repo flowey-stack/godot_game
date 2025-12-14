@@ -44,8 +44,10 @@ directories/dtl_directory={
 "main_slime_talk": "res://dialogue/timeline/main_slime_talk.dtl",
 "main_tip": "res://dialogue/timeline/main_tip.dtl",
 "progress2_frogman": "res://dialogue/timeline/progress2_frogman.dtl",
+"progress2_frogman_repeat": "res://dialogue/timeline/progress2_frogman_repeat.dtl",
 "progress3_cathead": "res://dialogue/timeline/progress3_cathead.dtl",
 "progress3_cathead_repeat": "res://dialogue/timeline/progress3_cathead_repeat.dtl",
+"progress3_frogman": "res://dialogue/timeline/progress3_frogman.dtl",
 "progress4_cavegirl": "res://dialogue/timeline/progress4_cavegirl.dtl",
 "progress4_cavegirl_repeat": "res://dialogue/timeline/progress4_cavegirl_repeat.dtl"
 }

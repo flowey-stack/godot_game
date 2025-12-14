@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=4 uid="uid://dtkr6b2bqgukk"]
+[gd_scene load_steps=15 format=4 uid="uid://dtkr6b2bqgukk"]
 
 [ext_resource type="Script" uid="uid://bk48ieuev6jlp" path="res://scenes/level/day_1/progress_3.gd" id="1_dp0gn"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_xroq8"]
 [ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_pjbde"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_7a8pt"]
+[ext_resource type="PackedScene" uid="uid://d3b48kcdjweja" path="res://dialogue/scene/mask_frog.tscn" id="4_pqe37"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_cmsb5"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_avcar"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="6_xroq8"]
@@ -40,6 +41,13 @@ tile_set = ExtResource("2_xroq8")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("3_pjbde")]
 position = Vector2(-84, 319)
+
+[node name="MaskFrog" parent="Node2D" instance=ExtResource("4_pqe37")]
+position = Vector2(321, -68)
+
+[node name="CatHead" parent="Node2D" instance=ExtResource("11_avcar")]
+position = Vector2(-87, -23)
+script = ExtResource("12_pqe37")
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -108,10 +116,6 @@ grow_vertical = 2
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_y3tra")
 
-[node name="CatHead" parent="." instance=ExtResource("11_avcar")]
-position = Vector2(-87, -23)
-script = ExtResource("12_pqe37")
-
+[editable path="Node2D/CatHead"]
 [editable path="Doors/Door_S"]
 [editable path="Doors/Door_E"]
-[editable path="CatHead"]
