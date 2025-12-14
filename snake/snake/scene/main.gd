@@ -5,8 +5,9 @@ extends Node
 var score : int
 var game_started : bool = false
 
-var cells : int = 20
-var cell_size : int = 50
+var cells_x : int = 18
+var cells_y : int = 9
+var cell_size : int = 16
 
 var food_pos : Vector2
 var regen_food : bool = true
@@ -16,7 +17,7 @@ var snake_data : Array
 var snake : Array
 
 
-var start_pos = Vector2(9, 9)
+var start_pos = Vector2(9, 5)
 var up = Vector2(0, -1)
 var down = Vector2(0, 1)
 var left = Vector2(-1, 0)
@@ -35,7 +36,7 @@ func new_game():
 	get_tree().call_group("segments", "queue_free")
 	$GameOverMenu.hide()
 	score = 0
-	$Hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
+	$Hud.get_node("ScorePanel/ScoreLabel").text = "SCORE: " + str(score)
 	move_direction = up
 	can_move = true
 	generate_snake()
@@ -109,7 +110,9 @@ func _on_move_timer_timeout() -> void:
 
 
 func check_out_of_bounds():
-	if snake_data[0].x < 0 or snake_data[0].x > cells - 1 or snake_data[0].y < 0 or snake_data[0].y > cells - 1:
+	var head = snake_data[0]
+	#if snake_data[0].x < 0 or snake_data[0].x > cells - 1 or snake_data[0].y < 0 or snake_data[0].y > cells - 1:
+	if head.x < 0 or head.x > cells_x - 1 or head.y < 0 or head.y > cells_y - 1:
 		end_game()
 		
 func check_self_eaten():
@@ -120,7 +123,7 @@ func check_self_eaten():
 func check_food_eaten():
 	if snake_data[0] == food_pos:
 		score += 1
-		$Hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
+		$Hud.get_node("ScorePanel/ScoreLabel").text = "SCORE: " + str(score)
 		add_segment(old_data[-1])
 		move_food()
 		
@@ -128,7 +131,8 @@ func check_food_eaten():
 func move_food():
 	while regen_food:
 		regen_food = false
-		food_pos = Vector2(randi_range(0, cells - 1), randi_range(0, cells - 1))
+		#food_pos = Vector2(randi_range(0, cells - 1), randi_range(0, cells - 1))
+		food_pos = Vector2(randi_range(0, cells_x - 1), randi_range(0, cells_y - 1))
 		for i in snake_data:
 			if food_pos == i:
 				regen_food = true
@@ -137,6 +141,7 @@ func move_food():
 	
 			
 func end_game():
+	$GameOverMenu.set_score(score)
 	$GameOverMenu.show()
 	$MoveTimer.stop()
 	game_started = false

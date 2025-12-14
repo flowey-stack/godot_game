@@ -1,19 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckgwiji5vugrf"]
+[gd_scene load_steps=8 format=3 uid="uid://ckgwiji5vugrf"]
 
-[ext_resource type="Script" uid="uid://dl64weh4mxyo3" path="res://scene/main.gd" id="1_brvut"]
-[ext_resource type="PackedScene" uid="uid://canb4o1taxsd4" path="res://scene/snake_segment.tscn" id="2_0ha60"]
-[ext_resource type="Texture2D" uid="uid://bfdcsrbs42iq8" path="res://assets/bg.png" id="3_4j5ol"]
-[ext_resource type="PackedScene" uid="uid://btdj6sw2v6n21" path="res://scene/hud.tscn" id="4_p1hux"]
-[ext_resource type="Texture2D" uid="uid://bqi675f2ldby3" path="res://assets/apple.png" id="5_0ha60"]
-[ext_resource type="PackedScene" uid="uid://niw2kapx6ues" path="res://scene/game_over_menu.tscn" id="6_4j5ol"]
+[ext_resource type="Script" uid="uid://dl64weh4mxyo3" path="res://snake/snake/scene/main.gd" id="1_brvut"]
+[ext_resource type="PackedScene" uid="uid://canb4o1taxsd4" path="res://snake/snake/scene/snake_segment.tscn" id="2_0ha60"]
+[ext_resource type="Texture2D" uid="uid://xw0o1jm40cti" path="res://snake/snake/assets/New Piskel.png" id="3_10r46"]
+[ext_resource type="Texture2D" uid="uid://iifixb7nnpfp" path="res://snake/snake/assets/background.png" id="4_3vwfm"]
+[ext_resource type="PackedScene" uid="uid://btdj6sw2v6n21" path="res://snake/snake/scene/hud.tscn" id="4_p1hux"]
+[ext_resource type="Texture2D" uid="uid://bqi675f2ldby3" path="res://snake/snake/assets/apple.png" id="5_0ha60"]
+[ext_resource type="PackedScene" uid="uid://niw2kapx6ues" path="res://snake/snake/scene/game_over_menu.tscn" id="6_4j5ol"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_brvut")
 snake_scene = ExtResource("2_0ha60")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(500, 550)
-texture = ExtResource("3_4j5ol")
+visible = false
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("3_10r46")
+centered = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 288.0
+offset_bottom = 162.0
+texture = ExtResource("4_3vwfm")
+stretch_mode = 1
 
 [node name="Hud" parent="." instance=ExtResource("4_p1hux")]
 
@@ -21,6 +30,7 @@ texture = ExtResource("3_4j5ol")
 wait_time = 0.1
 
 [node name="Food" type="Sprite2D" parent="."]
+scale = Vector2(0.29, 0.29)
 texture = ExtResource("5_0ha60")
 offset = Vector2(25, 25)
 
