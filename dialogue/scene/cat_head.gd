@@ -7,9 +7,13 @@ var player_in_area = false
 var player_node = null
 var dialogic_node = null
 @onready var animation = $AnimationPlayer
+##
+var first_dialogue_finished: bool = false
+
+
 
 func _ready():
-	
+
 	animation.play("idle")
 	randomize()
 	Dialogic.signal_event.connect(DialogicSignal)
@@ -18,7 +22,13 @@ func _ready():
 func _process(delta) :
 	if player_in_area :
 		if Input.is_action_just_pressed("interaction"):
-			run_dialogue("main_cathead")
+			
+			if first_dialogue_finished == false:
+				run_dialogue("main_cathead")
+				
+			else :
+				run_dialogue("main_cathead_repeat")
+			
 			
 	pass
 
@@ -27,7 +37,8 @@ func run_dialogue(dialogue_string):
 		player_node.set_movement_enabled(false)
 	
 	is_chatting = true
-	
+	first_dialogue_finished = true
+
 	var layout = Dialogic.Styles.load_style("角色對話")
 	layout.register_character(load("res://dialogue/npc/cat_head.dch"), $".")
 	Dialogic.start(dialogue_string)
@@ -53,8 +64,8 @@ func _on_chack_detection_body_exited(body: Node2D) -> void:
 	
 func _on_dialogue_ended(timeline_name: String):
 	is_chatting = false
+	first_dialogue_finished = true
 	print("對話結束:", timeline_name)
 	
 	if player_node:
-		# 恢復玩家移動
 		player_node.set_movement_enabled(true)

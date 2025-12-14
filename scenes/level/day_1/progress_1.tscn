@@ -34,7 +34,6 @@ tile_map_data = PackedByteArray("AADw//j/AgAJABIAAADw//n/AgAJABIAAADw//r/AgAJABI
 tile_set = ExtResource("2_ieq2y")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
-tile_map_data = PackedByteArray("AAD0/wAAAwAAAAAAAAAbAAYAAwAAAAAAAAA=")
 tile_set = ExtResource("2_ieq2y")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("3_2pxvh")]

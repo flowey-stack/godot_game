@@ -11,14 +11,14 @@ cat_head: 你想看一個褲東西嗎?
 	[signal arg="play_roll"]
 - 不要
 	cat_head: 你的損失?
-	cat_head: 想太多了!我還是要給你看
+	cat_head: 想太美了!我還是要給你看
 	cat_head: 後空翻!
 	[signal arg="play_roll"]
-[wait time="0.5"]
+[wait time="1.0"]
 cat_head: ...
 cat_head: 看來失敗了...
 cat_head: 畢竟我沒有用來翻滾的身體
 cat_head: 只有這個無用的頭，用來跟你講話
 cat_head: 快點離開這裡吧!
 cat_head: 看見你的臉只會讓我想起這場失敗
-唉!
+cat_head: 唉!

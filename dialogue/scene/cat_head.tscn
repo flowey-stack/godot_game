@@ -97,7 +97,7 @@ script = ExtResource("1_ca1b7")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(-4, 0)
-scale = Vector2(0.8125, 0.78125)
+scale = Vector2(0.9375, 0.856445)
 texture = ExtResource("2_e60yw")
 offset = Vector2(0, -5)
 hframes = 6
