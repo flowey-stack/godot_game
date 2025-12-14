@@ -1,4 +1,5 @@
-extends CharacterBody2D
+extends "res://scenes/characters/enemys/slime.gd"
+
 
 var is_chatting = false
 
@@ -14,7 +15,8 @@ var first_dialogue_finished: bool = false
 
 func _ready():
 
-	animation.play("idle")
+	start_position = position
+	end_position = end_point.global_position
 	randomize()
 	Dialogic.signal_event.connect(DialogicSignal)
 	pass
@@ -24,10 +26,10 @@ func _process(delta) :
 		if Input.is_action_just_pressed("interaction"):
 			
 			if first_dialogue_finished == false:
-				run_dialogue("main_cathead")
+				run_dialogue("hidden_slime_talk")
 				
 			else :
-				run_dialogue("main_cathead_repeat")
+				run_dialogue("hidden_slime_repeat")
 			
 			
 	pass
@@ -40,7 +42,7 @@ func run_dialogue(dialogue_string):
 	first_dialogue_finished = true
 
 	var layout = Dialogic.Styles.load_style("角色對話")
-	layout.register_character(load("res://dialogue/npc/cat_head.dch"), $".")
+	layout.register_character(load("res://dialogue/npc/main_slime.dch"), $".")
 	Dialogic.start(dialogue_string)
 	
 
