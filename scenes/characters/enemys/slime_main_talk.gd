@@ -1,4 +1,5 @@
-extends CharacterBody2D
+extends "res://scenes/characters/enemys/slime.gd"
+
 
 var is_chatting = false
 
@@ -8,6 +9,8 @@ var player_node = null
 var dialogic_node = null
 
 func _ready():
+	start_position = position
+	end_position = end_point.global_position
 	randomize()
 	Dialogic.signal_event.connect(DialogicSignal)
 
@@ -16,7 +19,7 @@ func _ready():
 func _process(delta) :
 	if player_in_area :
 		if Input.is_action_just_pressed("interaction"):
-			run_dialogue("main_frogman_talk")
+			run_dialogue("main_slime_talk")
 			
 	pass
 
@@ -27,7 +30,7 @@ func run_dialogue(dialogue_string):
 	is_chatting = true
 	
 	var layout = Dialogic.Styles.load_style("角色對話")
-	layout.register_character(load("res://dialogue/npc/frog_man.dch"), $".")
+	layout.register_character(load("res://dialogue/npc/main_slime.dch"), $".")
 	Dialogic.start(dialogue_string)
 
 func DialogicSignal(arg : String):

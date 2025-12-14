@@ -8,15 +8,14 @@ var player_node = null
 var dialogic_node = null
 
 func _ready():
-	randomize()
-	Dialogic.signal_event.connect(DialogicSignal)
 
+	randomize()
 	pass
 
 func _process(delta) :
 	if player_in_area :
 		if Input.is_action_just_pressed("interaction"):
-			run_dialogue("main_frogman_talk")
+			run_dialogue("home_fishing")
 			
 	pass
 
@@ -27,11 +26,11 @@ func run_dialogue(dialogue_string):
 	is_chatting = true
 	
 	var layout = Dialogic.Styles.load_style("角色對話")
-	layout.register_character(load("res://dialogue/npc/frog_man.dch"), $".")
+	layout.register_character(load("res://dialogue/npc/fish_告示牌.dch"), $".")
 	Dialogic.start(dialogue_string)
 
 func DialogicSignal(arg : String):
-	#if arg == "timeline訊號名稱":
+	if arg == "timeline訊號名稱":
 		pass
 
 func _on_chack_detection_body_entered(body: Node2D) -> void:
