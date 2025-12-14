@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="10_87ddl"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="11_07ue0"]
 [ext_resource type="PackedScene" uid="uid://uot5lsr7g2pv" path="res://scenes/component/background_decoration/falling_leaf.tscn" id="12_0p1ao"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="12_xvdib"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="12_xvdib"]
 [ext_resource type="PackedScene" uid="uid://cwhyjx3k8xgai" path="res://釣魚/fishing_entrance.tscn" id="13_nywe8"]
 [ext_resource type="PackedScene" uid="uid://da671k0qmw4d2" path="res://dialogue/dialogue_trigger.tscn" id="14_16x5l"]
 [ext_resource type="Script" uid="uid://vpr54v802aof" path="res://dialogue/home_fishing.gd" id="15_c411v"]
