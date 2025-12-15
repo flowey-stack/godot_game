@@ -617,6 +617,7 @@ offset_right = 864.0
 offset_bottom = 486.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="popupMenu" type="MarginContainer" parent="inGameUI" node_paths=PackedStringArray("menu_screen", "open_menu_screen", "help_menu_screen", "setting_menu_screen", "pause_menu_screen", "open_menu_button", "close_menu_button", "open_help_button", "close_help_button", "open_settings_button", "close_settings_button", "open_pause_button", "close_pause_button", "open_quit_button")]
 layout_mode = 1

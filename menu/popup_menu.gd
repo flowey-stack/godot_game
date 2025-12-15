@@ -36,6 +36,9 @@ func _ready() -> void:
 	#初始化滑桿位置 (讀取當前設定)
 	volume_slider.value = db_to_linear(AudioServer.get_bus_volume_db(master_bus_index))
 	
+	call_deferred("setup_visibility_check")
+	
+	
 func on_volume_changed(value):
 	AudioServer.set_bus_volume_db(master_bus_index, linear_to_db(value))
 	
@@ -45,6 +48,35 @@ func on_volume_changed(value):
 	else:
 		AudioServer.set_bus_mute(master_bus_index, false)
 		
+
+func setup_visibility_check():
+	#遊戲剛開始時，先檢查一次要不要顯示
+	check_ui_visibility()
+	#監聽「場景切換」訊號，每次換場景都重新檢查一次
+	get_tree().tree_changed.connect(check_ui_visibility)
+
+func check_ui_visibility():
+	# 安全鎖：如果 UI 自己還沒進入場景樹，就不要執行
+	if not is_inside_tree():
+		return
+	
+	var current_scene = get_tree().current_scene	
+	
+	# 安全鎖：如果場景還沒載入 (是 null)，就不要執行，直接返回
+	if current_scene == null:
+		return	
+	
+	if current_scene:
+		# 獲取當前場景的檔案路徑 (例如 "res://scenes/main_menu.tscn")
+		var path = current_scene.scene_file_path
+		# 判斷邏輯：如果路徑裡包含 "main_menu" (請確認你的檔名)，就隱藏
+		# 注意：這裡的字串 "main_menu" 必須要是你主選單檔名的一部分
+		if "main_menu" in path or "MainMenu" in path:
+			self.visible = false
+			print("hide in game ui in main menu")
+		else:
+			self.visible = true
+			print("appear in game ui")
 	
 func _process(delta):
 	update_button_scale()

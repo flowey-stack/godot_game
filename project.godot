@@ -23,6 +23,7 @@ global="*res://陷阱/global.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Cursor="*res://global/cursor.tscn"
 EventBus="*res://block/event_bus.gd"
+InGameUi="*res://menu/in_game_ui.tscn"
 
 [dialogic]
 
