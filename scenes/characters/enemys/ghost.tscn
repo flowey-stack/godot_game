@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://n8k8h503gjab"]
 
-[ext_resource type="Script" path="res://scenes/characters/enemys/ghost.gd" id="1_5d3hf"]
+[ext_resource type="Script" uid="uid://drmucmgptvdnq" path="res://scenes/characters/enemys/ghost.gd" id="1_5d3hf"]
 [ext_resource type="Texture2D" uid="uid://4trrpcoc1tmb" path="res://assets/Farm/Actor/Monsters/Spirit/SpriteSheet.png" id="2_rtoxo"]
 [ext_resource type="Texture2D" uid="uid://bc65q8shiv2u5" path="res://assets/Farm/FX/SpriteSheet.png" id="3_gwuor"]
 [ext_resource type="AudioStream" uid="uid://cpqnn4xox3xdn" path="res://assets/Farm/Audio/Sounds/Hit & Impact/Hit9.wav" id="4_dx6tw"]
-[ext_resource type="Script" path="res://scenes/characters/enemys/state/state_machine.gd" id="5_kpggt"]
-[ext_resource type="Script" path="res://scenes/characters/enemys/state/enemy_idle.gd" id="6_aqjr6"]
-[ext_resource type="Script" path="res://scenes/characters/enemys/state/enemy_wander.gd" id="7_gwjg2"]
-[ext_resource type="Script" path="res://scenes/characters/enemys/state/enemy_chase.gd" id="7_rtoxo"]
+[ext_resource type="Script" uid="uid://btngq8g8ln8ou" path="res://scenes/characters/enemys/state/state_machine.gd" id="5_kpggt"]
+[ext_resource type="Script" uid="uid://c8yhb7vkfe184" path="res://scenes/characters/enemys/state/enemy_idle.gd" id="6_aqjr6"]
+[ext_resource type="Script" uid="uid://came180xt8ofy" path="res://scenes/characters/enemys/state/enemy_wander.gd" id="7_gwjg2"]
+[ext_resource type="Script" uid="uid://46cqaauvp8w1" path="res://scenes/characters/enemys/state/enemy_chase.gd" id="7_rtoxo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pihf7"]
 radius = 2.0
@@ -299,12 +299,12 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dgv66"]
 _data = {
-"RESET": SubResource("Animation_p8yp6"),
-"death": SubResource("Animation_jgnha"),
-"walk_down": SubResource("Animation_dgv66"),
-"walk_left": SubResource("Animation_3osqy"),
-"walk_right": SubResource("Animation_ai2h8"),
-"walk_up": SubResource("Animation_7p67y")
+&"RESET": SubResource("Animation_p8yp6"),
+&"death": SubResource("Animation_jgnha"),
+&"walk_down": SubResource("Animation_dgv66"),
+&"walk_left": SubResource("Animation_3osqy"),
+&"walk_right": SubResource("Animation_ai2h8"),
+&"walk_up": SubResource("Animation_7p67y")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7p67y"]

@@ -1,14 +1,16 @@
-[gd_scene load_steps=14 format=4 uid="uid://cos6qsurtjany"]
+[gd_scene load_steps=16 format=4 uid="uid://cos6qsurtjany"]
 
-[ext_resource type="Script" path="res://scenes/level/day_1/progress_1.gd" id="1_jcp30"]
+[ext_resource type="Script" uid="uid://crhk3gns5q6fd" path="res://scenes/level/day_1/progress_1.gd" id="1_jcp30"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_ieq2y"]
 [ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_2pxvh"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_qynte"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_5ixmp"]
 [ext_resource type="PackedScene" uid="uid://bqm5hdqbqxbcq" path="res://block/block_entrance.tscn" id="5_b1g3g"]
-[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_jj62p"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_jj62p"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_p234h"]
+[ext_resource type="PackedScene" uid="uid://bdfa624gjsy3" path="res://dialogue/scene/cavegirl.tscn" id="7_6bas3"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_avs8e"]
+[ext_resource type="Script" uid="uid://cv357loy5ijny" path="res://dialogue/scene/progress1_cavegirl.gd" id="8_6bas3"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="8_ieq2y"]
 [ext_resource type="AudioStream" uid="uid://cukccy3hixulv" path="res://assets/Farm/Audio/背景音/オオルリのさえずり1.mp3" id="9_tko0q"]
 [ext_resource type="PackedScene" uid="uid://i6ur81uvykor" path="res://dialogue/scene/cat_head.tscn" id="10_5ixmp"]
@@ -41,7 +43,7 @@ tile_map_data = PackedByteArray("AAAUAA4AAwAOAAYAAAAVAA4AAwAOAAYAAAAWAA4AAwAOAAY
 tile_set = ExtResource("3_qynte")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("3_2pxvh")]
-position = Vector2(301, 22)
+position = Vector2(-184, 24)
 
 [node name="CatHead" parent="Node2D" instance=ExtResource("10_5ixmp")]
 position = Vector2(265, -43)
@@ -49,6 +51,10 @@ position = Vector2(265, -43)
 [node name="block_entrance" parent="Node2D" instance=ExtResource("5_b1g3g")]
 y_sort_enabled = true
 position = Vector2(357, 238)
+
+[node name="Cavegirl" parent="Node2D" instance=ExtResource("7_6bas3")]
+position = Vector2(311, 257)
+script = ExtResource("8_6bas3")
 
 [node name="Doors" type="Node2D" parent="."]
 

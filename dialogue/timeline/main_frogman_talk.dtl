@@ -1,17 +1,17 @@
 frog_man: 哈囉!
 frog_man: 你是第一次來的吧，歡迎~
-frog_man: 有任何事情都可以問我
+frog_man: 有任何事情都可以問我!
 frog_man: 像是...痾
 frog_man: 你知道嗎，按Z可以和別人對話喔
 - 知道
 	frog_man: 甚麼?你已經知道了!
 	frog_man: 是喔...
-	frog_man: 好吧，那點下一句的時候用滑數點這件事呢?
+	frog_man: 好吧，那點下一句時可以用滑數或空白建這件事呢?
 	frog_man: 也知道了?!
 	frog_man: 是喔...是喔...
 - 是喔
 	frog_man: 哈哈~不客氣
 	frog_man: 那再跟你說一件事!
-	frog_man: 用滑鼠可以點下一句喔
+	frog_man: 用滑鼠和空白鍵可以點下一句喔
 	frog_man: 知道了嗎?
 	frog_man: 快去多和其他人聊天吧!

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=4 uid="uid://c7k55nqfqp4a8"]
 
 [ext_resource type="TileSet" uid="uid://cnew40ld6bgxu" path="res://block/sokoban.tres" id="1_80nbo"]
-[ext_resource type="Script" path="res://block/game.gd" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://dw5vesmj16tdn" path="res://block/game.gd" id="1_e2o6t"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 offset = Vector2(9.6, 0)

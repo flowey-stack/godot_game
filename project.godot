@@ -12,7 +12,7 @@ config_version=5
 
 config/name="RPG"
 run/main_scene="res://scene/main.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -44,6 +44,9 @@ directories/dtl_directory={
 "main_frogman_talk": "res://dialogue/timeline/main_frogman_talk.dtl",
 "main_slime_talk": "res://dialogue/timeline/main_slime_talk.dtl",
 "main_tip": "res://dialogue/timeline/main_tip.dtl",
+"main_tip_useZ": "res://dialogue/timeline/main_tip_useZ.dtl",
+"progress1_cavegirl": "res://dialogue/timeline/progress1_cavegirl.dtl",
+"progress1_cavegirl_repeat": "res://dialogue/timeline/progress1_cavegirl_repeat.dtl",
 "progress2_frogman": "res://dialogue/timeline/progress2_frogman.dtl",
 "progress2_frogman_repeat": "res://dialogue/timeline/progress2_frogman_repeat.dtl",
 "progress3_cathead": "res://dialogue/timeline/progress3_cathead.dtl",

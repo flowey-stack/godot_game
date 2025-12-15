@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdfa624gjsy3"]
+[gd_scene load_steps=5 format=3 uid="uid://bdfa624gjsy3"]
 
 [ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="1_c64vv"]
+[ext_resource type="Script" uid="uid://ds62rjyrn20ev" path="res://dialogue/scene/cavegirl.gd" id="1_rfnpv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rfnpv"]
 radius = 6.08276
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_c64vv"]
+radius = 21.0238
+
 [node name="Cavegirl" type="CharacterBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_rfnpv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -3)
@@ -18,3 +23,12 @@ vframes = 7
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_rfnpv")
+
+[node name="ChackDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChackDetection"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_c64vv")
+
+[connection signal="body_entered" from="ChackDetection" to="." method="_on_chack_detection_body_entered"]
+[connection signal="body_exited" from="ChackDetection" to="." method="_on_chack_detection_body_exited"]

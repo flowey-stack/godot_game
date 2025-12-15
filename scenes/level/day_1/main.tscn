@@ -1,19 +1,21 @@
-[gd_scene load_steps=17 format=4 uid="uid://bmn3yro00ilmr"]
+[gd_scene load_steps=19 format=4 uid="uid://bmn3yro00ilmr"]
 
-[ext_resource type="Script" path="res://scenes/level/day_1/main.gd" id="1_b5rpj"]
+[ext_resource type="Script" uid="uid://beoao1x1gmh1b" path="res://scenes/level/day_1/main.gd" id="1_b5rpj"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_6dvl8"]
 [ext_resource type="PackedScene" uid="uid://d3b48kcdjweja" path="res://dialogue/scene/mask_frog.tscn" id="4_3icul"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_3ygs2"]
-[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_3ygs2"]
+[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_3ygs2"]
 [ext_resource type="TileSet" uid="uid://3y0ss002dmpj" path="res://tileset/items.tres" id="5_opd48"]
+[ext_resource type="Script" uid="uid://duesabxe51xua" path="res://dialogue/scene/main_mask_frog.gd" id="5_scxds"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="6_2grsr"]
-[ext_resource type="Script" path="res://dialogue/scene/main_tip.gd" id="6_xe4lw"]
+[ext_resource type="Script" uid="uid://b1c66xtx8v613" path="res://dialogue/scene/main_tip.gd" id="6_xe4lw"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="7_522j7"]
-[ext_resource type="Script" path="res://scenes/characters/enemys/slime_main_talk.gd" id="7_iwph4"]
+[ext_resource type="Script" uid="uid://dvl8wkl7fxe51" path="res://scenes/characters/enemys/slime_main_talk.gd" id="7_iwph4"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="8_2grsr"]
 [ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="9_02xfy"]
 [ext_resource type="AudioStream" uid="uid://cukccy3hixulv" path="res://assets/Farm/Audio/背景音/オオルリのさえずり1.mp3" id="9_qgn05"]
 [ext_resource type="PackedScene" uid="uid://da671k0qmw4d2" path="res://dialogue/dialogue_trigger.tscn" id="10_3icul"]
+[ext_resource type="Script" uid="uid://csadja3laypvm" path="res://dialogue/main_tip_useZ.gd" id="10_co8to"]
 [ext_resource type="PackedScene" uid="uid://50wbgvltd8dm" path="res://scenes/characters/enemys/slime.tscn" id="14_qwpk1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_scxds"]
@@ -42,10 +44,11 @@ tile_map_data = PackedByteArray("AAAPAAIAAgABAAsAAAA=")
 tile_set = ExtResource("2_6dvl8")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("9_02xfy")]
-position = Vector2(11, 224)
+position = Vector2(-1, 246)
 
 [node name="MaskFrog" parent="Node2D" instance=ExtResource("4_3icul")]
 position = Vector2(-86, 216)
+script = ExtResource("5_scxds")
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 tile_map_data = PackedByteArray("AAD8////AAAAAAAAAQA=")
@@ -67,6 +70,10 @@ position = Vector2(-42, -6)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Slime/ChackDetection"]
 position = Vector2(-2, -12)
 shape = SubResource("RectangleShape2D_scxds")
+
+[node name="DialogueTrigger" parent="Node2D" instance=ExtResource("10_3icul")]
+position = Vector2(-37, 216)
+script = ExtResource("10_co8to")
 
 [node name="Doors" type="Node2D" parent="."]
 
