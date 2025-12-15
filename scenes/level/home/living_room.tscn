@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://ledoae84ka4h"]
+[gd_scene load_steps=16 format=4 uid="uid://ledoae84ka4h"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_33nox"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_l0wn4"]
@@ -8,8 +8,12 @@
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="5_2ryyr"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_exair"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_8vdav"]
+[ext_resource type="PackedScene" uid="uid://d3b48kcdjweja" path="res://dialogue/scene/mask_frog.tscn" id="6_dpqc1"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_fscab"]
+[ext_resource type="Script" uid="uid://cdxix3i3gqfda" path="res://dialogue/scene/living_room_mask_frog.gd" id="7_iylyu"]
+[ext_resource type="PackedScene" uid="uid://i6ur81uvykor" path="res://dialogue/scene/cat_head.tscn" id="7_lkr5l"]
 [ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="8_2e3qo"]
+[ext_resource type="Script" uid="uid://ceh4y71sygyf0" path="res://dialogue/scene/living_room_cat_head.gd" id="8_lkr5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7kxj"]
 
@@ -52,6 +56,14 @@ position = Vector2(246, 88)
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
 tile_map_data = PackedByteArray("AAAPAAUAAwAOAAYAAAAPAAYAAwAOAAYAAAAPAAcAAwAOAAYAAAA=")
 tile_set = ExtResource("5_2ryyr")
+
+[node name="MaskFrog" parent="Node2D" instance=ExtResource("6_dpqc1")]
+position = Vector2(63, 111)
+script = ExtResource("7_iylyu")
+
+[node name="CatHead" parent="Node2D" instance=ExtResource("7_lkr5l")]
+position = Vector2(79, 94)
+script = ExtResource("8_lkr5l")
 
 [node name="Doors" type="Node2D" parent="."]
 
