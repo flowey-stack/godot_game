@@ -30,6 +30,13 @@ func _ready() -> void:
 	toggle_popupmenu_buttons = [open_menu_button, close_menu_button]
 	close_menu_buttons = [close_help_button, close_settings_button, close_pause_button]
 	
+	if setting_menu_screen:
+		setting_menu_screen.visible = false
+	if help_menu_screen:
+		help_menu_screen.visible = false
+	if pause_menu_screen:
+		pause_menu_screen.visible = false
+	
 	#連接訊號 (當滑桿數值改變時，觸發函式)
 	volume_slider.value_changed.connect(on_volume_changed)
 	
