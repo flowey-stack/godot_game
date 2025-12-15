@@ -34,7 +34,7 @@ y_sort_enabled = true
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAKAAIAAwAEAAUAAAAMAAIAAwAAAAAAAAAJAAIABAA2ACEAAAADAAEABAAtACEAAAAIAAEABAAtACEAAAAHAAEABAAtACEAAAAFAAEABAA0ACAAAAAGAAEABAAwACEAAAADAAMABAAnACMAAAA=")
+tile_map_data = PackedByteArray("AAAKAAIAAwAEAAUAAAAMAAIAAwAAAAAAAAAJAAIABAA2ACEAAAADAAEABAAtACEAAAAIAAEABAAtACEAAAAHAAEABAAtACEAAAAFAAEABAA0ACAAAAAGAAEABAAwACEAAAADAAMABAAnACMAAAAEAAEABAAtACEAAAA=")
 tile_set = ExtResource("2_phbfs")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("3_r4ts7")]
@@ -87,9 +87,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -46.0
-offset_top = -24.0
+offset_top = -32.0
 offset_right = 46.0
-offset_bottom = -4.0
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 0
 

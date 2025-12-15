@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://bj0p8riusuhwn"]
 
-[ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://menu/popup_menu.gd" id="1_cwbuu"]
+[ext_resource type="Script" path="res://menu/popup_menu.gd" id="1_cwbuu"]
 [ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
 [ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://menu/UIBundleFree/MediavelFree.png" id="5_4v80v"]
 [ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="5_q8sw4"]
@@ -591,15 +591,15 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uusyb"]
 _data = {
-&"RESET": SubResource("Animation_0qsvx"),
-&"close_helpMenu": SubResource("Animation_dpq86"),
-&"close_menu": SubResource("Animation_uusyb"),
-&"close_pauseMenu": SubResource("Animation_tjjbm"),
-&"close_settingMenu": SubResource("Animation_ukwlx"),
-&"open_helpMenu": SubResource("Animation_ep3pr"),
-&"open_menu": SubResource("Animation_4v80v"),
-&"open_pauseMenu": SubResource("Animation_h3j15"),
-&"open_settingMenu": SubResource("Animation_l8h7b")
+"RESET": SubResource("Animation_0qsvx"),
+"close_helpMenu": SubResource("Animation_dpq86"),
+"close_menu": SubResource("Animation_uusyb"),
+"close_pauseMenu": SubResource("Animation_tjjbm"),
+"close_settingMenu": SubResource("Animation_ukwlx"),
+"open_helpMenu": SubResource("Animation_ep3pr"),
+"open_menu": SubResource("Animation_4v80v"),
+"open_pauseMenu": SubResource("Animation_h3j15"),
+"open_settingMenu": SubResource("Animation_l8h7b")
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4etj"]
@@ -950,7 +950,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ukwlx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="inGameUI/popupMenu"]
 libraries = {
-&"": SubResource("AnimationLibrary_uusyb")
+"": SubResource("AnimationLibrary_uusyb")
 }
 
 [node name="pauseMenu" type="MarginContainer" parent="inGameUI/popupMenu"]
