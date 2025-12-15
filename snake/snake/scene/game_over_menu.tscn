@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://niw2kapx6ues"]
+
+[ext_resource type="FontFile" uid="uid://djhmncgnyxyev" path="res://snake/snake/assets/MaldiniBold.ttf" id="1_ckcbh"]
+[ext_resource type="Script" uid="uid://bikknxv0a2m1s" path="res://snake/snake/scene/game_over_menu.gd" id="1_io285"]
+[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="2_skohm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_io285"]
+bg_color = Color(0.145392, 0.34392, 0.510156, 1)
+shadow_size = 5
+shadow_offset = Vector2(10, 10)
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_io285")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_io285")
+
+[node name="ResultLabel" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -31.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_skohm")
+theme_override_font_sizes/font_size = 32
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 19.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_skohm")
+text = "SCORE: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+visible = false
+offset_left = 375.0
+offset_top = 545.0
+offset_right = 625.0
+offset_bottom = 608.0
+theme_override_fonts/font = ExtResource("1_ckcbh")
+theme_override_font_sizes/font_size = 50
+text = "Play Again"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
