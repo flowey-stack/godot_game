@@ -1,21 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqm5hdqbqxbcq"]
+[gd_scene load_steps=5 format=3 uid="uid://bqm5hdqbqxbcq"]
 
-[ext_resource type="Script" uid="uid://bsp2eko3t5q1t" path="res://block/block_entrance.gd" id="1_ogd2y"]
-[ext_resource type="Texture2D" uid="uid://dedtofwihmapt" path="res://assets/Farm/Backgrounds/Tilesets/TilesetElement.png" id="1_y8b5q"]
+[ext_resource type="Script" path="res://block/block_entrance.gd" id="1_ogd2y"]
+[ext_resource type="Texture2D" uid="uid://c3c0oeuqasm0r" path="res://assets/Farm/Backgrounds/Tilesets/TilesetHouse.png" id="2_47bd8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogd2y"]
-size = Vector2(32, 30)
+size = Vector2(60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2a4p"]
+atlas = ExtResource("2_47bd8")
+region = Rect2(304, 304, 48, 48)
 
 [node name="block_entrance" type="Area2D"]
 script = ExtResource("1_ogd2y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16, 15)
+position = Vector2(0, -21)
 shape = SubResource("RectangleShape2D_ogd2y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(16, 15)
-scale = Vector2(2, 2)
-texture = ExtResource("1_y8b5q")
-region_enabled = true
-region_rect = Rect2(48, 145, 16, 15)
+y_sort_enabled = true
+position = Vector2(0, -16)
+texture = SubResource("AtlasTexture_k2a4p")
+offset = Vector2(0, -8)

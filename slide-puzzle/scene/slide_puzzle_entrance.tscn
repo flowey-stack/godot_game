@@ -1,21 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkmt7cxvcsjgq"]
+[gd_scene load_steps=5 format=3 uid="uid://bkmt7cxvcsjgq"]
 
-[ext_resource type="Script" uid="uid://b3vg6rg0px8c7" path="res://slide_puzzle_entrance.gd" id="1_0tavx"]
-[ext_resource type="Texture2D" uid="uid://dedtofwihmapt" path="res://assets/Farm/Backgrounds/Tilesets/TilesetElement.png" id="2_jfvg0"]
+[ext_resource type="Script" path="res://slide-puzzle/scene/slide_puzzle_entrance.gd" id="1_0tavx"]
+[ext_resource type="Texture2D" uid="uid://d0x6uwnd55tcg" path="res://assets/Farm/Backgrounds/Tilesets/spr_tileset_sunnysideworld.png" id="2_guau4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jyu6"]
+atlas = ExtResource("2_guau4")
+region = Rect2(720, 528, 16, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mfanu"]
-size = Vector2(28, 12)
+size = Vector2(25, 28.5)
 
 [node name="slide_puzzle_entrance" type="Area2D"]
 script = ExtResource("1_0tavx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(14, 6)
-shape = SubResource("RectangleShape2D_mfanu")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(14, 6)
-scale = Vector2(2, 2)
-texture = ExtResource("2_jfvg0")
+texture = SubResource("AtlasTexture_7jyu6")
+offset = Vector2(0, -6)
 region_enabled = true
-region_rect = Rect2(97, 168, 14, 6)
+region_rect = Rect2(0, 0, 16, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_mfanu")

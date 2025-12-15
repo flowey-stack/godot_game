@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=4 uid="uid://b7o2alren1ovl"]
+[gd_scene load_steps=12 format=4 uid="uid://b7o2alren1ovl"]
 
-[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_327lm"]
+[ext_resource type="Script" path="res://scenes/level/home/room_2.gd" id="1_7pyri"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_phbfs"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="3_r4ts7"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_1dd2t"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_r4ts7"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="4_1dd2t"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_jb2cs"]
+[ext_resource type="PackedScene" uid="uid://bkmt7cxvcsjgq" path="res://slide-puzzle/scene/slide_puzzle_entrance.tscn" id="4_jgosm"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_gujg7"]
+[ext_resource type="PackedScene" uid="uid://bqm5hdqbqxbcq" path="res://block/block_entrance.tscn" id="5_kvlr0"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_54137"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_7nchm"]
 
@@ -14,7 +16,7 @@ size = Vector2(25, 20)
 
 [node name="Room2" type="Node2D"]
 position = Vector2(-8, 10)
-script = ExtResource("1_327lm")
+script = ExtResource("1_7pyri")
 
 [node name="Floor" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAADAAEAAgAHAAYAAAADAAIAAgAHAAYAAAADAAMAAgAHAAYAAAADAAQAAgAHAAYAAAADAAUAAgAHAAYAAAAEAAEAAgAHAAYAAAAEAAIAAgAHAAYAAAAEAAMAAgAHAAYAAAAEAAQAAgAHAAYAAAAEAAUAAgAHAAYAAAAFAAEAAgAHAAYAAAAFAAIAAgAHAAYAAAAFAAMAAgAHAAYAAAAFAAQAAgAHAAYAAAAFAAUAAgAHAAYAAAAGAAEAAgAHAAYAAAAGAAIAAgAHAAYAAAAGAAMAAgAHAAYAAAAGAAQAAgAHAAYAAAAGAAUAAgAHAAYAAAAHAAEAAgAHAAYAAAAHAAIAAgAHAAYAAAAHAAMAAgAHAAYAAAAHAAQAAgAHAAYAAAAHAAUAAgAHAAYAAAAIAAEAAgAHAAYAAAAIAAIAAgAHAAYAAAAIAAMAAgAHAAYAAAAIAAQAAgAHAAYAAAAIAAUAAgAHAAYAAAAJAAMAAgAHAAYAAAAJAAQAAgAHAAYAAAAJAAUAAgAHAAYAAAAKAAMAAgAHAAYAAAAKAAQAAgAHAAYAAAAKAAUAAgAHAAYAAAALAAMAAgAHAAYAAAALAAQAAgAHAAYAAAALAAUAAgAHAAYAAAAMAAMAAgAHAAYAAAAMAAQAAgAHAAYAAAAMAAUAAgAHAAYAAAA=")
@@ -33,11 +35,17 @@ y_sort_enabled = true
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAKAAIAAwAEAAUAAAAMAAIAAwAAAAAAAAAJAAIABAA2ACEAAAADAAEABAAtACEAAAAEAAEABAAtACEAAAAIAAEABAAtACEAAAAHAAEABAAtACEAAAAFAAEABAA0ACAAAAAGAAEABAAwACEAAAADAAMABAAnACMAAAA=")
+tile_map_data = PackedByteArray("AAAKAAIAAwAEAAUAAAAMAAIAAwAAAAAAAAAJAAIABAA2ACEAAAADAAEABAAtACEAAAAIAAEABAAtACEAAAAHAAEABAAtACEAAAAFAAEABAA0ACAAAAAGAAEABAAwACEAAAADAAMABAAnACMAAAA=")
 tile_set = ExtResource("2_phbfs")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("3_r4ts7")]
 position = Vector2(129, 89)
+
+[node name="slide_puzzle_entrance" parent="Node2D" instance=ExtResource("4_jgosm")]
+position = Vector2(72, 20)
+
+[node name="block_entrance" parent="Node2D" instance=ExtResource("5_kvlr0")]
+position = Vector2(65, 49)
 
 [node name="Doors" type="Node2D" parent="."]
 

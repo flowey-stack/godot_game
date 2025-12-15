@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://coopdkpeo3yq8"]
+[gd_scene load_steps=18 format=4 uid="uid://coopdkpeo3yq8"]
 
 [ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_8gk22"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_76ubw"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="12_xvdib"]
 [ext_resource type="PackedScene" uid="uid://cwhyjx3k8xgai" path="res://釣魚/fishing_entrance.tscn" id="13_nywe8"]
 [ext_resource type="PackedScene" uid="uid://koqcx5jvso0g" path="res://dialogue/scene/告示牌.tscn" id="14_16x5l"]
-[ext_resource type="PackedScene" uid="uid://easgk2drj2tq" path="res://snake/snake/scene/snake_entrance.tscn" id="15_yelmv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nywe8"]
 size = Vector2(65, 20)
@@ -82,8 +81,6 @@ position = Vector2(308, -50)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/fishing entrance"]
 position = Vector2(0.5, 4)
 shape = SubResource("RectangleShape2D_nywe8")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
 
 [node name="告示牌" parent="Node2D" instance=ExtResource("14_16x5l")]
 y_sort_enabled = true
@@ -155,9 +152,6 @@ grow_vertical = 0
 
 [node name="GPUParticles2D" parent="." instance=ExtResource("12_0p1ao")]
 position = Vector2(189, -19)
-
-[node name="snake_entrance" parent="." instance=ExtResource("15_yelmv")]
-position = Vector2(233, 26)
 
 [editable path="Doors/Door_from_4"]
 [editable path="Doors/Door_living_room"]
