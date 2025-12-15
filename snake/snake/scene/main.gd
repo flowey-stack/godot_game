@@ -67,22 +67,22 @@ func _process(delta):
 	
 func move_snake():
 	if can_move:
-		if Input.is_action_just_pressed("move_down") and move_direction != up:
+		if Input.is_action_just_pressed("ui_down") and move_direction != up:
 			move_direction = down
 			can_move = false
 			if not game_started:
 				start_game()
-		if Input.is_action_just_pressed("move_up") and move_direction != down:
+		if Input.is_action_just_pressed("ui_up") and move_direction != down:
 			move_direction = up
 			can_move = false
 			if not game_started:
 				start_game()
-		if Input.is_action_just_pressed("move_left") and move_direction != right:
+		if Input.is_action_just_pressed("ui_left") and move_direction != right:
 			move_direction = left
 			can_move = false
 			if not game_started:
 				start_game()
-		if Input.is_action_just_pressed("move_right") and move_direction != left:
+		if Input.is_action_just_pressed("ui_right") and move_direction != left:
 			move_direction = right
 			can_move = false
 			if not game_started:

@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://cos6qsurtjany"]
+[gd_scene load_steps=14 format=4 uid="uid://cos6qsurtjany"]
 
 [ext_resource type="Script" path="res://scenes/level/day_1/progress_1.gd" id="1_jcp30"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_ieq2y"]
 [ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_2pxvh"]
+[ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_qynte"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_5ixmp"]
 [ext_resource type="PackedScene" uid="uid://bqm5hdqbqxbcq" path="res://block/block_entrance.tscn" id="5_b1g3g"]
 [ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="5_jj62p"]
@@ -35,7 +36,9 @@ tile_map_data = PackedByteArray("AADw//j/AgAJABIAAADw//n/AgAJABIAAADw//r/AgAJABI
 tile_set = ExtResource("2_ieq2y")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
-tile_set = ExtResource("2_ieq2y")
+visible = false
+tile_map_data = PackedByteArray("AAAUAA4AAwAOAAYAAAAVAA4AAwAOAAYAAAAWAA4AAwAOAAYAAAAXAA4AAwAOAAYAAAA=")
+tile_set = ExtResource("3_qynte")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("3_2pxvh")]
 position = Vector2(301, 22)
@@ -44,7 +47,8 @@ position = Vector2(301, 22)
 position = Vector2(265, -43)
 
 [node name="block_entrance" parent="Node2D" instance=ExtResource("5_b1g3g")]
-position = Vector2(359, 235)
+y_sort_enabled = true
+position = Vector2(357, 238)
 
 [node name="Doors" type="Node2D" parent="."]
 

@@ -6,7 +6,7 @@ func  _process(delta: float) -> void:
 		return
 		
 	var dir := Vector2i(
-		Input.get_vector("move_left", "move_right", "move_up", "move_down").round()
+		Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").round()
 	)
 	if dir == Vector2i.ZERO:
 		return
