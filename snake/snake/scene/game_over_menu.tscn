@@ -65,7 +65,7 @@ text = "SCORE: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RestartButton" type="Button" parent="GameOverPanel/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="GameOverPanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
@@ -81,4 +81,4 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_83hqd")
 theme_override_styles/normal = SubResource("StyleBoxTexture_rrss5")
 text = " EXIT "
 
-[connection signal="pressed" from="GameOverPanel/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="GameOverPanel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
