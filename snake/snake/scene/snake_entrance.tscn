@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://easgk2drj2tq"]
+
+[ext_resource type="Script" path="res://snake/snake/scene/snake_entrance.gd" id="1_83ofo"]
+[ext_resource type="Texture2D" uid="uid://dedtofwihmapt" path="res://assets/Farm/Backgrounds/Tilesets/TilesetElement.png" id="1_on71v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83ofo"]
+size = Vector2(26, 22)
+
+[node name="snake_entrance" type="Area2D"]
+script = ExtResource("1_83ofo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, 11)
+shape = SubResource("RectangleShape2D_83ofo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13, 11)
+texture = ExtResource("1_on71v")
+region_enabled = true
+region_rect = Rect2(1, 35, 13, 11)
