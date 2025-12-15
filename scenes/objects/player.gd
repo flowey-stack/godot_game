@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 50.0
+const SPEED = 70.0
 const JUMP_VELOCITY = -350.0
 
 var can_move := false    # 開場禁止移動
