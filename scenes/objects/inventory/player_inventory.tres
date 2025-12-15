@@ -62,7 +62,7 @@ metadata/_custom_type_script = "uid://b7sxsg3ss1r5m"
 [sub_resource type="Resource" id="Resource_3ghho"]
 script = ExtResource("2_qw6px")
 item = ExtResource("3_j84gc")
-amount = 3
+amount = 5
 metadata/_custom_type_script = "uid://b7sxsg3ss1r5m"
 
 [resource]

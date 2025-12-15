@@ -30,8 +30,7 @@ directories/dch_directory={
 "cave_girl": "res://dialogue/npc/cave_girl.dch",
 "fish_告示牌": "res://dialogue/npc/fish_告示牌.dch",
 "frog_man": "res://dialogue/npc/frog_man.dch",
-"main_slime": "res://dialogue/npc/main_slime.dch",
-"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"main_slime": "res://dialogue/npc/main_slime.dch"
 }
 directories/dtl_directory={
 "first_main": "res://dialogue/timeline/first_main.dtl",
