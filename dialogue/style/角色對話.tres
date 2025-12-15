@@ -22,8 +22,6 @@ overrides = {
 script = ExtResource("2_c7bld")
 scene = ExtResource("4_gfjqe")
 overrides = {
-"behaviour_direction": "Vector2(2, -2)",
-"behaviour_distance": "40.0",
 "bold_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf\"",
 "box_corner_radius": "10.0",
 "box_padding": "Vector2(7, 7)",
@@ -46,4 +44,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_c7bld")]([])
-metadata/_latest_layer = "11"
+metadata/_latest_layer = "10"

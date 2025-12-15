@@ -1,0 +1,24 @@
+[style name="角色對話"]
+cat_head: 老兄!老兄!別走
+cat_head: 對!就是你!
+cat_head: 好久沒有人來了!你是第一個!
+cat_head: 總之!好，隨便
+cat_head: 你想看一個酷東西嗎?
+- 好
+	cat_head: 我就知道你會想看，老兄
+	cat_head: 畢竟沒人能拒絕這個
+	cat_head: 後空翻!
+	[signal arg="play_roll"]
+- 不要
+	cat_head: 你的損失?
+	cat_head: 想太美了!我還是要給你看
+	cat_head: 後空翻!
+	[signal arg="play_roll"]
+[wait time="1.5"]
+cat_head: ...
+cat_head: 看來失敗了...
+cat_head: 畢竟我沒有用來翻滾的身體
+cat_head: 只有這個無用的頭，用來跟你講話
+cat_head: 快點離開這裡吧!
+cat_head: 看見你的臉只會讓我想起這場失敗
+cat_head: 唉!

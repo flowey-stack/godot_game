@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdfa624gjsy3"]
+
+[ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="1_c64vv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rfnpv"]
+radius = 6.08276
+
+[node name="Cavegirl" type="CharacterBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_c64vv")
+offset = Vector2(0, -5)
+hframes = 4
+vframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_rfnpv")

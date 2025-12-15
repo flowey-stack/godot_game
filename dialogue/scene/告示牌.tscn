@@ -1,12 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhb6vbw82i1n5"]
+[gd_scene load_steps=6 format=3 uid="uid://koqcx5jvso0g"]
 
-[ext_resource type="Texture2D" uid="uid://dedtofwihmapt" path="res://assets/Farm/Backgrounds/Tilesets/TilesetElement.png" id="1_4lsq7"]
+[ext_resource type="Script" uid="uid://bxnxt5htmilgc" path="res://dialogue/scene/告示牌.gd" id="1_ut4b6"]
+[ext_resource type="Texture2D" uid="uid://dedtofwihmapt" path="res://assets/Farm/Backgrounds/Tilesets/TilesetElement.png" id="2_uffb8"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p52pf"]
-atlas = ExtResource("1_4lsq7")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg6mu"]
+atlas = ExtResource("2_uffb8")
 region = Rect2(16, 32, 16, 16)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8q5cs"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x7hlj"]
+radius = 15.0333
+
+[node name="告示牌" type="CharacterBody2D" groups=["Dialogic"]]
+script = ExtResource("1_ut4b6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("AtlasTexture_p52pf")
+texture = SubResource("AtlasTexture_lg6mu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8q5cs")
+
+[node name="ChackDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChackDetection"]
+shape = SubResource("CircleShape2D_x7hlj")
+
+[connection signal="body_entered" from="ChackDetection" to="." method="_on_chack_detection_body_entered"]
+[connection signal="body_exited" from="ChackDetection" to="." method="_on_chack_detection_body_exited"]

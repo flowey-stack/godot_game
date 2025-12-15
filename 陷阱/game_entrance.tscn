@@ -12,7 +12,9 @@ height = 94.0122
 script = ExtResource("1_o711f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -34)
 texture = ExtResource("1_fae3p")
+offset = Vector2(0, 34)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
 texture = ExtResource("2_o711f")

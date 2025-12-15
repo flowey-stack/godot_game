@@ -1,0 +1,5 @@
+cat_head: 想再看一次嗎?
+cat_head: 那就看好了!
+[signal arg="play_roll_pro"]
+[wait time="1.0"]
+cat_head: 呵呵，滿意了吧
