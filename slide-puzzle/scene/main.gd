@@ -44,6 +44,9 @@ func _input(event):
 		var rows = int(local_pos.y / tile_size)
 		var cols = int(local_pos.x / tile_size)
 		
+		if rows < 0 or rows >= grid_size or cols < 0 or cols >= grid_size:
+			return
+		
 		print("點擊座標: ", rows, ", ", cols) # 這行可以讓你知道有沒有點對
 		
 		# 3. 執行檢查與移動
