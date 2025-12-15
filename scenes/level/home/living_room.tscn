@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://ledoae84ka4h"]
+[gd_scene load_steps=12 format=4 uid="uid://ledoae84ka4h"]
 
-[ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_33nox"]
+[ext_resource type="Script" path="res://scenes/level/world/world.gd" id="1_33nox"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_l0wn4"]
-[ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_mjnk7"]
+[ext_resource type="Script" path="res://scenes/ui/canvas_layer.gd" id="4_mjnk7"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_vqsjn"]
+[ext_resource type="PackedScene" uid="uid://easgk2drj2tq" path="res://snake/snake/scene/snake_entrance.tscn" id="4_xavu6"]
+[ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="5_2ryyr"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_exair"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_8vdav"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_fscab"]
@@ -38,6 +40,19 @@ tile_set = ExtResource("2_l0wn4")
 tile_map_data = PackedByteArray("AAAMAAEACgABAAIAAAADAAQACgAAAAcAAAAFAAMACgAHAAQAAAA=")
 tile_set = ExtResource("2_l0wn4")
 
+[node name="snake_entrance" parent="Node2D" instance=ExtResource("4_xavu6")]
+position = Vector2(246, 123)
+
+[node name="snake_entrance2" parent="Node2D" instance=ExtResource("4_xavu6")]
+position = Vector2(246, 106)
+
+[node name="snake_entrance3" parent="Node2D" instance=ExtResource("4_xavu6")]
+position = Vector2(246, 88)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
+tile_map_data = PackedByteArray("AAAPAAUAAwAOAAYAAAAPAAYAAwAOAAYAAAAPAAcAAwAOAAYAAAA=")
+tile_set = ExtResource("5_2ryyr")
+
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="Door_home" parent="Doors" instance=ExtResource("4_vqsjn")]
@@ -52,6 +67,7 @@ position = Vector2(0, 20)
 position = Vector2(1, -18)
 
 [node name="Door_corridor" parent="Doors" instance=ExtResource("4_vqsjn")]
+visible = false
 position = Vector2(215, 65)
 destination_level_tag = "corridor"
 destination_door_tag = "living_room"
@@ -94,9 +110,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -46.0
-offset_top = -24.0
+offset_top = -32.0
 offset_right = 46.0
-offset_bottom = -4.0
+offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 0
 

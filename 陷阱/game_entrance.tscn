@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bom4d36fgprtv"]
 
 [ext_resource type="Texture2D" uid="uid://c81abrd8o68yy" path="res://陷阱/brackeys_platformer_assets/altar.png" id="1_fae3p"]
-[ext_resource type="Script" uid="uid://c02r8w78b37p4" path="res://陷阱/game_entrance.gd" id="1_o711f"]
+[ext_resource type="Script" path="res://陷阱/game_entrance.gd" id="1_o711f"]
 [ext_resource type="Texture2D" uid="uid://ck3ga8ho4q1fk" path="res://陷阱/brackeys_platformer_assets/altar words.png" id="2_o711f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4hcbd"]
@@ -17,6 +17,7 @@ texture = ExtResource("1_fae3p")
 offset = Vector2(0, 34)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-1, 34)
 texture = ExtResource("2_o711f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

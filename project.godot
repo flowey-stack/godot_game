@@ -12,7 +12,7 @@ config_version=5
 
 config/name="RPG"
 run/main_scene="res://scene/main.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -22,6 +22,8 @@ TransitionScreen="*res://global/transition_screen.tscn"
 global="*res://陷阱/global.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Cursor="*res://global/cursor.tscn"
+GameManager="*res://global/game_manager.tscn"
+EventBus="*res://block/event_bus.gd"
 
 [dialogic]
 
@@ -37,7 +39,7 @@ directories/dtl_directory={
 "hidden_slime_repeat": "res://dialogue/timeline/hidden_slime_repeat.dtl",
 "hidden_slime_talk": "res://dialogue/timeline/hidden_slime_talk.dtl",
 "home_fishing": "res://dialogue/timeline/home_fishing.dtl",
-"main_cathead": "res://main_cathead.dtl",
+"main_cathead": "res://dialogue/npc/main_cathead.dtl",
 "main_cathead_repeat": "res://dialogue/timeline/main_cathead_repeat.dtl",
 "main_frogman_talk": "res://dialogue/timeline/main_frogman_talk.dtl",
 "main_slime_talk": "res://dialogue/timeline/main_slime_talk.dtl",

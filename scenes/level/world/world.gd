@@ -2,12 +2,18 @@ extends Node2D
 @onready var player: Player = $Node2D/Player_2
 
 @onready var heart_container = $CanvasLayer/HeartContainer
-
+const PLAYER_GROUP = "Player" 
+var player_node = null
 
 func _ready() -> void:	
 	if NavigationManager.spawn_door_tag !=null:
 		_on_level_spawn(NavigationManager.spawn_door_tag)
 	
+	player_node = get_tree().get_first_node_in_group(PLAYER_GROUP)
+	if GameManager.last_player_position != Vector2.ZERO:
+		if player_node:
+			player_node.global_position = GameManager.last_player_position
+			GameManager.last_player_position = Vector2.ZERO
 	
 	
 	heart_container.set_max_heart(player.max_health)

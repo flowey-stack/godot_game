@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqm5hdqbqxbcq"]
+
+[ext_resource type="Script" path="res://block/block_entrance.gd" id="1_ogd2y"]
+[ext_resource type="Texture2D" uid="uid://c3c0oeuqasm0r" path="res://assets/Farm/Backgrounds/Tilesets/TilesetHouse.png" id="2_47bd8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogd2y"]
+size = Vector2(73, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2a4p"]
+atlas = ExtResource("2_47bd8")
+region = Rect2(400, 224, 64, 80)
+
+[node name="block_entrance" type="Area2D"]
+script = ExtResource("1_ogd2y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -35)
+shape = SubResource("RectangleShape2D_ogd2y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -20)
+texture = SubResource("AtlasTexture_k2a4p")
+offset = Vector2(0, -20)
