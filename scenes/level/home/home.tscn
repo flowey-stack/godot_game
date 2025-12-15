@@ -49,6 +49,8 @@ y_sort_enabled = true
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("12_xvdib")]
 position = Vector2(229, 129)
+max_health = null
+knock_back_power = null
 
 [node name="Nature" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
