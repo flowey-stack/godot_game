@@ -80,10 +80,10 @@ func check_ui_visibility():
 		# 注意：這裡的字串 "main_menu" 必須要是你主選單檔名的一部分
 		if "main_menu" in path or "MainMenu" in path:
 			self.visible = false
-			print("hide in game ui in main menu")
+			#print("hide in game ui in main menu")
 		else:
 			self.visible = true
-			print("appear in game ui")
+			#print("appear in game ui")
 	
 func _process(delta):
 	update_button_scale()

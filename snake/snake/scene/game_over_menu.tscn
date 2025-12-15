@@ -1,62 +1,84 @@
-[gd_scene load_steps=5 format=3 uid="uid://niw2kapx6ues"]
+[gd_scene load_steps=7 format=3 uid="uid://niw2kapx6ues"]
 
-[ext_resource type="FontFile" uid="uid://djhmncgnyxyev" path="res://snake/snake/assets/MaldiniBold.ttf" id="1_ckcbh"]
 [ext_resource type="Script" uid="uid://bikknxv0a2m1s" path="res://snake/snake/scene/game_over_menu.gd" id="1_io285"]
+[ext_resource type="Texture2D" uid="uid://b5vaijemtd51d" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_b2jao"]
 [ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="2_skohm"]
+[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="4_rlsw2"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_io285"]
-bg_color = Color(0.145392, 0.34392, 0.510156, 1)
-shadow_size = 5
-shadow_offset = Vector2(10, 10)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_83hqd"]
+texture = ExtResource("2_b2jao")
+region_rect = Rect2(275, 212, 90, 25)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rrss5"]
+texture = ExtResource("2_b2jao")
+region_rect = Rect2(275, 178, 90, 27)
 
 [node name="GameOverMenu" type="CanvasLayer"]
 script = ExtResource("1_io285")
 
-[node name="GameOverPanel" type="Panel" parent="."]
+[node name="GameOverPanel" type="NinePatchRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 65.0
+offset_top = 30.0
+offset_right = -53.0
+offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_io285")
+texture = ExtResource("2_b2jao")
+region_rect = Rect2(275, 178, 90, 27)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
 
-[node name="ResultLabel" type="Label" parent="."]
-anchors_preset = 14
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -31.0
-offset_bottom = 5.0
+offset_left = -97.5
+offset_top = -32.0
+offset_right = 97.5
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="ResultLabel" type="Label" parent="GameOverPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_skohm")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 20
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ScoreLabel" type="Label" parent="."]
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = 19.0
-offset_bottom = 37.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ScoreLabel" type="Label" parent="GameOverPanel/VBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_skohm")
+theme_override_font_sizes/font_size = 14
 text = "SCORE: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RestartButton" type="Button" parent="."]
-visible = false
-offset_left = 375.0
-offset_top = 545.0
-offset_right = 625.0
-offset_bottom = 608.0
-theme_override_fonts/font = ExtResource("1_ckcbh")
-theme_override_font_sizes/font_size = 50
-text = "Play Again"
+[node name="RestartButton" type="Button" parent="GameOverPanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(0.713726, 0.537255, 0.384314, 1)
+theme_override_colors/font_hover_color = Color(0.713726, 0.537255, 0.384314, 1)
+theme_override_colors/font_color = Color(0.713726, 0.537255, 0.384314, 1)
+theme_override_colors/font_pressed_color = Color(0.713726, 0.537255, 0.384314, 1)
+theme_override_fonts/font = ExtResource("4_rlsw2")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/hover = SubResource("StyleBoxTexture_83hqd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_83hqd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rrss5")
+text = " EXIT "
 
-[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="GameOverPanel/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
