@@ -57,11 +57,11 @@ position = Vector2(56, 18)
 script = ExtResource("6_2xn7t")
 
 [node name="BookCaseSmall2" parent="Node2D" instance=ExtResource("5_rqqmd")]
-position = Vector2(72, 18)
+position = Vector2(74, 18)
 script = ExtResource("7_t455y")
 
 [node name="BookCaseSmall3" parent="Node2D" instance=ExtResource("5_rqqmd")]
-position = Vector2(120, 18)
+position = Vector2(118, 18)
 script = ExtResource("8_cdjiu")
 
 [node name="BookCaseSmall4" parent="Node2D" instance=ExtResource("5_rqqmd")]
