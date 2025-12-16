@@ -12,27 +12,14 @@ var first_dialogue_finished: bool = false
 
 
 
-
 func _ready():
 
 	
 	randomize()
 	Dialogic.signal_event.connect(DialogicSignal)
 	pass
-	
 
-func _process(delta) :
-	if player_in_area :
-		if Input.is_action_just_pressed("interaction"):
-			
-			if first_dialogue_finished == false:
-				run_dialogue("")
-				
-			else :
-				run_dialogue("")
-			
-			
-	pass
+
 
 func run_dialogue(dialogue_string):
 	if player_node:
@@ -41,8 +28,8 @@ func run_dialogue(dialogue_string):
 	is_chatting = true
 	first_dialogue_finished = true
 
-	var layout = Dialogic.Styles.load_style("角色對話")
-	layout.register_character(load("res://dialogue/npc/cave_girl.dch"), $".")
+	#var layout = Dialogic.Styles.load_style("New_File")
+	#layout.register_character(load("res://dialogue/npc/bookcase_small.dch"), $".")
 	Dialogic.start(dialogue_string)
 	
 

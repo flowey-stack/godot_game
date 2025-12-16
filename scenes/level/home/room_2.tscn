@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://b7o2alren1ovl"]
+[gd_scene load_steps=17 format=4 uid="uid://b7o2alren1ovl"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_uj06c"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_phbfs"]
@@ -7,8 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_jb2cs"]
 [ext_resource type="PackedScene" uid="uid://bkmt7cxvcsjgq" path="res://slide-puzzle/scene/slide_puzzle_entrance.tscn" id="4_jgosm"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_gujg7"]
+[ext_resource type="PackedScene" uid="uid://cbb3hu67q7q0h" path="res://dialogue/scene/book_case_small.tscn" id="5_rqqmd"]
+[ext_resource type="Script" uid="uid://ws24suusgvo2" path="res://dialogue/scene/book_case_small_1.gd" id="6_2xn7t"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_54137"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_7nchm"]
+[ext_resource type="Script" uid="uid://c4sovwm1jr0sm" path="res://dialogue/scene/book_case_small_2.gd" id="7_t455y"]
+[ext_resource type="Script" uid="uid://w22rr0ml5ybt" path="res://dialogue/scene/book_case_small_3.gd" id="8_cdjiu"]
+[ext_resource type="Script" uid="uid://ba8wi1hmxquad" path="res://dialogue/scene/book_case_small_4.gd" id="9_ep8ha"]
+[ext_resource type="PackedScene" uid="uid://bmgwo3c8fgws3" path="res://dialogue/scene/piano.tscn" id="10_knixw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jb2cs"]
 size = Vector2(25, 20)
@@ -34,7 +40,7 @@ y_sort_enabled = true
 
 [node name="Item" type="TileMapLayer" parent="Node2D"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAKAAIAAwAEAAUAAAAMAAIAAwAAAAAAAAAJAAIABAA2ACEAAAADAAEABAAtACEAAAAIAAEABAAtACEAAAAHAAEABAAtACEAAAAFAAEABAA0ACAAAAAGAAEABAAwACEAAAADAAMABAAnACMAAAAEAAEABAAtACEAAAA=")
+tile_map_data = PackedByteArray("AAAMAAIAAwAAAAAAAAAJAAIABAA2ACEAAAAFAAEABAA0ACAAAAAGAAEABAAwACEAAAADAAMABAAnACMAAAA=")
 tile_set = ExtResource("2_phbfs")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("3_r4ts7")]
@@ -42,6 +48,28 @@ position = Vector2(129, 89)
 
 [node name="slide_puzzle_entrance" parent="Node2D" instance=ExtResource("4_jgosm")]
 position = Vector2(72, 20)
+
+[node name="Sprite2D" parent="Node2D/slide_puzzle_entrance" index="0"]
+visible = false
+
+[node name="BookCaseSmall" parent="Node2D" instance=ExtResource("5_rqqmd")]
+position = Vector2(56, 18)
+script = ExtResource("6_2xn7t")
+
+[node name="BookCaseSmall2" parent="Node2D" instance=ExtResource("5_rqqmd")]
+position = Vector2(72, 18)
+script = ExtResource("7_t455y")
+
+[node name="BookCaseSmall3" parent="Node2D" instance=ExtResource("5_rqqmd")]
+position = Vector2(120, 18)
+script = ExtResource("8_cdjiu")
+
+[node name="BookCaseSmall4" parent="Node2D" instance=ExtResource("5_rqqmd")]
+position = Vector2(136, 18)
+script = ExtResource("9_ep8ha")
+
+[node name="BookCaseSmall5" parent="Node2D" instance=ExtResource("10_knixw")]
+position = Vector2(176, 48)
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -59,6 +87,7 @@ position = Vector2(0, -12)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+visible = false
 script = ExtResource("4_1dd2t")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("5_gujg7")]
@@ -93,4 +122,5 @@ offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 0
 
+[editable path="Node2D/slide_puzzle_entrance"]
 [editable path="Doors/Door_corridor"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmgwo3c8fgws3"]
+
+[ext_resource type="Script" uid="uid://dhmrue1eha5tw" path="res://dialogue/scene/piano.gd" id="1_5c1m8"]
+[ext_resource type="Texture2D" uid="uid://cyl4i4v12gtmt" path="res://assets/Farm/Backgrounds/Tilesets/Others.png" id="2_0wiax"]
+[ext_resource type="AudioStream" uid="uid://cr2mh7wg1cn4j" path="res://assets/Farm/Audio/Jingles/Success4.wav" id="3_ejm06"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdqc6"]
+atlas = ExtResource("2_0wiax")
+region = Rect2(64, 88, 32, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7t613"]
+size = Vector2(27.25, 13.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_06lnc"]
+size = Vector2(29.5, 27.75)
+
+[node name="Piano" type="CharacterBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_5c1m8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_gdqc6")
+offset = Vector2(0, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.375, -3.25)
+shape = SubResource("RectangleShape2D_7t613")
+
+[node name="ChackDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChackDetection"]
+position = Vector2(0.25, 1)
+shape = SubResource("RectangleShape2D_06lnc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ejm06")
+volume_db = 10.0
+
+[connection signal="body_entered" from="ChackDetection" to="." method="_on_chack_detection_body_entered"]
+[connection signal="body_exited" from="ChackDetection" to="." method="_on_chack_detection_body_exited"]

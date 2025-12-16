@@ -1,0 +1,18 @@
+bookcase_small: (你打量著這一側的書櫃，對比另一頭，這邊的書櫃顯得乾淨許多)
+bookcase_small: (一本陳舊的筆記本被塞在底部，書頁泛黃發皺)
+bookcase_small: 要查看嗎?
+- 要
+	bookcase_small: (你查看了內容)
+	bookcase_small: (... ...)
+	bookcase_small: 我買了一艘船，帶了一點食物和水便離開了那個地方
+	bookcase_small: 船上的生活說不上好，也說不上壞。至少能忍受
+	bookcase_small: 我以為我會這樣，在船上漂泊一生，死在船倉或是甲板上
+	bookcase_small: 但我來到這裡
+	bookcase_small: 似乎是上帝決定結束我的苦難，這地方沒有爭吵，沒有飢餓
+	bookcase_small: 尤其是沒有人!
+	bookcase_small: 在這裡...時間像是靜止了一般，所有一切都顯得...
+	bookcase_small: 這麼美好
+	bookcase_small: 我很高興我來到了這裡
+- 不要
+	bookcase_small: (你覺得不該亂翻他人隱私)
+	bookcase_small: (你該離開了)

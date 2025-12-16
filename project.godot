@@ -28,11 +28,13 @@ EventBus="*res://block/event_bus.gd"
 [dialogic]
 
 directories/dch_directory={
+"bookcase_small": "res://dialogue/npc/bookcase_small.dch",
 "cat_head": "res://dialogue/npc/cat_head.dch",
 "cave_girl": "res://dialogue/npc/cave_girl.dch",
 "fish_告示牌": "res://dialogue/npc/fish_告示牌.dch",
 "frog_man": "res://dialogue/npc/frog_man.dch",
-"main_slime": "res://dialogue/npc/main_slime.dch"
+"main_slime": "res://dialogue/npc/main_slime.dch",
+"piano": "res://dialogue/npc/piano.dch"
 }
 directories/dtl_directory={
 "first_main": "res://dialogue/timeline/first_main.dtl",
@@ -59,7 +61,14 @@ directories/dtl_directory={
 "progress4_cavegirl": "res://dialogue/timeline/progress4_cavegirl.dtl",
 "progress4_cavegirl_repeat": "res://dialogue/timeline/progress4_cavegirl_repeat.dtl",
 "room1_cavegirl": "res://dialogue/timeline/room1_cavegirl.dtl",
-"room1_cavegirl_repeat": "res://dialogue/timeline/room1_cavegirl_repeat.dtl"
+"room1_cavegirl_repeat": "res://dialogue/timeline/room1_cavegirl_repeat.dtl",
+"room2_bookcase_1": "res://dialogue/timeline/room2_bookcase_1.dtl",
+"room2_bookcase_2": "res://dialogue/timeline/room2_bookcase_2.dtl",
+"room2_bookcase_3": "res://dialogue/timeline/room2_bookcase_3.dtl",
+"room2_bookcase_4": "res://dialogue/timeline/room2_bookcase_4.dtl",
+"room2_piano": "res://dialogue/timeline/room2_piano.dtl",
+"room3_cavegirl": "res://dialogue/timeline/room3_cavegirl.dtl",
+"room3_cavegirl_repeat": "res://dialogue/timeline/room3_cavegirl_repeat.dtl"
 }
 layout/style_directory={
 "New_File": "res://dialogue/style/底下對話框.tres",
@@ -68,7 +77,9 @@ layout/style_directory={
 }
 layout/style_list=["res://dialogue/style/底下對話框.tres", "res://dialogue/style/角色對話.tres", "res://dialogue/style/tip.tres"]
 layout/default_style="res://dialogue/style/New_File.tres"
-variables={}
+variables={
+"name": ""
+}
 extensions_folder="res://addons/dialogic"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

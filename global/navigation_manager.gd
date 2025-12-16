@@ -14,6 +14,8 @@ const scene_corridor = preload("res://scenes/level/home/corridor.tscn")
 const scene_room_1 = preload("res://scenes/level/home/room_1.tscn")
 const scene_room_2 = preload("res://scenes/level/home/room_2.tscn")
 
+const end_room = preload("res://scenes/level/home/room_3.tscn")  
+
 signal on_trigger_player_spawn 
 
 var spawn_door_tag
@@ -45,11 +47,14 @@ func go_to_level(level_tag, destination_tag,spawn_pos: Vector2, spawn_dir: Strin
 			scene_to_load = scene_room_1
 		"room_2":
 			scene_to_load = scene_room_2
+			
+		"end_room":
+			scene_to_load = end_room
 	
 	
 	if scene_to_load != null:
 		var transition_speed: float = 0.8
-		if level_tag == "home": #or level_tag == "room_2" or level_tag == "hidden":
+		if level_tag == "home" or level_tag == "end_room": #or level_tag == "room_2" or level_tag == "hidden":
 			transition_speed = 0.3 # 進入這些關鍵場景時，速度變慢 (例如慢三倍)
 		
 		TransitionScreen.transition(transition_speed)

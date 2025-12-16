@@ -28,6 +28,9 @@ func _ready():
 	state_machine.Initialize(self)
 	inventory.use_item.connect(use_item)
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
+	
+	Dialogic.timeline_ended.connect(change_control)
+	Dialogic.timeline_started.connect(change_control)
 	pass
 
 func _process(delta):
@@ -113,11 +116,7 @@ func use_item(item: InventoryItem) -> void:
 		inventory.remove_last_used_item()
 	heal_sound.play()
 
-#func set_movement_enabled(enabled: bool):
-#	can_move = enabled
-#	if not enabled:
-#		direction = Vector2.ZERO 
-	
-
+func change_control():
+	can_move = !can_move
 func player():
 	pass
