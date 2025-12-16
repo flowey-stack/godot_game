@@ -9,3 +9,4 @@ func _on_crate_reached_dest():
 		if not crate.is_reached:
 			return
 	print("Complete!")
+	get_tree().change_scene_to_file("res://scenes/level/day_1/progress_1.tscn")
