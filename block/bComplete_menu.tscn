@@ -1,32 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckj5dgpgjc53q"]
+[gd_scene load_steps=7 format=3 uid="uid://gmmhh6luhv50"]
 
-[ext_resource type="Script" uid="uid://ba5xv6t5j2hc5" path="res://complete_menu.gd" id="1_hx72c"]
-[ext_resource type="Texture2D" uid="uid://b5vaijemtd51d" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_uqusg"]
-[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="3_rdh7e"]
-[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="4_gauv7"]
+[ext_resource type="Script" uid="uid://o32m8anul0hf" path="res://block/bComplete_menu.gd" id="1_kxa7k"]
+[ext_resource type="Texture2D" uid="uid://b5vaijemtd51d" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_5nlkl"]
+[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="3_d862y"]
+[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="4_3yx3t"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vi88v"]
-texture = ExtResource("2_uqusg")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2kvsl"]
+texture = ExtResource("2_5nlkl")
 region_rect = Rect2(275, 212, 90, 25)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjxcv"]
-texture = ExtResource("2_uqusg")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_77dch"]
+texture = ExtResource("2_5nlkl")
 region_rect = Rect2(275, 178, 90, 27)
 
-[node name="completeMenu" type="CanvasLayer"]
-script = ExtResource("1_hx72c")
+[node name="bCompleteMenu" type="CanvasLayer"]
+layer = 98
+script = ExtResource("1_kxa7k")
 
 [node name="GameOverPanel" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(170, 80)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 65.0
-offset_top = 30.0
+offset_top = 35.0
 offset_right = -53.0
-offset_bottom = -52.0
+offset_bottom = -47.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_uqusg")
+texture = ExtResource("2_5nlkl")
 region_rect = Rect2(275, 178, 90, 27)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -57,7 +59,7 @@ layout_mode = 2
 [node name="ResultLabel" type="Label" parent="GameOverPanel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_rdh7e")
+theme_override_fonts/font = ExtResource("3_d862y")
 theme_override_font_sizes/font_size = 20
 text = "COMPLETE!"
 horizontal_alignment = 1
@@ -72,11 +74,21 @@ theme_override_colors/font_hover_pressed_color = Color(0.713726, 0.537255, 0.384
 theme_override_colors/font_hover_color = Color(0.713726, 0.537255, 0.384314, 1)
 theme_override_colors/font_color = Color(0.713726, 0.537255, 0.384314, 1)
 theme_override_colors/font_pressed_color = Color(0.713726, 0.537255, 0.384314, 1)
-theme_override_fonts/font = ExtResource("4_gauv7")
+theme_override_fonts/font = ExtResource("4_3yx3t")
 theme_override_font_sizes/font_size = 12
-theme_override_styles/hover = SubResource("StyleBoxTexture_vi88v")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_vi88v")
-theme_override_styles/normal = SubResource("StyleBoxTexture_rjxcv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2kvsl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2kvsl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_77dch")
 text = " EXIT "
+
+[node name="ColorRect" type="ColorRect" parent="GameOverPanel"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.34902, 0.266667, 1)
 
 [connection signal="pressed" from="GameOverPanel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

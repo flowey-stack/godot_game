@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqm5hdqbqxbcq"]
 
-[ext_resource type="Script" path="res://block/block_entrance.gd" id="1_ogd2y"]
+[ext_resource type="Script" uid="uid://bsp2eko3t5q1t" path="res://block/block_entrance.gd" id="1_ogd2y"]
 [ext_resource type="Texture2D" uid="uid://c3c0oeuqasm0r" path="res://assets/Farm/Backgrounds/Tilesets/TilesetHouse.png" id="2_47bd8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogd2y"]
-size = Vector2(73, 76)
+size = Vector2(73, 82)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2a4p"]
 atlas = ExtResource("2_47bd8")
@@ -20,6 +20,6 @@ shape = SubResource("RectangleShape2D_ogd2y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0, -20)
+position = Vector2(0, -15)
 texture = SubResource("AtlasTexture_k2a4p")
 offset = Vector2(0, -20)

@@ -1,4 +1,5 @@
 extends Area2D
+var clomplete_menu_scene = preload("res://slide-puzzle/scene/complete_menu.tscn")
 
 var tiles = []
 var solved = []
@@ -55,6 +56,7 @@ func _input(event):
 		# 4. 檢查勝利 (每次點擊後檢查一次就好)
 		if is_solved():
 			print("You win!")
+			show_win_menu()
 
 # 檢查方塊是否按正確的順序排列
 func is_solved() -> bool:
@@ -105,3 +107,8 @@ func swap_tiles(tile_src, tile_dst):
 	var temp_tile = tiles[tile_src]
 	tiles[tile_src] = tiles[tile_dst]
 	tiles[tile_dst] = temp_tile
+	
+func show_win_menu():
+	var menu_instance = clomplete_menu_scene.instantiate()
+	add_child(menu_instance)
+	get_tree().paused = true

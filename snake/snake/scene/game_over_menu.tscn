@@ -17,6 +17,7 @@ region_rect = Rect2(275, 178, 90, 27)
 script = ExtResource("1_io285")
 
 [node name="GameOverPanel" type="NinePatchRect" parent="."]
+process_mode = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

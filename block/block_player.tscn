@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2v64781jh420"]
+
+[ext_resource type="Script" uid="uid://c0cx6gwfy24in" path="res://block/block_player.gd" id="1_vv30q"]
+[ext_resource type="Texture2D" uid="uid://bia5bcq27en32" path="res://assets/Farm/Actor/Characters/Cavegirl/SpriteSheet.png" id="2_2ki5f"]
+
+[node name="block_player" type="Node2D"]
+script = ExtResource("1_vv30q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(4, 4)
+texture = ExtResource("2_2ki5f")
+hframes = 4
+vframes = 7

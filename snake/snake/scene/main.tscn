@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckgwiji5vugrf"]
 
-[ext_resource type="Script" path="res://snake/snake/scene/main.gd" id="1_brvut"]
+[ext_resource type="Script" uid="uid://dl64weh4mxyo3" path="res://snake/snake/scene/main.gd" id="1_brvut"]
 [ext_resource type="PackedScene" uid="uid://canb4o1taxsd4" path="res://snake/snake/scene/snake_segment.tscn" id="2_0ha60"]
 [ext_resource type="Texture2D" uid="uid://xw0o1jm40cti" path="res://snake/snake/assets/New Piskel.png" id="3_10r46"]
 [ext_resource type="Texture2D" uid="uid://iifixb7nnpfp" path="res://snake/snake/assets/background.png" id="4_3vwfm"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bqi675f2ldby3" path="res://snake/snake/assets/apple.png" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://niw2kapx6ues" path="res://snake/snake/scene/game_over_menu.tscn" id="6_4j5ol"]
 
-[node name="Main" type="Node"]
+[node name="Main2" type="Node"]
 script = ExtResource("1_brvut")
 snake_scene = ExtResource("2_0ha60")
 
