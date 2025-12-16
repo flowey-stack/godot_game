@@ -55,6 +55,8 @@ func _input(event):
 		# 4. 檢查勝利 (每次點擊後檢查一次就好)
 		if is_solved():
 			print("You win!")
+			get_tree().change_scene_to_file("res://scenes/level/home/room_2.tscn")
+
 
 # 檢查方塊是否按正確的順序排列
 func is_solved() -> bool:
