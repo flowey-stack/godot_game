@@ -41,6 +41,8 @@ directories/dtl_directory={
 "hidden_slime_repeat": "res://dialogue/timeline/hidden_slime_repeat.dtl",
 "hidden_slime_talk": "res://dialogue/timeline/hidden_slime_talk.dtl",
 "home_fishing": "res://dialogue/timeline/home_fishing.dtl",
+"home_slime": "res://dialogue/timeline/home_slime.dtl",
+"home_slime_repeat": "res://dialogue/timeline/home_slime_repeat.dtl",
 "living_room_cathead": "res://dialogue/timeline/living_room_cathead.dtl",
 "living_room_cathead_repeat": "res://dialogue/timeline/living_room_cathead_repeat.dtl",
 "living_room_frogman": "res://dialogue/timeline/living_room_frogman.dtl",

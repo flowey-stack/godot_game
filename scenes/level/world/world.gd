@@ -34,3 +34,7 @@ func _on_inventory_gui_closed() -> void:
 
 func _on_inventory_gui_opened() -> void:
 	get_tree().paused = true
+
+
+func _on_chack_detection_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
