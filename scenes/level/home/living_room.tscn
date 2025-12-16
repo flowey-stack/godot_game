@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://ledoae84ka4h"]
+[gd_scene load_steps=18 format=4 uid="uid://ledoae84ka4h"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_33nox"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_l0wn4"]
@@ -14,6 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://i6ur81uvykor" path="res://dialogue/scene/cat_head.tscn" id="7_lkr5l"]
 [ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="8_2e3qo"]
 [ext_resource type="Script" uid="uid://ceh4y71sygyf0" path="res://dialogue/scene/living_room_cat_head.gd" id="8_lkr5l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iylyu"]
+radius = 15.0333
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_87i0x"]
+radius = 17.0294
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7kxj"]
 
@@ -61,9 +67,23 @@ tile_set = ExtResource("5_2ryyr")
 position = Vector2(63, 111)
 script = ExtResource("7_iylyu")
 
+[node name="CollisionShape2D" parent="Node2D/MaskFrog/ChackDetection" index="0"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_iylyu")
+
 [node name="CatHead" parent="Node2D" instance=ExtResource("7_lkr5l")]
 position = Vector2(79, 94)
 script = ExtResource("8_lkr5l")
+
+[node name="CollisionShape2D" parent="Node2D/CatHead" index="2"]
+visible = true
+
+[node name="ChackDetection" parent="Node2D/CatHead" index="3"]
+visible = true
+
+[node name="CollisionShape2D" parent="Node2D/CatHead/ChackDetection" index="0"]
+position = Vector2(1, -3)
+shape = SubResource("CircleShape2D_87i0x")
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -128,5 +148,7 @@ offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 0
 
+[editable path="Node2D/MaskFrog"]
+[editable path="Node2D/CatHead"]
 [editable path="Doors/Door_home"]
 [editable path="Doors/Door_corridor"]

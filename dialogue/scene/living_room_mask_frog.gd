@@ -24,10 +24,10 @@ func _process(delta) :
 		if Input.is_action_just_pressed("interaction"):
 			
 			if first_dialogue_finished == false:
-				run_dialogue("progress3_frogman")
+				run_dialogue("living_room_frogman")
 				
 			else :
-				run_dialogue("progress2_frogman_repeat")
+				run_dialogue("living_room_frogman_repeat")
 			
 			
 	pass

@@ -52,7 +52,7 @@ func _process(delta) :
 				run_dialogue("living_room_cathead")
 				
 			else :
-				run_dialogue("living_room_cathead")
+				run_dialogue("living_room_cathead_repeat")
 			
 			
 	pass

@@ -40,6 +40,7 @@ directories/dtl_directory={
 "hidden_slime_talk": "res://dialogue/timeline/hidden_slime_talk.dtl",
 "home_fishing": "res://dialogue/timeline/home_fishing.dtl",
 "living_room_cathead": "res://dialogue/timeline/living_room_cathead.dtl",
+"living_room_cathead_repeat": "res://dialogue/timeline/living_room_cathead_repeat.dtl",
 "living_room_frogman": "res://dialogue/timeline/living_room_frogman.dtl",
 "living_room_frogman_repeat": "res://dialogue/timeline/living_room_frogman_repeat.dtl",
 "main_cathead": "res://dialogue/npc/main_cathead.dtl",
@@ -56,7 +57,9 @@ directories/dtl_directory={
 "progress3_cathead_repeat": "res://dialogue/timeline/progress3_cathead_repeat.dtl",
 "progress3_frogman": "res://dialogue/timeline/progress3_frogman.dtl",
 "progress4_cavegirl": "res://dialogue/timeline/progress4_cavegirl.dtl",
-"progress4_cavegirl_repeat": "res://dialogue/timeline/progress4_cavegirl_repeat.dtl"
+"progress4_cavegirl_repeat": "res://dialogue/timeline/progress4_cavegirl_repeat.dtl",
+"room1_cavegirl": "res://dialogue/timeline/room1_cavegirl.dtl",
+"room1_cavegirl_repeat": "res://dialogue/timeline/room1_cavegirl_repeat.dtl"
 }
 layout/style_directory={
 "New_File": "res://dialogue/style/底下對話框.tres",

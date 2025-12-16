@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://dd5wyarn2yaje"]
+[gd_scene load_steps=11 format=4 uid="uid://dd5wyarn2yaje"]
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_qfmh3"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_n6pxf"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_4t8kc"]
+[ext_resource type="PackedScene" uid="uid://bdfa624gjsy3" path="res://dialogue/scene/cavegirl.tscn" id="4_haxi4"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_m4k6c"]
+[ext_resource type="Script" uid="uid://fu7frj8kcyvo" path="res://dialogue/scene/room1_cavegirl.gd" id="5_gmb6f"]
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_ne08w"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_6b1lh"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_ob6fy"]
@@ -35,6 +37,10 @@ tile_set = ExtResource("2_n6pxf")
 
 [node name="Player_2" parent="Node2D" instance=ExtResource("8_07lb2")]
 position = Vector2(129, 81)
+
+[node name="Cavegirl" parent="Node2D" instance=ExtResource("4_haxi4")]
+position = Vector2(129, 38)
+script = ExtResource("5_gmb6f")
 
 [node name="Doors" type="Node2D" parent="."]
 
