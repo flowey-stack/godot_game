@@ -14,6 +14,8 @@ texture = ExtResource("2_b2jao")
 region_rect = Rect2(275, 178, 90, 27)
 
 [node name="GameOverMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 98
 script = ExtResource("1_io285")
 
 [node name="GameOverPanel" type="NinePatchRect" parent="."]
@@ -46,6 +48,7 @@ offset_right = 97.5
 offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/separation = 5
 
 [node name="ResultLabel" type="Label" parent="GameOverPanel/VBoxContainer"]
