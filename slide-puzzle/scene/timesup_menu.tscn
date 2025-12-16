@@ -1,20 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://ckj5dgpgjc53q"]
 
-[ext_resource type="Script" uid="uid://ba5xv6t5j2hc5" path="res://slide-puzzle/scene/time'sup_menu.gd" id="1_qc537"]
-[ext_resource type="Texture2D" uid="uid://b5vaijemtd51d" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_y8j26"]
-[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="3_87xwd"]
-[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="4_3jl4m"]
+[ext_resource type="Script" uid="uid://ba5xv6t5j2hc5" path="res://slide-puzzle/scene/timesup_menu.gd" id="1_46kdd"]
+[ext_resource type="Texture2D" uid="uid://b5vaijemtd51d" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_o0yfs"]
+[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="3_08rf5"]
+[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="4_sm4ti"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vi88v"]
-texture = ExtResource("2_y8j26")
+texture = ExtResource("2_o0yfs")
 region_rect = Rect2(275, 212, 90, 25)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjxcv"]
-texture = ExtResource("2_y8j26")
+texture = ExtResource("2_o0yfs")
 region_rect = Rect2(275, 178, 90, 27)
 
 [node name="time\'supMenu" type="CanvasLayer"]
-script = ExtResource("1_qc537")
+layer = 6
+script = ExtResource("1_46kdd")
 
 [node name="time\'supPanel" type="NinePatchRect" parent="."]
 anchors_preset = 15
@@ -26,7 +27,7 @@ offset_right = -53.0
 offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_y8j26")
+texture = ExtResource("2_o0yfs")
 region_rect = Rect2(275, 178, 90, 27)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -57,7 +58,7 @@ layout_mode = 2
 [node name="ResultLabel" type="Label" parent="time\'supPanel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_87xwd")
+theme_override_fonts/font = ExtResource("3_08rf5")
 theme_override_font_sizes/font_size = 20
 text = "TIME'S UP"
 horizontal_alignment = 1
@@ -72,7 +73,7 @@ theme_override_colors/font_hover_pressed_color = Color(0.713726, 0.537255, 0.384
 theme_override_colors/font_hover_color = Color(0.713726, 0.537255, 0.384314, 1)
 theme_override_colors/font_color = Color(0.713726, 0.537255, 0.384314, 1)
 theme_override_colors/font_pressed_color = Color(0.713726, 0.537255, 0.384314, 1)
-theme_override_fonts/font = ExtResource("4_3jl4m")
+theme_override_fonts/font = ExtResource("4_sm4ti")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxTexture_vi88v")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_vi88v")

@@ -1,10 +1,14 @@
 extends Area2D
-var clomplete_menu_scene = preload("res://slide-puzzle/scene/complete_menu.tscn")
+var timesup_menu_scene = preload("res://slide-puzzle/scene/timesup_menu.tscn")
 
 var tiles = []
 var solved = []
 var tile_size = 250  # 假設每個方塊的大小為250x250
 var grid_size = 4  # 4x4拼圖
+
+#時間控制變數
+var time_left = 30.0
+var is_game_active = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,6 +19,24 @@ func start_game():
 	$Tile9, $Tile10, $Tile11, $Tile12, $Tile13, $Tile14, $Tile15, $Tile16]
 	solved = tiles.duplicate()
 	shuffle_tiles()
+	update_timer_ui()
+	
+# 使用 _process 進行倒數
+func _process(delta: float) -> void:
+	if is_game_active:
+		time_left -= delta
+		update_timer_ui()
+		
+		if time_left <= 0:
+			time_left = 0
+			game_over_times_up()
+			
+#更新 UI 顯示 (記得場景要有名為 TimerLabel 的 Label)
+func update_timer_ui():
+	if %timerLabel:
+		%timerLabel.text = "TIME: " + str(int(ceil(time_left)))
+	else:
+		print("cant find")
 
 func shuffle_tiles():
 	# 隨機打亂方塊
@@ -35,6 +57,10 @@ func shuffle_tiles():
 #			print("You win!")
 
 func _input(event):
+	# 如果遊戲結束 (時間到或已拼完)，就不再處理輸入
+	if not is_game_active:
+		return
+		
 	# 偵測滑鼠左鍵是否被 "按下去" (只觸發一次)
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		
@@ -56,7 +82,7 @@ func _input(event):
 		# 4. 檢查勝利 (每次點擊後檢查一次就好)
 		if is_solved():
 			print("You win!")
-			show_win_menu()
+			is_game_active = false
 
 # 檢查方塊是否按正確的順序排列
 func is_solved() -> bool:
@@ -108,7 +134,10 @@ func swap_tiles(tile_src, tile_dst):
 	tiles[tile_src] = tiles[tile_dst]
 	tiles[tile_dst] = temp_tile
 	
-func show_win_menu():
-	var menu_instance = clomplete_menu_scene.instantiate()
+#時間到的處理函式
+func game_over_times_up():
+	print("Time's Up")
+	is_game_active = false
+	var menu_instance = timesup_menu_scene.instantiate()
 	add_child(menu_instance)
 	get_tree().paused = true
