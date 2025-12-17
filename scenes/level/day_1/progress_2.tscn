@@ -97,6 +97,7 @@ position = Vector2(485, -1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+layer = 2
 script = ExtResource("5_2nbuh")
 
 [node name="HotBar" parent="CanvasLayer" instance=ExtResource("6_6oeus")]

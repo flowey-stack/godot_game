@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_kwyvg"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_hte4f"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_yav5e"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_s53qb"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="3_s53qb"]
 [ext_resource type="PackedScene" uid="uid://bdfa624gjsy3" path="res://dialogue/scene/cavegirl.tscn" id="5_iocx5"]
 [ext_resource type="Script" uid="uid://dlo1hrd458ptn" path="res://dialogue/scene/room3_cavegirl.gd" id="6_kp6lp"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="9_52ugo"]
@@ -66,6 +66,7 @@ position = Vector2(16, -13)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+layer = 2
 script = ExtResource("10_ajswr")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("11_dpsc3")]

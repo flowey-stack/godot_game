@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_fscab"]
 [ext_resource type="Script" uid="uid://cdxix3i3gqfda" path="res://dialogue/scene/living_room_mask_frog.gd" id="7_iylyu"]
 [ext_resource type="PackedScene" uid="uid://i6ur81uvykor" path="res://dialogue/scene/cat_head.tscn" id="7_lkr5l"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="8_2e3qo"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="8_2e3qo"]
 [ext_resource type="Script" uid="uid://ceh4y71sygyf0" path="res://dialogue/scene/living_room_cat_head.gd" id="8_lkr5l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iylyu"]
@@ -99,7 +99,6 @@ position = Vector2(0, 20)
 position = Vector2(1, -18)
 
 [node name="Door_corridor" parent="Doors" instance=ExtResource("4_vqsjn")]
-visible = false
 position = Vector2(215, 65)
 destination_level_tag = "corridor"
 destination_door_tag = "living_room"
@@ -114,6 +113,7 @@ position = Vector2(13, -23)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+layer = 2
 script = ExtResource("4_mjnk7")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("5_exair")]

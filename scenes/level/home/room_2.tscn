@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3760pespb0hx" path="res://scenes/level/world/world.gd" id="1_uj06c"]
 [ext_resource type="TileSet" uid="uid://mvmyer8yspi1" path="res://tileset/room&item.tres" id="2_phbfs"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_r4ts7"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="3_r4ts7"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="4_1dd2t"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_jb2cs"]
 [ext_resource type="PackedScene" uid="uid://bkmt7cxvcsjgq" path="res://slide-puzzle/scene/slide_puzzle_entrance.tscn" id="4_jgosm"]
@@ -87,7 +87,7 @@ position = Vector2(0, -12)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
-visible = false
+layer = 2
 script = ExtResource("4_1dd2t")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("5_gujg7")]

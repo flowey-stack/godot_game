@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_ne08w"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_6b1lh"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_ob6fy"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="8_07lb2"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="8_07lb2"]
 
 [node name="Room1" type="Node2D"]
 position = Vector2(-8, 10)
@@ -57,7 +57,7 @@ position = Vector2(-1, -17)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
-visible = false
+layer = 2
 script = ExtResource("4_m4k6c")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("5_ne08w")]

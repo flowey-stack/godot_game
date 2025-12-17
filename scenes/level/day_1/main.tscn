@@ -91,6 +91,7 @@ position = Vector2(-21, 4)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+layer = 2
 script = ExtResource("5_3ygs2")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("6_2grsr")]

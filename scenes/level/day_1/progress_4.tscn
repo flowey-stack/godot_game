@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bv1os8kuwtf8i" path="res://scenes/level/day_1/progress_4.gd" id="1_l34qa"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_l34qa"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_wi8dh"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="3_wi8dh"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_683pc"]
 [ext_resource type="PackedScene" uid="uid://bdfa624gjsy3" path="res://dialogue/scene/cavegirl.tscn" id="4_twrdj"]
 [ext_resource type="Script" uid="uid://ckwux6ef0wydt" path="res://dialogue/scene/progress4_cavegirl.gd" id="5_jq7gg"]
@@ -86,6 +86,7 @@ position = Vector2(33, 5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+layer = 2
 script = ExtResource("5_twrdj")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("6_jq7gg")]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bk48ieuev6jlp" path="res://scenes/level/day_1/progress_3.gd" id="1_dp0gn"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_xroq8"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_pjbde"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="3_pjbde"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_7a8pt"]
 [ext_resource type="PackedScene" uid="uid://d3b48kcdjweja" path="res://dialogue/scene/mask_frog.tscn" id="4_pqe37"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_cmsb5"]
@@ -77,6 +77,7 @@ position = Vector2(-32, 4)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+layer = 2
 script = ExtResource("5_cmsb5")
 
 [node name="HotBar" parent="CanvasLayer" instance=ExtResource("6_xroq8")]

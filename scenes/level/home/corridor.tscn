@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dp51cf4ncsq3v" path="res://scenes/ui/health/heart_container.tscn" id="5_gxgdo"]
 [ext_resource type="PackedScene" uid="uid://8qpy7c6rjca0" path="res://scenes/ui/inventory/inventory_gui.tscn" id="6_sdpqm"]
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="7_urivi"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="8_25pgh"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="8_25pgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gux48"]
 size = Vector2(20, 29)
@@ -87,6 +87,7 @@ position = Vector2(0, 20)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+layer = 2
 script = ExtResource("4_k2im0")
 
 [node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("5_gxgdo")]
