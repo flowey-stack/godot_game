@@ -1,22 +1,23 @@
 [gd_scene load_steps=7 format=3 uid="uid://ckj5dgpgjc53q"]
 
-[ext_resource type="Script" uid="uid://ba5xv6t5j2hc5" path="res://complete_menu.gd" id="1_hx72c"]
-[ext_resource type="Texture2D" uid="uid://b5vaijemtd51d" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_uqusg"]
-[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="3_rdh7e"]
-[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="4_gauv7"]
+[ext_resource type="Script" uid="uid://ba5xv6t5j2hc5" path="res://slide-puzzle/scene/timesup_menu.gd" id="1_46kdd"]
+[ext_resource type="Texture2D" uid="uid://b5vaijemtd51d" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="2_o0yfs"]
+[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="3_08rf5"]
+[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="4_sm4ti"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vi88v"]
-texture = ExtResource("2_uqusg")
+texture = ExtResource("2_o0yfs")
 region_rect = Rect2(275, 212, 90, 25)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjxcv"]
-texture = ExtResource("2_uqusg")
+texture = ExtResource("2_o0yfs")
 region_rect = Rect2(275, 178, 90, 27)
 
-[node name="completeMenu" type="CanvasLayer"]
-script = ExtResource("1_hx72c")
+[node name="time\'supMenu" type="CanvasLayer"]
+layer = 6
+script = ExtResource("1_46kdd")
 
-[node name="GameOverPanel" type="NinePatchRect" parent="."]
+[node name="time\'supPanel" type="NinePatchRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,14 +27,14 @@ offset_right = -53.0
 offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_uqusg")
+texture = ExtResource("2_o0yfs")
 region_rect = Rect2(275, 178, 90, 27)
 patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GameOverPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="time\'supPanel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -48,22 +49,22 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 5
 
-[node name="seperator2" type="Control" parent="GameOverPanel/VBoxContainer"]
+[node name="seperator2" type="Control" parent="time\'supPanel/VBoxContainer"]
 layout_mode = 2
 
-[node name="seperator" type="Control" parent="GameOverPanel/VBoxContainer"]
+[node name="seperator" type="Control" parent="time\'supPanel/VBoxContainer"]
 layout_mode = 2
 
-[node name="ResultLabel" type="Label" parent="GameOverPanel/VBoxContainer"]
+[node name="ResultLabel" type="Label" parent="time\'supPanel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_rdh7e")
+theme_override_fonts/font = ExtResource("3_08rf5")
 theme_override_font_sizes/font_size = 20
-text = "COMPLETE!"
+text = "TIME'S UP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ExitButton" type="Button" parent="GameOverPanel/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="time\'supPanel/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
@@ -72,9 +73,11 @@ theme_override_colors/font_hover_pressed_color = Color(0.713726, 0.537255, 0.384
 theme_override_colors/font_hover_color = Color(0.713726, 0.537255, 0.384314, 1)
 theme_override_colors/font_color = Color(0.713726, 0.537255, 0.384314, 1)
 theme_override_colors/font_pressed_color = Color(0.713726, 0.537255, 0.384314, 1)
-theme_override_fonts/font = ExtResource("4_gauv7")
+theme_override_fonts/font = ExtResource("4_sm4ti")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxTexture_vi88v")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_vi88v")
 theme_override_styles/normal = SubResource("StyleBoxTexture_rjxcv")
 text = " EXIT "
+
+[connection signal="pressed" from="time\'supPanel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

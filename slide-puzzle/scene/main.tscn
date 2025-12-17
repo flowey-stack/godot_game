@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c86uikf4oiky5"]
+[gd_scene load_steps=20 format=3 uid="uid://c86uikf4oiky5"]
 
 [ext_resource type="Script" uid="uid://0kg2ey18mheb" path="res://slide-puzzle/scene/main.gd" id="1_axfas"]
 [ext_resource type="Texture2D" uid="uid://pkx8fho4u3ha" path="res://slide-puzzle/img/puzzle1.png" id="2_ttder"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cdqbcv8kpcy6u" path="res://slide-puzzle/img/puzzle14.png" id="15_1n8ca"]
 [ext_resource type="Texture2D" uid="uid://crnb2rkh1y133" path="res://slide-puzzle/img/puzzle15.png" id="16_b2iae"]
 [ext_resource type="Texture2D" uid="uid://r3hkdqp1wkgl" path="res://slide-puzzle/img/empty.png" id="16_fdshd"]
+[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="19_7maqe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8yysc"]
 size = Vector2(1000, 1000)
@@ -111,4 +112,13 @@ texture = ExtResource("16_b2iae")
 position = Vector2(875, 875)
 texture = ExtResource("16_fdshd")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Main"]
+[node name="timerLabel" type="Label" parent="Main"]
+unique_name_in_owner = true
+offset_left = 687.5
+offset_top = 43.75
+offset_right = 727.5
+offset_bottom = 109.75
+theme_override_colors/font_color = Color(0.456746, 0.507096, 0.876789, 1)
+theme_override_fonts/font = ExtResource("19_7maqe")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 2

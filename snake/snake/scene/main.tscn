@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bqi675f2ldby3" path="res://snake/snake/assets/apple.png" id="5_0ha60"]
 [ext_resource type="PackedScene" uid="uid://niw2kapx6ues" path="res://snake/snake/scene/game_over_menu.tscn" id="6_4j5ol"]
 
-[node name="Main" type="Node"]
+[node name="Main2" type="Node"]
 script = ExtResource("1_brvut")
 snake_scene = ExtResource("2_0ha60")
 
@@ -34,7 +34,6 @@ texture = ExtResource("5_0ha60")
 offset = Vector2(25, 25)
 
 [node name="GameOverMenu" parent="." instance=ExtResource("6_4j5ol")]
-process_mode = 2
 visible = false
 
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

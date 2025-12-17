@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bkmt7cxvcsjgq"]
 
-[ext_resource type="Script" uid="uid://cqaggxkasuonf" path="res://slide-puzzle/scene/slide_puzzle_entrance.gd" id="1_0tavx"]
+[ext_resource type="Script" uid="uid://bjiwk4y8xlkrn" path="res://slide-puzzle/scene/slide_puzzle_entrance.gd" id="1_0tavx"]
 [ext_resource type="Texture2D" uid="uid://d0x6uwnd55tcg" path="res://assets/Farm/Backgrounds/Tilesets/spr_tileset_sunnysideworld.png" id="2_guau4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7jyu6"]
