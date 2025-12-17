@@ -607,7 +607,6 @@ texture = ExtResource("6_0qsvx")
 region_rect = Rect2(772, 163, 22, 24)
 
 [node name="CanvasLayer" type="CanvasLayer"]
-layer = 2
 
 [node name="inGameUI" type="Control" parent="."]
 layout_mode = 3
@@ -636,13 +635,13 @@ setting_menu_screen = NodePath("settingMenu")
 pause_menu_screen = NodePath("pauseMenu")
 open_menu_button = NodePath("baseMenuOpenButtonContainer/toggleMenuButton")
 close_menu_button = NodePath("menu/baseMenuScreen/VBoxContainer/toggleMenuButton")
-open_help_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/toggleHelpMenuButton")
+open_help_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer/toggleHelpMenuButton")
 close_help_button = NodePath("helpMenu/exitButton/MarginContainer/toggleHelpMenuButton")
-open_settings_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/toggleSettingMenuButton")
+open_settings_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer/toggleSettingMenuButton")
 close_settings_button = NodePath("settingMenu/exitButton/MarginContainer/toggleSettingMenuButton")
-open_pause_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/pauseButton")
+open_pause_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer/pauseButton")
 close_pause_button = NodePath("pauseMenu/pauseButton")
-open_quit_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/quitButton")
+open_quit_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer/quitButton")
 
 [node name="baseMenuOpenButtonContainer" type="VBoxContainer" parent="inGameUI/popupMenu"]
 layout_mode = 2
@@ -872,7 +871,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_u4etj")
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 8
+size_flags_vertical = 4
 theme_override_constants/separation = 40
 
 [node name="baseMenuScreen" type="MarginContainer" parent="inGameUI/popupMenu/menu"]
@@ -918,17 +917,12 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 15
 
-[node name="buttonContainer" type="VBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
+[node name="topButtonContainer" type="HBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
+size_flags_horizontal = 4
 theme_override_constants/separation = 10
 
-[node name="topButtonContainer" type="HBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="toggleHelpMenuButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+[node name="toggleHelpMenuButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -937,7 +931,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_onc8m")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_onc8m")
 theme_override_styles/normal = SubResource("StyleBoxTexture_e6quo")
 
-[node name="pauseButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+[node name="pauseButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -946,11 +940,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
 theme_override_styles/normal = SubResource("StyleBoxTexture_cwbuu")
 
-[node name="bottomButtonContainer2" type="HBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="toggleSettingMenuButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
+[node name="toggleSettingMenuButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -959,7 +949,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_4v80v")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4v80v")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0qsvx")
 
-[node name="quitButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
+[node name="quitButton" type="Button" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -967,6 +957,18 @@ size_flags_vertical = 4
 theme_override_styles/hover = SubResource("StyleBoxTexture_uusyb")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_uusyb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ep3pr")
+
+[node name="buttonContainer" type="VBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="bottomButtonContainer2" type="HBoxContainer" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="seperator" type="Control" parent="inGameUI/popupMenu/menu"]
 layout_mode = 2
@@ -976,7 +978,7 @@ layout_mode = 2
 [connection signal="pressed" from="inGameUI/popupMenu/settingMenu/exitButton/MarginContainer/toggleSettingMenuButton" to="inGameUI/popupMenu" method="_on_toggle_setting_menu_button_pressed"]
 [connection signal="pressed" from="inGameUI/popupMenu/pauseMenu/pauseButton" to="inGameUI/popupMenu" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/toggleMenuButton" to="inGameUI/popupMenu" method="_on_toggle_menu_button_pressed"]
-[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/toggleHelpMenuButton" to="inGameUI/popupMenu" method="_on_toggle_help_menu_button_pressed"]
-[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/pauseButton" to="inGameUI/popupMenu" method="_on_pause_button_pressed"]
-[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/toggleSettingMenuButton" to="inGameUI/popupMenu" method="_on_toggle_setting_menu_button_pressed"]
-[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/quitButton" to="inGameUI/popupMenu" method="_on_quit_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer/toggleHelpMenuButton" to="inGameUI/popupMenu" method="_on_toggle_help_menu_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer/pauseButton" to="inGameUI/popupMenu" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer/toggleSettingMenuButton" to="inGameUI/popupMenu" method="_on_toggle_setting_menu_button_pressed"]
+[connection signal="pressed" from="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/topButtonContainer/quitButton" to="inGameUI/popupMenu" method="_on_quit_button_pressed"]
