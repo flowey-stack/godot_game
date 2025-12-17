@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dd2uodeb1vwgx"]
-
-[ext_resource type="Texture2D" uid="uid://c0shr7vbcmud4" path="res://陷阱/brackeys_platformer_assets/Cloudy-Pack-Free/Pale Clouds/Smooth/Cloud-7.png" id="1_aeg8v"]
-
-[node name="cloud_3" type="Sprite2D"]
-texture = ExtResource("1_aeg8v")

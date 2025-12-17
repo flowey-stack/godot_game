@@ -1,7 +1,0 @@
-piano: (這是一台鋼琴)
-piano: (要彈嗎?)
-- 要
-	[signal arg="play_piano"]
-	[wait time="1.4"]
-	piano: (聽起來像Success4.wav)
-- 不要

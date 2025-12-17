@@ -1,8 +1,0 @@
-cat_head: 你又出現了
-cat_head: 這次沒有後空翻了
-cat_head: ...
-cat_head: 而是後空翻PRO!
-[signal arg="play_roll_pro"]
-[wait time="1.0"]
-cat_head: 怎麼樣!
-cat_head: 不是只有鳥才會飛的，老兄
