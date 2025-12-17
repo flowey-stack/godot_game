@@ -48,6 +48,7 @@ directories/dtl_directory={
 "living_room_cathead_repeat": "res://dialogue/timeline/living_room_cathead_repeat.dtl",
 "living_room_frogman": "res://dialogue/timeline/living_room_frogman.dtl",
 "living_room_frogman_repeat": "res://dialogue/timeline/living_room_frogman_repeat.dtl",
+"main_cathead": "res://dialogue/timeline/main_cathead.dtl",
 "main_cathead_repeat": "res://dialogue/timeline/main_cathead_repeat.dtl",
 "main_frogman_talk": "res://dialogue/timeline/main_frogman_talk.dtl",
 "main_slime_talk": "res://dialogue/timeline/main_slime_talk.dtl",

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://crhk3gns5q6fd" path="res://scenes/level/day_1/progress_1.gd" id="1_jcp30"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_ieq2y"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_2pxvh"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="3_2pxvh"]
 [ext_resource type="TileSet" uid="uid://b7fpqus1b72c6" path="res://tileset/house.tres" id="3_qynte"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_5ixmp"]
 [ext_resource type="PackedScene" uid="uid://bqm5hdqbqxbcq" path="res://block/block_entrance.tscn" id="5_b1g3g"]

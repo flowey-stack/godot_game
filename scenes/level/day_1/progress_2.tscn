@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmgwajlg6rn8x" path="res://scenes/level/day_1/progress_2.gd" id="1_xetlm"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_6oeus"]
-[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/players/player_2.tscn" id="3_b12ph"]
+[ext_resource type="PackedScene" uid="uid://dvayatc4im3sd" path="res://scenes/characters/playerS/player_2.tscn" id="3_b12ph"]
 [ext_resource type="PackedScene" uid="uid://d3b48kcdjweja" path="res://dialogue/scene/mask_frog.tscn" id="4_k41sd"]
 [ext_resource type="PackedScene" uid="uid://5y54g7xmq8l7" path="res://scenes/component/scene_door/door.tscn" id="4_srpqv"]
 [ext_resource type="Script" uid="uid://wol2hthtsap0" path="res://scenes/ui/canvas_layer.gd" id="5_2nbuh"]

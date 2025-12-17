@@ -1,0 +1,25 @@
+cat_head: 老兄!老兄!
+cat_head: 別走!
+cat_head: 沒錯!就是你
+cat_head: 你來的正是時候
+cat_head: 好，老兄，想不想看的酷東西?
+- 想
+	cat_head: 呵呵，好，我就知道
+	cat_head: 畢竟沒人能拒絕這個...
+	cat_head: 後空翻!
+	[signal arg="play_roll"]
+- 不想
+	cat_head: ...
+	cat_head: 你真的以為你能拒絕嗎!?
+	cat_head: 想太美了!
+	[signal arg="play_roll"]
+[wait time="1.0"]
+cat_head: ...
+cat_head: 失敗了...
+cat_head: ...
+cat_head: 你還在這裡幹嘛，快點離開吧!
+cat_head: 看見你的臉只會讓我想起剛剛的失敗
+cat_head: 這滿腔的悲憤與尷尬...
+cat_head: ...
+cat_head: 快走吧!讓我繼續留在這個鬼地方
+cat_head: 沒人能感受我的痛苦
