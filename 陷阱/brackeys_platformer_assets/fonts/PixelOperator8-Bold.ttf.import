@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dfxks2ajvaiy0"
+uid="uid://cmxf7qde5s83h"
 path="res://.godot/imported/PixelOperator8-Bold.ttf-bb3b4c40a91669bc2d9c48c5bcffc1dc.fontdata"
 
 [deps]
@@ -23,7 +23,6 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=1
-keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

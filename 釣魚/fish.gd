@@ -2,11 +2,11 @@ extends CharacterBody2D
 
 signal fish_caught(points)
 
-@export var SPEED: float = 45.0
+@export var SPEED: float = 50.0
 @export var points: int = 10  # 抓到這條魚加多少分
-@export var min_x := 5
+@export var min_x := 10
 @export var max_x := 280
-@export var min_y := 5
+@export var min_y := 10
 @export var max_y := 160
 
 var target_position: Vector2

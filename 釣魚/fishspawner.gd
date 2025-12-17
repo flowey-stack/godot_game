@@ -2,10 +2,10 @@ extends Node
 
 @export var aquaContainer: Control
 @export var fish_scenes: Array[PackedScene] = []
-@export var min_fish: int = 2
-@export var max_fish: int = 5
-@export var min_scale: float = 0.5
-@export var max_scale: float = 1
+@export var min_fish: int = 4
+@export var max_fish: int = 7
+@export var min_scale: float = 0.8
+@export var max_scale: float = 1.3
 @export var max_total_fish: int = 10  # 魚缸最大數量
 
 var fishing_game = null

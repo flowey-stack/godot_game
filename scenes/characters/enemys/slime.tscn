@@ -1,9 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://50wbgvltd8dm"]
+[gd_scene load_steps=11 format=3 uid="uid://50wbgvltd8dm"]
 
 [ext_resource type="Texture2D" uid="uid://c1vfsrlj5w42n" path="res://assets/Farm/Actor/Monsters/Slime/Slime.png" id="1_b6ku0"]
-[ext_resource type="Script" uid="uid://dutj4i1np5gtt" path="res://scenes/characters/enemys/slime.gd" id="1_p8yp6"]
-[ext_resource type="Texture2D" uid="uid://bc65q8shiv2u5" path="res://assets/Farm/FX/SpriteSheet.png" id="3_ai2h8"]
-[ext_resource type="AudioStream" uid="uid://cpqnn4xox3xdn" path="res://assets/Farm/Audio/Sounds/Hit & Impact/Hit9.wav" id="4_dgv66"]
+[ext_resource type="Script" path="res://scenes/characters/enemys/slime.gd" id="1_p8yp6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8yp6"]
 radius = 4.0
@@ -46,83 +44,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("DeathEffect:frame_coords")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2i(0, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("DeathEffect:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_jgnha"]
-resource_name = "death"
-length = 0.6
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("DeathEffect:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("DeathEffect:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_dgv66"]
@@ -295,21 +216,16 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dgv66"]
 _data = {
-&"RESET": SubResource("Animation_p8yp6"),
-&"death": SubResource("Animation_jgnha"),
-&"walk_down": SubResource("Animation_dgv66"),
-&"walk_left": SubResource("Animation_3osqy"),
-&"walk_right": SubResource("Animation_ai2h8"),
-&"walk_up": SubResource("Animation_7p67y")
+"RESET": SubResource("Animation_p8yp6"),
+"walk_down": SubResource("Animation_dgv66"),
+"walk_left": SubResource("Animation_3osqy"),
+"walk_right": SubResource("Animation_ai2h8"),
+"walk_up": SubResource("Animation_7p67y")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7p67y"]
 radius = 5.0
 height = 14.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ai2h8"]
-radius = 7.0
-height = 16.0
 
 [node name="Slime" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -331,7 +247,7 @@ vframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_dgv66")
+"": SubResource("AnimationLibrary_dgv66")
 }
 
 [node name="HitBox" type="Area2D" parent="."]
@@ -340,23 +256,3 @@ libraries = {
 position = Vector2(0, -5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_7p67y")
-
-[node name="HurtBox" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(0, -7)
-rotation = -1.5708
-shape = SubResource("CapsuleShape2D_ai2h8")
-
-[node name="DeathEffect" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(0, -10)
-texture = ExtResource("3_ai2h8")
-hframes = 6
-
-[node name="Hit" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_dgv66")
-
-[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
