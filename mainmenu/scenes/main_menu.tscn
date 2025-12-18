@@ -1,11 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://del0x1j5skg88"]
+[gd_scene load_steps=15 format=3 uid="uid://del0x1j5skg88"]
 
 [ext_resource type="Script" uid="uid://ca632qnvjanup" path="res://mainmenu/scenes/main_menu.gd" id="1_wu84c"]
-[ext_resource type="FontFile" uid="uid://cxulhvuiugx6m" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_ekxnf"]
+[ext_resource type="Shader" uid="uid://byus3cnx4462k" path="res://mainmenu/scenes/scroll.gdshader" id="2_cr5sp"]
 [ext_resource type="Texture2D" uid="uid://cl4cotn8j4x5c" path="res://mainmenu/background.png" id="2_wu84c"]
+[ext_resource type="Texture2D" uid="uid://80rdtqom3fnn" path="res://assets/Sprite-0002.png" id="3_c2cl8"]
+[ext_resource type="FontFile" uid="uid://dugudjugv0wt5" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.5.ttf" id="4_tcrvx"]
 [ext_resource type="Texture2D" uid="uid://c6yr273kolfxl" path="res://assets/Theme Wood/button_normal.png" id="4_xntqg"]
+[ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="5_cr5sp"]
 [ext_resource type="PackedScene" uid="uid://dhlri5n7mxw1v" path="res://transition/fade_transition.tscn" id="5_hgc6w"]
 [ext_resource type="Texture2D" uid="uid://c2d0yxtn2m7bu" path="res://assets/Theme Wood/button_hover.png" id="5_tcrvx"]
+[ext_resource type="PackedScene" uid="uid://uot5lsr7g2pv" path="res://scenes/component/background_decoration/falling_leaf.tscn" id="10_c2cl8"]
+[ext_resource type="PackedScene" uid="uid://wvklnhgc2o3e" path="res://scenes/component/audio_stream_player_2d.tscn" id="11_hncop"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hncop"]
+shader = ExtResource("2_cr5sp")
+shader_parameter/speed = 0.1
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
 texture = ExtResource("4_xntqg")
@@ -31,6 +40,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wu84c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.862745, 0.54902, 0.392157, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hncop")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_c2cl8")
+stretch_mode = 1
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -63,11 +95,13 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="separator" type="Control" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_ekxnf")
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("5_cr5sp")
 theme_override_font_sizes/font_size = 30
 text = "RPG"
 horizontal_alignment = 1
@@ -90,30 +124,35 @@ custom_minimum_size = Vector2(75, 15)
 layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.690196, 0.501961, 0.372549, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("4_tcrvx")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxTexture_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bqqt6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_wu84c")
-text = "START GAME"
+text = "START"
 
 [node name="exitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(75, 15)
 layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0.690196, 0.501961, 0.372549, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("4_tcrvx")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/hover = SubResource("StyleBoxTexture_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_bqqt6")
 theme_override_styles/normal = SubResource("StyleBoxTexture_wu84c")
-text = "EXIT GAME"
+text = "EXIT"
 
 [node name="fadeTransition" parent="." instance=ExtResource("5_hgc6w")]
 layout_mode = 1
 
 [node name="fadeTimer" type="Timer" parent="fadeTransition"]
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("10_c2cl8")]
+position = Vector2(34, 123)
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("11_hncop")]

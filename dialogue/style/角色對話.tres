@@ -30,7 +30,7 @@ overrides = {
 "choices_text_size": "10.0",
 "name_label_enabled": "false",
 "normal_font": "\"res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_1.9.ttf\"",
-"text_max_width": "100.0",
+"text_max_width": "50.0",
 "text_size": "10.0"
 }
 
@@ -51,4 +51,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_c7bld")]([])
-metadata/_latest_layer = "12"
+metadata/_latest_layer = "11"

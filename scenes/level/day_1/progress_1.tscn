@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cos6qsurtjany"]
+[gd_scene load_steps=20 format=4 uid="uid://cos6qsurtjany"]
 
 [ext_resource type="Script" uid="uid://crhk3gns5q6fd" path="res://scenes/level/day_1/progress_1.gd" id="1_jcp30"]
 [ext_resource type="TileSet" uid="uid://diyac756kvgfh" path="res://tileset/test_tile_nature.tres" id="2_ieq2y"]
@@ -14,9 +14,16 @@
 [ext_resource type="PackedScene" uid="uid://7ghmum7w1e48" path="res://scenes/ui/inventory/hot_bar.tscn" id="8_ieq2y"]
 [ext_resource type="AudioStream" uid="uid://cukccy3hixulv" path="res://assets/Farm/Audio/背景音/オオルリのさえずり1.mp3" id="9_tko0q"]
 [ext_resource type="PackedScene" uid="uid://i6ur81uvykor" path="res://dialogue/scene/cat_head.tscn" id="10_5ixmp"]
+[ext_resource type="PackedScene" uid="uid://wvklnhgc2o3e" path="res://scenes/component/audio_stream_player_2d.tscn" id="15_4kodo"]
+[ext_resource type="Shader" uid="uid://byus3cnx4462k" path="res://mainmenu/scenes/scroll.gdshader" id="16_xylp5"]
+[ext_resource type="Texture2D" uid="uid://b6hvpiqv2yjen" path="res://assets/Farm/FX/Fog.png" id="17_ergho"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ieq2y"]
 size = Vector2(66, 95)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_11mg4"]
+shader = ExtResource("16_xylp5")
+shader_parameter/speed = 0.025
 
 [node name="Progress1" type="Node2D"]
 position = Vector2(-8, 10)
@@ -119,6 +126,24 @@ grow_vertical = 0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_tko0q")
+
+[node name="AudioStreamPlayer2D2" parent="." instance=ExtResource("15_4kodo")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.25098, 0.25098, 0.25098, 0.352941)
+material = SubResource("ShaderMaterial_11mg4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -827.0
+offset_top = -479.0
+offset_right = 2373.0
+offset_bottom = 1321.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("17_ergho")
+stretch_mode = 1
 
 [editable path="Doors/Door_E"]
 [editable path="Doors/Door_W"]
