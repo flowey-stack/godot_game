@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://ca632qnvjanup" path="res://mainmenu/scenes/main_menu.gd" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://cxulhvuiugx6m" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://cl4cotn8j4x5c" path="res://mainmenu/background.png" id="2_wu84c"]
-[ext_resource type="Texture2D" uid="uid://bdkg3ang0afnr" path="res://menu/Ninja Adventure - Asset Pack/Ui/Theme/Theme Wood/button_normal.png" id="4_xntqg"]
+[ext_resource type="Texture2D" uid="uid://c6yr273kolfxl" path="res://assets/Theme Wood/button_normal.png" id="4_xntqg"]
 [ext_resource type="PackedScene" uid="uid://dhlri5n7mxw1v" path="res://transition/fade_transition.tscn" id="5_hgc6w"]
-[ext_resource type="Texture2D" uid="uid://cq8dycqnus2ow" path="res://menu/Ninja Adventure - Asset Pack/Ui/Theme/Theme Wood/button_hover.png" id="5_tcrvx"]
+[ext_resource type="Texture2D" uid="uid://c2d0yxtn2m7bu" path="res://assets/Theme Wood/button_hover.png" id="5_tcrvx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
 texture = ExtResource("4_xntqg")
