@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://bj0p8riusuhwn"]
+[gd_scene load_steps=29 format=3 uid="uid://bj0p8riusuhwn"]
 
 [ext_resource type="Script" uid="uid://ctop460eqdjxx" path="res://menu/popup_menu.gd" id="1_cwbuu"]
 [ext_resource type="FontFile" uid="uid://dxo2xyqdatael" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_onc8m"]
 [ext_resource type="Texture2D" uid="uid://cosmx1gagru5p" path="res://menu/UIBundleFree/MediavelFree.png" id="5_4v80v"]
 [ext_resource type="FontFile" uid="uid://c10uy6w4d82mr" path="res://assets/Farm/Ui/Font/BoutiqueBitmap9x9_Bold_1.9.ttf" id="5_q8sw4"]
 [ext_resource type="Texture2D" uid="uid://bvfswaunhxabf" path="res://menu/Sprout Lands - UI Pack - Basic pack (1)/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="6_0qsvx"]
+[ext_resource type="Texture2D" uid="uid://wdbwiyjadu45" path="res://menu/Ninja Adventure - Asset Pack/Ui/Theme/Theme Wood/button_disabled.png" id="6_q8sw4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpq86"]
 texture = ExtResource("6_0qsvx")
@@ -896,8 +897,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dpq86")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="inGameUI/popupMenu/menu/baseMenuScreen/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("6_0qsvx")
-region_rect = Rect2(741, 38, 22, 22)
+texture = ExtResource("6_q8sw4")
+region_rect = Rect2(0, 0, 16, 8)
 patch_margin_left = 4
 patch_margin_top = 4
 patch_margin_right = 4

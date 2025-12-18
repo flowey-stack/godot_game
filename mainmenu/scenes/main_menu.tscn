@@ -1,18 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://del0x1j5skg88"]
+[gd_scene load_steps=9 format=3 uid="uid://del0x1j5skg88"]
 
 [ext_resource type="Script" uid="uid://ca632qnvjanup" path="res://mainmenu/scenes/main_menu.gd" id="1_wu84c"]
 [ext_resource type="FontFile" uid="uid://cxulhvuiugx6m" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://cl4cotn8j4x5c" path="res://mainmenu/background.png" id="2_wu84c"]
-[ext_resource type="Texture2D" uid="uid://b5vaijemtd51d" path="res://mainmenu/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://bdkg3ang0afnr" path="res://menu/Ninja Adventure - Asset Pack/Ui/Theme/Theme Wood/button_normal.png" id="4_xntqg"]
 [ext_resource type="PackedScene" uid="uid://dhlri5n7mxw1v" path="res://transition/fade_transition.tscn" id="5_hgc6w"]
+[ext_resource type="Texture2D" uid="uid://cq8dycqnus2ow" path="res://menu/Ninja Adventure - Asset Pack/Ui/Theme/Theme Wood/button_hover.png" id="5_tcrvx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
-texture = ExtResource("3_bqqt6")
-region_rect = Rect2(275, 212, 90, 25)
+texture = ExtResource("4_xntqg")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 0, 16, 8)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
-texture = ExtResource("3_bqqt6")
-region_rect = Rect2(275, 178, 90, 27)
+texture = ExtResource("5_tcrvx")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 0, 16, 8)
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3
@@ -79,10 +88,10 @@ layout_mode = 2
 [node name="startButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(75, 15)
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.690196, 0.501961, 0.372549, 1)
-theme_override_colors/font_hover_color = Color(0.690196, 0.501961, 0.372549, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0.690196, 0.501961, 0.372549, 1)
-theme_override_colors/font_pressed_color = Color(0.690196, 0.501961, 0.372549, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxTexture_bqqt6")
@@ -93,10 +102,10 @@ text = "START GAME"
 [node name="exitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(75, 15)
 layout_mode = 2
-theme_override_colors/font_hover_pressed_color = Color(0.690196, 0.501961, 0.372549, 1)
-theme_override_colors/font_hover_color = Color(0.690196, 0.501961, 0.372549, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0.690196, 0.501961, 0.372549, 1)
-theme_override_colors/font_pressed_color = Color(0.690196, 0.501961, 0.372549, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/hover = SubResource("StyleBoxTexture_bqqt6")

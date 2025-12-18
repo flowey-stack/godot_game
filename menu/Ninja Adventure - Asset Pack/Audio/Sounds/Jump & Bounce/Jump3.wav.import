@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmt6myxib1ph3"
+path="res://.godot/imported/Jump3.wav-41dc4af55d7135f86f2ebd6b48c1e357.sample"
+
+[deps]
+
+source_file="res://menu/Ninja Adventure - Asset Pack/Audio/Sounds/Jump & Bounce/Jump3.wav"
+dest_files=["res://.godot/imported/Jump3.wav-41dc4af55d7135f86f2ebd6b48c1e357.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
